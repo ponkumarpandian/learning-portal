@@ -1,0 +1,186 @@
+/*
+ * App stylesheet entry (SPEC §15). Order matters:
+ *  1. Tailwind (declares the layers theme, base, components, utilities)
+ *  2. tokens.css: canonical design tokens, unlayered, keyed off
+ *     <html data-world data-theme data-text>
+ *  3. component + feature CSS, inside @layer components so Tailwind utilities can still override them
+ */
+@import 'tailwindcss';
+@import './tokens.css';
+@import '../components/ui.css';
+@import '../features/features.css';
+
+/* Tailwind theme mapped onto the tokens. `inline` makes utilities use var(--token) directly,
+   so they follow the world/theme switch (bg-surface, text-ink, rounded-card, font-display...). */
+@theme inline {
+  --color-sky1: var(--sky1);
+  --color-sky2: var(--sky2);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-ledge: var(--ledge);
+  --color-go: var(--go);
+  --color-go-d: var(--go-d);
+  --color-on-go: var(--on-go);
+  --color-tab-on: var(--tab-on);
+  --color-ok-bg: var(--ok-bg);
+  --color-ok-ink: var(--ok-ink);
+  --color-hint-bg: var(--hint-bg);
+  --color-hint-ink: var(--hint-ink);
+  --color-gold: var(--gold);
+  --color-gold-d: var(--gold-d);
+  --color-catch: var(--catch);
+  --color-maths: var(--maths);
+  --color-physics: var(--physics);
+  --color-chemistry: var(--chemistry);
+  --color-biology: var(--biology);
+  --color-english: var(--english);
+  --color-history: var(--history);
+  --color-geography: var(--geography);
+
+  --font-display: 'Fredoka', 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+
+  --radius-card: 26px;
+  --radius-btn: 20px;
+  --radius-option: 20px;
+  --radius-key: 12px;
+  --radius-pill: 999px;
+}
+
+/* Registered colours so a world switch cross-fades instead of snapping (optional polish, §15.4). */
+@property --sky1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #bfe7ff;
+}
+@property --sky2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #f1fbff;
+}
+@property --surface {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ffffff;
+}
+@property --surface2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #eef6ff;
+}
+@property --ink {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #1b2845;
+}
+@property --ledge {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #c4d8ee;
+}
+@property --go {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #1f9d55;
+}
+@property --go-d {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #137a3f;
+}
+@property --trail-bg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #bfe3a0;
+}
+@property --tab-on {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #d9f3e3;
+}
+
+@layer base {
+  html {
+    transition:
+      --sky1 0.45s,
+      --sky2 0.45s,
+      --surface 0.45s,
+      --surface2 0.45s,
+      --ink 0.45s,
+      --ledge 0.45s,
+      --go 0.45s,
+      --go-d 0.45s,
+      --trail-bg 0.45s,
+      --tab-on 0.45s;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 16px;
+  }
+  /* Focus Not Obscured (WCAG 2.2 SC 2.4.11): when Tab scrolls a control into view, keep it, its label
+     and the 7px focus ring above the fixed tab bar (border 3px + 2 × 0.4rem padding + --tab-h). */
+  html:has(.tabbar) {
+    scroll-padding-bottom: calc(var(--tab-h) + 0.8rem + 3px + env(safe-area-inset-bottom, 0px) + 24px);
+  }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--ink);
+    background-color: var(--sky2);
+    background-image: linear-gradient(180deg, var(--sky1) 0%, var(--sky2) 75vh);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: var(--lh-tight);
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  button {
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+  a {
+    color: inherit;
+  }
+  :focus-visible {
+    outline: 4px solid var(--focus);
+    outline-offset: 3px;
+  }
+  [tabindex='-1']:focus {
+    outline: none;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--go) 30%, transparent);
+  }
+}
+
+/* Reduced motion: everything stops (§12, §15.9). Framer Motion follows via MotionConfig reducedMotion="user". */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

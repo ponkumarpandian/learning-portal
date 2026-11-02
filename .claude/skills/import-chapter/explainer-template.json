@@ -1,0 +1,39 @@
+{
+  "id": "tmpl-concept",
+  "subject": "physics",
+  "title": "<Concept title, kid-friendly, using the book's term>",
+  "scenes": [
+    {
+      "visual": "LightRay",
+      "props": { "scene": "torch", "beam": false },
+      "minDuration": 8,
+      "steps": [{ "at": 2, "props": { "beam": true } }],
+      "narration": "<Short sentences. Use the book's own example and exact term, e.g. rectilinear propagation.>",
+      "source": { "pages": [61] }
+    },
+    {
+      "visual": "LightRay",
+      "props": { "scene": "shadow", "showShadow": false },
+      "minDuration": 10,
+      "steps": [{ "at": 3, "props": { "showShadow": true } }],
+      "narration": "<Second idea, from page 62 only.>",
+      "captions": "<optional; defaults to the narration>",
+      "checkpoint": { "questionId": "tmpl-concept-cp1" },
+      "source": { "pages": [62] }
+    }
+  ],
+  "questions": [
+    {
+      "id": "tmpl-concept-cp1",
+      "type": "mcq",
+      "prompt": "<checkpoint question about the scene just shown>",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["<right>", "<distractor 1>", "<distractor 2>"],
+      "answer": "<right>",
+      "hints": ["<clue>"],
+      "explanation": "<one line>",
+      "source": { "pages": [62] }
+    }
+  ]
+}

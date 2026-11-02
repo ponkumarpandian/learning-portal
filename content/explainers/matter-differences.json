@@ -1,0 +1,91 @@
+{
+  "id": "matter-differences",
+  "subject": "chemistry",
+  "title": "Solids, liquids and gases side by side",
+  "scenes": [
+    {
+      "visual": "ParticleBox",
+      "props": { "compare": true, "row": "shape-volume" },
+      "minDuration": 11,
+      "narration": "Let's put solids, liquids and gases side by side, at room temperature. Solids have a definite shape and a definite volume. Liquids have no definite shape, but have a definite volume. Gases have neither definite shape nor definite volume.",
+      "source": { "pages": [61] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "compare": true, "row": "position" },
+      "minDuration": 11,
+      "narration": "Now look at the molecules. The position of the molecules of a solid is fixed. In a liquid, the molecules can change their position within the liquid. In a gas, the molecules can move freely in all directions.",
+      "checkpoint": { "questionId": "matter-differences-cp1" },
+      "source": { "pages": [61] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "compare": true, "row": "compression", "compress": 0 },
+      "steps": [{ "at": 4, "props": { "compress": 0.4 } }],
+      "minDuration": 9,
+      "narration": "Let's try to squeeze them. Solids cannot be compressed. Liquids can be very slightly compressed. Gas can be easily compressed.",
+      "source": { "pages": [61] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "compare": true, "row": "flow" },
+      "minDuration": 10,
+      "narration": "What about flowing? Solids cannot flow. They can be heaped. Liquids flow from higher to lower level. Gases can flow in all directions.",
+      "checkpoint": { "questionId": "matter-differences-cp2" },
+      "source": { "pages": [61] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "compare": true, "row": "spaces-forces", "highlight": "space" },
+      "minDuration": 14,
+      "narration": "Solids have very small intermolecular spaces, and very strong intermolecular forces of attraction. Liquids have small intermolecular spaces, but larger than the solids, and less intermolecular forces of attraction than the solids. Gases have very large intermolecular spaces.",
+      "source": { "pages": [61, 62] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "compare": true, "row": "surfaces" },
+      "minDuration": 12,
+      "narration": "Last, free surfaces. Solids have infinite number of free surfaces, and they do not need a vessel to contain them. Liquids have only one free surface, and they need a vessel to contain them. And gases have no free surface at all.",
+      "checkpoint": { "questionId": "matter-differences-cp3" },
+      "source": { "pages": [60, 62] }
+    }
+  ],
+  "questions": [
+    {
+      "id": "matter-differences-cp1",
+      "type": "mcq",
+      "prompt": "In which state can the molecules move freely in all directions?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["Gas", "Liquid", "Solid"],
+      "answer": "Gas",
+      "hints": ["Which state's molecules are very far apart?"],
+      "explanation": "The molecules of a gas can move freely in all directions.",
+      "source": { "pages": [61] }
+    },
+    {
+      "id": "matter-differences-cp2",
+      "type": "mcq",
+      "prompt": "Which one can be heaped?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["Solids", "Liquids", "Gases"],
+      "answer": "Solids",
+      "hints": ["Remember the sugar from the bowl."],
+      "explanation": "Solids cannot flow — they can be heaped.",
+      "source": { "pages": [61] }
+    },
+    {
+      "id": "matter-differences-cp3",
+      "type": "mcq",
+      "prompt": "How many free surfaces does a liquid have?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["Only one", "Infinite", "None"],
+      "answer": "Only one",
+      "hints": ["Solids have infinite, gases have none…"],
+      "explanation": "Liquids have only one free surface.",
+      "source": { "pages": [62] }
+    }
+  ]
+}

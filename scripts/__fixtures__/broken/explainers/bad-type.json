@@ -1,0 +1,10 @@
+{
+  "id": "bad-type",
+  "subject": "physics",
+  "title": "Explainer with a type error",
+  "sample": true,
+  "scenes": [
+    { "visual": "LightRay", "props": {}, "minDuration": "eight", "narration": "Light travels in a straight line." }
+  ],
+  "questions": []
+}

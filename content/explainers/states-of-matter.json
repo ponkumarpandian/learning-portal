@@ -1,0 +1,25 @@
+{
+  "id": "states-of-matter",
+  "subject": "chemistry",
+  "title": "Solids, liquids and gases — what are particles doing?",
+  "sample": true,
+  "scenes": [
+    { "visual": "ParticleBox", "props": { "state": "solid", "temperature": 0 }, "minDuration": 8,
+      "narration": "Everything around you is made of tiny particles. In a solid, like ice, the particles are packed tightly and can only wiggle in place. That's why a solid keeps its shape." },
+    { "visual": "ParticleBox", "props": { "state": "solid", "temperature": 0 },
+      "steps": [ { "at": 0, "props": { "temperature": 40, "state": "liquid" } } ], "minDuration": 10,
+      "narration": "Now let's heat it. The particles get energy, move faster and start sliding past each other. The ice melts into water — a liquid. A liquid flows and takes the shape of its container." },
+    { "visual": "ParticleBox", "props": { "state": "liquid", "temperature": 40 },
+      "steps": [ { "at": 0, "props": { "temperature": 100, "state": "gas" } } ], "minDuration": 10,
+      "narration": "Heat it even more and the particles zoom around freely, far apart from each other. The water boils and becomes steam — a gas. A gas spreads out to fill any space.",
+      "checkpoint": { "questionId": "sm-cp1" } },
+    { "visual": "ParticleBox", "props": { "state": "gas", "temperature": 100 },
+      "steps": [ { "at": 0, "props": { "temperature": 20, "state": "liquid" } } ], "minDuration": 8,
+      "narration": "Cool the steam down and the particles slow down and come closer again. Steam turns back into water drops. This is called condensation — like water drops on a cold glass!" }
+  ],
+  "questions": [
+    { "id": "sm-cp1", "type": "mcq", "prompt": "In which state are the particles farthest apart?", "difficulty": "easy", "marks": 1,
+      "options": ["Solid", "Liquid", "Gas"], "answer": "Gas",
+      "explanation": "Gas particles move freely and spread far apart — that's why gases fill any space." }
+  ]
+}

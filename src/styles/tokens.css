@@ -1,0 +1,287 @@
+/*
+ * Avantika's Adventure: design tokens (SPEC §15.4, §15.5, §15.7)
+ *
+ * Canonical token values. docs/theme-prototype.html inlines this exact file
+ * (kept in sync by `node docs/design/check-tokens.mjs --sync`).
+ *
+ * <html data-world="meadow|ocean|space" data-theme="light|dark" data-text="big|bigger">
+ *   data-theme is the RESOLVED theme (night "auto" follows prefers-color-scheme).
+ *   Space is always dark, whatever data-theme says.
+ *
+ * No Tailwind directives here; src/styles/index.css imports this file.
+ * Contrast is verified by docs/design/check-tokens.mjs (WCAG AA).
+ * Text placed directly on --go or a subject colour must be "large"
+ * (>= 1.35rem, i.e. >= 24px at the Big setting) or be an emoji. Smaller text
+ * on a "go" fill uses --go-d (e.g. the "Start here!" tag).
+ */
+
+/* ---------- Shared (all worlds) ---------- */
+:root {
+  /* Subject colours (§3). They never change between worlds. */
+  --maths: #3f7bf6;
+  --maths-d: #2a5bd0;
+  --on-maths: #ffffff;
+  --physics: #7a5af8;
+  --physics-d: #5536d1;
+  --on-physics: #ffffff;
+  --chemistry: #14b8a6;
+  --chemistry-d: #0d8a7c;
+  --on-chemistry: #08343a;
+  --biology: #43a047;
+  --biology-d: #2e7a32;
+  --on-biology: #ffffff;
+  --english: #f0643c;
+  --english-d: #c94721;
+  --on-english: #ffffff;
+  --history: #b45309;
+  --history-d: #873d05;
+  --on-history: #ffffff;
+  --geography: #0ea5e9;
+  --geography-d: #0a7fb5;
+  --on-geography: #08343a;
+
+  /* Activity colours (tick-off items, rest stops, breaks) */
+  --tuition: #64748b;
+  --tuition-d: #475266;
+  --on-tuition: #ffffff;
+  --lang: #ff5f87;
+  --lang-d: #d63d66;
+  --on-lang: #3d0716;
+  --dance: #d946ef;
+  --dance-d: #a92bbd;
+  --on-dance: #2d0435;
+  --sport: #84cc16;
+  --sport-d: #5f9a0c;
+  --on-sport: #1f3300;
+  --fun: #ffbf1f;
+  --fun-d: #d69a00;
+  --on-fun: #3d2a00;
+
+  /* Stars, ticks, medals */
+  --gold: #ffc83d;
+  --gold-d: #d99e00;
+  --on-gold: #3a2600;
+
+  /* Catch-up state: soft amber, never red (§5.2, §12) */
+  --catch: #f59e0b;
+  --catch-d: #c27803;
+
+  /* Type (§15.7). Everything is rem so the Big/Bigger setting scales the app. */
+  --font-display: 'Fredoka', 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  --px: calc(1rem / 18); /* 1 design px at the Big (18px) setting */
+  --fs-xs: 0.78rem; /* tiny labels (caterpillar, sticker names) */
+  --fs-sm: 0.89rem; /* times, captions */
+  --fs-body: 1rem; /* 18px / 20px */
+  --fs-lg: 1.15rem; /* card titles, row names */
+  --fs-question: 1.35rem; /* questions (~24px) */
+  --fs-button: 1.35rem; /* chunky button label: "large text" for AA */
+  --fs-greeting: 1.45rem; /* Today greeting */
+  --fs-h1: 1.75rem;
+  --fs-display: 2.4rem; /* medal number, big emoji */
+  --lh-tight: 1.2;
+  --lh-body: 1.45;
+  --measure: 60ch; /* line length cap */
+  --content-max: calc(560 * var(--px));
+
+  /* Corners by role (§15.6) */
+  --r-card: 26px;
+  --r-btn: 20px;
+  --r-option: 20px;
+  --r-key: 12px;
+  --r-pill: 999px;
+
+  /* The flat "ledge" (3D bottom edge). Never blurry shadows. */
+  --ledge-h: 6px;
+  --ledge-h-sm: 4px;
+  --press-y: 5px;
+
+  /* Component sizes (scale with text size) */
+  --tap-min: calc(48 * var(--px));
+  --btn-h: calc(64 * var(--px)); /* ChunkyButton >= 60px */
+  --option-h: calc(68 * var(--px)); /* OptionButton >= 64px */
+  --key: calc(46 * var(--px)); /* A/B/C/D key square */
+  --tab-h: calc(76 * var(--px)); /* tab item >= 68px */
+  --close: calc(56 * var(--px)); /* lesson ✕ */
+  --stone: calc(84 * var(--px));
+  --stone-now: calc(104 * var(--px));
+  --step: calc(48 * var(--px)); /* caterpillar segment */
+
+  /* Spacing scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+
+  /* Trail (§15.3) */
+  --trail-ground-w: 30; /* SVG stroke widths (unitless, px) */
+  --trail-dot-w: 7;
+  --trail-dash: 0 17;
+  --trail-offsets: 50% 74% 50% 26%; /* documentation; layout code repeats this */
+
+  /* Motion */
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms;
+  --dur-med: 240ms;
+  --dur-slow: 420ms;
+  --halo-dur: 2.4s;
+}
+
+html {
+  font-size: 112.5%;
+} /* Big: 18px base */
+html[data-text='bigger'] {
+  font-size: 125%;
+} /* Bigger: 20px base */
+
+/* ---------- 🌻 Meadow (default), day ---------- */
+:root,
+html[data-world='meadow'] {
+  color-scheme: light;
+  --sky1: #bfe7ff;
+  --sky2: #f1fbff;
+  --surface: #ffffff;
+  --surface2: #eef6ff;
+  --ink: #1b2845;
+  --ink-soft: #4a5878;
+  --line: #d3e2f3;
+  --ledge: #c4d8ee;
+  --go: #1f9d55;
+  --go-d: #137a3f;
+  --on-go: #ffffff;
+  --trail: #ffffff;
+  --trail-bg: #bfe3a0;
+  --trail-dot-w: 8; /* bigger kolam dots on the pale light-world trail */
+  --tab-on: #d9f3e3;
+  --ok-bg: #d8f6e2;
+  --ok-ink: #0c5a2c;
+  --hint-bg: #fff1cc;
+  --hint-ink: #6a4000;
+  --deco: #ffd23f;
+  --deco2: #ffffff;
+  --tara: #a7b8d6;
+  --tara-ear: #ffb0c8;
+  --focus: #1d4ed8;
+}
+
+/* ---------- 🌻 Meadow, night: deep indigo ---------- */
+html[data-world='meadow'][data-theme='dark'] {
+  color-scheme: dark;
+  --sky1: #0e1433;
+  --sky2: #1c2556;
+  --surface: #232d64;
+  --surface2: #2c3874;
+  --ink: #f4f6ff;
+  --ink-soft: #c2cbf0;
+  --line: #3b4889;
+  --ledge: #121940;
+  --go: #1f9d55;
+  --go-d: #137a3f;
+  --on-go: #ffffff;
+  --trail: #cfd8ff;
+  --trail-bg: #2c376f;
+  --trail-dot-w: 7;
+  --tab-on: #1d4a4a;
+  --ok-bg: #164a35;
+  --ok-ink: #d6ffe6;
+  --hint-bg: #4a3812;
+  --hint-ink: #ffe9b8;
+  --deco: #ffe9a8;
+  --deco2: #36437f;
+  --tara: #aab4dc;
+  --tara-ear: #ff9fbd;
+  --focus: #ffd84d;
+}
+
+/* ---------- 🐠 Ocean, day ---------- */
+html[data-world='ocean'] {
+  color-scheme: light;
+  --sky1: #86e0ef;
+  --sky2: #eafcff;
+  --surface: #ffffff;
+  --surface2: #e9fafc;
+  --ink: #0b2a3c;
+  --ink-soft: #2f4d5b;
+  --line: #c3e7ee;
+  --ledge: #a9d7e1;
+  --go: #e8436f;
+  --go-d: #bd2853;
+  --on-go: #ffffff;
+  --trail: #ffffff;
+  --trail-bg: #ffe2ae;
+  --trail-dot-w: 8; /* bigger kolam dots on the pale light-world trail */
+  --tab-on: #ffe0e9;
+  --ok-bg: #d8f6e2;
+  --ok-ink: #0c5a2c;
+  --hint-bg: #fff1cc;
+  --hint-ink: #6a4000;
+  --deco: #ffffff;
+  --deco2: #4cc3da;
+  --tara: #9fb6d0;
+  --tara-ear: #ffa9c2;
+  --focus: #1d4ed8;
+}
+
+/* ---------- 🐠 Ocean, night: deep indigo ---------- */
+html[data-world='ocean'][data-theme='dark'] {
+  color-scheme: dark;
+  --sky1: #0a1838;
+  --sky2: #12305c;
+  --surface: #1b2d62;
+  --surface2: #233a76;
+  --ink: #f2f8ff;
+  --ink-soft: #bcd2ee;
+  --line: #33508f;
+  --ledge: #0d1a40;
+  --go: #e8436f;
+  --go-d: #bd2853;
+  --on-go: #ffffff;
+  --trail: #9ce9f5;
+  --trail-bg: #22406f;
+  --trail-dot-w: 7;
+  --tab-on: #4a2347;
+  --ok-bg: #164a35;
+  --ok-ink: #d6ffe6;
+  --hint-bg: #4a3812;
+  --hint-ink: #ffe9b8;
+  --deco: #8fd9ec;
+  --deco2: #2a6d99;
+  --tara: #a6b6d8;
+  --tara-ear: #ff9fbd;
+  --focus: #ffd84d;
+}
+
+/* ---------- 🚀 Space: always cosy and dark ---------- */
+html[data-world='space'],
+html[data-world='space'][data-theme='light'],
+html[data-world='space'][data-theme='dark'] {
+  color-scheme: dark;
+  --sky1: #151038;
+  --sky2: #2b2168;
+  --surface: #2e2470;
+  --surface2: #3a2f86;
+  --ink: #fbf8ff;
+  --ink-soft: #cfc7f7;
+  --line: #4a3f9e;
+  --ledge: #181243;
+  --go: #ffc93c;
+  --go-d: #d9a000;
+  --on-go: #2a1d00;
+  --trail: #ffe08a;
+  --trail-bg: #3b3088;
+  --tab-on: #4a3d9c;
+  --ok-bg: #17503a;
+  --ok-ink: #d6ffe6;
+  --hint-bg: #4f3c12;
+  --hint-ink: #ffe9b8;
+  --deco: #fff6c8;
+  --deco2: #ff8fb1;
+  --tara: #b9b2ee;
+  --tara-ear: #ff9fc0;
+  --focus: #7fe8ff; /* light cyan: must not read as the yellow --go "selected" border */
+}

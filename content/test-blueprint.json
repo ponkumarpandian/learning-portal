@@ -1,0 +1,22 @@
+{
+  "sectionMinutes": 15,
+  "sectionMarks": 15,
+  "structure": [
+    { "count": 6, "marksEach": 1, "types": ["mcq", "true_false", "fill_blank", "match", "order", "label_diagram", "numeric"] },
+    { "count": 3, "marksEach": 2, "types": ["short_answer", "numeric", "label_diagram"] },
+    { "count": 1, "marksEach": 3, "types": ["think_write"] }
+  ],
+  "sourceMix": { "sinceLastTest": 0.6, "weakTopics": 0.2, "spacedReview": 0.2 },
+  "difficultyMix": { "easy": 0.4, "medium": 0.4, "challenge": 0.2 },
+  "fallback": "If a source pool is empty, fill from sinceLastTest, then any studied lesson. Never include lessons not yet studied.",
+  "windows": {
+    "sat": { "opens": "sat 15:30", "closes": "sun 20:00" },
+    "sun": { "opens": "sun 09:30", "closes": "mon 21:30" }
+  },
+  "bands": [
+    { "min": 90, "label": "Superstar", "emoji": "🌟" },
+    { "min": 75, "label": "Great work", "emoji": "👍" },
+    { "min": 60, "label": "Getting there", "emoji": "💪" },
+    { "min": 0, "label": "Let's grow this one", "emoji": "🌱" }
+  ]
+}

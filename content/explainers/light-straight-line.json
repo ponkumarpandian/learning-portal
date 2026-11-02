@@ -1,0 +1,39 @@
+{
+  "id": "light-straight-line",
+  "subject": "physics",
+  "title": "Light travels in a straight line — torches, corners and shadows",
+  "sample": true,
+  "scenes": [
+    { "visual": "LightRay", "props": { "scene": "torch", "beam": false }, "minDuration": 8,
+      "steps": [ { "at": 2, "props": { "beam": true } } ],
+      "narration": "Switch on a torch. Look at its beam — it is straight! Light always travels in a straight line. This is called rectilinear propagation." },
+    { "visual": "LightRay", "props": { "scene": "corner", "object": "toy" }, "minDuration": 10,
+      "steps": [ { "at": 4, "props": { "showBlockedRay": true } } ],
+      "narration": "A toy is hidden around a corner. Light from the toy travels in a straight line. It cannot bend around the corner to reach our eyes. So we cannot see the toy!" },
+    { "visual": "LightRay", "props": { "scene": "materials", "material": "transparent" }, "minDuration": 12,
+      "steps": [
+        { "at": 0, "props": { "material": "transparent" } },
+        { "at": 4, "props": { "material": "translucent" } },
+        { "at": 8, "props": { "material": "opaque" } }
+      ],
+      "narration": "Clear glass is transparent: it lets almost all light through. Butter paper is translucent: it lets some light through. Wood is opaque: it lets no light through at all.",
+      "checkpoint": { "questionId": "lsl-cp1" } },
+    { "visual": "LightRay", "props": { "scene": "shadow", "object": "ball", "showShadow": false }, "minDuration": 10,
+      "steps": [ { "at": 3, "props": { "showShadow": true } } ],
+      "narration": "Now hold an opaque ball in front of the torch. The ball blocks the light, and a dark shadow forms on the wall behind it. A shadow needs three things: a light source, an opaque object and a screen." },
+    { "visual": "LightRay", "props": { "scene": "pinhole", "showImage": false }, "minDuration": 12,
+      "steps": [ { "at": 5, "props": { "showImage": true } } ],
+      "narration": "This is a pinhole camera. It has a tiny hole. Rays from the top of the object go through the tiny hole in a straight line and land at the bottom. So the image is upside down — we call it inverted!",
+      "checkpoint": { "questionId": "lsl-cp2" } }
+  ],
+  "questions": [
+    { "id": "lsl-cp1", "type": "mcq", "prompt": "Butter paper lets some light through. What kind of material is it?", "difficulty": "easy", "marks": 1,
+      "options": ["Transparent", "Translucent", "Opaque"], "answer": "Translucent",
+      "hints": ["Some light passes — not all, not none."],
+      "explanation": "Translucent materials let some light through, like butter paper." },
+    { "id": "lsl-cp2", "type": "true_false", "prompt": "The image in a pinhole camera is upside down.", "difficulty": "easy", "marks": 1,
+      "answer": true,
+      "hints": ["Think about where the rays from the top of the object land."],
+      "explanation": "Light travels in a straight line through the tiny hole, so the image is upside down (inverted)." }
+  ]
+}

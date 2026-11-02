@@ -1,0 +1,31 @@
+{
+  "startDate": "2026-11-02",
+  "exams": {
+    "mode": "per_subject",
+    "dates": {
+      "maths": "REPLACE_ME", "physics": "REPLACE_ME", "chemistry": "REPLACE_ME", "biology": "REPLACE_ME",
+      "english": "REPLACE_ME", "history": "REPLACE_ME", "geography": "REPLACE_ME"
+    }
+  },
+  "revisionDays": 7,
+  "chapterOrder": {
+    "physics": ["phy-light"],
+    "chemistry": ["che-matter"],
+    "maths": [],
+    "biology": [],
+    "english": [],
+    "history": [],
+    "geography": []
+  },
+  "taughtAlready": [],
+  "examPattern": {
+    "default": [
+      { "section": "A", "title": "Fill in the blanks", "types": ["fill_blank"], "marks": 5 },
+      { "section": "B", "title": "True/False & MCQ", "types": ["true_false", "mcq"], "marks": 10 },
+      { "section": "C", "title": "Match the following", "types": ["match"], "marks": 5 },
+      { "section": "D", "title": "Short answers", "types": ["short_answer", "numeric"], "marks": 20 },
+      { "section": "E", "title": "Long answers", "types": ["short_answer", "label_diagram"], "marks": 25 },
+      { "section": "F", "title": "Think and write", "types": ["think_write"], "marks": 15 }
+    ]
+  }
+}

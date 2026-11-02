@@ -1,0 +1,97 @@
+{
+  "id": "phy-light",
+  "subject": "physics",
+  "title": "Light",
+  "order": 4,
+  "sample": true,
+  "status": "approved",
+  "parentNotes": [
+    "SAMPLE content from SPEC Appendix B — replace with the real chapter imported from Avantika's textbook (§13A).",
+    "SAMPLE: questionBank items phy-light-1-q3 to phy-light-1-q10 were added only so the engine (tests, Daily Assignment, mastery) has enough questions to work with. They use only the facts already in this sample.",
+    "Video search words (for the parent): \"rectilinear propagation of light class 6\", \"transparent translucent opaque class 6\", \"pinhole camera class 6\"."
+  ],
+  "lessons": [
+    {
+      "id": "phy-light-1",
+      "title": "Light travels in a straight line",
+      "videos": [
+        { "role": "primary", "kind": "explainer", "explainerId": "light-straight-line" },
+        { "role": "alternate", "kind": "youtube", "youtubeId": "REPLACE_ME", "title": "Rectilinear propagation of light", "start": 0, "end": 300,
+          "checkpoints": [ { "at": 120, "questionId": "phy-light-1-cp1", "rewindTo": 80 } ] }
+      ],
+      "warmup": [
+        { "front": "Name one natural source of light.", "back": "The Sun ☀️ (also fireflies, stars)." }
+      ],
+      "cards": [
+        { "title": "Light goes straight!", "emoji": "🔦", "body": "Light always travels in a straight line. That's why a torch makes a straight beam." },
+        { "title": "Why can't we see around corners?", "emoji": "🧱", "body": "Light from things behind a corner can't bend around it to reach our eyes.", "reveal": "Because light travels in straight lines!" },
+        { "title": "Transparent, translucent, opaque", "emoji": "🪟", "body": "Transparent lets almost all light through (clear glass). Translucent lets some through (butter paper). Opaque lets none through (wood).",
+          "didYouKnow": "Your hand looks red when you hold a torch behind it because a little light passes through thin skin!" },
+        { "title": "Shadows", "emoji": "🌑", "body": "A shadow forms when an opaque object blocks light. Shadows need a light source, an opaque object and a screen." }
+      ],
+      "practice": [
+        { "id": "phy-light-1-p1", "type": "match", "prompt": "Match each material to its type.", "difficulty": "easy", "marks": 3,
+          "pairs": [["Clear glass", "Transparent"], ["Butter paper", "Translucent"], ["Wooden door", "Opaque"]],
+          "hints": ["Ask: does light pass fully, partly, or not at all?"],
+          "explanation": "Clear glass lets almost all light through, butter paper lets some through, and wood blocks it completely." }
+      ],
+      "notebook": "Draw a torch, a ball and a wall in your notebook. Show the straight light rays and the shadow on the wall.",
+      "check": [
+        { "id": "phy-light-1-c1", "type": "fill_blank", "prompt": "Light travels in a ____ line.", "difficulty": "easy", "marks": 1,
+          "answer": "straight", "explanation": "Light always travels in straight lines — that's called rectilinear propagation." },
+        { "id": "phy-light-1-c2", "type": "true_false", "prompt": "A shadow is formed when an opaque object blocks light.", "difficulty": "easy", "marks": 1,
+          "answer": true, "explanation": "Opaque objects stop light completely, so a dark area — the shadow — forms behind them.", "videoRef": { "video": "primary", "scene": 3 } },
+        { "id": "phy-light-1-c3", "type": "short_answer", "prompt": "Why can't we see an object hidden around a corner?", "difficulty": "medium", "marks": 2,
+          "modelAnswer": "Light travels in straight lines, so light from the object cannot bend around the corner to reach our eyes.",
+          "keywords": ["straight line", "cannot bend", "reach our eyes"],
+          "explanation": "Remember: no light reaching your eyes = you can't see it." }
+      ],
+      "keyRules": [
+        "Light travels in straight lines.",
+        "Transparent = all light passes · Translucent = some · Opaque = none.",
+        "Shadow = light source + opaque object + screen."
+      ]
+    }
+  ],
+  "questionBank": [
+    { "id": "phy-light-1-cp1", "lessonId": "phy-light-1", "type": "mcq", "prompt": "Which of these is opaque?", "difficulty": "easy", "marks": 1,
+      "options": ["Clear glass", "Butter paper", "A book", "Clean water"], "answer": "A book",
+      "explanation": "A book blocks all light, so it is opaque." },
+    { "id": "phy-light-1-q1", "lessonId": "phy-light-1", "type": "mcq", "prompt": "The image formed in a pinhole camera is:", "difficulty": "medium", "marks": 1,
+      "options": ["Upright", "Upside down (inverted)", "Coloured differently", "Not formed at all"], "answer": "Upside down (inverted)",
+      "explanation": "Rays from the top of the object go through the tiny hole in a straight line and land at the bottom, so the image is inverted." },
+    { "id": "phy-light-1-q2", "lessonId": "phy-light-1", "type": "think_write", "prompt": "Your shadow is long in the evening and short at noon. Why?", "difficulty": "challenge", "marks": 3,
+      "modelAnswer": "At noon the Sun is high overhead, so light falls almost straight down and the shadow is short. In the evening the Sun is low, so light comes from the side and the shadow stretches long.",
+      "keywords": ["Sun high", "Sun low", "angle of light"],
+      "explanation": "The lower the light source, the longer the shadow." },
+    { "id": "phy-light-1-q3", "lessonId": "phy-light-1", "type": "true_false", "prompt": "Butter paper is translucent.", "difficulty": "easy", "marks": 1,
+      "answer": true, "fromBook": false,
+      "explanation": "Butter paper lets some light through, so it is translucent." },
+    { "id": "phy-light-1-q4", "lessonId": "phy-light-1", "type": "fill_blank", "prompt": "A shadow forms when an ____ object blocks light.", "difficulty": "easy", "marks": 1,
+      "answer": "opaque", "fromBook": false, "variantOf": "phy-light-1-c2", "videoRef": { "video": "primary", "scene": 3 },
+      "explanation": "Opaque objects let no light through, so they block it and make a shadow." },
+    { "id": "phy-light-1-q5", "lessonId": "phy-light-1", "type": "mcq", "prompt": "Which three things are needed to make a shadow?", "difficulty": "medium", "marks": 1,
+      "options": ["Only a light source", "A light source and clear glass", "A light source, an opaque object and a screen", "A screen and butter paper"],
+      "answer": "A light source, an opaque object and a screen", "fromBook": false, "videoRef": { "video": "primary", "scene": 3 },
+      "explanation": "Shadow = light source + opaque object + screen." },
+    { "id": "phy-light-1-q6", "lessonId": "phy-light-1", "type": "match", "prompt": "Match each word to how much light passes through.", "difficulty": "medium", "marks": 3,
+      "pairs": [["Transparent", "Almost all light passes"], ["Translucent", "Some light passes"], ["Opaque", "No light passes"]], "fromBook": false,
+      "videoRef": { "video": "primary", "scene": 2 },
+      "explanation": "Transparent lets almost all light through, translucent lets some through, and opaque lets none through." },
+    { "id": "phy-light-1-q7", "lessonId": "phy-light-1", "type": "short_answer", "prompt": "Why does a torch make a straight beam?", "difficulty": "medium", "marks": 2,
+      "modelAnswer": "Because light always travels in a straight line.", "keywords": ["straight line"], "fromBook": false,
+      "videoRef": { "video": "primary", "scene": 0 },
+      "explanation": "Light travels in straight lines, so the beam from a torch is straight." },
+    { "id": "phy-light-1-q8", "lessonId": "phy-light-1", "type": "short_answer", "prompt": "In a pinhole camera, why does light from the top of an object land at the bottom of the screen?", "difficulty": "challenge", "marks": 2,
+      "modelAnswer": "Light travels in a straight line through the tiny hole, so rays from the top of the object go down to the bottom. That is why the image is upside down (inverted).",
+      "keywords": ["straight line", "tiny hole", "inverted"], "fromBook": false, "variantOf": "phy-light-1-q1",
+      "videoRef": { "video": "primary", "scene": 4 },
+      "explanation": "Rays from the top of the object go through the tiny hole in a straight line and land at the bottom, so the image is inverted." },
+    { "id": "phy-light-1-q9", "lessonId": "phy-light-1", "type": "fill_blank", "prompt": "Light travelling in straight lines is called ____ propagation.", "difficulty": "easy", "marks": 1,
+      "answer": "rectilinear", "fromBook": false, "variantOf": "phy-light-1-c1",
+      "explanation": "Light always travels in straight lines — that's called rectilinear propagation." },
+    { "id": "phy-light-1-q10", "lessonId": "phy-light-1", "type": "order", "prompt": "Put these in order to make a shadow on a wall.", "difficulty": "medium", "marks": 1,
+      "sequence": ["Switch on the torch", "Hold an opaque object in front of the light", "See the shadow on the wall (the screen)"], "fromBook": false,
+      "explanation": "First you need a light source, then an opaque object to block the light, and the shadow falls on the screen." }
+  ]
+}

@@ -1,0 +1,8 @@
+dist
+coverage
+docs/theme-prototype.html
+content/**/*.json
+docs/SPEC.md
+scripts/__fixtures__/**/*.json
+playwright-report
+test-results

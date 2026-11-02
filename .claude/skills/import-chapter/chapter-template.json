@@ -1,0 +1,264 @@
+{
+  "id": "phy-tmpl",
+  "subject": "physics",
+  "title": "<Chapter title exactly as printed>",
+  "order": 4,
+  "status": "draft",
+  "book": {
+    "title": "<from source/books.json>",
+    "publisher": "<publisher>",
+    "edition": "<edition>",
+    "chapterNo": 4
+  },
+  "sourceDir": "source/physics/04-tmpl",
+  "parentNotes": [
+    "Video search words — lesson phy-tmpl-1: \"<book term> class 6\", \"<concept> experiment for kids\"",
+    "Missing from the pages (not taught): <topic the exam portion lists but the pages don't cover>",
+    "Teacher's notes vs book: <difference>; answers follow the teacher's notes"
+  ],
+  "lessons": [
+    {
+      "id": "phy-tmpl-1",
+      "title": "<Lesson title, book order>",
+      "source": { "pages": [61, 62] },
+      "videos": [
+        { "role": "primary", "kind": "explainer", "explainerId": "tmpl-concept" },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "<what the parent should look for>",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [{ "at": 120, "questionId": "phy-tmpl-1-q1", "rewindTo": 80 }]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "<recall question from the previous lesson>",
+          "back": "<answer from that lesson's pages>",
+          "source": { "pages": [58] }
+        }
+      ],
+      "cards": [
+        {
+          "title": "<Definition card>",
+          "emoji": "📘",
+          "body": "\"<definition in the book's exact wording>\"",
+          "reveal": "<tap-to-reveal answer>",
+          "source": { "pages": [61] }
+        },
+        {
+          "title": "<Idea card>",
+          "emoji": "🔦",
+          "body": "<one idea, kid-friendly words around the book's terms>",
+          "example": "<the book's own example>",
+          "didYouKnow": "<fact printed on these pages>",
+          "source": { "pages": [62] }
+        }
+      ],
+      "practice": [
+        {
+          "id": "phy-tmpl-1-p1",
+          "type": "match",
+          "prompt": "Match each <thing> to its <type>.",
+          "difficulty": "easy",
+          "marks": 2,
+          "pairs": [
+            ["<a>", "<type A>"],
+            ["<b>", "<type B>"]
+          ],
+          "hints": ["<a nudge, not the answer>"],
+          "explanation": "<why, in one or two sentences>",
+          "source": { "pages": [62] },
+          "fromBook": false
+        }
+      ],
+      "notebook": "<Offline task: draw and label …, or solve these 3 sums in your notebook>",
+      "check": [
+        {
+          "id": "phy-tmpl-1-c1",
+          "type": "fill_blank",
+          "prompt": "<Sentence with a ____ blank>",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "<word>",
+          "accept": ["<alternative spelling the book allows>"],
+          "explanation": "<why>",
+          "source": { "pages": [61] },
+          "fromBook": false
+        },
+        {
+          "id": "phy-tmpl-1-c2",
+          "type": "true_false",
+          "prompt": "<Statement from the pages>",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "videoRef": { "video": "primary", "scene": 1 },
+          "explanation": "<why>",
+          "source": { "pages": [62] },
+          "fromBook": false
+        },
+        {
+          "id": "phy-tmpl-1-c3",
+          "type": "short_answer",
+          "prompt": "<Why/how question>",
+          "difficulty": "medium",
+          "marks": 2,
+          "modelAnswer": "<answer in the book's or teacher's wording>",
+          "keywords": ["<key term>", "<key term>"],
+          "explanation": "<why>",
+          "source": { "pages": [62] },
+          "fromBook": false
+        }
+      ],
+      "keyRules": ["<rule in the book's wording>", "<rule in the book's wording>"]
+    }
+  ],
+  "questionBank": [
+    {
+      "id": "phy-tmpl-1-q1",
+      "lessonId": "phy-tmpl-1",
+      "type": "mcq",
+      "prompt": "<question>",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["<right>", "<distractor 1>", "<distractor 2>"],
+      "answer": "<right>",
+      "explanation": "<why>",
+      "source": { "pages": [61] },
+      "fromBook": false
+    },
+    {
+      "id": "phy-tmpl-1-q2",
+      "lessonId": "phy-tmpl-1",
+      "type": "true_false",
+      "prompt": "<statement>",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "explanation": "<why>",
+      "source": { "pages": [61] },
+      "fromBook": true,
+      "bookRef": "Ex. A Q2"
+    },
+    {
+      "id": "phy-tmpl-1-q3",
+      "lessonId": "phy-tmpl-1",
+      "type": "fill_blank",
+      "prompt": "<sentence with ____>",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "<word>",
+      "explanation": "<why>",
+      "source": { "pages": [62] },
+      "fromBook": true,
+      "bookRef": "Ex. B Q1"
+    },
+    {
+      "id": "phy-tmpl-1-q4",
+      "lessonId": "phy-tmpl-1",
+      "type": "match",
+      "prompt": "Match the following.",
+      "difficulty": "medium",
+      "marks": 3,
+      "pairs": [
+        ["<a>", "<1>"],
+        ["<b>", "<2>"],
+        ["<c>", "<3>"]
+      ],
+      "explanation": "<why>",
+      "source": { "pages": [63] },
+      "fromBook": true,
+      "bookRef": "Ex. C"
+    },
+    {
+      "id": "phy-tmpl-1-q5",
+      "lessonId": "phy-tmpl-1",
+      "type": "order",
+      "prompt": "Put the steps in order.",
+      "difficulty": "medium",
+      "marks": 2,
+      "sequence": ["<step 1>", "<step 2>", "<step 3>"],
+      "explanation": "<why>",
+      "source": { "pages": [62] },
+      "fromBook": false
+    },
+    {
+      "id": "phy-tmpl-1-q6",
+      "lessonId": "phy-tmpl-1",
+      "type": "label_diagram",
+      "prompt": "Label the diagram.",
+      "difficulty": "medium",
+      "marks": 2,
+      "image": "media/images/phy-tmpl-fig4-2.png",
+      "hotspots": [
+        { "id": "h1", "x": 30, "y": 40, "label": "<label printed in the book>" },
+        { "id": "h2", "x": 70, "y": 60, "label": "<label>" }
+      ],
+      "explanation": "<why>",
+      "source": { "pages": [62] },
+      "fromBook": false
+    },
+    {
+      "id": "phy-tmpl-1-q7",
+      "lessonId": "phy-tmpl-1",
+      "type": "numeric",
+      "prompt": "<sum using the book's numbers>",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": 12.5,
+      "tolerance": 0.1,
+      "unit": "cm",
+      "explanation": "<worked steps>",
+      "source": { "pages": [63] },
+      "fromBook": true,
+      "bookRef": "Ex. D Q3"
+    },
+    {
+      "id": "phy-tmpl-1-q8",
+      "lessonId": "phy-tmpl-1",
+      "type": "short_answer",
+      "prompt": "<book exercise question>",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "<answer from the pages or teacher's notes>",
+      "keywords": ["<term>"],
+      "explanation": "<why>",
+      "source": { "pages": [63], "notes": "notebook-1.jpg" },
+      "fromBook": true,
+      "bookRef": "Ex. D Q1"
+    },
+    {
+      "id": "phy-tmpl-1-q9",
+      "lessonId": "phy-tmpl-1",
+      "type": "think_write",
+      "prompt": "<think-and-write question>",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "<model answer>",
+      "keywords": ["<term>", "<term>"],
+      "explanation": "<why>",
+      "source": { "pages": [63] },
+      "fromBook": true,
+      "bookRef": "Ex. E Q1"
+    },
+    {
+      "id": "phy-tmpl-1-q10",
+      "lessonId": "phy-tmpl-1",
+      "type": "mcq",
+      "prompt": "<exercise whose answer is not on the pages>",
+      "difficulty": "challenge",
+      "marks": 1,
+      "options": ["<draft answer>", "<option 2>", "<option 3>", "<option 4>"],
+      "answer": "<draft answer>",
+      "explanation": "<draft — parent to confirm>",
+      "source": { "pages": [64] },
+      "fromBook": true,
+      "bookRef": "Ex. A Q5",
+      "needsReview": true,
+      "variantOf": "phy-tmpl-1-q1"
+    }
+  ]
+}

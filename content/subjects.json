@@ -1,0 +1,9 @@
+[
+  { "id": "maths", "name": "Maths", "emoji": "📘", "colour": "#3f7bf6", "sessionsPerWeek": 5 },
+  { "id": "physics", "name": "Physics", "emoji": "⚡", "colour": "#7a5af8", "sessionsPerWeek": 3 },
+  { "id": "chemistry", "name": "Chemistry", "emoji": "🧪", "colour": "#14b8a6", "sessionsPerWeek": 3 },
+  { "id": "biology", "name": "Biology", "emoji": "🌿", "colour": "#43a047", "sessionsPerWeek": 3 },
+  { "id": "english", "name": "English", "emoji": "📖", "colour": "#f0643c", "sessionsPerWeek": 3 },
+  { "id": "history", "name": "History / Civics", "emoji": "🏛️", "colour": "#b45309", "sessionsPerWeek": 3 },
+  { "id": "geography", "name": "Geography", "emoji": "🌏", "colour": "#0ea5e9", "sessionsPerWeek": 3 }
+]

@@ -1,0 +1,10 @@
+node_modules
+dist
+dev-dist
+coverage
+playwright-report
+test-results
+*.local
+# Family-private textbook photos/PDFs (§13A) — never push
+source/
+docs/design/

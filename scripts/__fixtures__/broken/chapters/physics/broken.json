@@ -1,0 +1,29 @@
+{
+  "id": "phy-broken",
+  "subject": "physics",
+  "title": "Deliberately broken chapter (validator fixture)",
+  "order": 1,
+  "sample": true,
+  "status": "draft",
+  "lessons": [
+    {
+      "id": "phy-broken-1",
+      "title": "A lesson with problems",
+      "videos": [
+        { "role": "primary", "kind": "youtube", "youtubeId": "REPLACE_ME", "title": "Some clip", "start": 0, "end": 120,
+          "checkpoints": [ { "at": 60, "questionId": "does-not-exist", "rewindTo": 30 } ] }
+      ],
+      "cards": [ { "title": "Light goes straight!", "body": "Light travels in a straight line." } ],
+      "practice": [],
+      "notebook": "Draw a torch beam.",
+      "check": [
+        { "id": "phy-broken-1-c1", "type": "true_false", "prompt": "Light travels in a straight line.", "difficulty": "easy", "marks": 1,
+          "answer": true, "explanation": "It does." },
+        { "id": "phy-broken-1-c1", "type": "fill_blank", "prompt": "Light travels in a ____ line.", "difficulty": "easy", "marks": 1,
+          "answer": "straight", "explanation": "Straight lines." }
+      ],
+      "keyRules": ["Light travels in straight lines."]
+    }
+  ],
+  "questionBank": []
+}

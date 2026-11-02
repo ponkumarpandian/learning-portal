@@ -1,0 +1,81 @@
+{
+  "timezone": "Asia/Kolkata",
+  "bedtime": { "schoolNights": "21:45", "weekendNights": "22:15" },
+  "schoolNights": ["sun", "mon", "tue", "wed", "thu"],
+  "days": {
+    "mon": [
+      { "start": "15:30", "end": "16:15", "kind": "break", "label": "Reach home • snack & rest", "emoji": "🍎" },
+      { "start": "16:15", "end": "17:15", "kind": "homework_lesson", "subject": "maths", "focus": "homework + practice" },
+      { "start": "17:15", "end": "17:30", "kind": "break", "label": "Short break", "emoji": "☕" },
+      { "start": "17:30", "end": "18:15", "kind": "lesson", "subject": "physics" },
+      { "start": "18:15", "end": "18:30", "kind": "break", "label": "Get ready for dance", "emoji": "🎒" },
+      { "start": "18:30", "end": "19:30", "kind": "activity", "label": "Bharatanatyam class", "emoji": "💃", "colour": "dance" },
+      { "start": "19:30", "end": "20:15", "kind": "break", "label": "Dinner & rest", "emoji": "🍽️" },
+      { "start": "20:15", "end": "21:00", "kind": "lesson", "subject": "english", "focus": "reading & grammar" },
+      { "start": "21:00", "end": "21:30", "kind": "lesson", "subject": "geography" }
+    ],
+    "tue": [
+      { "start": "15:30", "end": "16:15", "kind": "break", "label": "Snack & rest", "emoji": "🍎" },
+      { "start": "16:15", "end": "17:00", "kind": "homework_lesson", "subject": "maths", "focus": "homework" },
+      { "start": "17:00", "end": "18:00", "kind": "activity", "label": "Tuition — Hindi & Kannada", "emoji": "🧑‍🏫", "colour": "tuition" },
+      { "start": "18:00", "end": "18:30", "kind": "break", "label": "Break & snack", "emoji": "☕" },
+      { "start": "18:30", "end": "19:30", "kind": "lesson", "subject": "history" },
+      { "start": "19:30", "end": "20:00", "kind": "break", "label": "Free play time", "emoji": "🎨" },
+      { "start": "20:00", "end": "20:30", "kind": "break", "label": "Dinner", "emoji": "🍽️" },
+      { "start": "20:30", "end": "21:00", "kind": "lesson", "subject": "biology" },
+      { "start": "21:00", "end": "21:30", "kind": "offline_task", "label": "Hindi / Kannada tuition homework", "emoji": "✍️", "colour": "lang" }
+    ],
+    "wed": [
+      { "start": "15:30", "end": "16:15", "kind": "break", "label": "Snack & rest", "emoji": "🍎" },
+      { "start": "16:15", "end": "17:15", "kind": "lesson", "subject": "maths", "focus": "practice sums" },
+      { "start": "17:15", "end": "17:30", "kind": "break", "label": "Short break", "emoji": "☕" },
+      { "start": "17:30", "end": "18:15", "kind": "lesson", "subject": "chemistry" },
+      { "start": "18:15", "end": "18:30", "kind": "break", "label": "Get ready for dance", "emoji": "🎒" },
+      { "start": "18:30", "end": "19:30", "kind": "activity", "label": "Bharatanatyam class", "emoji": "💃", "colour": "dance" },
+      { "start": "19:30", "end": "20:15", "kind": "break", "label": "Dinner & rest", "emoji": "🍽️" },
+      { "start": "20:15", "end": "21:00", "kind": "lesson", "subject": "biology" },
+      { "start": "21:00", "end": "21:30", "kind": "revise", "subject": "history" }
+    ],
+    "thu": [
+      { "start": "15:30", "end": "16:15", "kind": "break", "label": "Snack & rest", "emoji": "🍎" },
+      { "start": "16:15", "end": "17:00", "kind": "lesson", "subject": "physics" },
+      { "start": "17:00", "end": "18:00", "kind": "activity", "label": "Tuition — Hindi & Kannada", "emoji": "🧑‍🏫", "colour": "tuition" },
+      { "start": "18:00", "end": "18:30", "kind": "break", "label": "Break", "emoji": "☕" },
+      { "start": "18:30", "end": "19:30", "kind": "lesson", "subject": "maths", "focus": "practice" },
+      { "start": "19:30", "end": "20:00", "kind": "break", "label": "Free time", "emoji": "🎨" },
+      { "start": "20:00", "end": "20:30", "kind": "break", "label": "Dinner", "emoji": "🍽️" },
+      { "start": "20:30", "end": "21:00", "kind": "lesson", "subject": "geography", "focus": "maps & revision" },
+      { "start": "21:00", "end": "21:30", "kind": "offline_task", "label": "Hindi / Kannada tuition homework", "emoji": "✍️", "colour": "lang" }
+    ],
+    "fri": [
+      { "start": "15:30", "end": "16:15", "kind": "break", "label": "Snack & rest", "emoji": "🍎" },
+      { "start": "16:15", "end": "17:00", "kind": "lesson", "subject": "english", "focus": "writing" },
+      { "start": "17:00", "end": "18:00", "kind": "activity", "label": "Tuition — Hindi & Kannada", "emoji": "🧑‍🏫", "colour": "tuition" },
+      { "start": "18:00", "end": "18:30", "kind": "break", "label": "Break", "emoji": "☕" },
+      { "start": "18:30", "end": "19:15", "kind": "lesson", "subject": "chemistry" },
+      { "start": "19:15", "end": "20:30", "kind": "break", "label": "Family & free time + dinner", "emoji": "🎉" },
+      { "start": "20:30", "end": "21:30", "kind": "lesson", "subject": "physics", "focus": "numericals & diagrams" }
+    ],
+    "sat": [
+      { "start": "09:00", "end": "10:00", "kind": "lesson", "subject": "maths", "focus": "practice & revision" },
+      { "start": "10:00", "end": "10:15", "kind": "break", "label": "Short break", "emoji": "☕" },
+      { "start": "10:15", "end": "11:00", "kind": "lesson", "subject": "chemistry" },
+      { "start": "11:00", "end": "11:45", "kind": "lesson", "subject": "biology", "focus": "diagrams & terms" },
+      { "start": "11:45", "end": "15:30", "kind": "break", "label": "Lunch, rest & play", "emoji": "🛌" },
+      { "start": "15:30", "end": "16:15", "kind": "test", "testId": "sat", "subjects": ["english", "history", "geography"], "label": "Saturday Test", "emoji": "🖥️" },
+      { "start": "16:15", "end": "16:30", "kind": "break", "label": "Breather", "emoji": "🧃" },
+      { "start": "16:30", "end": "17:15", "kind": "fixit", "subject": "english" },
+      { "start": "17:15", "end": "18:00", "kind": "fixit", "subject": "geography" },
+      { "start": "18:00", "end": "18:15", "kind": "break", "label": "Short break", "emoji": "☕" },
+      { "start": "18:15", "end": "19:00", "kind": "fixit", "subject": "history" }
+    ],
+    "sun": [
+      { "start": "09:00", "end": "09:30", "kind": "revise", "subjects": ["maths", "physics", "chemistry", "biology"], "label": "Quick revision before the test", "emoji": "🔁" },
+      { "start": "09:30", "end": "10:30", "kind": "test", "testId": "sun", "subjects": ["maths", "physics", "chemistry", "biology"], "label": "Sunday Test", "emoji": "🖥️" },
+      { "start": "10:30", "end": "11:00", "kind": "review", "subjects": ["maths", "physics", "chemistry", "biology"], "label": "Results + get ready", "emoji": "✅" },
+      { "start": "11:00", "end": "12:00", "kind": "activity", "label": "Badminton class", "emoji": "🏸", "colour": "sport" },
+      { "start": "12:00", "end": "16:30", "kind": "break", "label": "Lunch, rest, hobby & family time", "emoji": "🌈" },
+      { "start": "16:30", "end": "17:15", "kind": "fixit", "subjects": ["maths", "physics", "chemistry", "biology"], "label": "Fix-it + next week preview", "emoji": "💡" }
+    ]
+  }
+}

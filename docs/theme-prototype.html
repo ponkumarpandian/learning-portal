@@ -1,0 +1,1287 @@
+<!doctype html>
+<html lang="en-IN" data-world="meadow" data-theme="light" data-text="big">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avantika’s Adventure</title>
+<meta name="description" content="Theme prototype and visual reference for Avantika’s Adventure (SPEC §15).">
+<meta name="theme-color" content="#1f9d55">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐘</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@700;800&display=swap">
+<!--
+  THEME PROTOTYPE: the visual reference for the React port (SPEC §15).
+  Port the LOOK, not this single-file structure. Component sizes and states: docs/design/NOTES.md.
+  The block between tokens:start/end is src/styles/tokens.css verbatim (node docs/design/check-tokens.mjs --sync).
+  URL params for review: ?s=today|week|progress|me|lesson &world=meadow|ocean|space &night=auto|day|night
+                         &text=big|bigger &fb=ok|hint (lesson) &sheet=notready|leave
+-->
+<style>
+/* tokens:start */
+/*
+ * Avantika's Adventure: design tokens (SPEC §15.4, §15.5, §15.7)
+ *
+ * Canonical token values. docs/theme-prototype.html inlines this exact file
+ * (kept in sync by `node docs/design/check-tokens.mjs --sync`).
+ *
+ * <html data-world="meadow|ocean|space" data-theme="light|dark" data-text="big|bigger">
+ *   data-theme is the RESOLVED theme (night "auto" follows prefers-color-scheme).
+ *   Space is always dark, whatever data-theme says.
+ *
+ * No Tailwind directives here; src/styles/index.css imports this file.
+ * Contrast is verified by docs/design/check-tokens.mjs (WCAG AA).
+ * Text placed directly on --go or a subject colour must be "large"
+ * (>= 1.35rem, i.e. >= 24px at the Big setting) or be an emoji. Smaller text
+ * on a "go" fill uses --go-d (e.g. the "Start here!" tag).
+ */
+
+/* ---------- Shared (all worlds) ---------- */
+:root {
+  /* Subject colours (§3). They never change between worlds. */
+  --maths: #3f7bf6;
+  --maths-d: #2a5bd0;
+  --on-maths: #ffffff;
+  --physics: #7a5af8;
+  --physics-d: #5536d1;
+  --on-physics: #ffffff;
+  --chemistry: #14b8a6;
+  --chemistry-d: #0d8a7c;
+  --on-chemistry: #08343a;
+  --biology: #43a047;
+  --biology-d: #2e7a32;
+  --on-biology: #ffffff;
+  --english: #f0643c;
+  --english-d: #c94721;
+  --on-english: #ffffff;
+  --history: #b45309;
+  --history-d: #873d05;
+  --on-history: #ffffff;
+  --geography: #0ea5e9;
+  --geography-d: #0a7fb5;
+  --on-geography: #08343a;
+
+  /* Activity colours (tick-off items, rest stops, breaks) */
+  --tuition: #64748b;
+  --tuition-d: #475266;
+  --on-tuition: #ffffff;
+  --lang: #ff5f87;
+  --lang-d: #d63d66;
+  --on-lang: #3d0716;
+  --dance: #d946ef;
+  --dance-d: #a92bbd;
+  --on-dance: #2d0435;
+  --sport: #84cc16;
+  --sport-d: #5f9a0c;
+  --on-sport: #1f3300;
+  --fun: #ffbf1f;
+  --fun-d: #d69a00;
+  --on-fun: #3d2a00;
+
+  /* Stars, ticks, medals */
+  --gold: #ffc83d;
+  --gold-d: #d99e00;
+  --on-gold: #3a2600;
+
+  /* Catch-up state: soft amber, never red (§5.2, §12) */
+  --catch: #f59e0b;
+  --catch-d: #c27803;
+
+  /* Type (§15.7). Everything is rem so the Big/Bigger setting scales the app. */
+  --font-display: 'Fredoka', 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  --px: calc(1rem / 18); /* 1 design px at the Big (18px) setting */
+  --fs-xs: 0.78rem; /* tiny labels (caterpillar, sticker names) */
+  --fs-sm: 0.89rem; /* times, captions */
+  --fs-body: 1rem; /* 18px / 20px */
+  --fs-lg: 1.15rem; /* card titles, row names */
+  --fs-question: 1.35rem; /* questions (~24px) */
+  --fs-button: 1.35rem; /* chunky button label: "large text" for AA */
+  --fs-greeting: 1.45rem; /* Today greeting */
+  --fs-h1: 1.75rem;
+  --fs-display: 2.4rem; /* medal number, big emoji */
+  --lh-tight: 1.2;
+  --lh-body: 1.45;
+  --measure: 60ch; /* line length cap */
+  --content-max: calc(560 * var(--px));
+
+  /* Corners by role (§15.6) */
+  --r-card: 26px;
+  --r-btn: 20px;
+  --r-option: 20px;
+  --r-key: 12px;
+  --r-pill: 999px;
+
+  /* The flat "ledge" (3D bottom edge). Never blurry shadows. */
+  --ledge-h: 6px;
+  --ledge-h-sm: 4px;
+  --press-y: 5px;
+
+  /* Component sizes (scale with text size) */
+  --tap-min: calc(48 * var(--px));
+  --btn-h: calc(64 * var(--px)); /* ChunkyButton >= 60px */
+  --option-h: calc(68 * var(--px)); /* OptionButton >= 64px */
+  --key: calc(46 * var(--px)); /* A/B/C/D key square */
+  --tab-h: calc(76 * var(--px)); /* tab item >= 68px */
+  --close: calc(56 * var(--px)); /* lesson ✕ */
+  --stone: calc(84 * var(--px));
+  --stone-now: calc(104 * var(--px));
+  --step: calc(48 * var(--px)); /* caterpillar segment */
+
+  /* Spacing scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+
+  /* Trail (§15.3) */
+  --trail-ground-w: 30; /* SVG stroke widths (unitless, px) */
+  --trail-dot-w: 7;
+  --trail-dash: 0 17;
+  --trail-offsets: 50% 74% 50% 26%; /* documentation; layout code repeats this */
+
+  /* Motion */
+  --ease-pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 120ms;
+  --dur-med: 240ms;
+  --dur-slow: 420ms;
+  --halo-dur: 2.4s;
+}
+
+html {
+  font-size: 112.5%;
+} /* Big: 18px base */
+html[data-text='bigger'] {
+  font-size: 125%;
+} /* Bigger: 20px base */
+
+/* ---------- 🌻 Meadow (default), day ---------- */
+:root,
+html[data-world='meadow'] {
+  color-scheme: light;
+  --sky1: #bfe7ff;
+  --sky2: #f1fbff;
+  --surface: #ffffff;
+  --surface2: #eef6ff;
+  --ink: #1b2845;
+  --ink-soft: #4a5878;
+  --line: #d3e2f3;
+  --ledge: #c4d8ee;
+  --go: #1f9d55;
+  --go-d: #137a3f;
+  --on-go: #ffffff;
+  --trail: #ffffff;
+  --trail-bg: #bfe3a0;
+  --trail-dot-w: 8; /* bigger kolam dots on the pale light-world trail */
+  --tab-on: #d9f3e3;
+  --ok-bg: #d8f6e2;
+  --ok-ink: #0c5a2c;
+  --hint-bg: #fff1cc;
+  --hint-ink: #6a4000;
+  --deco: #ffd23f;
+  --deco2: #ffffff;
+  --tara: #a7b8d6;
+  --tara-ear: #ffb0c8;
+  --focus: #1d4ed8;
+}
+
+/* ---------- 🌻 Meadow, night: deep indigo ---------- */
+html[data-world='meadow'][data-theme='dark'] {
+  color-scheme: dark;
+  --sky1: #0e1433;
+  --sky2: #1c2556;
+  --surface: #232d64;
+  --surface2: #2c3874;
+  --ink: #f4f6ff;
+  --ink-soft: #c2cbf0;
+  --line: #3b4889;
+  --ledge: #121940;
+  --go: #1f9d55;
+  --go-d: #137a3f;
+  --on-go: #ffffff;
+  --trail: #cfd8ff;
+  --trail-bg: #2c376f;
+  --trail-dot-w: 7;
+  --tab-on: #1d4a4a;
+  --ok-bg: #164a35;
+  --ok-ink: #d6ffe6;
+  --hint-bg: #4a3812;
+  --hint-ink: #ffe9b8;
+  --deco: #ffe9a8;
+  --deco2: #36437f;
+  --tara: #aab4dc;
+  --tara-ear: #ff9fbd;
+  --focus: #ffd84d;
+}
+
+/* ---------- 🐠 Ocean, day ---------- */
+html[data-world='ocean'] {
+  color-scheme: light;
+  --sky1: #86e0ef;
+  --sky2: #eafcff;
+  --surface: #ffffff;
+  --surface2: #e9fafc;
+  --ink: #0b2a3c;
+  --ink-soft: #2f4d5b;
+  --line: #c3e7ee;
+  --ledge: #a9d7e1;
+  --go: #e8436f;
+  --go-d: #bd2853;
+  --on-go: #ffffff;
+  --trail: #ffffff;
+  --trail-bg: #ffe2ae;
+  --trail-dot-w: 8; /* bigger kolam dots on the pale light-world trail */
+  --tab-on: #ffe0e9;
+  --ok-bg: #d8f6e2;
+  --ok-ink: #0c5a2c;
+  --hint-bg: #fff1cc;
+  --hint-ink: #6a4000;
+  --deco: #ffffff;
+  --deco2: #4cc3da;
+  --tara: #9fb6d0;
+  --tara-ear: #ffa9c2;
+  --focus: #1d4ed8;
+}
+
+/* ---------- 🐠 Ocean, night: deep indigo ---------- */
+html[data-world='ocean'][data-theme='dark'] {
+  color-scheme: dark;
+  --sky1: #0a1838;
+  --sky2: #12305c;
+  --surface: #1b2d62;
+  --surface2: #233a76;
+  --ink: #f2f8ff;
+  --ink-soft: #bcd2ee;
+  --line: #33508f;
+  --ledge: #0d1a40;
+  --go: #e8436f;
+  --go-d: #bd2853;
+  --on-go: #ffffff;
+  --trail: #9ce9f5;
+  --trail-bg: #22406f;
+  --trail-dot-w: 7;
+  --tab-on: #4a2347;
+  --ok-bg: #164a35;
+  --ok-ink: #d6ffe6;
+  --hint-bg: #4a3812;
+  --hint-ink: #ffe9b8;
+  --deco: #8fd9ec;
+  --deco2: #2a6d99;
+  --tara: #a6b6d8;
+  --tara-ear: #ff9fbd;
+  --focus: #ffd84d;
+}
+
+/* ---------- 🚀 Space: always cosy and dark ---------- */
+html[data-world='space'],
+html[data-world='space'][data-theme='light'],
+html[data-world='space'][data-theme='dark'] {
+  color-scheme: dark;
+  --sky1: #151038;
+  --sky2: #2b2168;
+  --surface: #2e2470;
+  --surface2: #3a2f86;
+  --ink: #fbf8ff;
+  --ink-soft: #cfc7f7;
+  --line: #4a3f9e;
+  --ledge: #181243;
+  --go: #ffc93c;
+  --go-d: #d9a000;
+  --on-go: #2a1d00;
+  --trail: #ffe08a;
+  --trail-bg: #3b3088;
+  --tab-on: #4a3d9c;
+  --ok-bg: #17503a;
+  --ok-ink: #d6ffe6;
+  --hint-bg: #4f3c12;
+  --hint-ink: #ffe9b8;
+  --deco: #fff6c8;
+  --deco2: #ff8fb1;
+  --tara: #b9b2ee;
+  --tara-ear: #ff9fc0;
+  --focus: #7fe8ff; /* light cyan: must not read as the yellow --go "selected" border */
+}
+/* tokens:end */
+
+/* Prototype only: registered colours so switching worlds cross-fades smoothly. */
+@property --sky1 { syntax: "<color>"; inherits: true; initial-value: #bfe7ff; }
+@property --sky2 { syntax: "<color>"; inherits: true; initial-value: #f1fbff; }
+@property --surface { syntax: "<color>"; inherits: true; initial-value: #ffffff; }
+@property --surface2 { syntax: "<color>"; inherits: true; initial-value: #eef6ff; }
+@property --ink { syntax: "<color>"; inherits: true; initial-value: #1b2845; }
+@property --ledge { syntax: "<color>"; inherits: true; initial-value: #c4d8ee; }
+@property --go { syntax: "<color>"; inherits: true; initial-value: #1f9d55; }
+@property --go-d { syntax: "<color>"; inherits: true; initial-value: #137a3f; }
+@property --trail-bg { syntax: "<color>"; inherits: true; initial-value: #bfe3a0; }
+@property --tab-on { syntax: "<color>"; inherits: true; initial-value: #d9f3e3; }
+html { transition: --sky1 .45s, --sky2 .45s, --surface .45s, --surface2 .45s, --ink .45s, --ledge .45s, --go .45s, --go-d .45s, --trail-bg .45s, --tab-on .45s; }
+
+/* ---------- base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  background-color: var(--sky2);
+  background-image: linear-gradient(180deg, var(--sky1) 0%, var(--sky2) 75vh);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: var(--lh-tight); margin: 0; }
+p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 4px solid var(--focus); outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.muted { color: var(--ink-soft); }
+.eyebrow { font: 600 var(--fs-sm)/1.2 var(--font-display); color: var(--ink-soft); letter-spacing: .01em; }
+
+/* ---------- world decorations (fixed, behind content) ---------- */
+.deco { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.deco > svg { position: absolute; }
+.deco [data-for] { display: none; }
+html[data-world="meadow"] .deco [data-for~="meadow"],
+html[data-world="ocean"] .deco [data-for~="ocean"],
+html[data-world="space"] .deco [data-for~="space"] { display: block; }
+html[data-theme="dark"] .deco [data-only="light"],
+html:not([data-theme="dark"]) .deco [data-only="dark"] { display: none; }
+.d-sun { top: -38px; right: -38px; width: 190px; height: 190px; }
+.d-cloud1 { top: 118px; left: -46px; width: 170px; }
+.d-cloud2 { top: 330px; right: -60px; width: 200px; }
+.d-cloud3 { top: 720px; left: -70px; width: 190px; }
+.d-bubbles { top: 40px; right: -10px; width: 160px; height: 520px; }
+.d-bubbles2 { top: 560px; left: -6px; width: 90px; height: 300px; }
+.d-wave { top: 150px; left: 0; width: 100%; height: 40px; }
+.d-stars { inset: 0; width: 100%; height: 100%; }
+.d-planet { top: 18px; right: -26px; width: 170px; height: 150px; }
+@media (max-width: 599px) { .d-planet { top: 46vh; right: -58px; width: 150px; height: 132px; } }
+
+/* ---------- layout ---------- */
+.app { position: relative; z-index: 1; max-width: var(--content-max); margin: 0 auto; padding: var(--sp-5) 16px calc(var(--tab-h) + 3.5rem); }
+html.focus .app { padding-bottom: var(--sp-10); }
+.screen { display: grid; gap: var(--sp-5); }
+.screen[hidden] { display: none; }
+.screen.enter { animation: screen-in var(--dur-slow) var(--ease-out); }
+@keyframes screen-in { from { opacity: 0; transform: translateY(14px); } }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--sp-3); padding: 0 var(--sp-1); }
+.sec-head h2 { font-size: var(--fs-h1); }
+.page-head h1 { font-size: var(--fs-h1); }
+.page-head p { color: var(--ink-soft); margin-top: var(--sp-1); }
+
+/* ---------- Card ---------- */
+.card { background: var(--surface); border-radius: var(--r-card); box-shadow: 0 var(--ledge-h) 0 var(--ledge); padding: var(--sp-5); margin-bottom: var(--ledge-h); }
+.card > h2 { font-size: var(--fs-lg); margin-bottom: var(--sp-3); }
+
+/* ---------- ChunkyButton ---------- */
+.chunky {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  width: 100%; min-height: var(--btn-h); padding: .55rem 1.25rem;
+  border: 0; border-radius: var(--r-btn);
+  background: var(--go); color: var(--on-go);
+  font: 600 var(--fs-button)/1.1 var(--font-display);
+  box-shadow: 0 var(--ledge-h) 0 var(--go-d);
+  margin-bottom: var(--ledge-h);
+  cursor: pointer; user-select: none;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), filter var(--dur-fast);
+}
+.chunky:hover:not(:disabled) { filter: brightness(1.06); }
+.chunky:active:not(:disabled), .chunky.is-pressed { transform: translateY(var(--press-y)); box-shadow: 0 1px 0 var(--go-d); }
+.chunky.soft { background: var(--surface2); color: var(--ink); box-shadow: 0 var(--ledge-h) 0 var(--ledge); font-size: var(--fs-lg); }
+.chunky.soft:active:not(:disabled) { box-shadow: 0 1px 0 var(--ledge); }
+.chunky:disabled { opacity: .45; cursor: not-allowed; }
+.chunky .arrow { font-size: .9em; }
+
+/* ---------- Chip ---------- */
+.chips { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: var(--sp-2); }
+.chip { background: var(--surface); border-radius: var(--r-pill); box-shadow: 0 var(--ledge-h-sm) 0 var(--ledge); padding: .45rem .5rem .5rem; text-align: center; margin-bottom: var(--ledge-h-sm); }
+.chip b { display: block; font: 600 var(--fs-lg)/1.15 var(--font-display); white-space: nowrap; }
+.chip small { display: block; font-size: var(--fs-xs); color: var(--ink-soft); line-height: 1.2; white-space: nowrap; }
+
+/* ---------- Tara + speech bubble ---------- */
+.hello { display: grid; grid-template-columns: auto 1fr; align-items: end; gap: var(--sp-3); }
+.tara { width: calc(92 * var(--px)); height: calc(92 * var(--px)); display: block; }
+.hello.small .tara { width: calc(74 * var(--px)); height: calc(74 * var(--px)); }
+.bubble { position: relative; background: var(--surface); border-radius: 24px; padding: var(--sp-3) var(--sp-4) var(--sp-4); box-shadow: 0 var(--ledge-h-sm) 0 var(--ledge); margin-bottom: calc(var(--sp-2) + 4px); }
+.bubble::before { content: ""; position: absolute; left: -9px; bottom: 20px; width: 22px; height: 22px; background: var(--surface); border-radius: 4px; transform: rotate(45deg); }
+.bubble > * { position: relative; }
+.greet { font: 600 var(--fs-greeting)/1.15 var(--font-display); margin: 2px 0 4px; }
+.prog { height: 14px; border-radius: var(--r-pill); background: var(--surface2); box-shadow: inset 0 0 0 2px var(--line); overflow: hidden; }
+.prog > i { display: block; height: 100%; background: var(--go); border-radius: inherit; box-shadow: inset 0 -4px 0 var(--go-d); }
+.prog-row { display: flex; align-items: center; gap: var(--sp-3); margin-top: var(--sp-3); }
+.prog-row .prog { flex: 1; }
+.prog-row span { font-size: var(--fs-sm); color: var(--ink-soft); white-space: nowrap; }
+
+/* ---------- Up now card ---------- */
+.upnow { display: grid; gap: var(--sp-4); }
+.upnow-head { display: grid; grid-template-columns: auto 1fr; gap: var(--sp-4); align-items: center; }
+.subj-badge { width: calc(68 * var(--px)); height: calc(68 * var(--px)); border-radius: 50%; display: grid; place-items: center; font-size: 2rem; background: var(--s); box-shadow: 0 5px 0 var(--sd); margin-bottom: 5px; }
+.upnow-title { font-size: var(--fs-h1); }
+.upnow-sub { color: var(--ink-soft); }
+.next { display: flex; align-items: center; gap: var(--sp-2); color: var(--ink-soft); font-size: var(--fs-sm); justify-content: center; }
+.kolam-rule { height: 8px; background: radial-gradient(circle, var(--line) 2.6px, transparent 3.2px) 0 50% / 15px 8px repeat-x; }
+.upnow .kolam-rule { margin: calc(-1 * var(--sp-1)) 0 calc(-1 * var(--sp-2)); }
+
+/* ---------- Today's trail ---------- */
+.trail { position: relative; }
+.trail-svg { position: absolute; inset: 0; overflow: visible; }
+.trail-svg path { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.trail-ground { stroke: var(--trail-bg); stroke-width: var(--trail-ground-w); }
+.trail-dots { stroke: var(--trail); stroke-width: var(--trail-dot-w); stroke-dasharray: var(--trail-dash); }
+.trail-walked { stroke: var(--gold); stroke-width: calc(var(--trail-dot-w) + 1); stroke-dasharray: var(--trail-dash); }
+.node { position: absolute; width: 0; height: 0; z-index: 1; }
+.stone {
+  --sz: var(--stone);
+  position: absolute; left: calc(var(--sz) / -2); top: calc(var(--sz) / -2);
+  width: var(--sz); height: var(--sz); border-radius: 50%; padding: 0;
+  display: grid; place-items: center; font-size: 2.1rem; line-height: 1;
+  border: 0; cursor: pointer; background: var(--surface);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+.stone:active { transform: translateY(4px); }
+.stone.later { border: 4px dashed var(--s); box-shadow: 0 5px 0 var(--ledge); }
+.stone.later:active { box-shadow: 0 1px 0 var(--ledge); }
+.stone.done { background: var(--s); box-shadow: 0 6px 0 var(--sd); }
+.stone.done:active, .stone.now:active { box-shadow: 0 2px 0 var(--sd); }
+.stone.now { --sz: var(--stone-now); background: var(--s); border: 6px solid #fff; box-shadow: 0 7px 0 var(--sd); font-size: 2.7rem; }
+.stone.now::before { content: ""; position: absolute; inset: -18px; border-radius: 50%; background: var(--s); z-index: -1; opacity: .3; animation: halo var(--halo-dur) ease-in-out infinite; }
+@keyframes halo { 0%, 100% { transform: scale(.9); opacity: .34; } 50% { transform: scale(1.1); opacity: .12; } }
+.tick { position: absolute; top: -6px; right: -6px; width: calc(34 * var(--px)); height: calc(34 * var(--px)); border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: var(--on-gold); font: 600 1.05rem/1 var(--font-display); border: 3px solid var(--surface); box-shadow: 0 3px 0 var(--gold-d); }
+.tag { position: absolute; left: 0; bottom: calc(var(--stone-now) / 2 + 22px); transform: translateX(-50%); white-space: nowrap; background: var(--go-d); color: var(--on-go); font: 600 var(--fs-sm)/1 var(--font-display); padding: .5rem .9rem; border-radius: var(--r-pill); }
+.tag::after { content: ""; position: absolute; left: 50%; bottom: -6px; width: 14px; height: 14px; margin-left: -7px; background: var(--go-d); border-radius: 3px; transform: rotate(45deg); z-index: -1; }
+.stone-label { position: absolute; left: 0; transform: translateX(-50%); white-space: nowrap; text-align: center; background: var(--surface); border-radius: 14px; padding: .2rem .75rem .3rem; box-shadow: 0 3px 0 var(--ledge); pointer-events: none; }
+.stone-label b { display: block; font: 600 var(--fs-body)/1.2 var(--font-display); }
+.stone-label small { display: block; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.2; }
+.rest {
+  position: absolute; left: 0; top: 0; transform: translate(-50%, -50%);
+  display: flex; align-items: center; gap: .6rem; white-space: nowrap; text-align: left;
+  padding: .4rem 1.1rem .4rem .45rem; border-radius: var(--r-pill);
+  background: var(--surface); border: 3px solid var(--a); box-shadow: 0 4px 0 var(--ad);
+  cursor: pointer; min-height: var(--tap-min);
+}
+.rest:active { transform: translate(-50%, calc(-50% + 3px)); box-shadow: 0 1px 0 var(--ad); }
+.rest .r-emo { width: calc(44 * var(--px)); height: calc(44 * var(--px)); border-radius: 50%; display: grid; place-items: center; font-size: 1.4rem; background: color-mix(in srgb, var(--a) 22%, var(--surface)); }
+.rest b { display: block; font: 600 var(--fs-body)/1.15 var(--font-display); }
+.rest small { display: block; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.2; }
+.rest.end { border-style: dashed; border-color: var(--line); box-shadow: none; background: color-mix(in srgb, var(--surface) 80%, transparent); }
+.rest.end .r-emo { background: var(--surface2); }
+
+/* ---------- Tab bar ---------- */
+.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 3px solid var(--line); padding: .4rem 16px calc(.4rem + env(safe-area-inset-bottom)); }
+html.focus .tabbar { display: none; }
+.tabbar ul { list-style: none; margin: 0 auto; padding: 0; max-width: var(--content-max); display: grid; grid-template-columns: repeat(4, 1fr); gap: .4rem; }
+.tab { min-height: var(--tab-h); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .2rem; border-radius: 22px; color: var(--ink-soft); text-decoration: none; font: 600 var(--fs-sm)/1 var(--font-display); transition: background var(--dur-med), color var(--dur-med); }
+.tab .t-emo { font-size: 1.65rem; line-height: 1.1; transition: transform var(--dur-med) var(--ease-pop); }
+.tab:hover { background: color-mix(in srgb, var(--tab-on) 50%, transparent); }
+.tab[aria-current="page"] { background: var(--tab-on); color: var(--ink); }
+.tab[aria-current="page"] .t-emo { transform: scale(1.2) translateY(-1px); }
+
+/* ---------- Week ---------- */
+.days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.day { display: flex; flex-direction: column; align-items: center; gap: .25rem; padding: .55rem 0 .6rem; border-radius: 20px; border: 3px solid transparent; background: var(--surface); box-shadow: 0 var(--ledge-h-sm) 0 var(--ledge); cursor: pointer; margin-bottom: var(--ledge-h-sm); min-width: 0; transition: transform var(--dur-fast); }
+.day:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ledge); }
+.day .d-name { font: 600 var(--fs-xs)/1 var(--font-display); color: var(--ink-soft); }
+.day .d-num { width: calc(34 * var(--px)); height: calc(34 * var(--px)); border-radius: 50%; display: grid; place-items: center; font: 600 var(--fs-lg)/1 var(--font-display); }
+.day.today .d-num { background: var(--go-d); color: var(--on-go); }
+.day[aria-selected="true"] { border-color: var(--go); background: var(--tab-on); }
+.day[aria-selected="true"] .d-name { color: var(--ink); }
+.dots { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; max-width: 32px; min-height: 17px; }
+.dots i { width: 7px; height: 7px; border-radius: 50%; background: var(--c); }
+.day-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--sp-2); padding: 0 var(--sp-1); }
+.day-head h2 { font-size: var(--fs-h1); }
+.rows { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-3); }
+.row { display: grid; grid-template-columns: 3.1rem auto 1fr auto; align-items: center; gap: var(--sp-3); background: var(--surface); border-radius: 22px; padding: .7rem .9rem; min-height: calc(80 * var(--px)); box-shadow: 0 5px 0 var(--ledge); margin-bottom: 5px; }
+.row.is-now { box-shadow: 0 5px 0 var(--sd), inset 0 0 0 3px var(--s); }
+.r-time b { display: block; font: 600 var(--fs-lg)/1.1 var(--font-display); }
+.r-time small { display: block; font-size: var(--fs-xs); color: var(--ink-soft); }
+.r-emo { width: calc(52 * var(--px)); height: calc(52 * var(--px)); border-radius: 50%; display: grid; place-items: center; font-size: 1.6rem; background: color-mix(in srgb, var(--s) 20%, var(--surface)); border: 3px solid var(--s); }
+.r-main { min-width: 0; }
+.r-main b { display: block; font: 600 var(--fs-lg)/1.2 var(--font-display); }
+.r-main small { display: block; font-size: var(--fs-sm); color: var(--ink-soft); line-height: 1.3; }
+.state { font: 600 var(--fs-xs)/1 var(--font-display); padding: .4rem .6rem; border-radius: var(--r-pill); background: var(--surface2); color: var(--ink); white-space: nowrap; }
+.state.done { background: var(--ok-bg); color: var(--ok-ink); }
+.state.now { background: var(--go-d); color: var(--on-go); }
+.row.brk { background: transparent; box-shadow: none; min-height: 0; padding: .1rem .9rem; margin: 0; grid-template-columns: 3.1rem auto 1fr; }
+.row.brk .r-emo { width: auto; height: auto; background: none; border: 0; font-size: 1.15rem; }
+.row.brk .r-main { display: flex; align-items: center; gap: var(--sp-2); color: var(--ink-soft); font-size: var(--fs-sm); }
+.row.brk .r-main .kolam-rule { flex: 1; min-width: 1rem; }
+.row.brk .r-time b { font-size: var(--fs-sm); color: var(--ink-soft); }
+
+/* ---------- Rewards ---------- */
+.level { display: grid; grid-template-columns: auto 1fr; gap: var(--sp-5); align-items: center; }
+.medal { position: relative; width: calc(112 * var(--px)); height: calc(112 * var(--px)); margin-bottom: 26px; }
+.medal::before, .medal::after { content: ""; position: absolute; bottom: -24px; width: 30px; height: 52px; z-index: 0; }
+.medal::before { left: 22%; background: var(--physics); transform: rotate(14deg); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%); }
+.medal::after { right: 22%; background: var(--english); transform: rotate(-14deg); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%); }
+.medal-face { position: relative; z-index: 1; width: 100%; height: 100%; border-radius: 50%; display: grid; place-items: center; background: var(--gold); box-shadow: 0 6px 0 var(--gold-d); }
+.medal-face::before { content: ""; position: absolute; inset: 9px; border-radius: 50%; border: 4px dotted var(--gold-d); }
+.medal-face b { font: 600 var(--fs-display)/1 var(--font-display); color: var(--on-gold); }
+.level h2 { font-size: var(--fs-h1); margin: 2px 0 var(--sp-3); }
+.level .prog { height: 18px; }
+.level p.muted { margin-top: var(--sp-2); font-size: var(--fs-sm); }
+.streak { list-style: none; margin: var(--sp-2) 0 var(--sp-3); padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+.flame { width: calc(42 * var(--px)); height: calc(42 * var(--px)); margin: 0 auto 4px; border-radius: 50%; display: grid; place-items: center; font-size: 1.3rem; background: var(--fun); box-shadow: 0 3px 0 var(--fun-d); }
+.flame.todo { background: transparent; border: 3px dashed var(--line); box-shadow: none; }
+.flame.todo span { opacity: .35; filter: grayscale(1); }
+.streak small { font: 600 var(--fs-xs)/1 var(--font-display); color: var(--ink-soft); }
+.shield { display: flex; align-items: center; gap: var(--sp-2); background: var(--surface2); border-radius: 16px; padding: .55rem .8rem; font-size: var(--fs-sm); }
+.stickers { list-style: none; margin: var(--sp-3) 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(calc(96 * var(--px)), 1fr)); gap: var(--sp-5) var(--sp-2); }
+.sticker { display: flex; flex-direction: column; align-items: center; gap: .45rem; text-align: center; }
+.st-face { width: calc(80 * var(--px)); height: calc(80 * var(--px)); border-radius: 50%; display: grid; place-items: center; font-size: 2.15rem; background: var(--c); border: 5px solid #fff; box-shadow: 0 5px 0 var(--ledge); transform: rotate(var(--r, 0deg)); }
+.st-name { font: 600 var(--fs-xs)/1.15 var(--font-display); }
+.sticker.locked .st-face { background: var(--surface2); border: 4px dashed var(--line); box-shadow: none; font-size: 1.6rem; }
+.sticker.locked .st-face span { filter: grayscale(1); opacity: .6; }
+.sticker.locked .st-name { color: var(--ink-soft); }
+
+/* ---------- Me: WorldPicker + SegmentedControl ---------- */
+.worlds { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-3); }
+.world { position: relative; display: grid; gap: .4rem; text-align: center; cursor: pointer; }
+.w-prev { position: relative; height: calc(96 * var(--px)); border-radius: 20px; overflow: hidden; border: 3px solid var(--line); transition: transform var(--dur-fast); }
+.w-prev svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.w-prev[data-w="meadow"] { background: linear-gradient(#bfe7ff, #f1fbff); }
+.w-prev[data-w="ocean"] { background: linear-gradient(#86e0ef, #eafcff); }
+.w-prev[data-w="space"] { background: linear-gradient(#151038, #2b2168); }
+.world b { font: 600 var(--fs-body)/1.1 var(--font-display); }
+.world small { display: block; font-size: var(--fs-xs); color: var(--ink-soft); line-height: 1.1; }
+.world:active .w-prev { transform: translateY(3px); }
+.world:has(input:checked) .w-prev { border: 4px solid var(--go); box-shadow: 0 5px 0 var(--go-d); }
+.world .w-tick { position: absolute; top: -8px; right: -6px; z-index: 2; display: none; }
+.world:has(input:checked) .w-tick { display: grid; }
+.world:has(input:focus-visible) .w-prev { outline: 4px solid var(--focus); outline-offset: 3px; }
+.setting + .setting { margin-top: var(--sp-5); }
+.setting > .kolam-rule { margin: 0 0 var(--sp-5); }
+.setting h3 { font-size: var(--fs-lg); margin-bottom: var(--sp-2); }
+.setting .muted { font-size: var(--fs-sm); margin-top: var(--sp-2); }
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 6px; padding: 6px; border-radius: var(--r-pill); background: var(--surface2); box-shadow: inset 0 0 0 2px var(--line); }
+.seg label { min-height: calc(52 * var(--px)); display: flex; align-items: center; justify-content: center; gap: .4rem; border-radius: var(--r-pill); border: 3px solid transparent; font: 600 var(--fs-body)/1 var(--font-display); color: var(--ink-soft); cursor: pointer; white-space: nowrap; transition: background var(--dur-med), color var(--dur-med); }
+.seg label:has(input:checked) { background: var(--tab-on); border-color: var(--go); color: var(--ink); }
+.seg label:has(input:focus-visible) { outline: 4px solid var(--focus); outline-offset: 2px; }
+.seg .aa-big { font-size: 1.05rem; } .seg .aa-bigger { font-size: 1.3rem; }
+
+/* ---------- Lesson (focus mode) ---------- */
+.focus-top { display: grid; grid-template-columns: auto 1fr; gap: var(--sp-3); align-items: center; }
+.xbtn { width: var(--close); height: var(--close); border-radius: 50%; border: 0; background: var(--surface); box-shadow: 0 5px 0 var(--ledge); font: 600 1.5rem/1 var(--font-display); cursor: pointer; display: grid; place-items: center; margin-bottom: 5px; }
+.xbtn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--ledge); }
+.focus-top h1 { font-size: var(--fs-lg); }
+.caterpillar { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); position: relative; }
+.caterpillar li { position: relative; display: flex; flex-direction: column; align-items: center; gap: .3rem; }
+.caterpillar li + li::before { content: ""; position: absolute; top: calc(var(--step) / 2 - 7px); right: 50%; width: 100%; height: 14px; background: var(--surface2); box-shadow: inset 0 0 0 2px var(--line); z-index: 0; }
+.caterpillar li.done + li::before { background: var(--gold); box-shadow: none; }
+.ball { position: relative; z-index: 1; width: var(--step); height: var(--step); border-radius: 50%; display: grid; place-items: center; font-size: 1.35rem; background: var(--surface); border: 3px solid var(--line); }
+.done .ball { background: var(--gold); border-color: var(--gold); box-shadow: 0 3px 0 var(--gold-d); }
+.done .ball .tick { width: calc(22 * var(--px)); height: calc(22 * var(--px)); top: -7px; right: -9px; font-size: .75rem; border-width: 2px; }
+.current .ball { background: var(--s); border: 4px solid #fff; box-shadow: 0 0 0 3px var(--s), 0 4px 0 3px var(--sd); transform: scale(1.1); }
+.current .c-lbl { margin-top: 9px; }
+.c-lbl { font: 600 var(--fs-xs)/1 var(--font-display); color: var(--ink-soft); }
+.current .c-lbl { color: var(--ink); }
+.qcard { display: grid; gap: var(--sp-4); }
+.q-meta { display: flex; justify-content: space-between; gap: var(--sp-2); font: 600 var(--fs-sm)/1.2 var(--font-display); color: var(--ink-soft); }
+.question { font: 600 var(--fs-question)/1.25 var(--font-display); max-width: var(--measure); }
+.options { display: grid; gap: var(--sp-3); }
+.option {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--sp-3);
+  min-height: var(--option-h); padding: .5rem 1rem .5rem .6rem; margin-bottom: 4px;
+  border-radius: var(--r-option); border: 3px solid var(--line); background: var(--surface);
+  box-shadow: 0 4px 0 var(--ledge); cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-out), border-color var(--dur-fast), background var(--dur-fast), box-shadow var(--dur-fast);
+}
+.option:hover { border-color: color-mix(in srgb, var(--s) 55%, var(--line)); }
+.option:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ledge); }
+.key { width: var(--key); height: var(--key); border-radius: var(--r-key); display: grid; place-items: center; border: 3px solid var(--line); background: var(--surface2); font: 600 var(--fs-question)/1 var(--font-display); color: var(--ink); transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast); }
+.o-text { font-size: var(--fs-lg); line-height: 1.3; }
+.o-mark { font-size: 1.4rem; line-height: 1; }
+.option:has(input:checked) { border-color: var(--s); background: color-mix(in srgb, var(--s) 12%, var(--surface)); box-shadow: 0 4px 0 var(--sd); }
+.option:has(input:checked) .key { background: var(--s); border-color: var(--s); color: var(--on-s); }
+.option:has(input:focus-visible) { outline: 4px solid var(--focus); outline-offset: 3px; }
+.options .option.is-right { border-color: var(--ok-ink); background: var(--ok-bg); box-shadow: 0 4px 0 color-mix(in srgb, var(--ok-ink) 45%, var(--ok-bg)); }
+.options .option.is-right .key { background: var(--ok-ink); border-color: var(--ok-ink); color: var(--ok-bg); }
+.options .option.is-tried { border-color: var(--catch); background: var(--hint-bg); box-shadow: 0 4px 0 var(--catch-d); }
+.options .option.is-tried .key { background: var(--hint-bg); border-color: var(--catch); color: var(--hint-ink); }
+.options.locked .option { cursor: default; }
+.lesson-action { transition: opacity var(--dur-med); }
+
+/* ---------- BottomSheet ---------- */
+.scrim { position: fixed; inset: 0; z-index: 30; background: rgb(10 14 40 / .45); animation: fade var(--dur-med) var(--ease-out); }
+@keyframes fade { from { opacity: 0; } }
+.sheet {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  max-width: calc(var(--content-max) + 32px); margin: 0 auto;
+  background: var(--surface); color: var(--ink);
+  border-radius: var(--r-card) var(--r-card) 0 0;
+  border-top: 5px solid var(--line);
+  padding: var(--sp-5) 16px calc(var(--sp-4) + env(safe-area-inset-bottom));
+  display: grid; gap: var(--sp-4);
+  animation: sheet-up var(--dur-slow) var(--ease-pop);
+}
+@keyframes sheet-up { from { transform: translateY(105%); } }
+.sheet.ok { background: var(--ok-bg); color: var(--ok-ink); border-top-color: color-mix(in srgb, var(--ok-ink) 30%, var(--ok-bg)); }
+.sheet.hint { background: var(--hint-bg); color: var(--hint-ink); border-top-color: var(--catch); }
+.sheet-body { display: grid; grid-template-columns: auto 1fr; gap: var(--sp-4); align-items: center; }
+.sheet-icon { width: calc(64 * var(--px)); height: calc(64 * var(--px)); border-radius: 50%; display: grid; place-items: center; font-size: 2rem; background: var(--surface); }
+.sheet-icon .tara { width: 100%; height: 100%; }
+.sheet h2 { font-size: var(--fs-greeting); }
+.sheet p { margin-top: .2rem; }
+.sheet-actions { display: grid; gap: var(--sp-2); }
+.sheet .chunky { margin-bottom: var(--ledge-h); }
+
+/* ---------- Joy: star pop + confetti ---------- */
+.fx { position: fixed; inset: 0; z-index: 60; pointer-events: none; overflow: hidden; }
+.starpop { position: fixed; z-index: 61; font: 600 1.6rem/1 var(--font-display); color: var(--ink); pointer-events: none; white-space: nowrap; }
+.confetto { position: absolute; top: -20px; width: 10px; height: 16px; border-radius: 3px; }
+
+/* ---------- Reduced motion: everything stops ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { transition: none; }
+}
+
+/* ---------- Wider screens (tablet) ---------- */
+@media (min-width: 600px) {
+  .app { padding-top: var(--sp-8); }
+  .days { gap: 10px; }
+  .dots { max-width: 42px; }
+  .tara { width: calc(116 * var(--px)); height: calc(116 * var(--px)); }
+  .hello.small .tara { width: calc(92 * var(--px)); height: calc(92 * var(--px)); }
+}
+</style>
+</head>
+<body>
+
+<!-- Tara the elephant: one symbol, coloured by --tara / --tara-ear so she fits every world -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="tara" viewBox="0 0 120 120">
+      <ellipse cx="25" cy="56" rx="23" ry="27" fill="var(--tara)"/>
+      <ellipse cx="27" cy="58" rx="14" ry="18" fill="var(--tara-ear)"/>
+      <ellipse cx="95" cy="56" rx="23" ry="27" fill="var(--tara)"/>
+      <ellipse cx="93" cy="58" rx="14" ry="18" fill="var(--tara-ear)"/>
+      <path d="M57 78 C55 92 57 103 66 106 C74 108 79 101 74 96" fill="none" stroke="var(--tara)" stroke-width="13" stroke-linecap="round"/>
+      <circle cx="60" cy="58" r="33" fill="var(--tara)"/>
+      <path d="M50 30 q4 -8 8 -1 M58 28 q5 -9 9 0" fill="none" stroke="var(--tara)" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="48" cy="55" rx="5" ry="6" fill="#1b2845"/>
+      <ellipse cx="72" cy="55" rx="5" ry="6" fill="#1b2845"/>
+      <circle cx="49.8" cy="52.8" r="1.9" fill="#fff"/>
+      <circle cx="73.8" cy="52.8" r="1.9" fill="#fff"/>
+      <ellipse cx="40" cy="68" rx="7" ry="4.5" fill="#ff7aa2" opacity=".6"/>
+      <ellipse cx="80" cy="68" rx="7" ry="4.5" fill="#ff7aa2" opacity=".6"/>
+      <path d="M53 74 q7 5 14 0" fill="none" stroke="#1b2845" stroke-width="2.6" stroke-linecap="round" opacity=".55"/>
+      <!-- jasmine flower (Bharatanatyam) -->
+      <g transform="translate(96 28)">
+        <g fill="#ffffff" stroke="#dfe6f2" stroke-width="1">
+          <ellipse rx="4.6" ry="8" transform="rotate(0) translate(0 -6.5)"/>
+          <ellipse rx="4.6" ry="8" transform="rotate(72) translate(0 -6.5)"/>
+          <ellipse rx="4.6" ry="8" transform="rotate(144) translate(0 -6.5)"/>
+          <ellipse rx="4.6" ry="8" transform="rotate(216) translate(0 -6.5)"/>
+          <ellipse rx="4.6" ry="8" transform="rotate(288) translate(0 -6.5)"/>
+        </g>
+        <circle r="3.4" fill="#ffd23f"/>
+        <ellipse cx="-13" cy="9" rx="3.4" ry="5" fill="#ffffff" stroke="#dfe6f2" stroke-width="1" transform="rotate(-35 -13 9)"/>
+      </g>
+    </symbol>
+    <symbol id="cloud" viewBox="0 0 200 90">
+      <path d="M30 80 h140 a28 28 0 0 0 0 -56 a40 40 0 0 0 -72 -8 a30 30 0 0 0 -50 22 a22 22 0 0 0 -18 42 z" fill="var(--deco2)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- World decorations (static: the only idle motion allowed is the Now-stone halo) -->
+<div class="deco" aria-hidden="true">
+  <!-- Meadow: sun (day) / moon (night) + soft clouds -->
+  <svg class="d-sun" viewBox="0 0 190 190" data-for="meadow" data-only="light"><circle cx="95" cy="95" r="82" fill="var(--deco)" opacity=".22"/><circle cx="95" cy="95" r="62" fill="var(--deco)" opacity=".35"/><circle cx="95" cy="95" r="46" fill="var(--deco)"/></svg>
+  <svg class="d-sun" viewBox="0 0 190 190" data-for="meadow" data-only="dark"><defs><mask id="moonmask"><rect width="190" height="190" fill="#fff"/><circle cx="112" cy="80" r="40" fill="#000"/></mask></defs><circle cx="95" cy="95" r="70" fill="var(--deco)" opacity=".08"/><circle cx="92" cy="98" r="42" fill="var(--deco)" mask="url(#moonmask)"/></svg>
+  <svg class="d-stars" data-for="meadow" data-only="dark" viewBox="0 0 400 900" preserveAspectRatio="xMidYMid slice"><g fill="var(--deco)"><circle cx="40" cy="60" r="1.6"/><circle cx="120" cy="30" r="1.2"/><circle cx="210" cy="90" r="1.8"/><circle cx="300" cy="200" r="1.3"/><circle cx="30" cy="260" r="1.5"/><circle cx="370" cy="330" r="1.4"/><circle cx="80" cy="480" r="1.2"/><circle cx="350" cy="560" r="1.7"/><circle cx="20" cy="700" r="1.3"/><circle cx="380" cy="800" r="1.5"/></g></svg>
+  <svg class="d-cloud1" viewBox="0 0 200 90" data-for="meadow" opacity=".9"><use href="#cloud"/></svg>
+  <svg class="d-cloud2" viewBox="0 0 200 90" data-for="meadow" opacity=".75"><use href="#cloud"/></svg>
+  <svg class="d-cloud3" viewBox="0 0 200 90" data-for="meadow" opacity=".7"><use href="#cloud"/></svg>
+  <!-- Ocean: bubbles + a wave line -->
+  <svg class="d-wave" viewBox="0 0 400 40" preserveAspectRatio="none" data-for="ocean"><path d="M0 20 Q25 4 50 20 T100 20 T150 20 T200 20 T250 20 T300 20 T350 20 T400 20" fill="none" stroke="var(--deco2)" stroke-width="5" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".7"/><path d="M0 32 Q25 18 50 32 T100 32 T150 32 T200 32 T250 32 T300 32 T350 32 T400 32" fill="none" stroke="var(--deco2)" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".35"/></svg>
+  <svg class="d-bubbles" viewBox="0 0 160 520" data-for="ocean"><g fill="var(--deco)" fill-opacity=".22" stroke="var(--deco)" stroke-width="3" stroke-opacity=".85"><circle cx="120" cy="40" r="22"/><circle cx="80" cy="90" r="10"/><circle cx="130" cy="130" r="14"/><circle cx="100" cy="300" r="8"/><circle cx="135" cy="360" r="18"/><circle cx="110" cy="440" r="11"/></g><g fill="var(--deco)" opacity=".9"><circle cx="114" cy="32" r="5"/><circle cx="129" cy="352" r="4"/></g></svg>
+  <svg class="d-bubbles2" viewBox="0 0 90 300" data-for="ocean"><g fill="var(--deco)" fill-opacity=".22" stroke="var(--deco)" stroke-width="3" stroke-opacity=".8"><circle cx="30" cy="40" r="16"/><circle cx="55" cy="110" r="8"/><circle cx="25" cy="200" r="12"/></g></svg>
+  <!-- Space: tiny stars + a ringed planet -->
+  <svg class="d-stars" data-for="space" viewBox="0 0 400 900" preserveAspectRatio="xMidYMid slice"><g fill="var(--deco)"><circle cx="30" cy="40" r="1.6"/><circle cx="90" cy="120" r="1.1"/><circle cx="160" cy="30" r="1.4"/><circle cx="230" cy="80" r="1"/><circle cx="20" cy="200" r="1.3"/><circle cx="380" cy="230" r="1.7"/><circle cx="330" cy="300" r="1"/><circle cx="60" cy="330" r="1.8"/><circle cx="200" cy="380" r="1"/><circle cx="370" cy="420" r="1.3"/><circle cx="15" cy="470" r="1.1"/><circle cx="110" cy="520" r="1.5"/><circle cx="390" cy="560" r="1.2"/><circle cx="40" cy="620" r="1.6"/><circle cx="300" cy="650" r="1"/><circle cx="370" cy="720" r="1.8"/><circle cx="20" cy="780" r="1.2"/><circle cx="160" cy="840" r="1.4"/><circle cx="350" cy="870" r="1.1"/></g><g fill="var(--deco)" opacity=".9"><path d="M60 250 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/><path d="M350 140 l2.4 6 6 2.4 -6 2.4 -2.4 6 -2.4 -6 -6 -2.4 6 -2.4z"/><path d="M28 560 l2.4 6 6 2.4 -6 2.4 -2.4 6 -2.4 -6 -6 -2.4 6 -2.4z"/><path d="M372 640 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/></g></svg>
+  <svg class="d-planet" viewBox="0 0 170 150" data-for="space"><ellipse cx="88" cy="78" rx="74" ry="20" fill="none" stroke="var(--go)" stroke-width="7" transform="rotate(-18 88 78)" opacity=".9"/><circle cx="88" cy="76" r="42" fill="var(--deco2)"/><circle cx="74" cy="62" r="9" fill="#fff" opacity=".18"/><circle cx="102" cy="92" r="6" fill="#000" opacity=".08"/><path d="M14 101 A74 20 -18 0 0 162 55" fill="none" stroke="var(--go)" stroke-width="7" stroke-linecap="round" transform="rotate(0)" opacity=".95"/></svg>
+</div>
+
+<div class="app">
+<main id="main">
+
+  <!-- ================= TODAY ================= -->
+  <section class="screen" id="s-today" aria-labelledby="today-h">
+    <header class="hello">
+      <svg class="tara" role="img" aria-label="Tara the elephant"><use href="#tara"/></svg>
+      <div class="bubble">
+        <p class="eyebrow">Monday · Day 23</p>
+        <h1 class="greet" id="today-h" tabindex="-1">Good evening, Avantika! 🌙</h1>
+        <p>3 lessons left today — you’ve got this!</p>
+        <div class="prog-row">
+          <div class="prog" role="progressbar" aria-label="Today's lessons" aria-valuemin="0" aria-valuemax="4" aria-valuenow="1"><i style="width:25%"></i></div>
+          <span>1 of 4 done</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="chips">
+      <div class="chip"><b>🔥 6</b><small>day streak</small></div>
+      <div class="chip"><b>⭐ 128</b><small>stars</small></div>
+      <div class="chip"><b>📅 31</b><small>days to exams</small></div>
+    </div>
+
+    <section class="card upnow" style="--s:var(--physics);--sd:var(--physics-d)" aria-labelledby="upnow-h">
+      <div class="upnow-head">
+        <div class="subj-badge" aria-hidden="true">⚡</div>
+        <div>
+          <p class="eyebrow">Up now · 5:30–6:15</p>
+          <h2 class="upnow-title" id="upnow-h">Physics</h2>
+          <p class="upnow-sub">Light travels in a straight line · 45 min</p>
+        </div>
+      </div>
+      <button class="chunky" data-go="lesson">Start Physics <span class="arrow" aria-hidden="true">▶</span></button>
+      <div class="kolam-rule" aria-hidden="true"></div>
+      <p class="next">Next: 💃 Bharatanatyam at 6:30</p>
+    </section>
+
+    <section aria-labelledby="trail-h">
+      <div class="sec-head"><h2 id="trail-h">Today’s trail</h2><span class="muted">4 lessons</span></div>
+      <div class="trail" id="trail"><svg class="trail-svg" id="trail-svg" aria-hidden="true"></svg></div>
+    </section>
+  </section>
+
+  <!-- ================= WEEK ================= -->
+  <section class="screen" id="s-week" aria-labelledby="week-h" hidden>
+    <header class="page-head">
+      <h1 id="week-h" tabindex="-1">Your week 📅</h1>
+      <p>2–8 November · Tap a day to see it</p>
+    </header>
+    <div class="days" role="tablist" aria-label="Days of the week" id="days"></div>
+    <section aria-live="polite">
+      <div class="day-head"><h2 id="day-title">Monday</h2><span class="muted" id="day-sum"></span></div>
+      <ul class="rows" id="rows" style="margin-top:var(--sp-3)"></ul>
+    </section>
+  </section>
+
+  <!-- ================= REWARDS ================= -->
+  <section class="screen" id="s-progress" aria-labelledby="prog-h" hidden>
+    <header class="hello small">
+      <svg class="tara" role="img" aria-label="Tara the elephant"><use href="#tara"/></svg>
+      <div class="bubble"><h1 class="greet" id="prog-h" tabindex="-1">🔥 6-day streak!</h1><p>Tara is doing a happy&nbsp;dance&nbsp;🐘</p></div>
+    </header>
+
+    <section class="card level" aria-label="Your level">
+      <div class="medal"><div class="medal-face"><b>2</b></div></div>
+      <div>
+        <p class="eyebrow">Level 2</p>
+        <h2>Thinker</h2>
+        <div class="prog" role="progressbar" aria-label="Stars to the next level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="28"><i style="width:28%"></i></div>
+        <p class="muted">⭐ 128 stars · 72 more to <b>Scholar</b></p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="streak-h">
+      <h2 id="streak-h">Your last 7 days</h2>
+      <ol class="streak">
+        <li><div class="flame"><span>🔥</span></div><small>Tue</small></li>
+        <li><div class="flame"><span>🔥</span></div><small>Wed</small></li>
+        <li><div class="flame"><span>🔥</span></div><small>Thu</small></li>
+        <li><div class="flame"><span>🔥</span></div><small>Fri</small></li>
+        <li><div class="flame"><span>🔥</span></div><small>Sat</small></li>
+        <li><div class="flame"><span>🔥</span></div><small>Sun</small></li>
+        <li><div class="flame todo"><span>🔥</span></div><small>Today</small></li>
+      </ol>
+      <p class="shield">🛡️ <span>Your streak shield is ready this week.</span></p>
+    </section>
+
+    <section class="card" aria-labelledby="stick-h">
+      <div class="sec-head" style="padding:0"><h2 id="stick-h" style="font-size:var(--fs-lg)">Sticker book</h2><span class="muted" style="font-size:var(--fs-sm)">5 of 13</span></div>
+      <ul class="stickers" id="stickers"></ul>
+    </section>
+  </section>
+
+  <!-- ================= ME ================= -->
+  <section class="screen" id="s-me" aria-labelledby="me-h" hidden>
+    <header class="hello small">
+      <svg class="tara" role="img" aria-label="Tara the elephant"><use href="#tara"/></svg>
+      <div class="bubble"><h1 class="greet" id="me-h" tabindex="-1">Make it yours! ✨</h1><p>Pick a world for your adventure.</p></div>
+    </header>
+
+    <section class="card" aria-labelledby="world-h">
+      <h2 id="world-h">Pick your world</h2>
+      <div class="worlds" role="radiogroup" aria-labelledby="world-h">
+        <label class="world"><input class="sr-only" type="radio" name="world" value="meadow">
+          <span class="w-prev" data-w="meadow"><svg viewBox="0 0 100 80" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><circle cx="82" cy="14" r="13" fill="#ffd23f"/><path d="M8 40 h36 a8 8 0 0 0 0 -16 a11 11 0 0 0 -20 -2 a8 8 0 0 0 -14 6 a6 6 0 0 0 -2 12z" fill="#fff"/><path d="M0 70 Q30 56 60 66 T100 62 V80 H0z" fill="#bfe3a0"/><text x="50" y="62" font-size="20" text-anchor="middle">🌻</text></svg></span>
+          <span class="tick w-tick" aria-hidden="true">✓</span>
+          <span><b>Meadow</b><small>Sunny</small></span></label>
+        <label class="world"><input class="sr-only" type="radio" name="world" value="ocean">
+          <span class="w-prev" data-w="ocean"><svg viewBox="0 0 100 80" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff" fill-opacity=".3" stroke="#fff" stroke-width="2"><circle cx="80" cy="16" r="8"/><circle cx="68" cy="32" r="4"/><circle cx="18" cy="22" r="5"/></g><path d="M0 46 Q12 38 25 46 T50 46 T75 46 T100 46" fill="none" stroke="#4cc3da" stroke-width="3"/><path d="M0 70 Q30 60 60 68 T100 64 V80 H0z" fill="#ffe2ae"/><text x="50" y="66" font-size="20" text-anchor="middle">🐠</text></svg></span>
+          <span class="tick w-tick" aria-hidden="true">✓</span>
+          <span><b>Ocean</b><small>Fresh</small></span></label>
+        <label class="world"><input class="sr-only" type="radio" name="world" value="space">
+          <span class="w-prev" data-w="space"><svg viewBox="0 0 100 80" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="#fff6c8"><circle cx="12" cy="12" r="1.2"/><circle cx="30" cy="30" r="1"/><circle cx="52" cy="10" r="1.4"/><circle cx="20" cy="52" r="1"/><circle cx="90" cy="50" r="1.2"/></g><ellipse cx="78" cy="22" rx="20" ry="5" fill="none" stroke="#ffc93c" stroke-width="2.5" transform="rotate(-18 78 22)"/><circle cx="78" cy="22" r="11" fill="#ff8fb1"/><text x="48" y="66" font-size="20" text-anchor="middle">🚀</text></svg></span>
+          <span class="tick w-tick" aria-hidden="true">✓</span>
+          <span><b>Space</b><small>Cosy</small></span></label>
+      </div>
+    </section>
+
+    <section class="card" aria-label="How your app looks and sounds">
+      <div class="setting">
+        <h3 id="night-h">Night colours</h3>
+        <div class="seg" role="radiogroup" aria-labelledby="night-h">
+          <label><input class="sr-only" type="radio" name="night" value="auto"><span aria-hidden="true">🌗</span> Auto</label>
+          <label><input class="sr-only" type="radio" name="night" value="day"><span aria-hidden="true">☀️</span> Day</label>
+          <label><input class="sr-only" type="radio" name="night" value="night"><span aria-hidden="true">🌙</span> Night</label>
+        </div>
+        <p class="muted" id="space-note" hidden>Space is always cosy and dark 🌌</p>
+      </div>
+      <div class="setting">
+        <div class="kolam-rule" aria-hidden="true"></div>
+        <h3 id="text-h">Text size</h3>
+        <div class="seg" role="radiogroup" aria-labelledby="text-h">
+          <label><input class="sr-only" type="radio" name="text" value="big"><span class="aa-big" aria-hidden="true">Aa</span> Big</label>
+          <label><input class="sr-only" type="radio" name="text" value="bigger"><span class="aa-bigger" aria-hidden="true">Aa</span> Bigger</label>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="kolam-rule" aria-hidden="true"></div>
+        <h3 id="sound-h">Sounds</h3>
+        <div class="seg" role="radiogroup" aria-labelledby="sound-h">
+          <label><input class="sr-only" type="radio" name="sound" value="off"><span aria-hidden="true">🔇</span> Off</label>
+          <label><input class="sr-only" type="radio" name="sound" value="on"><span aria-hidden="true">🔊</span> On</label>
+        </div>
+      </div>
+    </section>
+
+    <button class="chunky soft" data-sheet="grownups">🔒 Grown-ups only</button>
+  </section>
+
+  <!-- ================= LESSON (focus mode) ================= -->
+  <section class="screen" id="s-lesson" aria-labelledby="lesson-h" hidden style="--s:var(--physics);--sd:var(--physics-d);--on-s:var(--on-physics)">
+    <header class="focus-top">
+      <button class="xbtn" id="xbtn" aria-label="Leave the lesson">✕</button>
+      <div>
+        <p class="eyebrow">⚡ Physics · Light</p>
+        <h1 id="lesson-h" tabindex="-1">Light travels in a straight line</h1>
+      </div>
+    </header>
+
+    <ol class="caterpillar" aria-label="Lesson steps">
+      <li class="done"><span class="ball"><span aria-hidden="true">🎬</span><span class="tick" aria-hidden="true">✓</span></span><span class="c-lbl">Watch<span class="sr-only">, done</span></span></li>
+      <li class="done"><span class="ball"><span aria-hidden="true">🃏</span><span class="tick" aria-hidden="true">✓</span></span><span class="c-lbl">Learn<span class="sr-only">, done</span></span></li>
+      <li class="current" aria-current="step"><span class="ball"><span aria-hidden="true">✋</span></span><span class="c-lbl">Try</span></li>
+      <li><span class="ball"><span aria-hidden="true">✅</span></span><span class="c-lbl">Check</span></li>
+      <li><span class="ball"><span aria-hidden="true">⭐</span></span><span class="c-lbl">Stars</span></li>
+    </ol>
+
+    <section class="card qcard">
+      <p class="q-meta"><span>✋ Try it</span><span>Question 2 of 8</span></p>
+      <h2 class="question" id="q-text">Which of these is opaque?</h2>
+      <div class="options" id="options" role="radiogroup" aria-labelledby="q-text"></div>
+    </section>
+
+    <div class="lesson-action" id="lesson-action">
+      <button class="chunky" id="check" disabled>Check my answer</button>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<nav class="tabbar" aria-label="Main">
+  <ul>
+    <li><a class="tab" href="#/" data-tab="today"><span class="t-emo" aria-hidden="true">🗺️</span>Today</a></li>
+    <li><a class="tab" href="#/week" data-tab="week"><span class="t-emo" aria-hidden="true">📅</span>Week</a></li>
+    <li><a class="tab" href="#/progress" data-tab="progress"><span class="t-emo" aria-hidden="true">🏆</span>Rewards</a></li>
+    <li><a class="tab" href="#/me" data-tab="me"><span class="t-emo" aria-hidden="true">😊</span>Me</a></li>
+  </ul>
+</nav>
+
+<div id="sheet-root"></div>
+<div class="fx" id="fx" aria-hidden="true"></div>
+
+<script>
+(() => {
+'use strict';
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const html = document.documentElement;
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const prefersDark = matchMedia('(prefers-color-scheme: dark)');
+
+/* ---------- data (Appendix A2 + A). In the app this comes from /content. ---------- */
+const SUBJECTS = {
+  maths: { name: 'Maths', emoji: '📘' }, physics: { name: 'Physics', emoji: '⚡' },
+  chemistry: { name: 'Chemistry', emoji: '🧪' }, biology: { name: 'Biology', emoji: '🌿' },
+  english: { name: 'English', emoji: '📖' }, history: { name: 'History / Civics', emoji: '🏛️' },
+  geography: { name: 'Geography', emoji: '🌏' },
+};
+const L = (start, end, kind, subject, focus) => ({ start, end, kind, subject, focus });
+const B = (start, end, label, emoji) => ({ start, end, kind: 'break', label, emoji });
+const A = (start, end, label, emoji, colour, kind = 'activity') => ({ start, end, kind, label, emoji, colour });
+const TT = {
+  mon: [B('15:30','16:15','Reach home • snack & rest','🍎'), L('16:15','17:15','homework_lesson','maths','homework + practice'), B('17:15','17:30','Short break','☕'), L('17:30','18:15','lesson','physics'), B('18:15','18:30','Get ready for dance','🎒'), A('18:30','19:30','Bharatanatyam class','💃','dance'), B('19:30','20:15','Dinner & rest','🍽️'), L('20:15','21:00','lesson','english','reading & grammar'), L('21:00','21:30','lesson','geography')],
+  tue: [B('15:30','16:15','Snack & rest','🍎'), L('16:15','17:00','homework_lesson','maths','homework'), A('17:00','18:00','Tuition — Hindi & Kannada','🧑‍🏫','tuition'), B('18:00','18:30','Break & snack','☕'), L('18:30','19:30','lesson','history'), B('19:30','20:00','Free play time','🎨'), B('20:00','20:30','Dinner','🍽️'), L('20:30','21:00','lesson','biology'), A('21:00','21:30','Hindi / Kannada tuition homework','✍️','lang','offline_task')],
+  wed: [B('15:30','16:15','Snack & rest','🍎'), L('16:15','17:15','lesson','maths','practice sums'), B('17:15','17:30','Short break','☕'), L('17:30','18:15','lesson','chemistry'), B('18:15','18:30','Get ready for dance','🎒'), A('18:30','19:30','Bharatanatyam class','💃','dance'), B('19:30','20:15','Dinner & rest','🍽️'), L('20:15','21:00','lesson','biology'), L('21:00','21:30','revise','history')],
+  thu: [B('15:30','16:15','Snack & rest','🍎'), L('16:15','17:00','lesson','physics'), A('17:00','18:00','Tuition — Hindi & Kannada','🧑‍🏫','tuition'), B('18:00','18:30','Break','☕'), L('18:30','19:30','lesson','maths','practice'), B('19:30','20:00','Free time','🎨'), B('20:00','20:30','Dinner','🍽️'), L('20:30','21:00','lesson','geography','maps & revision'), A('21:00','21:30','Hindi / Kannada tuition homework','✍️','lang','offline_task')],
+  fri: [B('15:30','16:15','Snack & rest','🍎'), L('16:15','17:00','lesson','english','writing'), A('17:00','18:00','Tuition — Hindi & Kannada','🧑‍🏫','tuition'), B('18:00','18:30','Break','☕'), L('18:30','19:15','lesson','chemistry'), B('19:15','20:30','Family & free time + dinner','🎉'), L('20:30','21:30','lesson','physics','numericals & diagrams')],
+  sat: [L('09:00','10:00','lesson','maths','practice & revision'), B('10:00','10:15','Short break','☕'), L('10:15','11:00','lesson','chemistry'), L('11:00','11:45','lesson','biology','diagrams & terms'), B('11:45','15:30','Lunch, rest & play','🛌'), { start:'15:30', end:'16:15', kind:'test', subjects:['english','history','geography'], label:'Saturday Test', emoji:'🖥️' }, B('16:15','16:30','Breather','🧃'), L('16:30','17:15','fixit','english'), L('17:15','18:00','fixit','geography'), B('18:00','18:15','Short break','☕'), L('18:15','19:00','fixit','history')],
+  sun: [{ start:'09:00', end:'09:30', kind:'revise', subjects:['maths','physics','chemistry','biology'], label:'Quick revision before the test', emoji:'🔁' }, { start:'09:30', end:'10:30', kind:'test', subjects:['maths','physics','chemistry','biology'], label:'Sunday Test', emoji:'🖥️' }, { start:'10:30', end:'11:00', kind:'review', subjects:['maths','physics','chemistry','biology'], label:'Results + get ready', emoji:'✅' }, A('11:00','12:00','Badminton class','🏸','sport'), B('12:00','16:30','Lunch, rest, hobby & family time','🌈'), { start:'16:30', end:'17:15', kind:'fixit', subjects:['maths','physics','chemistry','biology'], label:'Fix-it + next week preview', emoji:'💡' }],
+};
+const WEEK = [['mon','Mon','Monday',2],['tue','Tue','Tuesday',3],['wed','Wed','Wednesday',4],['thu','Thu','Thursday',5],['fri','Fri','Friday',6],['sat','Sat','Saturday',7],['sun','Sun','Sunday',8]];
+const TODAY = 'mon';
+const NOW_MIN = 17 * 60 + 40;            // the prototype's fixed clock: Monday 5:40 pm
+const KIND = { lesson: 'Lesson', homework_lesson: 'Homework + lesson', revise: 'Revise', fixit: 'Fix-it + lesson', test: 'Online test', review: 'Results', activity: 'Tick it off', offline_task: 'Tick it off' };
+
+const toMin = (t) => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
+const fmt = (t) => { let [h, m] = t.split(':').map(Number); h = h % 12 || 12; return `${h}:${String(m).padStart(2, '0')}`; };
+const range = (s) => `${fmt(s.start)}–${fmt(s.end)}`;
+const isStudy = (s) => !['break', 'activity', 'offline_task'].includes(s.kind);
+const subjOf = (s) => s.subject || (s.subjects && s.subjects[0]);
+const colourVars = (s) => {
+  const c = s.colour || subjOf(s) || 'fun';
+  return `--s:var(--${c});--sd:var(--${c}-d);--a:var(--${c});--ad:var(--${c}-d);--on-s:var(--on-${c})`;
+};
+const nameOf = (s) => s.subject ? SUBJECTS[s.subject].name : s.label;
+const emojiOf = (s) => s.subject ? SUBJECTS[s.subject].emoji : s.emoji;
+const stateOf = (day, s) => {
+  if (day !== TODAY) return 'locked';
+  if (toMin(s.end) <= NOW_MIN) return 'done';
+  if (toMin(s.start) <= NOW_MIN) return 'now';
+  return 'later';
+};
+
+/* ---------- settings (prototype: localStorage; the app uses Dexie settings repo) ---------- */
+const params = new URLSearchParams(location.search);
+let settings = { world: 'meadow', night: 'auto', text: 'big', sound: 'off' };
+try { Object.assign(settings, JSON.parse(localStorage.getItem('aa-proto') || '{}')); } catch {}
+for (const k of ['world', 'night', 'text', 'sound']) if (params.get(k)) settings[k] = params.get(k);
+const save = () => { try { localStorage.setItem('aa-proto', JSON.stringify(settings)); } catch {} };
+
+function applySettings() {
+  const theme = settings.world === 'space' ? 'dark'
+    : settings.night === 'night' ? 'dark' : settings.night === 'day' ? 'light'
+    : prefersDark.matches ? 'dark' : 'light';
+  html.dataset.world = settings.world;
+  html.dataset.theme = theme;
+  html.dataset.text = settings.text;
+  for (const k of ['world', 'night', 'text', 'sound']) {
+    const input = $(`input[name="${k}"][value="${settings[k]}"]`);
+    if (input) input.checked = true;
+  }
+  $('#space-note').hidden = settings.world !== 'space';
+  requestAnimationFrame(() => {
+    $('meta[name="theme-color"]').content = getComputedStyle(html).getPropertyValue('--go').trim();
+  });
+}
+prefersDark.addEventListener('change', applySettings);
+document.addEventListener('change', (e) => {
+  const t = e.target;
+  if (t.matches('input[type=radio]') && t.name in settings) {
+    settings[t.name] = t.value; save(); applySettings();
+    if (t.name === 'sound' && t.value === 'on') chime();
+    if (t.name === 'text') requestAnimationFrame(renderTrail);
+  }
+});
+
+/* ---------- Today's trail ---------- */
+const OFFSETS = [0.5, 0.74, 0.5, 0.26];
+function stoneNode(s) {
+  const st = stateOf(TODAY, s);
+  const n = document.createElement('div');
+  n.className = 'node';
+  n.style.cssText = colourVars(s);
+  const sub = SUBJECTS[s.subject];
+  const spoken = { done: 'done', now: 'up now, start here', later: 'later' }[st];
+  n.innerHTML = (st === 'now' ? '<span class="tag">Start here!</span>' : '')
+    + `<button class="stone ${st}" aria-label="${sub.name}, ${range(s)}, ${spoken}"><span aria-hidden="true">${sub.emoji}</span>${st === 'done' ? '<span class="tick" aria-hidden="true">✓</span>' : ''}</button>`
+    + `<span class="stone-label" aria-hidden="true"><b>${sub.name}</b><small>${range(s)}</small></span>`;
+  n.querySelector('button').addEventListener('click', () => onStone(s, st));
+  n._metrics = () => {
+    const stone = n.querySelector('.stone'), label = n.querySelector('.stone-label'), tag = n.querySelector('.tag');
+    const size = stone.offsetWidth, halo = st === 'now' ? 18 : 0;
+    label.style.top = `${size / 2 + 14}px`;
+    return {
+      above: size / 2 + halo + (tag ? tag.offsetHeight + 4 : 0),
+      below: size / 2 + 14 + label.offsetHeight + 4,
+      half: Math.max(size / 2 + halo, label.offsetWidth / 2, tag ? tag.offsetWidth / 2 : 0),
+      now: st === 'now',
+    };
+  };
+  return n;
+}
+function restNode(s, extraClass = '') {
+  const n = document.createElement('div');
+  n.className = 'node';
+  n.style.cssText = s.colour ? colourVars(s) : '';
+  n.innerHTML = `<button class="rest ${extraClass}"><span class="r-emo" aria-hidden="true">${s.emoji}</span><span><b>${s.short || s.label}</b><small>${s.time || range(s)}</small></span></button>`;
+  n.querySelector('button').addEventListener('click', () => onRest(s));
+  n._metrics = () => {
+    const b = n.querySelector('.rest');
+    return { above: b.offsetHeight / 2, below: b.offsetHeight / 2 + 6, half: b.offsetWidth / 2, now: false };
+  };
+  return n;
+}
+function renderTrail() {
+  const host = $('#trail'), svg = $('#trail-svg');
+  if (!host.offsetParent) return;
+  $$('.node', host).forEach((n) => n.remove());
+  const items = TT[TODAY].filter((s) => s.kind !== 'break');
+  const nodes = items.map((s) => s.kind === 'activity' || s.kind === 'offline_task'
+    ? restNode({ ...s, short: s.label.replace(' class', '') }) : stoneNode(s));
+  nodes.push(restNode({ emoji: '🌙', short: 'Sleep time', time: '9:45' }, 'end'));
+  nodes.forEach((n) => host.appendChild(n));
+  const W = host.clientWidth, GAP = 22;
+  let y = 8, nowIdx = -1;
+  const pts = nodes.map((n, i) => {
+    const m = n._metrics();
+    y += m.above;
+    const x = Math.min(Math.max(W * OFFSETS[i % 4], m.half + 2), W - m.half - 2);
+    n.style.left = `${x}px`; n.style.top = `${y}px`;
+    if (m.now) nowIdx = i;
+    const p = [x, y];
+    y += m.below + GAP;
+    return p;
+  });
+  const H = y - GAP + 8;
+  host.style.height = `${H}px`;
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.setAttribute('width', W); svg.setAttribute('height', H);
+  const d = (list) => list.map(([x, yy], i) => {
+    if (!i) return `M${x} ${yy}`;
+    const [px, py] = list[i - 1], my = (py + yy) / 2;
+    return `C${px} ${my} ${x} ${my} ${x} ${yy}`;
+  }).join(' ');
+  const all = d(pts);
+  svg.innerHTML = `<path class="trail-ground" d="${all}"/><path class="trail-dots" d="${all}"/>`
+    + (nowIdx > 0 ? `<path class="trail-walked" d="${d(pts.slice(0, nowIdx + 1))}"/>` : '');
+}
+new ResizeObserver(() => renderTrail()).observe($('#trail'));
+
+function onStone(s, st) {
+  const sub = SUBJECTS[s.subject];
+  if (st === 'now') return go('lesson');
+  if (st === 'done') return openSheet({ icon: sub.emoji, title: `${sub.name} is done! ✅`, body: 'Brilliant work. Your stars are safe.', primary: 'Back to my trail' });
+  openSheet({ tara: true, title: `${sub.name} starts at ${fmt(s.start)}.`, body: 'Finish the glowing stone first!', primary: 'OK, got it' });
+}
+function onRest(s) {
+  if (s.kind === 'activity') return openSheet({ icon: s.emoji, title: `Enjoy ${s.label.replace(' class', '')}! ${s.emoji}`, body: 'Your next lesson is at 8:15.', primary: 'Back to my trail' });
+  openSheet({ tara: true, title: 'Time to sleep at 9:45 🌙', body: 'Your stars are safe. See you tomorrow.', primary: 'Back to my trail' });
+}
+
+/* ---------- Week ---------- */
+let selectedDay = TODAY;
+function renderWeek() {
+  const days = $('#days');
+  days.innerHTML = WEEK.map(([id, short, , num]) => {
+    const subs = [...new Set(TT[id].flatMap((s) => s.subject ? [s.subject] : (s.subjects || [])))];
+    return `<button class="day ${id === TODAY ? 'today' : ''}" role="tab" aria-selected="${id === selectedDay}" aria-controls="rows" data-day="${id}">
+      <span class="d-name">${id === TODAY ? 'Today' : short}</span><span class="d-num">${num}</span>
+      <span class="sr-only">, ${subs.length} subjects</span><span class="dots" aria-hidden="true">${subs.map((x) => `<i style="--c:var(--${x})"></i>`).join('')}</span></button>`;
+  }).join('');
+  const [, , long] = WEEK.find((w) => w[0] === selectedDay);
+  const slots = TT[selectedDay];
+  const lessons = slots.filter(isStudy).length;
+  $('#day-title').textContent = long;
+  $('#day-sum').textContent = `${lessons} study slot${lessons === 1 ? '' : 's'}`;
+  $('#rows').innerHTML = slots.map((s) => {
+    if (s.kind === 'break') return `<li class="row brk"><span class="r-time"><b>${fmt(s.start)}</b></span><span class="r-emo" aria-hidden="true">${s.emoji}</span><span class="r-main"><span>${s.label}</span><span class="kolam-rule" aria-hidden="true"></span></span></li>`;
+    const st = stateOf(selectedDay, s);
+    const mins = toMin(s.end) - toMin(s.start);
+    const cap = (t) => t[0].toUpperCase() + t.slice(1);
+    const detail = s.subjects && !s.subject ? s.subjects.map((x) => SUBJECTS[x].name).join(', ') : s.focus ? cap(s.focus) : KIND[s.kind];
+    const pill = { done: '<span class="state done">Done ✅</span>', now: '<span class="state now">Now ▶</span>', later: '<span class="state">Later ⏳</span>', locked: `<span class="state">🔒 ${WEEK.find((w) => w[0] === selectedDay)[1]}</span>` }[st];
+    return `<li class="row ${st === 'now' ? 'is-now' : ''}" style="${colourVars(s)}">
+      <span class="r-time"><b>${fmt(s.start)}</b><small>${mins} min</small></span>
+      <span class="r-emo" aria-hidden="true">${emojiOf(s)}</span>
+      <span class="r-main"><b>${nameOf(s)}</b><small>${detail}</small></span>${pill}</li>`;
+  }).join('');
+}
+$('#days').addEventListener('click', (e) => {
+  const b = e.target.closest('.day'); if (!b) return;
+  selectedDay = b.dataset.day; renderWeek(); $(`[data-day="${selectedDay}"]`).focus();
+});
+$('#days').addEventListener('keydown', (e) => {
+  if (!['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+  const i = WEEK.findIndex((w) => w[0] === selectedDay);
+  selectedDay = WEEK[(i + (e.key === 'ArrowRight' ? 1 : 6)) % 7][0];
+  renderWeek(); $(`[data-day="${selectedDay}"]`).focus();
+});
+
+/* ---------- Rewards: sticker book (badges from §10) ---------- */
+const STICKERS = [
+  ['First Lesson', '🌱', 'biology', 1], ['First 100%', '💯', 'english', 1], ['5-Day Streak', '🔥', 'fun', 1],
+  ['Test Taker', '📝', 'maths', 1], ['Mistake Fixer', '🛠️', 'chemistry', 1], ['2-Week Streak', '🚀', 'physics', 0],
+  ['Full Week Done', '🗓️', 'geography', 0], ['Subject Star', '🌟', 'gold', 0], ['Video Detective', '🔎', 'history', 0],
+  ['Chapter Complete', '📗', 'biology', 0], ['All Chapters', '🏔️', 'maths', 0], ['Revision Hero', '🦸', 'dance', 0],
+  ['Mock Exam Master', '🎓', 'physics', 0],
+];
+$('#stickers').innerHTML = STICKERS.map(([name, emo, c, got], i) => got
+  ? `<li class="sticker"><span class="st-face" style="--c:var(--${c});--r:${[-6, 4, -3, 5, -4][i % 5]}deg" aria-hidden="true">${emo}</span><span class="st-name">${name}</span></li>`
+  : `<li class="sticker locked"><span class="st-face" aria-hidden="true"><span>🔒</span></span><span class="st-name">${name}<span class="sr-only"> (not yet)</span></span></li>`).join('');
+
+/* ---------- Lesson: question + feedback (sample question from Appendix B) ---------- */
+const Q = { options: ['Clear glass', 'Butter paper', 'A book', 'Clean water'], answer: 2,
+  hint: 'Ask: does light pass fully, partly, or not at all?', explanation: 'A book blocks all light, so it is opaque.' };
+let tries = 0;
+function renderQuestion() {
+  tries = 0;
+  $('#options').classList.remove('locked');
+  $('#options').innerHTML = Q.options.map((o, i) => `<label class="option"><input class="sr-only" type="radio" name="q" value="${i}">
+    <span class="key" aria-hidden="true">${'ABCD'[i]}</span><span class="o-text">${o}</span><span class="o-mark" aria-hidden="true"></span></label>`).join('');
+  $('#check').disabled = true;
+}
+$('#options').addEventListener('change', () => { $('#check').disabled = false; });
+$('#check').addEventListener('click', checkAnswer);
+function checkAnswer() {
+  const picked = $('#options input:checked'); if (!picked) return;
+  const label = picked.closest('.option');
+  const right = Number(picked.value) === Q.answer;
+  tries++;
+  $('#lesson-action').style.visibility = 'hidden';
+  if (right) {
+    label.classList.add('is-right'); label.querySelector('.o-mark').textContent = '⭐';
+    $('#options').classList.add('locked'); $$('#options input').forEach((i) => (i.disabled = true));
+    if (tries === 1) starPop(label.querySelector('.key'));
+    confetti(); chime(); buzz();
+    openSheet({ tone: 'ok', icon: '⭐', title: 'Yes! ⭐ Spot on!', body: Q.explanation, primary: 'Continue', onPrimary: () => { renderQuestion(); } });
+  } else {
+    label.classList.add('is-tried');
+    openSheet({ tone: 'hint', tara: true, title: 'Almost! Here’s a&nbsp;clue&nbsp;💡', body: Q.hint, primary: 'Try again', onPrimary: () => {
+      label.classList.remove('is-tried'); picked.checked = false; $('#check').disabled = true;
+    } });
+  }
+}
+
+/* ---------- BottomSheet ---------- */
+let lastFocus = null;
+function openSheet({ tone = '', icon, tara, title, body, primary, onPrimary, secondary, onSecondary, scrim = !tone }) {
+  closeSheet(true);
+  lastFocus = document.activeElement;
+  const root = $('#sheet-root');
+  root.innerHTML = (scrim ? '<div class="scrim" data-close></div>' : '')
+    + `<section class="sheet ${tone}" role="${scrim ? 'dialog' : 'status'}" ${scrim ? 'aria-modal="true"' : ''} aria-labelledby="sheet-t">
+      <div class="sheet-body"><div class="sheet-icon" aria-hidden="true">${tara ? '<svg class="tara"><use href="#tara"/></svg>' : icon}</div>
+      <div><h2 id="sheet-t">${title}</h2>${body ? `<p>${body}</p>` : ''}</div></div>
+      <div class="sheet-actions"><button class="chunky" data-primary>${primary}</button>${secondary ? `<button class="chunky soft" data-secondary>${secondary}</button>` : ''}</div></section>`;
+  const sheet = $('.sheet', root);
+  // Never cover the question: pad the page so options can sit above the sheet.
+  requestAnimationFrame(() => {
+    $('.app').style.paddingBottom = `${sheet.offsetHeight + 24}px`;
+    const picked = $('#options .is-right, #options .is-tried');
+    if (picked && !$('#s-lesson').hidden) {
+      const r = picked.getBoundingClientRect(), limit = innerHeight - sheet.offsetHeight - 16;
+      if (r.bottom > limit) scrollBy({ top: r.bottom - limit, behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+    }
+  });
+  $('[data-primary]', root).addEventListener('click', () => { closeSheet(); onPrimary && onPrimary(); });
+  $('[data-secondary]', root)?.addEventListener('click', () => { closeSheet(); onSecondary && onSecondary(); });
+  $('[data-close]', root)?.addEventListener('click', () => closeSheet());
+  $('[data-primary]', root).focus({ preventScroll: true });
+}
+function closeSheet(silent) {
+  const root = $('#sheet-root'); if (!root.innerHTML) return;
+  root.innerHTML = '';
+  $('.app').style.paddingBottom = '';
+  $('#lesson-action').style.visibility = '';
+  if (!silent && lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && $('.scrim')) closeSheet(); });
+$('#xbtn').addEventListener('click', leaveDialog);
+function leaveDialog() {
+  openSheet({ tara: true, title: 'Leave the lesson?', body: 'Your progress is saved.', primary: 'Keep going', secondary: 'Leave for now', onSecondary: () => { location.hash = '#/'; } });
+}
+document.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-sheet="grownups"]');
+  if (b) openSheet({ icon: '🔒', title: 'Grown-ups only', body: 'Ask Amma or Appa to type the PIN.', primary: 'OK' });
+  const g = e.target.closest('[data-go]');
+  if (g) go(g.dataset.go);
+});
+
+/* ---------- Joy: star pop, confetti, chime ---------- */
+function starPop(anchor) {
+  if (reduceMotion.matches) return;
+  const r = anchor.getBoundingClientRect();
+  const s = document.createElement('span');
+  s.className = 'starpop'; s.textContent = '⭐ +1';
+  s.style.left = `${r.left}px`; s.style.top = `${r.top}px`;
+  document.body.appendChild(s);
+  s.animate([
+    { transform: 'translateY(0) scale(.6)', opacity: 0 },
+    { transform: 'translateY(-30px) scale(1.35)', opacity: 1, offset: .3 },
+    { transform: 'translateY(-110px) scale(1)', opacity: 0 },
+  ], { duration: 1100, easing: 'cubic-bezier(.22,1,.36,1)' }).onfinish = () => s.remove();
+}
+function confetti() {
+  if (reduceMotion.matches) return;
+  const fx = $('#fx'), css = getComputedStyle(html);
+  const colours = ['--gold', '--maths', '--physics', '--chemistry', '--english', '--lang', '--sport'].map((v) => css.getPropertyValue(v).trim());
+  for (let i = 0; i < 46; i++) {
+    const p = document.createElement('i');
+    p.className = 'confetto';
+    p.style.left = `${Math.random() * 100}%`;
+    p.style.background = colours[i % colours.length];
+    if (i % 3 === 0) p.style.borderRadius = '50%', p.style.height = '10px';
+    fx.appendChild(p);
+    const drift = (Math.random() - .5) * 160, spin = (Math.random() - .5) * 900;
+    p.animate([
+      { transform: 'translate(0,0) rotate(0)', opacity: 1 },
+      { transform: `translate(${drift}px, ${innerHeight * (.75 + Math.random() * .35)}px) rotate(${spin}deg)`, opacity: .9 },
+    ], { duration: 1500 + Math.random() * 900, delay: Math.random() * 180, easing: 'cubic-bezier(.25,.6,.4,1)', fill: 'forwards' }).onfinish = () => p.remove();
+  }
+}
+let audio;
+function chime() {
+  if (settings.sound !== 'on') return;
+  try {
+    audio = audio || new AudioContext();
+    [[784, 0], [1047, .14]].forEach(([f, t]) => {
+      const o = audio.createOscillator(), g = audio.createGain();
+      o.type = 'sine'; o.frequency.value = f; o.connect(g); g.connect(audio.destination);
+      const at = audio.currentTime + t;
+      g.gain.setValueAtTime(0, at); g.gain.linearRampToValueAtTime(.18, at + .02); g.gain.exponentialRampToValueAtTime(.001, at + .45);
+      o.start(at); o.stop(at + .5);
+    });
+  } catch {}
+}
+function buzz() { /* vibration is off by default (settings.vibration); the app calls navigator.vibrate(30) */ }
+
+/* ---------- router ---------- */
+const ROUTES = { '': 'today', '/': 'today', '/week': 'week', '/progress': 'progress', '/me': 'me', '/lesson': 'lesson' };
+function go(name) { location.hash = name === 'today' ? '#/' : `#/${name}`; }
+function route(first) {
+  const name = ROUTES[location.hash.slice(1)] || 'today';
+  closeSheet(true);
+  $$('.screen').forEach((s) => { const on = s.id === `s-${name}`; s.hidden = !on; s.classList.toggle('enter', on && !first); });
+  html.classList.toggle('focus', name === 'lesson');
+  $$('.tab').forEach((t) => (t.dataset.tab === name ? t.setAttribute('aria-current', 'page') : t.removeAttribute('aria-current')));
+  if (name === 'today') requestAnimationFrame(renderTrail);
+  if (name === 'week') renderWeek();
+  if (name === 'lesson') renderQuestion();
+  window.scrollTo(0, 0);
+  if (!first) $(`#s-${name} [tabindex="-1"]`)?.focus({ preventScroll: true });
+}
+addEventListener('hashchange', () => route(false));
+
+/* ---------- boot ---------- */
+applySettings();
+if (params.get('s')) history.replaceState(null, '', `${location.pathname}${location.search}#/${params.get('s') === 'today' ? '' : params.get('s')}`);
+route(true);
+const fb = params.get('fb');
+if (fb && !$('#s-lesson').hidden) {
+  const pick = $(`#options input[value="${fb === 'ok' ? Q.answer : 0}"]`);
+  pick.checked = true; $('#check').disabled = false; checkAnswer();
+}
+const sh = params.get('sheet');
+if (sh === 'notready') onStone(TT.mon[7], 'later');
+if (sh === 'leave') leaveDialog();
+Promise.all([document.fonts.load('600 1em Fredoka'), document.fonts.load('700 1em Nunito')]).catch(() => {}).then(() => document.fonts.ready).then(() => { renderTrail(); document.body.dataset.ready = '1'; });
+})();
+</script>
+</body>
+</html>

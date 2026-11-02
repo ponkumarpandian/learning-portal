@@ -1,0 +1,105 @@
+{
+  "id": "matter-molecules",
+  "subject": "chemistry",
+  "title": "Molecules — why matter is solid, liquid or gas",
+  "scenes": [
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "solid", "container": "box", "zoom": true, "highlight": "molecules" },
+      "minDuration": 8,
+      "narration": "Matter is made of very small particles which can exist independently. These particles are commonly called molecules.",
+      "source": { "pages": [60] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "liquid", "container": "box", "highlight": "force" },
+      "steps": [{ "at": 5, "props": { "highlight": "space" } }],
+      "minDuration": 11,
+      "narration": "The molecules of any kind of matter always attract each other. The force of attraction between molecules is called intermolecular force. And the space between the molecules is called intermolecular space.",
+      "checkpoint": { "questionId": "matter-molecules-cp1" },
+      "source": { "pages": [60] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "liquid", "container": "box", "highlight": "force", "gap": 0.6 },
+      "steps": [
+        { "at": 3, "props": { "gap": 0.2 } },
+        { "at": 7, "props": { "gap": 0.9 } }
+      ],
+      "minDuration": 10,
+      "narration": "Watch the two molecules. When the space between them decreases, the force of attraction between them increases. When the space increases, the force decreases.",
+      "source": { "pages": [60] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "solid", "container": "box", "label": "Fig. 3.12" },
+      "minDuration": 13,
+      "narration": "In solids, the molecules are very tightly packed. The intermolecular spaces are very small, so they have very strong intermolecular force of attraction. The molecules cannot interchange their position. That is why solids have a definite shape and a definite volume, and they cannot be compressed.",
+      "source": { "pages": [60, 61] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "liquid", "container": "box", "label": "Fig. 3.13" },
+      "minDuration": 14,
+      "narration": "In liquids, the molecules are not very tightly packed. The intermolecular spaces are larger than in solids, so the forces are not strong. The molecules can interchange their places. That is why liquids take the shape of the containing vessel and can flow. But the molecules cannot move far apart, so liquids have a definite volume.",
+      "checkpoint": { "questionId": "matter-molecules-cp2" },
+      "source": { "pages": [61] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "gas", "container": "box", "label": "Fig. 3.14" },
+      "minDuration": 13,
+      "narration": "In gases, the molecules are very far apart from each other. The intermolecular spaces are too large, so the intermolecular forces are almost negligible. That is why gases have no definite shape or definite volume, and fill the entire space available to them. They can be easily compressed, because their intermolecular spaces can be decreased by compressive forces.",
+      "checkpoint": { "questionId": "matter-molecules-cp3" },
+      "source": { "pages": [61] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "liquid", "container": "flask", "viscous": true },
+      "minDuration": 10,
+      "narration": "Did you know? Honey, coconut oil and desi ghee are sticky and difficult to pour out. That is because there is more friction between the layers of their molecules. Such liquids are called viscous liquids.",
+      "source": { "pages": [61] }
+    }
+  ],
+  "questions": [
+    {
+      "id": "matter-molecules-cp1",
+      "type": "mcq",
+      "prompt": "What is the space between molecules called?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["Intermolecular space", "Intermolecular force", "Free surface"],
+      "answer": "Intermolecular space",
+      "hints": ["'Inter' means between. Space between molecules…"],
+      "explanation": "The space between the molecules is called intermolecular space.",
+      "source": { "pages": [60] }
+    },
+    {
+      "id": "matter-molecules-cp2",
+      "type": "true_false",
+      "prompt": "Liquid molecules can interchange their places.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "hints": ["Liquids can flow. What lets them flow?"],
+      "explanation": "Liquid molecules are not very tightly packed, so they can interchange their places.",
+      "source": { "pages": [61] }
+    },
+    {
+      "id": "matter-molecules-cp3",
+      "type": "mcq",
+      "prompt": "Why can gases be easily compressed?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "Their intermolecular spaces are very large and can be decreased",
+        "Their molecules are very tightly packed",
+        "They have one free surface"
+      ],
+      "answer": "Their intermolecular spaces are very large and can be decreased",
+      "hints": ["Look at how far apart the gas molecules are."],
+      "explanation": "Gases can be easily compressed, as intermolecular spaces can be decreased by compressive forces.",
+      "source": { "pages": [61] }
+    }
+  ]
+}

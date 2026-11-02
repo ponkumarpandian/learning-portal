@@ -1,0 +1,54 @@
+# Component inventory (`src/components/`)
+
+Import from `@/components/<Name>`. The props here are taken from the source; when in doubt, read the file. Sizes and states are in `docs/design/NOTES.md`.
+
+| Component             | Props                                                                                                                        | Notes                                                                                                                                                                                      |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ChunkyButton`        | `variant?: 'go'\|'soft'`, `arrow?`, `ref?`, plus every `<button>` attribute                                                  | The one big action. `type` defaults to `button`. Disabled shows at 45% opacity                                                                                                             |
+| `ChunkyLink`          | `variant?`, `arrow?`, plus react-router `LinkProps` (`to`)                                                                   | Same look, used for navigation ("Back to my trail")                                                                                                                                        |
+| `Card`                | `as?: 'section'\|'div'\|'article'`, `className`, HTML attributes                                                             | `--surface`, 26px corners, ledge. An `h2` inside gets the title style                                                                                                                      |
+| `Chip`, `ChipRow`     | `value: ReactNode`, `label: string`, `srLabel?`                                                                              | Stat pills (streak, stars, exam). `ChipRow` lays them out in a grid                                                                                                                        |
+| `SpeechBubble`        | `children`, `className?`                                                                                                     | Bubble with a tail                                                                                                                                                                         |
+| `TaraSays`            | `children`, `mood?`, `small?`                                                                                                | Tara next to a bubble. One short line, and she never scolds                                                                                                                                |
+| `Tara`                | `mood?: 'happy'\|'cheer'\|'sleepy'`, `size?: 'default'\|'small'\|'fill'`, `label?: string\|null`, `animateIn?`, `className?` | Inline SVG using `--tara` and `--tara-ear`                                                                                                                                                 |
+| `Stone`               | `name`, `emoji`, `time`, `state: 'done'\|'now'\|'later'\|'catchup'`, `vars: ColourVars`, `onSelect?`                         | Trail stone. Gets `vars` from `subjectVars()` (`tokenVars('gold')` for tests)                                                                                                              |
+| `RestStop`            | `label`, `emoji`, `time`, `vars?`, `end?`, `onSelect?`                                                                       | Activity pill. `end` = the "🌙 Sleep time" marker                                                                                                                                          |
+| `Trail`               | `items: TrailItem[]`, `label`, `relayoutKey?`                                                                                | `TrailItem` = `{type:'stone', key, name, emoji, time, state, vars, onSelect?}` or `{type:'rest', key, label, emoji, time, vars?, end?, onSelect?}`. Lays itself out (zig-zag 50/74/50/26%) |
+| `BottomSheet`         | `open`, `tone?: 'plain'\|'ok'\|'hint'`, `icon`, `title`, `body?`, `primary: {label,onClick}`, `secondary?`, `onDismiss?`     | `plain` = modal with a scrim (not ready, leave, grown-ups). `ok`/`hint` = feedback with no scrim. The primary button is focused on open                                                    |
+| `OptionButton`        | `name`, `value`, `letter`, `text`, `checked`, `onChange(value,e)`, `state?: 'idle'\|'right'\|'tried'`, `disabled?`           | A hidden radio, so arrow keys work. `tried` is soft amber. Put it inside an element that has the subject vars                                                                              |
+| `SegmentedControl<T>` | `label`, `options: {value,label,icon?}[]`, `value`, `onChange`, `disabled?`, `note?`                                         | Radio group (Me screen)                                                                                                                                                                    |
+| `WorldPicker`         | `value: WorldId`, `onChange`, `labelledBy`                                                                                   | 3 world tiles; switches live                                                                                                                                                               |
+| `ProgressBar`         | `value`, `max`, `label`, `big?`                                                                                              | Gentle bar (test timer, level)                                                                                                                                                             |
+| `ProgressRing`        | `value`, `max`, `label`, `size?=72`, `stroke?=10`, `children?`                                                               | Class `.pring`                                                                                                                                                                             |
+| `Caterpillar`         | `current: number`, `steps?` (default `LESSON_STEPS` from `steps.ts`), `vars?`                                                | Lesson step indicator: 🎬 🃏 ✋ ✅ ⭐                                                                                                                                                      |
+| `FocusHeader`         | `title`, `eyebrow?`, `titleId?`, `what?='lesson'`, `leaveTo?='/'`                                                            | ✕ button and the leave sheet, for focus routes                                                                                                                                             |
+| `LevelMedal`          | `level: number`                                                                                                              | Gold medal                                                                                                                                                                                 |
+| `StreakRow`           | `days: {label, lit}[]`                                                                                                       | 7 🔥 discs                                                                                                                                                                                 |
+| `StickerBadge`        | `name`, `emoji`, `colour` (a token name), `locked?`, `tilt?`                                                                 | Badges come from `src/features/progress/badges.ts`                                                                                                                                         |
+| `EmptyState`          | `title`, `body?`, `mood?`, `action?`, `as?: 'h1'\|'h2'`, `headingId?`                                                        | Tara with a kolam rule                                                                                                                                                                     |
+| `TabBar`              | `tabs?` (default `KID_TABS` from `tabs.ts`)                                                                                  | Inside KidLayout only. The active pill slides (framer `layoutId`)                                                                                                                          |
+| `WorldDecor`          | `world`, `theme`                                                                                                             | Fixed decoration behind content (KidLayout)                                                                                                                                                |
+| `layout/Screen`       | `labelledBy`, `children`, `className?`                                                                                       | Fade/slide in; focuses the h1 after navigation                                                                                                                                             |
+| `layout/Layouts`      | `KidLayout`, `FocusLayout`, `ParentLayout`                                                                                   | Route layout elements (`src/routes.tsx`)                                                                                                                                                   |
+
+Helpers:
+
+- `colours.ts`: `subjectVars(subject)` and `tokenVars(token)`, which return `ColourVars`
+- `trailPath(points)`: the SVG path
+- `steps.ts`: `LESSON_STEPS`
+- `tabs.ts`: `KID_TABS`
+
+Shared CSS classes (in `ui.css`): `.muted`, `.eyebrow`, `.kolam-rule` (the dotted separator, the theme's signature), `.card`, `.chunky`, `.soft`.
+
+Feature helpers:
+
+- `src/features/today/todayModel.ts`: `fmtTime`, `fmtRange`, `slotMinutes`, `greeting`, `weekdayName`. The rest of this file is replaced by the Phase 1 engine.
+- `src/features/copy.ts`: `KID_NAME`, `APP_NAME`.
+
+## Adding a component
+
+1. Add `src/components/<Name>.tsx`. Its props interface is exported with a JSDoc line, and it uses tokens and vars only.
+2. Its CSS goes in `ui.css`, inside `@layer components`, with no Tailwind-clashing class names, rem sizes and a ledge rather than a shadow.
+3. Add a reduced-motion path, a 48px or larger target, a visible label (not just an icon), and a focus ring.
+4. Add a sample to `/kit` (KitScreen), using content from the bundle.
+5. Add a test with role and name queries. See `ChunkyButton.test.tsx` and `TabBar.test.tsx`.

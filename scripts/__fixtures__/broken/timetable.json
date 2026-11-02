@@ -1,0 +1,21 @@
+{
+  "timezone": "Asia/Kolkata",
+  "bedtime": { "schoolNights": "21:45", "weekendNights": "22:15" },
+  "schoolNights": ["sun", "mon", "tue", "wed", "thu"],
+  "days": {
+    "mon": [
+      { "start": "16:15", "end": "17:15", "kind": "lesson", "subject": "maths" },
+      { "start": "17:00", "end": "17:45", "kind": "lesson", "subject": "physics" }
+    ],
+    "tue": [],
+    "wed": [],
+    "thu": [],
+    "fri": [],
+    "sat": [
+      { "start": "15:30", "end": "16:15", "kind": "test", "testId": "sat", "subjects": ["maths"], "label": "Saturday Test", "emoji": "🖥️" }
+    ],
+    "sun": [
+      { "start": "09:30", "end": "10:30", "kind": "test", "testId": "sun", "subjects": ["physics"], "label": "Sunday Test", "emoji": "🖥️" }
+    ]
+  }
+}

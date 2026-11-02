@@ -1,0 +1,98 @@
+{
+  "id": "matter-gases",
+  "subject": "chemistry",
+  "title": "Gases — no shape, no volume, and they can be squeezed",
+  "scenes": [
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "gas", "container": "none" },
+      "minDuration": 7,
+      "narration": "Substances like oxygen, nitrogen and carbon dioxide are gases. Let's find out what gases do, with three investigations.",
+      "source": { "pages": [58] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "gas", "container": "balloon", "shape": "round" },
+      "steps": [
+        { "at": 4, "props": { "shape": "long" } },
+        { "at": 8, "props": { "shape": "wavy" } }
+      ],
+      "minDuration": 11,
+      "narration": "Take balloons of different shapes and inflate them with air. The air inside each balloon takes the shape of that balloon. Air has no shape of its own. So, gases have no definite shape. They take the shape of the containing vessel.",
+      "checkpoint": { "questionId": "matter-gases-cp1" },
+      "source": { "pages": [59, 60] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "gas", "container": "bottle", "spread": 0 },
+      "steps": [{ "at": 6, "props": { "container": "room", "spread": 1 } }],
+      "minDuration": 13,
+      "narration": "Pour a few drops of scent into an empty glass bottle and smell it. Now leave the bottle undisturbed in your drawing room for a few minutes. Soon, the whole room is filled with the smell of scent! Gases have no definite volume. They have a property to fill the entire space available to them.",
+      "source": { "pages": [60] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "gas", "container": "syringe", "compress": 0 },
+      "steps": [
+        { "at": 5, "props": { "compress": 0.4 } },
+        { "at": 10, "props": { "compress": 0 } }
+      ],
+      "minDuration": 13,
+      "narration": "Take a syringe, remove the plunger, and seal its nozzle with fevicol. Now the syringe is filled with air. Put the plunger back and push it inward. It moves somewhat inward! As soon as you let go, the plunger moves outward again. So, gases can be compressed.",
+      "checkpoint": { "questionId": "matter-gases-cp2" },
+      "source": { "pages": [60] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "gas", "container": "room", "spread": 1, "label": "Gas" },
+      "minDuration": 11,
+      "narration": "So, gases have no definite shape and no definite volume. They can be compressed, and they have no free surface. Your book says: any material which has neither definite shape nor definite volume, is easily compressible and has no free surface, is called gas.",
+      "source": { "pages": [60] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "gas", "container": "none", "glow": true },
+      "minDuration": 11,
+      "narration": "Did you know? When gases are heated to tens of thousand of degree of celsius, they change into another state of matter called plasma. The atoms of gas break into positively and negatively charged particles. The matter in the sun is in plasma state. The gases in a fluorescent tube are in plasma state too!",
+      "checkpoint": { "questionId": "matter-gases-cp3" },
+      "source": { "pages": [60] }
+    }
+  ],
+  "questions": [
+    {
+      "id": "matter-gases-cp1",
+      "type": "mcq",
+      "prompt": "The air inside a long balloon takes the shape of…",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["the long balloon", "a round ball", "nothing — air has a fixed shape"],
+      "answer": "the long balloon",
+      "hints": ["Air has no shape of its own."],
+      "explanation": "Gases have no definite shape, so the air takes the shape of the balloon it is in.",
+      "source": { "pages": [59] }
+    },
+    {
+      "id": "matter-gases-cp2",
+      "type": "true_false",
+      "prompt": "When you push the plunger of a sealed syringe full of air, it moves somewhat inward.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "hints": ["Gases can be squeezed into less space."],
+      "explanation": "The plunger moves inward because gases can be compressed. When you let go, it moves outward.",
+      "source": { "pages": [60] }
+    },
+    {
+      "id": "matter-gases-cp3",
+      "type": "mcq",
+      "prompt": "What is the state of matter in the sun called?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["Plasma", "Solid", "Liquid"],
+      "answer": "Plasma",
+      "hints": ["It is the new state you just heard about."],
+      "explanation": "The matter in the sun is in plasma state.",
+      "source": { "pages": [60] }
+    }
+  ]
+}

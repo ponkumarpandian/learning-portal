@@ -1,0 +1,195 @@
+/* Feature-specific layout (screens). Shared component looks live in src/components/ui.css. */
+@layer components {
+  /* Today: Up now card */
+  .upnow {
+    display: grid;
+    gap: var(--sp-4);
+  }
+  .upnow-head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--sp-4);
+    align-items: center;
+  }
+  .upnow-title {
+    font-size: var(--fs-h1);
+  }
+  .upnow-sub {
+    color: var(--ink-soft);
+  }
+  .upnow .kolam-rule {
+    margin: calc(-1 * var(--sp-1)) 0 calc(-1 * var(--sp-2));
+  }
+  .next {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    color: var(--ink-soft);
+    font-size: var(--fs-sm);
+    justify-content: center;
+  }
+  .trail-box {
+    margin-top: var(--sp-3);
+  }
+
+  /* Week placeholder */
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+  }
+  .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.6rem 0 0.7rem;
+    min-height: calc(100 * var(--px));
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background: var(--surface);
+    box-shadow: 0 var(--ledge-h-sm) 0 var(--ledge);
+    margin-bottom: var(--ledge-h-sm);
+    min-width: 0;
+  }
+  .day .d-name {
+    font: 600 var(--fs-xs) / 1 var(--font-display);
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .day .d-num {
+    width: calc(34 * var(--px));
+    height: calc(34 * var(--px));
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font: 600 var(--fs-lg) / 1 var(--font-display);
+  }
+  .day.today .d-num {
+    background: var(--go-d);
+    color: var(--on-go);
+  }
+  .day.today {
+    border-color: var(--go);
+    background: var(--tab-on);
+  }
+  .day.today .d-name {
+    color: var(--ink);
+  }
+  .dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+    max-width: 32px;
+    min-height: 17px;
+  }
+  .dots i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--c);
+  }
+
+  /* Rewards placeholder */
+  .level {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--sp-5);
+    align-items: center;
+  }
+  .level h2 {
+    font-size: var(--fs-h1);
+    margin: 2px 0 var(--sp-3);
+  }
+  .level p.muted {
+    margin-top: var(--sp-2);
+    font-size: var(--fs-sm);
+  }
+  .shield {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    background: var(--surface2);
+    border-radius: 16px;
+    padding: 0.55rem 0.8rem;
+    font-size: var(--fs-sm);
+  }
+  .card-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--sp-3);
+  }
+  .card-head h2 {
+    font-size: var(--fs-lg);
+  }
+  .card-head span {
+    font-size: var(--fs-sm);
+  }
+  .soon {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    background: color-mix(in srgb, var(--gold) 22%, var(--surface));
+    border-radius: 18px;
+    padding: 0.7rem 0.9rem;
+    font-size: var(--fs-sm);
+  }
+  .soon > span:first-child {
+    font-size: 1.5rem;
+  }
+
+  /* Kit (dev gallery) */
+  .kit-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+    align-items: center;
+  }
+  .kit-stones {
+    position: relative;
+    height: calc(200 * var(--px));
+  }
+  .kit-stones > div {
+    position: absolute;
+    top: calc(70 * var(--px));
+  }
+
+  @media (max-width: 419.98px) {
+    .days {
+      gap: 4px;
+    }
+    .day .d-name {
+      font-size: calc(var(--fs-xs) * 0.9);
+    }
+  }
+  @media (min-width: 600px) {
+    .days {
+      gap: 10px;
+    }
+    .dots {
+      max-width: 42px;
+    }
+  }
+}
+
+@layer components {
+  .aa-big {
+    font-size: 1.05rem;
+  }
+  .aa-bigger {
+    font-size: 1.3rem;
+  }
+  .subj-badge.is-activity {
+    background: color-mix(in srgb, var(--a, var(--fun)) 24%, var(--surface));
+    box-shadow: 0 5px 0 var(--ad, var(--fun-d));
+  }
+  .parent-card h1 {
+    font-size: var(--fs-h1);
+  }
+  .parent-card p + p {
+    margin-top: var(--sp-3);
+  }
+}

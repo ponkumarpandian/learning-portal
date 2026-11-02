@@ -1,0 +1,1167 @@
+{
+  "id": "che-matter",
+  "subject": "chemistry",
+  "title": "Matter",
+  "order": 3,
+  "status": "approved",
+  "book": { "title": "REPLACE_ME", "publisher": "REPLACE_ME", "chapterNo": 3 },
+  "sourceDir": "source/chemistry/03-matter",
+  "parentNotes": [
+    "Chapter title \"Matter\" and the book title/publisher are placeholders — the chapter's title page was not photographed. Please type the real chapter title here and fill in source/books.json.",
+    "Pages imported: 58–62 only. Missing: the chapter's opening pages (before p.58), a sharper photo of p.57 (Investigations 3.1–3.4 — too blurred to read), the end of Investigation 3.5 (bottom of p.58 is cut off), and the Exercise 3.1 questions (p.62 onwards). Send these and I will add the book's exercise questions with bookRef.",
+    "No book exercise questions are included yet (Exercise 3.1 was not photographed). All 25 bank questions are new (fromBook: false) and test only facts printed on pp.58–62.",
+    "Book vs book: p.59 says \"Liquids cannot be compressed\", but the table on p.61 (row 3) says \"Liquids can be very slightly compressed\". No question asks this directly. Please check which wording her teacher wants in answers.",
+    "p.58: the solid definition is cut by the binding after \"such\" — I read it as \"such that it can have any number of free surfaces\". Question che-matter-1-q3 is marked needsReview so you can confirm the wording.",
+    "p.62: the Gases column of table rows 6–8 is cut off in the photo. Gases' 'no free surface' and 'almost negligible forces' are taught from pp.60–61 instead; row 8 for gases (vessel) is not taught.",
+    "Explainers use the ParticleBox visual with new props (container, objects, heaped, compress, spread, highlight, compare, row, glow, viscous). The ParticleBox component is built in Phase 2 — until then the explainers exist as content only.",
+    "Video search words — lesson che-matter-1: \"properties of solids and liquids class 6\", \"liquid takes shape of container experiment\", \"syringe water compression experiment\"",
+    "Video search words — lesson che-matter-2: \"properties of gases class 6\", \"gas fills entire space scent experiment\", \"syringe air compression experiment for kids\"",
+    "Video search words — lesson che-matter-3: \"intermolecular force and intermolecular space class 6\", \"arrangement of molecules in solids liquids and gases\"",
+    "Video search words — lesson che-matter-4: \"differences between solids liquids and gases class 6\""
+  ],
+  "lessons": [
+    {
+      "id": "che-matter-1",
+      "title": "Properties of solids and liquids",
+      "source": { "pages": [58, 59] },
+      "videos": [
+        { "role": "primary", "kind": "explainer", "explainerId": "matter-solids-liquids" },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Properties of solids and liquids (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [{ "at": 120, "questionId": "che-matter-1-q1", "rewindTo": 80 }]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Solids keep their shape",
+          "emoji": "🥄",
+          "body": "Cups, saucers, knives and spoons do not change their shape at room temperature. So, solids have a definite shape.",
+          "reveal": "Solids have a definite shape.",
+          "source": { "pages": [58] }
+        },
+        {
+          "title": "Solids keep their volume",
+          "emoji": "🪑",
+          "body": "A wooden stool occupies space. When your friend sits on it, the volume of the stool does not change. So, solids have a definite volume.",
+          "example": "Empty a bowl of sugar: the sugar does not flow, it gets heaped (Fig. 3.7). Solids do not flow, and they do not need a container to hold them.",
+          "source": { "pages": [58] }
+        },
+        {
+          "title": "What is a solid?",
+          "emoji": "📘",
+          "body": "\"Any material which has a definite shape and definite volume, such that it can have any number of free surfaces, is called solid.\"",
+          "reveal": "Definite shape + definite volume + any number of free surfaces = solid",
+          "source": { "pages": [58] }
+        },
+        {
+          "title": "Liquids take the shape of the vessel",
+          "emoji": "🥛",
+          "body": "Half fill a small cup with water: it takes the shape of the cup. Pour it into a glass bowl, then a coffee flask: it takes their shape each time.",
+          "example": "Fig. 3.8: water in a cup, a bowl and a flask — each time with one free, flat surface on top.",
+          "source": { "pages": [58] }
+        },
+        {
+          "title": "Liquids keep their volume",
+          "emoji": "💉",
+          "body": "Seal a syringe's nozzle with fevicol and half fill it with water. Push the plunger inward. The volume of water does not change!",
+          "reveal": "Liquids do not change their volume when compressive forces are applied.",
+          "source": { "pages": [59] }
+        },
+        {
+          "title": "What is a liquid?",
+          "emoji": "📗",
+          "body": "\"Any material which has a definite volume, but no definite shape and has one free surface, is called liquid.\"",
+          "didYouKnow": "A liquid's one free surface at the top of the vessel is always flat.",
+          "source": { "pages": [59] }
+        }
+      ],
+      "practice": [
+        {
+          "id": "che-matter-1-p1",
+          "type": "match",
+          "prompt": "Match each observation to what it shows.",
+          "difficulty": "easy",
+          "marks": 4,
+          "pairs": [
+            ["Cups and spoons keep their shape", "Solids have a definite shape"],
+            ["A stool's volume stays the same when you sit on it", "Solids have a definite volume"],
+            ["Sugar from a bowl gets heaped", "Solids do not flow"],
+            ["Water in a bowl has a flat top", "Liquids have one free surface"]
+          ],
+          "hints": ["Think about which investigation each one comes from: shape, volume, flowing or surface?"],
+          "explanation": "Each observation from the book proves one property: cups keep shape, the stool keeps volume, sugar heaps instead of flowing, and water always has one flat free surface.",
+          "source": { "pages": [58] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-1-p2",
+          "type": "order",
+          "prompt": "Put the steps of Investigation 3.6 (the syringe of water) in order.",
+          "difficulty": "medium",
+          "marks": 2,
+          "sequence": [
+            "Remove the plunger from the syringe",
+            "Seal its nozzle with fevicol and let it dry",
+            "Half fill it with water",
+            "Insert the plunger and push it inward",
+            "See that the volume of water does not change"
+          ],
+          "hints": ["You must seal the nozzle before you pour in the water."],
+          "explanation": "First remove the plunger and seal the nozzle, then add water, put the plunger back and push. The water's volume stays the same.",
+          "videoRef": { "video": "primary", "scene": 5 },
+          "source": { "pages": [59] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-1-p3",
+          "type": "label_diagram",
+          "prompt": "Label the syringe from Fig. 3.9.",
+          "difficulty": "medium",
+          "marks": 3,
+          "image": "media/images/che-matter-fig3-9.svg",
+          "hotspots": [
+            { "id": "h1", "x": 15, "y": 50, "label": "Plunger" },
+            { "id": "h2", "x": 67, "y": 50, "label": "Water" },
+            { "id": "h3", "x": 94, "y": 50, "label": "Sealed nozzle" }
+          ],
+          "hints": ["The plunger is the part you push. The nozzle is sealed with fevicol."],
+          "explanation": "You push the plunger from one end; the water sits in the barrel; the nozzle at the other end is sealed so no water escapes.",
+          "source": { "pages": [59] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-1-p4",
+          "type": "mcq",
+          "prompt": "Water from a glass bowl is poured into a coffee flask. What happens?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "It takes the shape of the coffee flask, with its top surface free and flat",
+            "It keeps the shape of the bowl",
+            "It gets heaped like sugar"
+          ],
+          "answer": "It takes the shape of the coffee flask, with its top surface free and flat",
+          "hints": ["Liquids have no definite shape. Whose shape do they take?"],
+          "explanation": "Liquids take the shape of the containing vessel, and their top surface stays free and flat.",
+          "videoRef": { "video": "primary", "scene": 4 },
+          "source": { "pages": [58] },
+          "fromBook": false
+        }
+      ],
+      "notebook": "Draw Fig. 3.8 in your notebook 📓: a cup, a bowl and a flask with water. Colour the water and mark its one free, flat surface in each. Then write the definitions of a solid and a liquid from your book.",
+      "check": [
+        {
+          "id": "che-matter-1-c1",
+          "type": "fill_blank",
+          "prompt": "Solids have a definite shape and a definite ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "volume",
+          "explanation": "The wooden stool shows it: its volume does not change, so solids have a definite volume.",
+          "videoRef": { "video": "primary", "scene": 1 },
+          "source": { "pages": [58] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-1-c2",
+          "type": "true_false",
+          "prompt": "Solids need a container to hold them.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "explanation": "Solids do not need a container to hold them. It is liquids that need a container, or they start flowing.",
+          "source": { "pages": [58, 59] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-1-c3",
+          "type": "mcq",
+          "prompt": "How many free surfaces does a liquid have?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": ["Only one", "None", "Any number"],
+          "answer": "Only one",
+          "explanation": "Liquids have only one definite free surface, at the top of the vessel, and it is always flat.",
+          "videoRef": { "video": "primary", "scene": 6 },
+          "source": { "pages": [59] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-1-c4",
+          "type": "true_false",
+          "prompt": "When you push the plunger of a sealed syringe half filled with water, the volume of water does not change.",
+          "difficulty": "medium",
+          "marks": 1,
+          "answer": true,
+          "explanation": "That is Investigation 3.6: liquids do not change their volume when compressive forces are applied.",
+          "videoRef": { "video": "primary", "scene": 5 },
+          "source": { "pages": [59] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-1-c5",
+          "type": "short_answer",
+          "prompt": "Why do we say that liquids have no definite shape?",
+          "difficulty": "medium",
+          "marks": 2,
+          "modelAnswer": "Liquids take the shape of the containing vessel. Water in a cup takes the shape of the cup, and in a bowl it takes the shape of the bowl.",
+          "keywords": ["shape of the containing vessel", "cup", "bowl"],
+          "explanation": "Use the cup → bowl → flask investigation: the same water changes shape every time it changes vessel.",
+          "source": { "pages": [58, 59] },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Solids have a definite shape and a definite volume.",
+        "Solids do not flow. They can be heaped. Solids do not need a container to hold them.",
+        "Any material which has a definite shape and definite volume, such that it can have any number of free surfaces, is called solid.",
+        "The liquids have no definite shape. They take the shape of the containing vessel. Liquids have a definite volume.",
+        "Liquids have only one definite free surface at the top of vessel in which they are contained. This surface is always flat.",
+        "Any material which has a definite volume, but no definite shape and has one free surface, is called liquid."
+      ]
+    },
+    {
+      "id": "che-matter-2",
+      "title": "Properties of a gas",
+      "source": { "pages": [59, 60] },
+      "videos": [
+        { "role": "primary", "kind": "explainer", "explainerId": "matter-gases" },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Properties of gases (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [{ "at": 120, "questionId": "che-matter-2-q1", "rewindTo": 80 }]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "Name one property of a solid.",
+          "back": "Solids have a definite shape (and a definite volume). They do not flow — they can be heaped.",
+          "source": { "pages": [58] }
+        },
+        {
+          "front": "How many free surfaces does a liquid have?",
+          "back": "Only one — at the top of the vessel, and it is always flat.",
+          "source": { "pages": [59] }
+        }
+      ],
+      "cards": [
+        {
+          "title": "Air takes the balloon's shape",
+          "emoji": "🎈",
+          "body": "Inflate balloons of different shapes with air. The air inside takes the shape of each balloon. It has no shape of its own.",
+          "example": "Substances like oxygen, nitrogen and carbon dioxide are gases.",
+          "source": { "pages": [58, 59] }
+        },
+        {
+          "title": "Gases fill the whole space",
+          "emoji": "🌸",
+          "body": "Put a few drops of scent in an empty glass bottle and leave it in your drawing room. In a few minutes the whole room is filled with the smell of scent!",
+          "reveal": "Gases have no definite volume. They have a property to fill the entire space available to them.",
+          "source": { "pages": [60] }
+        },
+        {
+          "title": "Gases can be compressed",
+          "emoji": "💉",
+          "body": "Seal a syringe's nozzle with fevicol — now it is filled with air. Push the plunger: it moves somewhat inward. Let go: it moves outward again.",
+          "reveal": "Gases can be compressed.",
+          "source": { "pages": [60] }
+        },
+        {
+          "title": "No free surface",
+          "emoji": "☁️",
+          "body": "A liquid has one flat free surface at the top. A gas has no free surface at all.",
+          "source": { "pages": [59, 60] }
+        },
+        {
+          "title": "What is a gas?",
+          "emoji": "📙",
+          "body": "\"Any material which has neither definite shape nor definite volume, is easily compressible and has no free surface, is called gas.\"",
+          "reveal": "No definite shape + no definite volume + compressible + no free surface = gas",
+          "source": { "pages": [60] }
+        },
+        {
+          "title": "A fourth state: plasma",
+          "emoji": "☀️",
+          "body": "Gases on heating to tens of thousand of degree of celsius change into another state of matter called plasma. The atoms of gas break into positively and negatively charged particles.",
+          "didYouKnow": "The matter in the sun is in plasma state. The gases in a fluorescent tube are in plasma state too!",
+          "source": { "pages": [60] }
+        }
+      ],
+      "practice": [
+        {
+          "id": "che-matter-2-p1",
+          "type": "match",
+          "prompt": "Match each investigation to what it shows about gases.",
+          "difficulty": "easy",
+          "marks": 3,
+          "pairs": [
+            ["Balloons of different shapes", "Gases have no definite shape"],
+            ["Scent bottle in the drawing room", "Gases have no definite volume"],
+            ["Sealed syringe filled with air", "Gases can be compressed"]
+          ],
+          "hints": ["Balloons are about shape. The smell spreading is about filling space."],
+          "explanation": "Investigation 3.7 (balloons) shows no definite shape, 3.8 (scent) shows no definite volume, and 3.9 (syringe of air) shows gases can be compressed.",
+          "source": { "pages": [59, 60] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-2-p2",
+          "type": "mcq",
+          "prompt": "You push the plunger of a sealed syringe filled with air, then let go. What does the plunger do?",
+          "difficulty": "medium",
+          "marks": 1,
+          "options": ["It moves outward", "It stays pushed in", "It falls out of the syringe"],
+          "answer": "It moves outward",
+          "hints": ["The plunger moved inward when you pushed. What happens when the force is removed?"],
+          "explanation": "As soon as the force is removed, the plunger moves outward (Investigation 3.9).",
+          "videoRef": { "video": "primary", "scene": 3 },
+          "source": { "pages": [60] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-2-p3",
+          "type": "true_false",
+          "prompt": "Gases have one flat free surface, just like liquids.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "hints": ["Think of the scent filling the whole room. Is there a 'top' to it?"],
+          "explanation": "Gases have no free surface. Only liquids have one flat free surface.",
+          "source": { "pages": [60] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-2-p4",
+          "type": "fill_blank",
+          "prompt": "Gases have a property to fill the entire ____ available to them.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "space",
+          "hints": ["The smell of scent filled the whole room…"],
+          "explanation": "Gases have no definite volume. They fill the entire space available to them.",
+          "source": { "pages": [60] },
+          "fromBook": false
+        }
+      ],
+      "notebook": "Draw three balloons of different shapes (like Fig. 3.11) in your notebook 📓. Under them, write the four properties of gases from your book.",
+      "check": [
+        {
+          "id": "che-matter-2-c1",
+          "type": "mcq",
+          "prompt": "The smell of scent from a bottle fills the whole drawing room. What does this show?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": ["Gases have no definite volume", "Gases have a definite shape", "Gases have one free surface"],
+          "answer": "Gases have no definite volume",
+          "explanation": "Investigation 3.8: gases have no definite volume — they fill the entire space available to them.",
+          "videoRef": { "video": "primary", "scene": 2 },
+          "source": { "pages": [60] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-2-c2",
+          "type": "true_false",
+          "prompt": "Gases can be compressed.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "The plunger of a sealed syringe of air moves inward when pushed — gases can be compressed.",
+          "source": { "pages": [60] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-2-c3",
+          "type": "fill_blank",
+          "prompt": "The air inside a balloon takes the ____ of the balloon.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "shape",
+          "explanation": "Air has no shape of its own, so it takes the shape of the balloon (Investigation 3.7).",
+          "videoRef": { "video": "primary", "scene": 1 },
+          "source": { "pages": [59] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-2-c4",
+          "type": "mcq",
+          "prompt": "The matter in the sun is in which state?",
+          "difficulty": "medium",
+          "marks": 1,
+          "options": ["Plasma", "Solid", "Liquid"],
+          "answer": "Plasma",
+          "explanation": "The matter in the sun is in plasma state — and so are the gases in a fluorescent tube.",
+          "videoRef": { "video": "primary", "scene": 5 },
+          "source": { "pages": [60] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-2-c5",
+          "type": "short_answer",
+          "prompt": "Write the definition of a gas.",
+          "difficulty": "medium",
+          "marks": 2,
+          "modelAnswer": "Any material which has neither definite shape nor definite volume, is easily compressible and has no free surface, is called gas.",
+          "keywords": ["neither definite shape nor definite volume", "easily compressible", "no free surface"],
+          "explanation": "The definition has four parts: no definite shape, no definite volume, easily compressible, no free surface.",
+          "source": { "pages": [60] },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Gases have no definite shape. They take the shape of containing vessel.",
+        "Gases have no definite volume. They have a property to fill the entire space available to them.",
+        "Gases can be compressed.",
+        "Gases have no free surface.",
+        "Any material which has neither definite shape nor definite volume, is easily compressible and has no free surface, is called gas.",
+        "Gases on heating to tens of thousand of degree of celsius change into another state of matter called plasma."
+      ]
+    },
+    {
+      "id": "che-matter-3",
+      "title": "Molecules: why matter has three states",
+      "source": { "pages": [60, 61] },
+      "videos": [
+        { "role": "primary", "kind": "explainer", "explainerId": "matter-molecules" },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Arrangement of molecules in solids, liquids and gases (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [{ "at": 120, "questionId": "che-matter-3-q1", "rewindTo": 80 }]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "Can gases be compressed?",
+          "back": "Yes! The plunger of a sealed syringe of air moves inward when you push it.",
+          "source": { "pages": [60] }
+        },
+        {
+          "front": "Which state of matter has no free surface?",
+          "back": "Gas.",
+          "source": { "pages": [60] }
+        }
+      ],
+      "cards": [
+        {
+          "title": "Molecules",
+          "emoji": "🔬",
+          "body": "\"Matter is made of very small particles which can exist independently. These particles are commonly called molecules.\"",
+          "source": { "pages": [60] }
+        },
+        {
+          "title": "Intermolecular force",
+          "emoji": "🧲",
+          "body": "The molecules of any kind of matter always attract each other. \"The force of attraction between molecules is called intermolecular force.\"",
+          "reveal": "When the space between two molecules decreases, the force of attraction increases — and vice-versa.",
+          "source": { "pages": [60] }
+        },
+        {
+          "title": "Intermolecular space",
+          "emoji": "↔️",
+          "body": "\"This space between the molecules is called intermolecular space.\"",
+          "reveal": "Small space → strong force. Large space → weak force.",
+          "source": { "pages": [60] }
+        },
+        {
+          "title": "Solids: very tightly packed",
+          "emoji": "🧱",
+          "body": "In solids the molecules are very tightly packed (Fig. 3.12). The intermolecular spaces are very small, so the intermolecular force of attraction is very strong. The molecules cannot interchange their position.",
+          "example": "That is why solids have definite shape and definite volume, and cannot be compressed.",
+          "source": { "pages": [60, 61] }
+        },
+        {
+          "title": "Liquids: not very tightly packed",
+          "emoji": "💧",
+          "body": "In liquids the intermolecular spaces are larger than in solids (Fig. 3.13), so the forces are not strong. The molecules can interchange their places — so liquids flow and take the shape of the vessel. But the molecules cannot move far apart, so liquids have a definite volume.",
+          "didYouKnow": "Honey, coconut oil and desi ghee are sticky and difficult to pour out. There is more friction between the layers of their molecules. Such liquids are called viscous liquids.",
+          "source": { "pages": [61] }
+        },
+        {
+          "title": "Gases: very far apart",
+          "emoji": "🎈",
+          "body": "In gases the molecules are very far apart from each other (Fig. 3.14). The intermolecular spaces are too large, so the intermolecular forces are almost negligible.",
+          "example": "That is why gases have no definite shape or volume, fill the entire space available to them, and can be easily compressed.",
+          "source": { "pages": [61] }
+        }
+      ],
+      "practice": [
+        {
+          "id": "che-matter-3-p1",
+          "type": "match",
+          "prompt": "Match each state to how its molecules are arranged.",
+          "difficulty": "easy",
+          "marks": 3,
+          "pairs": [
+            ["Solid", "Molecules very tightly packed"],
+            ["Liquid", "Molecules not very tightly packed"],
+            ["Gas", "Molecules very far apart from each other"]
+          ],
+          "hints": ["Picture the three boxes: Fig. 3.12, 3.13 and 3.14."],
+          "explanation": "Solids: very tightly packed. Liquids: not very tightly packed. Gases: very far apart.",
+          "videoRef": { "video": "primary", "scene": 3 },
+          "source": { "pages": [60, 61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-3-p2",
+          "type": "mcq",
+          "prompt": "If the space between two molecules decreases, the intermolecular force of attraction between them…",
+          "difficulty": "medium",
+          "marks": 1,
+          "options": ["increases", "decreases", "stays the same"],
+          "answer": "increases",
+          "hints": ["Closer molecules attract each other more strongly."],
+          "explanation": "The intermolecular force increases if the space between the molecules decreases, and vice-versa.",
+          "videoRef": { "video": "primary", "scene": 2 },
+          "source": { "pages": [60] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-3-p3",
+          "type": "order",
+          "prompt": "Arrange the states from the smallest intermolecular spaces to the largest.",
+          "difficulty": "medium",
+          "marks": 2,
+          "sequence": ["Solid", "Liquid", "Gas"],
+          "hints": ["Which state has its molecules very tightly packed?"],
+          "explanation": "Solids have very small spaces, liquids have larger spaces than solids, and gases have very large spaces.",
+          "source": { "pages": [60, 61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-3-p4",
+          "type": "true_false",
+          "prompt": "Honey and desi ghee are viscous liquids.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "hints": ["Viscous liquids are sticky and difficult to pour out."],
+          "explanation": "Honey, coconut oil and animal fat (desi ghee) are viscous liquids — there is more friction between the layers of their molecules.",
+          "source": { "pages": [61] },
+          "fromBook": false
+        }
+      ],
+      "notebook": "Draw the three boxes of Fig. 3.12, 3.13 and 3.14 in your notebook 📓: molecules very tightly packed (solid), molecules with gaps (liquid), and molecules far apart (gas). Label each box, and write the meanings of intermolecular force and intermolecular space.",
+      "check": [
+        {
+          "id": "che-matter-3-c1",
+          "type": "fill_blank",
+          "prompt": "The force of attraction between molecules is called ____ force.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "intermolecular",
+          "explanation": "\"The force of attraction between molecules is called intermolecular force.\"",
+          "videoRef": { "video": "primary", "scene": 1 },
+          "source": { "pages": [60] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-3-c2",
+          "type": "mcq",
+          "prompt": "In which state are the intermolecular forces almost negligible?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": ["Gas", "Liquid", "Solid"],
+          "answer": "Gas",
+          "explanation": "In gases the intermolecular spaces are too large, so the intermolecular forces are almost negligible.",
+          "videoRef": { "video": "primary", "scene": 5 },
+          "source": { "pages": [61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-3-c3",
+          "type": "true_false",
+          "prompt": "In liquids, the molecules are in a position to interchange their places.",
+          "difficulty": "medium",
+          "marks": 1,
+          "answer": true,
+          "explanation": "Liquid molecules are not very tightly packed, so they can interchange their places — that is why liquids can flow.",
+          "source": { "pages": [61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-3-c4",
+          "type": "mcq",
+          "prompt": "Why can't solids be compressed?",
+          "difficulty": "medium",
+          "marks": 1,
+          "options": [
+            "On account of very small intermolecular spaces",
+            "Because their molecules are very far apart",
+            "Because they have one free surface"
+          ],
+          "answer": "On account of very small intermolecular spaces",
+          "explanation": "Solids cannot be compressed on account of very small intermolecular spaces.",
+          "source": { "pages": [61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-3-c5",
+          "type": "short_answer",
+          "prompt": "Liquids can flow. Why do they still have a definite volume?",
+          "difficulty": "challenge",
+          "marks": 2,
+          "modelAnswer": "As the molecules of a liquid cannot move far apart, therefore, liquids have a definite volume.",
+          "keywords": ["molecules cannot move far apart", "definite volume"],
+          "explanation": "Liquid molecules can slide past each other (so liquids flow), but they cannot move far apart (so the volume stays the same).",
+          "videoRef": { "video": "primary", "scene": 4 },
+          "source": { "pages": [61] },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Matter is made of very small particles which can exist independently. These particles are commonly called molecules.",
+        "The force of attraction between molecules is called intermolecular force.",
+        "The space between the molecules is called intermolecular space.",
+        "The intermolecular force of attraction between two molecules increases, if the space between them decreases and vice-versa.",
+        "Solids: molecules very tightly packed, very small intermolecular spaces, very strong intermolecular force of attraction.",
+        "Liquids: molecules not very tightly packed, larger intermolecular spaces than solids; molecules can interchange their places.",
+        "Gases: molecules very far apart, intermolecular spaces too large, intermolecular forces almost negligible.",
+        "Liquids such as honey, coconut oil, animal fat (desi ghee) are called viscous liquids."
+      ]
+    },
+    {
+      "id": "che-matter-4",
+      "title": "Differences between solids, liquids and gases",
+      "source": { "pages": [61, 62] },
+      "videos": [
+        { "role": "primary", "kind": "explainer", "explainerId": "matter-differences" },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Differences between solids, liquids and gases (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [{ "at": 120, "questionId": "che-matter-4-q1", "rewindTo": 80 }]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "What is intermolecular space?",
+          "back": "The space between the molecules is called intermolecular space.",
+          "source": { "pages": [60] }
+        },
+        {
+          "front": "In which state are the molecules very tightly packed?",
+          "back": "Solids (Fig. 3.12).",
+          "source": { "pages": [60] }
+        }
+      ],
+      "cards": [
+        {
+          "title": "Shape and volume",
+          "emoji": "📦",
+          "body": "Solids: definite shape and definite volume. Liquids: no definite shape, but a definite volume. Gases: neither definite shape nor definite volume.",
+          "source": { "pages": [61] }
+        },
+        {
+          "title": "Where are the molecules?",
+          "emoji": "🧩",
+          "body": "Solids: the position of the molecules is fixed. Liquids: the molecules can change their position within the liquid. Gases: the molecules can move freely in all directions.",
+          "source": { "pages": [61] }
+        },
+        {
+          "title": "Squeezing (compression)",
+          "emoji": "🤏",
+          "body": "Solids cannot be compressed. Liquids can be very slightly compressed. Gas can be easily compressed.",
+          "source": { "pages": [61] }
+        },
+        {
+          "title": "Flowing",
+          "emoji": "🌊",
+          "body": "Solids cannot flow — they can be heaped. Liquids flow from higher to lower level. Gases can flow in all directions.",
+          "source": { "pages": [61] }
+        },
+        {
+          "title": "Spaces and forces",
+          "emoji": "🧲",
+          "body": "Solids have very small intermolecular spaces and very strong intermolecular forces of attraction. Liquids have small spaces (but larger than solids) and less force than solids. Gases have very large intermolecular spaces.",
+          "source": { "pages": [61, 62] }
+        },
+        {
+          "title": "Free surfaces and vessels",
+          "emoji": "🫙",
+          "body": "Solids have infinite number of free surfaces and do not need a vessel to contain them. Liquids have only one free surface and need a vessel to contain them. Gases have no free surface.",
+          "source": { "pages": [60, 62] }
+        }
+      ],
+      "practice": [
+        {
+          "id": "che-matter-4-p1",
+          "type": "match",
+          "prompt": "Match how each state flows.",
+          "difficulty": "easy",
+          "marks": 3,
+          "pairs": [
+            ["Solids", "Cannot flow — they can be heaped"],
+            ["Liquids", "Flow from higher to lower level"],
+            ["Gases", "Flow in all directions"]
+          ],
+          "hints": ["Remember the sugar heap, and the scent spreading through the room."],
+          "explanation": "Row 4 of the table: solids heap, liquids flow from higher to lower level, gases flow in all directions.",
+          "videoRef": { "video": "primary", "scene": 3 },
+          "source": { "pages": [61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-4-p2",
+          "type": "mcq",
+          "prompt": "Which state can be easily compressed?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": ["Gas", "Liquid", "Solid"],
+          "answer": "Gas",
+          "hints": ["Which state has very large spaces between its molecules?"],
+          "explanation": "Gas can be easily compressed, because its intermolecular spaces are very large.",
+          "source": { "pages": [61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-4-p3",
+          "type": "true_false",
+          "prompt": "Solids have infinite number of free surfaces.",
+          "difficulty": "medium",
+          "marks": 1,
+          "answer": true,
+          "hints": ["A liquid has only one free surface. What about a solid?"],
+          "explanation": "Row 7 of the table: solids have infinite number of free surfaces; liquids have only one.",
+          "source": { "pages": [62] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-4-p4",
+          "type": "fill_blank",
+          "prompt": "Liquids flow from higher to ____ level.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "lower",
+          "hints": ["Water runs downhill…"],
+          "explanation": "Liquids flow from higher to lower level (row 4 of the table).",
+          "source": { "pages": [61] },
+          "fromBook": false
+        }
+      ],
+      "notebook": "Copy the table \"Differences between solids, liquids and gases at room temperature\" into your notebook 📓 — at least rows 1 to 5, with Solids, Liquids and Gases as the three columns.",
+      "check": [
+        {
+          "id": "che-matter-4-c1",
+          "type": "mcq",
+          "prompt": "In which state is the position of the molecules fixed?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": ["Solids", "Liquids", "Gases"],
+          "answer": "Solids",
+          "explanation": "The position of the molecules of a solid is fixed. In liquids and gases it is not fixed.",
+          "videoRef": { "video": "primary", "scene": 1 },
+          "source": { "pages": [61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-4-c2",
+          "type": "true_false",
+          "prompt": "Liquids need a vessel to contain them.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "Liquids need a vessel to contain them; solids do not.",
+          "source": { "pages": [62] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-4-c3",
+          "type": "fill_blank",
+          "prompt": "Gases have very ____ intermolecular spaces.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "large",
+          "explanation": "Gases have very large intermolecular spaces — that is why they can be easily compressed.",
+          "source": { "pages": [61] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-4-c4",
+          "type": "match",
+          "prompt": "Match each state to its free surfaces.",
+          "difficulty": "medium",
+          "marks": 3,
+          "pairs": [
+            ["Solids", "Infinite number of free surfaces"],
+            ["Liquids", "Only one free surface"],
+            ["Gases", "No free surface"]
+          ],
+          "explanation": "Solids have infinite free surfaces, liquids have only one (always flat), and gases have no free surface.",
+          "videoRef": { "video": "primary", "scene": 5 },
+          "source": { "pages": [60, 62] },
+          "fromBook": false
+        },
+        {
+          "id": "che-matter-4-c5",
+          "type": "short_answer",
+          "prompt": "Write two differences between a solid and a liquid.",
+          "difficulty": "medium",
+          "marks": 2,
+          "modelAnswer": "Solids have definite shape and definite volume, but liquids have no definite shape, though they have a definite volume. Solids cannot flow and can be heaped, but liquids flow from higher to lower level.",
+          "keywords": ["definite shape", "flow", "heaped"],
+          "explanation": "Pick any two rows of the table and write the Solids and Liquids sides together.",
+          "source": { "pages": [61, 62] },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Solids have definite shape and definite volume. Liquids have no definite shape, but have a definite volume. Gases have neither definite shape nor definite volume.",
+        "Position of the molecules of a solid is fixed. Molecules of a liquid can change their position within the liquid. Molecules of a gas can move freely in all directions.",
+        "Solids cannot be compressed. Liquids can be very slightly compressed. Gas can be easily compressed.",
+        "Solids cannot flow; they can be heaped. Liquids flow from higher to lower level. Gases can flow in all directions.",
+        "Solids have very small intermolecular spaces; liquids have small intermolecular spaces, but larger than the solids; gases have very large intermolecular spaces.",
+        "Solids have infinite number of free surfaces. Liquids have only one free surface."
+      ]
+    }
+  ],
+  "questionBank": [
+    {
+      "id": "che-matter-1-q1",
+      "lessonId": "che-matter-1",
+      "type": "mcq",
+      "prompt": "Which of these is a solid?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["A spoon", "Water in a cup", "Air in a balloon"],
+      "answer": "A spoon",
+      "explanation": "A spoon keeps its shape at room temperature, so it is a solid. Water is a liquid and air is a gas.",
+      "source": { "pages": [58, 59] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-1-q2",
+      "lessonId": "che-matter-1",
+      "type": "true_false",
+      "prompt": "A solid can have any number of free surfaces.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "explanation": "The definition of a solid says it can have any number of free surfaces. A liquid has only one.",
+      "source": { "pages": [58] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-1-q3",
+      "lessonId": "che-matter-1",
+      "type": "fill_blank",
+      "prompt": "Any material which has a definite shape and definite volume, such that it can have any number of free surfaces, is called ____.",
+      "difficulty": "medium",
+      "marks": 1,
+      "answer": "solid",
+      "explanation": "That is the book's definition of a solid.",
+      "source": { "pages": [58] },
+      "fromBook": false,
+      "needsReview": true
+    },
+    {
+      "id": "che-matter-1-q4",
+      "lessonId": "che-matter-1",
+      "type": "fill_blank",
+      "prompt": "Liquids always need some container as otherwise they start ____.",
+      "difficulty": "medium",
+      "marks": 1,
+      "answer": "flowing",
+      "accept": ["flow"],
+      "explanation": "Without a container a liquid starts flowing — that is why liquids always need some container.",
+      "source": { "pages": [59] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-1-q5",
+      "lessonId": "che-matter-1",
+      "type": "match",
+      "prompt": "Match each word to what is true for a liquid.",
+      "difficulty": "medium",
+      "marks": 3,
+      "pairs": [
+        ["Shape", "No definite shape"],
+        ["Volume", "Definite volume"],
+        ["Free surface", "Only one, always flat"]
+      ],
+      "explanation": "Liquids have no definite shape, a definite volume, and only one free surface, which is always flat.",
+      "source": { "pages": [59] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-1-q6",
+      "lessonId": "che-matter-1",
+      "type": "short_answer",
+      "prompt": "Write two properties of solids from your book.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Solids have a definite shape. Solids have a definite volume. (Also: solids do not flow, they can be heaped; solids do not need a container to hold them.)",
+      "keywords": ["definite shape", "definite volume", "heaped", "container"],
+      "explanation": "Any two of the four properties in the box on p.58 are right.",
+      "source": { "pages": [58] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-1-q7",
+      "lessonId": "che-matter-1",
+      "type": "think_write",
+      "prompt": "Your friend sits on a wooden stool, and you push the plunger of a sealed syringe half filled with water. What do these two investigations tell you about solids and liquids?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "The volume of the stool does not change when my friend sits on it, so solids have a definite volume. The volume of water in the syringe does not change when the plunger is pushed, so liquids also have a definite volume — they do not change their volume when compressive forces are applied.",
+      "keywords": ["volume does not change", "solids have a definite volume", "liquids have a definite volume"],
+      "explanation": "Both investigations test volume: one for a solid, one for a liquid. In both, the volume stays the same.",
+      "source": { "pages": [58, 59] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-2-q1",
+      "lessonId": "che-matter-2",
+      "type": "true_false",
+      "prompt": "Gases have no definite shape. They take the shape of the containing vessel.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "explanation": "Like the air in balloons of different shapes, gases take the shape of the containing vessel.",
+      "source": { "pages": [59, 60] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-2-q2",
+      "lessonId": "che-matter-2",
+      "type": "fill_blank",
+      "prompt": "Gases have no ____ surface.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "free",
+      "explanation": "Gases have no free surface. Liquids have one; solids can have any number.",
+      "source": { "pages": [60] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-2-q3",
+      "lessonId": "che-matter-2",
+      "type": "mcq",
+      "prompt": "In Investigation 3.9, the plunger of a sealed syringe filled with air moves inward when you push it. Why?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": ["Because gases can be compressed", "Because air has a definite volume", "Because air gets heaped"],
+      "answer": "Because gases can be compressed",
+      "explanation": "The air inside gets squeezed into less space — gases can be compressed.",
+      "source": { "pages": [60] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-2-q4",
+      "lessonId": "che-matter-2",
+      "type": "order",
+      "prompt": "Put the steps of Investigation 3.8 (the scent bottle) in order.",
+      "difficulty": "medium",
+      "marks": 2,
+      "sequence": [
+        "Pour a few drops of scent into an empty glass bottle",
+        "Smell the bottle",
+        "Leave the bottle undisturbed in your drawing room for a few minutes",
+        "The whole room is filled with the smell of scent"
+      ],
+      "explanation": "Scent first, smell the bottle, leave it in the room, and then the smell fills the whole room.",
+      "source": { "pages": [60] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-2-q5",
+      "lessonId": "che-matter-2",
+      "type": "short_answer",
+      "prompt": "In which state of matter are the gases in a fluorescent tube? How do gases change into this state?",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Plasma. Gases on heating to tens of thousand of degree of celsius change into plasma; at such a high temperature the atoms of gas break into positively and negatively charged particles.",
+      "keywords": ["plasma", "heating", "charged particles"],
+      "explanation": "This is from the 'Did you know?' box on p.60.",
+      "source": { "pages": [60] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-2-q6",
+      "lessonId": "che-matter-2",
+      "type": "think_write",
+      "prompt": "Your friend says a gas is just like a liquid, because both take the shape of their container. Using your book, write two ways in which a gas is different from a liquid.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "A liquid has a definite volume, but a gas has no definite volume — it fills the entire space available to it. A liquid has one free surface, but a gas has no free surface. A gas can be compressed, but the volume of a liquid does not change when the plunger of a sealed syringe is pushed.",
+      "keywords": ["no definite volume", "no free surface", "compressed"],
+      "explanation": "Your friend is half right: both take the vessel's shape. But think of volume, free surface and compression.",
+      "source": { "pages": [59, 60] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-3-q1",
+      "lessonId": "che-matter-3",
+      "type": "mcq",
+      "prompt": "Very small particles of matter which can exist independently are commonly called:",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["Molecules", "Free surfaces", "Plasma"],
+      "answer": "Molecules",
+      "explanation": "Matter is made of very small particles which can exist independently, commonly called molecules.",
+      "source": { "pages": [60] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-3-q2",
+      "lessonId": "che-matter-3",
+      "type": "fill_blank",
+      "prompt": "This space between the molecules is called intermolecular ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "space",
+      "explanation": "\"This space between the molecules is called intermolecular space.\"",
+      "source": { "pages": [60] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-3-q3",
+      "lessonId": "che-matter-3",
+      "type": "true_false",
+      "prompt": "In gases, the intermolecular spaces are too large, so the intermolecular forces are almost negligible.",
+      "difficulty": "medium",
+      "marks": 1,
+      "answer": true,
+      "explanation": "Gas molecules are very far apart, so the forces between them are almost negligible.",
+      "source": { "pages": [61] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-3-q4",
+      "lessonId": "che-matter-3",
+      "type": "match",
+      "prompt": "Match each state to its intermolecular force of attraction.",
+      "difficulty": "medium",
+      "marks": 3,
+      "pairs": [
+        ["Solids", "Very strong intermolecular force"],
+        ["Liquids", "Not a strong intermolecular force"],
+        ["Gases", "Almost negligible intermolecular force"]
+      ],
+      "explanation": "Smaller spaces mean stronger forces: solids strongest, then liquids, and gases almost none.",
+      "source": { "pages": [60, 61] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-3-q5",
+      "lessonId": "che-matter-3",
+      "type": "short_answer",
+      "prompt": "What are viscous liquids? Give two examples.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Liquids which are sticky and difficult to pour out, because there is more friction between the layers of their molecules, are called viscous liquids. Examples: honey, coconut oil, animal fat (desi ghee).",
+      "keywords": ["sticky", "difficult to pour", "friction", "honey"],
+      "explanation": "From the 'Did you know?' box on p.61.",
+      "source": { "pages": [61] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-3-q6",
+      "lessonId": "che-matter-3",
+      "type": "think_write",
+      "prompt": "Gases can be easily compressed, but solids cannot. Explain why, using the words 'intermolecular spaces'.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "In solids the intermolecular spaces are very small, so solids cannot be compressed. In gases the intermolecular spaces are very large, and these spaces can be decreased by compressive forces, so gases can be easily compressed.",
+      "keywords": ["very small intermolecular spaces", "very large intermolecular spaces", "decreased by compressive forces"],
+      "explanation": "Compressing means making the spaces between molecules smaller. Gases have lots of space to squeeze; solids hardly have any.",
+      "source": { "pages": [61] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-4-q1",
+      "lessonId": "che-matter-4",
+      "type": "mcq",
+      "prompt": "Which state has neither definite shape nor definite volume?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["Gases", "Liquids", "Solids"],
+      "answer": "Gases",
+      "explanation": "Row 1 of the table: gases have neither definite shape nor definite volume.",
+      "source": { "pages": [61] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-4-q2",
+      "lessonId": "che-matter-4",
+      "type": "true_false",
+      "prompt": "Gases can flow in all directions.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "explanation": "Row 4 of the table: gases can flow in all directions, while liquids flow from higher to lower level.",
+      "source": { "pages": [61] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-4-q3",
+      "lessonId": "che-matter-4",
+      "type": "fill_blank",
+      "prompt": "Solids do not need a ____ to contain them.",
+      "difficulty": "medium",
+      "marks": 1,
+      "answer": "vessel",
+      "accept": ["container"],
+      "explanation": "Row 8 of the table: solids do not need a vessel to contain them, but liquids do.",
+      "source": { "pages": [58, 62] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-4-q4",
+      "lessonId": "che-matter-4",
+      "type": "match",
+      "prompt": "Match each state to the position of its molecules.",
+      "difficulty": "medium",
+      "marks": 3,
+      "pairs": [
+        ["Solids", "Position of molecules is fixed"],
+        ["Liquids", "Molecules can change their position within the liquid"],
+        ["Gases", "Molecules can move freely in all directions"]
+      ],
+      "explanation": "Row 2 of the table.",
+      "source": { "pages": [61] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-4-q5",
+      "lessonId": "che-matter-4",
+      "type": "short_answer",
+      "prompt": "Write two differences between a liquid and a gas.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Liquids have a definite volume, but gases have neither definite shape nor definite volume. Liquids have small intermolecular spaces, but gases have very large intermolecular spaces. (Also: liquids flow from higher to lower level, gases flow in all directions; liquids have one free surface, gases have no free surface.)",
+      "keywords": ["definite volume", "intermolecular spaces", "flow", "free surface"],
+      "explanation": "Pick any two rows of the table and write the Liquids and Gases sides together.",
+      "source": { "pages": [60, 61] },
+      "fromBook": false
+    },
+    {
+      "id": "che-matter-4-q6",
+      "lessonId": "che-matter-4",
+      "type": "think_write",
+      "prompt": "Look at the three boxes in Fig. 3.12, 3.13 and 3.14. Which one shows a gas? Explain how the picture matches the properties of a gas.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Fig. 3.14 shows a gas: the molecules are very far apart from each other. As the intermolecular spaces are very large, the intermolecular forces are almost negligible, so a gas has neither definite shape nor definite volume and can be easily compressed.",
+      "keywords": ["Fig. 3.14", "very far apart", "almost negligible", "easily compressed"],
+      "explanation": "Link the picture (far-apart molecules) to the properties (no shape, no volume, compressible).",
+      "source": { "pages": [60, 61] },
+      "fromBook": false
+    }
+  ]
+}

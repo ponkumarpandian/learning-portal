@@ -1,0 +1,104 @@
+{
+  "id": "matter-solids-liquids",
+  "subject": "chemistry",
+  "title": "Solids and liquids — shape, volume and free surface",
+  "scenes": [
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "solid", "container": "none", "objects": ["cup", "saucer", "knife", "spoon"] },
+      "minDuration": 9,
+      "narration": "Look around you. Cups, saucers, knives and spoons are all solids. Do they change their shape at room temperature? No, they do not. So, solids have a definite shape.",
+      "source": { "pages": [58] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "solid", "container": "none", "objects": ["stool"], "load": false },
+      "steps": [{ "at": 5, "props": { "load": true } }],
+      "minDuration": 10,
+      "narration": "Here is a wooden stool. It occupies space, so it has some volume. Now your friend sits on the stool. Does the volume of the stool change? No, it does not. Solids have a definite volume.",
+      "source": { "pages": [58] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "solid", "container": "bowl", "heaped": false },
+      "steps": [{ "at": 4, "props": { "container": "none", "heaped": true } }],
+      "minDuration": 10,
+      "narration": "Now take a bowl filled with sugar and empty it. What do you see? The sugar does not flow. Instead, it gets heaped! Solids do not flow, and they do not need a container to hold them.",
+      "checkpoint": { "questionId": "matter-solids-liquids-cp1" },
+      "source": { "pages": [58] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "solid", "container": "none", "label": "Solid" },
+      "minDuration": 9,
+      "narration": "So here is how your book defines a solid. Any material which has a definite shape and definite volume, such that it can have any number of free surfaces, is called solid.",
+      "source": { "pages": [58] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "liquid", "container": "cup" },
+      "steps": [
+        { "at": 5, "props": { "container": "bowl" } },
+        { "at": 10, "props": { "container": "flask" } },
+        { "at": 15, "props": { "container": "cup" } }
+      ],
+      "minDuration": 18,
+      "narration": "Now let's study liquids. Fill half of a small cup with water. The water takes the shape of the cup, with one free, flat surface on top. Pour it into a big glass bowl. Now it takes the shape of the bowl. Pour it into a coffee flask. It takes the shape of the flask! Every time, its top surface stays free and flat. Pour it back into the cup, and the cup again gets half filled.",
+      "checkpoint": { "questionId": "matter-solids-liquids-cp2" },
+      "source": { "pages": [58] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "liquid", "container": "syringe", "compress": 0 },
+      "steps": [{ "at": 6, "props": { "compress": 0, "pushing": true } }],
+      "minDuration": 12,
+      "narration": "Take a plastic syringe. Seal its nozzle with fevicol, and half fill it with water. Now push the plunger with force. What happens? The volume of water does not change! Liquids do not change their volume when compressive forces are applied.",
+      "source": { "pages": [59] }
+    },
+    {
+      "visual": "ParticleBox",
+      "props": { "state": "liquid", "container": "flask", "label": "Liquid" },
+      "minDuration": 12,
+      "narration": "So, liquids have no definite shape. They take the shape of the containing vessel. Liquids have a definite volume. They always need a container, otherwise they start flowing. And they have only one free surface at the top, which is always flat. Your book says: any material which has a definite volume, but no definite shape and has one free surface, is called liquid.",
+      "checkpoint": { "questionId": "matter-solids-liquids-cp3" },
+      "source": { "pages": [59] }
+    }
+  ],
+  "questions": [
+    {
+      "id": "matter-solids-liquids-cp1",
+      "type": "mcq",
+      "prompt": "What happens when you empty a bowl of sugar?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["It gets heaped", "It flows away like water", "It fills the whole room"],
+      "answer": "It gets heaped",
+      "hints": ["Sugar is a solid. Do solids flow?"],
+      "explanation": "Solids do not flow — the sugar gets heaped (Fig. 3.7).",
+      "source": { "pages": [58] }
+    },
+    {
+      "id": "matter-solids-liquids-cp2",
+      "type": "mcq",
+      "prompt": "Water from a cup is poured into a big glass bowl. What shape does it take?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": ["The shape of the bowl", "The shape of the cup", "No shape — it gets heaped"],
+      "answer": "The shape of the bowl",
+      "hints": ["Liquids take the shape of the containing vessel."],
+      "explanation": "A liquid takes the shape of whatever vessel it is in — now the bowl.",
+      "source": { "pages": [58] }
+    },
+    {
+      "id": "matter-solids-liquids-cp3",
+      "type": "true_false",
+      "prompt": "A liquid has only one free surface, and it is always flat.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "hints": ["Think of the top of the water in the cup, the bowl and the flask."],
+      "explanation": "Liquids have only one definite free surface at the top of the vessel, and it is always flat.",
+      "source": { "pages": [59] }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "startDate": "2026-11-02",
+  "exams": { "mode": "single", "date": "2027-03-01" },
+  "revisionDays": 7,
+  "chapterOrder": { "physics": ["phy-broken"], "maths": [] },
+  "taughtAlready": [],
+  "examPattern": {
+    "default": [{ "section": "A", "title": "Fill in the blanks", "types": ["fill_blank"], "marks": 5 }]
+  }
+}

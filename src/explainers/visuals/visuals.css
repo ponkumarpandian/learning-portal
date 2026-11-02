@@ -1,0 +1,616 @@
+/*
+ * §7.5 visuals (ParticleBox `pb-`, LightRay `lr-`, NumberLine `nl-`). Tokens only: the subject colour
+ * comes from --s / --sd / --on-s (set on the player stage or by the visual), everything else from the
+ * theme tokens, so each world, light and dark, just works. No blurred shadows.
+ */
+@layer components {
+  .pb,
+  .lr,
+  .nl {
+    position: relative;
+    width: 100%;
+    color: var(--ink);
+  }
+  .pb-svg,
+  .lr-svg,
+  .nl-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* chips over a visual (label "Fig. 3.12", temperature) — real text at body size */
+  .vis-chips {
+    position: absolute;
+    inset: 2% 2% auto 2%;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--sp-2);
+    pointer-events: none;
+  }
+  .vis-chip {
+    background: var(--surface);
+    color: var(--ink);
+    border-radius: var(--r-pill);
+    padding: 0.2rem 0.75rem 0.25rem;
+    font: 600 var(--fs-body) / 1.2 var(--font-display);
+    box-shadow: 0 3px 0 var(--ledge);
+    border: 2px solid var(--line);
+    white-space: nowrap;
+  }
+
+  /* ---------- particles ---------- */
+  .pb-p {
+    fill: var(--s);
+    stroke: var(--sd);
+    stroke-width: 2.2;
+  }
+  .pb-shine {
+    fill: color-mix(in srgb, var(--s), white 55%);
+    opacity: 0.8;
+  }
+  .pb-plus {
+    fill: var(--gold);
+    stroke: var(--gold-d);
+  }
+  .pb-minus {
+    fill: var(--s);
+  }
+  .pb-sign {
+    font: 800 19px/1 var(--font-display);
+    fill: var(--on-gold);
+  }
+  .pb-minus + .pb-sign {
+    fill: var(--on-s);
+  }
+  .pb-honey {
+    --s: var(--gold);
+    --sd: var(--gold-d);
+  }
+
+  /* ---------- glass, rims, decoration ---------- */
+  .pb-glass {
+    fill: var(--surface2);
+    opacity: 0.75;
+  }
+  .pb-edge {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  .pb-rim {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 6;
+    stroke-linecap: round;
+  }
+  .pb-gleam {
+    fill: none;
+    stroke: var(--deco2);
+    stroke-width: 5;
+    stroke-linecap: round;
+    opacity: 0.7;
+  }
+  .pb-handle {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 9;
+    stroke-linecap: round;
+  }
+  .pb-handle-s {
+    stroke: var(--sd);
+    stroke-width: 7;
+  }
+  .pb-balloon {
+    fill: color-mix(in srgb, var(--s) 22%, var(--surface));
+    stroke: var(--sd);
+    stroke-width: 4;
+  }
+  .pb-knot {
+    fill: var(--sd);
+  }
+  .pb-string {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 2.5;
+  }
+  .pb-cap {
+    fill: var(--s);
+    stroke: var(--sd);
+    stroke-width: 3;
+  }
+  .pb-wall {
+    fill: var(--surface2);
+  }
+  .pb-floor {
+    fill: var(--line);
+  }
+  .pb-window {
+    fill: var(--sky1);
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+  }
+  .pb-frame {
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+  }
+  .pb-table {
+    fill: var(--catch);
+    stroke: var(--catch-d);
+    stroke-width: 2;
+  }
+  .pb-table-leg {
+    stroke: var(--catch-d);
+    stroke-width: 6;
+    stroke-linecap: round;
+  }
+  .pb-emoji {
+    font-size: 40px;
+  }
+  .pb-emoji-head {
+    font-size: 58px;
+  }
+  .pb-friend {
+    fill: var(--lang);
+    stroke: var(--lang-d);
+    stroke-width: 3;
+  }
+  .pb-friend-legs {
+    fill: none;
+    stroke: var(--maths-d);
+    stroke-width: 14;
+    stroke-linecap: round;
+  }
+  .pb-drip {
+    fill: var(--gold);
+    stroke: var(--gold-d);
+    stroke-width: 2;
+  }
+  .pb-nozzle {
+    fill: var(--surface2);
+  }
+  .pb-seal {
+    fill: var(--gold);
+    stroke: var(--gold-d);
+    stroke-width: 3;
+  }
+  .pb-tick {
+    stroke: var(--ink-soft);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+  }
+  .pb-flange,
+  .pb-rod {
+    fill: var(--surface2);
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+  }
+  .pb-head {
+    fill: var(--ink-soft);
+  }
+  .pb-push {
+    fill: none;
+    stroke: var(--catch-d);
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* objects */
+  .pb-obj {
+    fill: var(--s);
+    stroke: var(--sd);
+    stroke-width: 3;
+  }
+  .pb-obj-soft {
+    fill: var(--surface2);
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+  }
+  .pb-obj-inner {
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 3;
+  }
+  .pb-wood {
+    fill: var(--catch);
+    stroke: var(--catch-d);
+    stroke-width: 3;
+  }
+  .pb-leg {
+    fill: none;
+    stroke: var(--catch-d);
+    stroke-width: 10;
+    stroke-linecap: round;
+  }
+  .pb-leg-s {
+    stroke-width: 6;
+  }
+  .pb-connector {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+    stroke-dasharray: 2 8;
+    stroke-linecap: round;
+  }
+  .pb-volume-line {
+    fill: color-mix(in srgb, var(--s) 12%, transparent);
+    stroke: var(--sd);
+    stroke-width: 3;
+    stroke-dasharray: 10 8;
+  }
+  .pb-chunk {
+    fill: color-mix(in srgb, var(--s) 45%, var(--surface));
+    stroke: var(--sd);
+    stroke-width: 4;
+  }
+
+  /* lens */
+  .pb-lens-bg {
+    fill: var(--surface);
+  }
+  .pb-lens {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 8;
+  }
+  .pb-lens-handle {
+    stroke: var(--ink-soft);
+    stroke-width: 14;
+    stroke-linecap: round;
+  }
+
+  /* heat */
+  .pb-thermo {
+    fill: var(--surface);
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+  }
+  .pb-mercury,
+  .pb-bulb {
+    fill: var(--catch);
+  }
+  .pb-bulb {
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+  }
+  .pb-flame {
+    fill: var(--catch);
+  }
+  .pb-flame-in {
+    fill: var(--gold);
+  }
+
+  /* liquids, spaces, forces */
+  .pb-liquid {
+    fill: var(--s);
+    opacity: 0.28;
+  }
+  .pb-space {
+    fill: var(--catch);
+    opacity: 0.32;
+  }
+  .pb-surface {
+    fill: none;
+    stroke: var(--sd);
+    stroke-width: 4;
+    stroke-linecap: round;
+  }
+  .pb-spring {
+    fill: none;
+    stroke: var(--gold-d);
+    stroke-linecap: round;
+    opacity: 0.95;
+  }
+  .pb-force {
+    fill: var(--gold);
+    stroke: var(--gold-d);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+  }
+  .pb-measure,
+  .pb-arrow {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 3.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .pb-text,
+  .lr-text,
+  .nl-text {
+    font: 700 23px/1 var(--font-display);
+    fill: var(--ink);
+    paint-order: stroke;
+    stroke: var(--surface);
+    stroke-width: 6px;
+    stroke-linejoin: round;
+  }
+  .pb-plate {
+    fill: var(--surface2);
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+  }
+  .pb-ground,
+  .pb-ramp {
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 8;
+    stroke-linecap: round;
+  }
+  .pb-ramp {
+    stroke: var(--ink-soft);
+    stroke-width: 6;
+  }
+  .pb-outline {
+    fill: none;
+    stroke: var(--sd);
+    stroke-width: 3;
+    stroke-dasharray: 8 6;
+  }
+  .pb-free {
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .pb-ring {
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 5;
+  }
+  .pb-home {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 1.5;
+    stroke-dasharray: 2 3;
+  }
+
+  /* ---------- compare: three panels with real HTML labels ---------- */
+  .pb-compare {
+    display: grid;
+    gap: var(--sp-2);
+    padding: var(--sp-2) 0 0;
+  }
+  .pb-row-title {
+    justify-self: center;
+    font: 700 var(--fs-lg) / 1.2 var(--font-display);
+    background: var(--surface);
+    border: 2px solid var(--line);
+    border-radius: var(--r-pill);
+    padding: 0.15rem 0.9rem 0.25rem;
+    box-shadow: 0 3px 0 var(--ledge);
+  }
+  .pb-panels {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--sp-2);
+  }
+  .pb-panel {
+    display: grid;
+    gap: var(--sp-1);
+    margin: 0;
+    justify-items: center;
+  }
+  .pb-panel figcaption {
+    font: 600 var(--fs-body) / 1.15 var(--font-display);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* ---------- LightRay ---------- */
+  .lr-torch {
+    fill: var(--s);
+    stroke: var(--sd);
+    stroke-width: 3;
+  }
+  .lr-switch {
+    fill: var(--surface2);
+    stroke: var(--sd);
+    stroke-width: 2.5;
+  }
+  .lr-switch.is-on {
+    fill: var(--gold);
+  }
+  .lr-head {
+    fill: var(--surface2);
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+    stroke-linejoin: round;
+  }
+  .lr-glass {
+    stroke: var(--line);
+    stroke-width: 6;
+    stroke-linecap: round;
+  }
+  .lr-glass.is-on {
+    stroke: var(--gold);
+  }
+  .lr-beam {
+    fill: var(--gold);
+    opacity: 0.22;
+  }
+  .lr-ray,
+  .lr-chev {
+    fill: none;
+    stroke: var(--gold-d);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .lr-ray-2 {
+    stroke: var(--sd);
+  }
+  .lr-chev {
+    stroke-width: 4;
+  }
+  .lr-ruler {
+    stroke: var(--line);
+    stroke-width: 4;
+    stroke-dasharray: 2 10;
+    stroke-linecap: round;
+  }
+  .lr-wall {
+    fill: var(--surface2);
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+  }
+  .lr-floorline {
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+  }
+  .lr-emoji {
+    font-size: 52px;
+  }
+  .lr-ghost {
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 4;
+    stroke-dasharray: 3 10;
+    stroke-linecap: round;
+  }
+  .lr-bonk {
+    fill: var(--gold);
+    stroke: var(--gold-d);
+    stroke-width: 2;
+  }
+  .lr-think {
+    fill: var(--surface);
+    stroke: var(--line);
+    stroke-width: 3;
+  }
+  .lr-screen {
+    fill: var(--surface2);
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+  }
+  .lr-spot {
+    fill: var(--gold);
+  }
+  .lr-wood {
+    fill: var(--catch);
+    stroke: var(--catch-d);
+    stroke-width: 3;
+  }
+  .lr-paper {
+    fill: var(--surface);
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+    opacity: 0.92;
+  }
+  .lr-glass-sheet {
+    fill: var(--sky1);
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+    opacity: 0.6;
+  }
+  .lr-grain {
+    stroke: var(--catch-d);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+  }
+  .lr-grain-soft {
+    stroke: var(--line);
+  }
+  .lr-gleam {
+    stroke: var(--deco2);
+    stroke-width: 4;
+    stroke-linecap: round;
+  }
+  .lr-shadow {
+    fill: var(--ink);
+    opacity: 0.7;
+  }
+  .lr-umbra {
+    stroke: var(--ink);
+    stroke-width: 0;
+  }
+  .lr-ball {
+    fill: var(--s);
+    stroke: var(--sd);
+    stroke-width: 3;
+  }
+  .lr-shine {
+    fill: color-mix(in srgb, var(--s), white 55%);
+  }
+  .lr-candle {
+    fill: var(--surface);
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+  }
+  .lr-flame {
+    fill: var(--gold);
+    stroke: var(--catch-d);
+    stroke-width: 2;
+  }
+  .lr-box {
+    fill: var(--surface2);
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+    opacity: 0.9;
+  }
+  .lr-box-front {
+    stroke: var(--ink);
+    stroke-width: 7;
+    stroke-linecap: round;
+  }
+
+  /* ---------- NumberLine ---------- */
+  .nl-line {
+    stroke: var(--ink-soft);
+    stroke-width: 5;
+    stroke-linecap: round;
+  }
+  .nl-tick {
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+  }
+  .nl-zero {
+    stroke: var(--ink);
+    stroke-width: 4;
+  }
+  .nl-jump {
+    fill: none;
+    stroke: var(--s);
+    stroke-width: 5;
+    stroke-linecap: round;
+  }
+  .nl-jump-head {
+    fill: var(--s);
+  }
+  .nl-dot {
+    fill: var(--gold);
+    stroke: var(--gold-d);
+    stroke-width: 3;
+  }
+  .nl-dot.is-start {
+    fill: var(--surface);
+    stroke: var(--sd);
+  }
+  .nl-small {
+    font: 700 21px/1 var(--font-display);
+    fill: var(--ink-soft);
+  }
+
+  /* ---------- /kit gallery (dev only) ---------- */
+  .kit-visuals {
+    display: grid;
+    gap: var(--sp-4);
+  }
+  .kit-visual-stage {
+    border-radius: 20px;
+    padding: var(--sp-2);
+    background:
+      radial-gradient(circle, var(--line) 1.6px, transparent 2.2px) 0 0 / 22px 22px,
+      color-mix(in srgb, var(--s, var(--go)) 7%, var(--surface));
+    box-shadow: inset 0 0 0 3px var(--line);
+  }
+  .kit-visual-name {
+    font-size: var(--fs-sm);
+    margin-top: var(--sp-1);
+  }
+}
