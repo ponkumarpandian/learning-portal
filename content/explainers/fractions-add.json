@@ -1,0 +1,258 @@
+{
+  "id": "fractions-add",
+  "subject": "maths",
+  "title": "Adding fractions",
+  "source": {
+    "pages": [
+      94,
+      95
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 9,
+            "shaded": 4,
+            "label": "4/9"
+          },
+          {
+            "parts": 9,
+            "shaded": 2,
+            "label": "2/9"
+          }
+        ],
+        "sign": "+"
+      },
+      "steps": [
+        {
+          "at": 6,
+          "props": {
+            "result": "6/9 = 2/3"
+          }
+        }
+      ],
+      "minDuration": 11,
+      "narration": "To add like fractions, add the numerators and keep the common denominator. 4 by 9 plus 2 by 9 is 4 plus 2, which is 6, over 9. 6 by 9 in its simplest form is 2 by 3.",
+      "captions": "Sum of like fractions = (Sum of their numerators) / (Common denominator). 4/9 + 2/9 = (4 + 2)/9 = 6/9 = 2/3."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 8,
+            "shaded": 3,
+            "label": "3/8"
+          },
+          {
+            "parts": 8,
+            "shaded": 1,
+            "label": "1/8"
+          },
+          {
+            "parts": 8,
+            "shaded": 5,
+            "label": "5/8"
+          }
+        ],
+        "sign": "+"
+      },
+      "steps": [
+        {
+          "at": 6,
+          "props": {
+            "result": "9/8 = 1 1/8"
+          }
+        }
+      ],
+      "minDuration": 11,
+      "narration": "Now 3 by 8 plus 1 by 8 plus 5 by 8. That is 3 plus 1 plus 5, which is 9, over 8. 9 by 8 is one whole and 1 by 8 more, so the sum is 1 and 1 by 8.",
+      "captions": "3/8 + 1/8 + 5/8 = (3 + 1 + 5)/8 = 9/8 = 1 1/8.",
+      "checkpoint": {
+        "questionId": "fractions-add-cp1"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 9,
+            "shaded": 8,
+            "label": "8/9"
+          },
+          {
+            "parts": 12,
+            "shaded": 5,
+            "label": "5/12"
+          }
+        ],
+        "sign": "+",
+        "label": "LCM of 9 and 12 = 36"
+      },
+      "steps": [
+        {
+          "at": 7,
+          "props": {
+            "bars": [
+              {
+                "parts": 36,
+                "shaded": 32,
+                "label": "32/36"
+              },
+              {
+                "parts": 36,
+                "shaded": 15,
+                "label": "15/36"
+              }
+            ],
+            "result": "47/36 = 1 11/36"
+          }
+        }
+      ],
+      "minDuration": 15,
+      "narration": "For unlike fractions, change them into equivalent like fractions and then add. For 8 by 9 plus 5 by 12, the LCM of 9 and 12 is 36. 8 by 9 is 32 by 36, and 5 by 12 is 15 by 36. 32 plus 15 is 47. So the sum is 47 by 36, which is 1 and 11 by 36.",
+      "captions": "For unlike fractions, change them into equivalent like fractions and then add. For 8/9 + 5/12, the LCM of 9 and 12 is 36. 8/9 = 32/36, and 5/12 = 15/36. 32 + 15 = 47. So the sum is 47/36 = 1 11/36.",
+      "checkpoint": {
+        "questionId": "fractions-add-cp2"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 5,
+            "shaded": 14,
+            "label": "14/5"
+          },
+          {
+            "parts": 10,
+            "shaded": 13,
+            "label": "13/10"
+          },
+          {
+            "parts": 15,
+            "shaded": 46,
+            "label": "46/15"
+          }
+        ],
+        "sign": "+",
+        "label": "LCM of 5, 10, 15 = 30"
+      },
+      "steps": [
+        {
+          "at": 9,
+          "props": {
+            "result": "215/30 = 43/6 = 7 1/6"
+          }
+        }
+      ],
+      "minDuration": 15,
+      "narration": "For mixed fractions, change them into improper fractions first. 2 and 4 by 5 is 14 by 5. 1 and 3 by 10 is 13 by 10. 3 and 1 by 15 is 46 by 15. The LCM of 5, 10 and 15 is 30. So we get 84 plus 39 plus 92, which is 215, over 30. That is 43 by 6, or 7 and 1 by 6.",
+      "captions": "For mixed fractions, change them into improper fractions first. 2 4/5 = 14/5. 1 3/10 = 13/10. 3 1/15 = 46/15. The LCM of 5, 10 and 15 is 30. So we get (84 + 39 + 92)/30 = 215/30 = 43/6 = 7 1/6."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 4,
+            "shaded": 35,
+            "label": "₹ 8 3/4"
+          },
+          {
+            "parts": 5,
+            "shaded": 52,
+            "label": "₹ 10 2/5"
+          }
+        ],
+        "sign": "+",
+        "label": "Tanvi’s shopping"
+      },
+      "steps": [
+        {
+          "at": 8,
+          "props": {
+            "result": "₹ 383/20 = ₹ 19 3/20"
+          }
+        }
+      ],
+      "minDuration": 13,
+      "narration": "Tanvi bought a notebook for 8 and 3 by 4 rupees, and a pen for 10 and 2 by 5 rupees. That is 35 by 4 plus 52 by 5. The LCM is 20, so we get 175 plus 208, which is 383, over 20. Tanvi should pay 19 and 3 by 20 rupees.",
+      "captions": "Tanvi bought a notebook for ₹ 8 3/4 and a pen for ₹ 10 2/5. That is 35/4 + 52/5. The LCM is 20, so we get (175 + 208)/20 = 383/20. Tanvi should pay ₹ 19 3/20.",
+      "checkpoint": {
+        "questionId": "fractions-add-cp3"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "fill_blank",
+      "prompt": "3/8 + 1/8 + 5/8 = ____",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "1 1/8",
+      "accept": [
+        "9/8"
+      ],
+      "hints": [
+        "Add the numerators: 3 + 1 + 5."
+      ],
+      "explanation": "(3 + 1 + 5)/8 = 9/8 = 1 1/8.",
+      "source": {
+        "pages": [
+          94
+        ]
+      },
+      "id": "fractions-add-cp1"
+    },
+    {
+      "type": "mcq",
+      "prompt": "To add 8/9 and 5/12, we change both to…",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "36ths",
+        "21sts",
+        "108ths"
+      ],
+      "answer": "36ths",
+      "hints": [
+        "Use the LCM of 9 and 12."
+      ],
+      "explanation": "LCM of 9 and 12 = 36, so 8/9 = 32/36 and 5/12 = 15/36.",
+      "source": {
+        "pages": [
+          94
+        ]
+      },
+      "id": "fractions-add-cp2"
+    },
+    {
+      "type": "mcq",
+      "prompt": "How much should Tanvi pay?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "₹ 19 3/20",
+        "₹ 18 5/9",
+        "₹ 19 1/20"
+      ],
+      "answer": "₹ 19 3/20",
+      "hints": [
+        "383/20: how many 20s are in 383?"
+      ],
+      "explanation": "35/4 + 52/5 = (175 + 208)/20 = 383/20 = ₹ 19 3/20.",
+      "source": {
+        "pages": [
+          95
+        ]
+      },
+      "id": "fractions-add-cp3"
+    }
+  ]
+}

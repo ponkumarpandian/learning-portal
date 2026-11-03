@@ -7,10 +7,10 @@ Vite 8 + React 19 + TypeScript 6 (strict, `noUncheckedIndexedAccess`), Tailwind 
 ## Status
 
 - **Phase 0 (Foundation): done.**
-- **Phase C:** Chemistry Ch 3 "Matter" (pp.58–62) imported and **approved**. Its exercises and opening pages are still to come.
+- **Phase C:** Chemistry Ch 3 "Matter" (pp.58–62) imported and **approved**. Its exercises and opening pages are still to come. Maths Ch 5 "Fractions" (pp.89–101, 7 lessons, 136 bank questions) imported as **draft**, waiting for the parent's review.
 - **Phase 2 (Lessons & videos): built early, at the parent's request.**
   - `src/features/lesson/`: the lesson flow, autosave and resume.
-  - `src/explainers/`: the narrated player, plus ParticleBox, LightRay and NumberLine.
+  - `src/explainers/`: the narrated player, plus ParticleBox, LightRay, NumberLine and FractionBar.
   - `src/features/video/`: YouTube, MP4 and the fallbacks.
   - `src/features/questions/`: every question type and the correction report.
   - `src/engine/`: grading, lessonTemplate and queue.

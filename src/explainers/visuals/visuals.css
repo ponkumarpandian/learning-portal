@@ -6,14 +6,16 @@
 @layer components {
   .pb,
   .lr,
-  .nl {
+  .nl,
+  .fb {
     position: relative;
     width: 100%;
     color: var(--ink);
   }
   .pb-svg,
   .lr-svg,
-  .nl-svg {
+  .nl-svg,
+  .fb-svg {
     display: block;
     width: 100%;
     height: auto;
@@ -594,6 +596,39 @@
   .nl-small {
     font: 700 21px/1 var(--font-display);
     fill: var(--ink-soft);
+  }
+
+  /* ---------- FractionBar ---------- */
+  .fb-cell {
+    fill: var(--surface2);
+  }
+  .fb-cell.is-on {
+    fill: var(--s);
+  }
+  .fb-divider {
+    stroke: var(--ink-soft);
+    stroke-width: 2;
+  }
+  .fb-whole {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 4;
+  }
+  .fb-label,
+  .fb-sign,
+  .fb-result {
+    font: 700 23px/1 var(--font-display);
+    fill: var(--ink);
+    paint-order: stroke;
+    stroke: var(--surface);
+    stroke-width: 6px;
+    stroke-linejoin: round;
+  }
+  .fb-sign {
+    font-size: 30px;
+  }
+  .fb-result {
+    font-size: 28px;
   }
 
   /* ---------- /kit gallery (dev only) ---------- */

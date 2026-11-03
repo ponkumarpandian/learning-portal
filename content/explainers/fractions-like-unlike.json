@@ -1,0 +1,208 @@
+{
+  "id": "fractions-like-unlike",
+  "subject": "maths",
+  "title": "Like and unlike fractions",
+  "source": {
+    "pages": [
+      90
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 9,
+            "shaded": 2,
+            "label": "2/9"
+          },
+          {
+            "parts": 9,
+            "shaded": 4,
+            "label": "4/9"
+          },
+          {
+            "parts": 9,
+            "shaded": 5,
+            "label": "5/9"
+          },
+          {
+            "parts": 9,
+            "shaded": 8,
+            "label": "8/9"
+          }
+        ],
+        "label": "Like fractions"
+      },
+      "minDuration": 10,
+      "narration": "Fractions having the same denominator are called like fractions. 2 by 9, 4 by 9, 5 by 9 and 8 by 9 are all like fractions. Every bar is cut into 9 equal parts.",
+      "captions": "Fractions having the same denominator are called like fractions. 2/9, 4/9, 5/9 and 8/9 are all like fractions. Every bar is cut into 9 equal parts."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 2,
+            "shaded": 1,
+            "label": "1/2"
+          },
+          {
+            "parts": 4,
+            "shaded": 3,
+            "label": "3/4"
+          },
+          {
+            "parts": 6,
+            "shaded": 5,
+            "label": "5/6"
+          },
+          {
+            "parts": 9,
+            "shaded": 7,
+            "label": "7/9"
+          }
+        ],
+        "label": "Unlike fractions"
+      },
+      "minDuration": 10,
+      "narration": "Fractions having different denominators are called unlike fractions. 1 by 2, 3 by 4, 5 by 6 and 7 by 9 are all unlike fractions. The bars are cut into different numbers of parts.",
+      "captions": "Fractions having different denominators are called unlike fractions. 1/2, 3/4, 5/6 and 7/9 are all unlike fractions. The bars are cut into different numbers of parts.",
+      "checkpoint": {
+        "questionId": "fractions-like-unlike-cp1"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 2,
+            "shaded": 1,
+            "label": "1/2"
+          },
+          {
+            "parts": 3,
+            "shaded": 2,
+            "label": "2/3"
+          },
+          {
+            "parts": 6,
+            "shaded": 5,
+            "label": "5/6"
+          },
+          {
+            "parts": 9,
+            "shaded": 4,
+            "label": "4/9"
+          }
+        ],
+        "label": "LCM of 2, 3, 6, 9 = 18"
+      },
+      "minDuration": 12,
+      "narration": "How do we make unlike fractions into like fractions? Convert each one into an equivalent fraction having a denominator equal to the LCM of all the denominators. For 1 by 2, 2 by 3, 5 by 6 and 4 by 9, the LCM of 2, 3, 6 and 9 is 18.",
+      "captions": "How do we make unlike fractions into like fractions? Convert each one into an equivalent fraction having a denominator equal to the LCM of all the denominators. For 1/2, 2/3, 5/6 and 4/9, the LCM of 2, 3, 6 and 9 is 18."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 2,
+            "shaded": 1,
+            "label": "1/2"
+          },
+          {
+            "parts": 3,
+            "shaded": 2,
+            "label": "2/3"
+          },
+          {
+            "parts": 6,
+            "shaded": 5,
+            "label": "5/6"
+          },
+          {
+            "parts": 9,
+            "shaded": 4,
+            "label": "4/9"
+          }
+        ],
+        "label": "LCM of 2, 3, 6, 9 = 18"
+      },
+      "steps": [
+        {
+          "at": 6,
+          "props": {
+            "bars": [
+              {
+                "parts": 18,
+                "shaded": 9,
+                "label": "9/18"
+              },
+              {
+                "parts": 18,
+                "shaded": 12,
+                "label": "12/18"
+              },
+              {
+                "parts": 18,
+                "shaded": 15,
+                "label": "15/18"
+              },
+              {
+                "parts": 18,
+                "shaded": 8,
+                "label": "8/18"
+              }
+            ],
+            "label": "Like fractions"
+          }
+        }
+      ],
+      "minDuration": 14,
+      "narration": "Now change each one to eighteenths. 1 by 2 is 9 by 18. 2 by 3 is 12 by 18. 5 by 6 is 15 by 18. And 4 by 9 is 8 by 18. Now all the bars have 18 parts. They are like fractions!",
+      "captions": "Now change each one to 18ths. 1/2 = 9/18. 2/3 = 12/18. 5/6 = 15/18. And 4/9 = 8/18. Now all the bars have 18 parts. They are like fractions!",
+      "checkpoint": {
+        "questionId": "fractions-like-unlike-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "true_false",
+      "prompt": "1/2, 3/4, 5/6 and 7/9 are like fractions.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "hints": [
+        "Are the denominators the same?"
+      ],
+      "explanation": "Their denominators are different, so they are unlike fractions.",
+      "source": {
+        "pages": [
+          90
+        ]
+      },
+      "id": "fractions-like-unlike-cp1"
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "5/6 = ____/18",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "15",
+      "hints": [
+        "6 × 3 = 18."
+      ],
+      "explanation": "5/6 = (5×3)/(6×3) = 15/18.",
+      "source": {
+        "pages": [
+          90
+        ]
+      },
+      "id": "fractions-like-unlike-cp2"
+    }
+  ]
+}

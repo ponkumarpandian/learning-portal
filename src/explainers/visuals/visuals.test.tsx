@@ -2,6 +2,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import { loadContent } from '@/content';
 import { activeProps } from '../timeline';
 import { VISUALS } from './index';
+import { layoutFractionBar, parseFractionBar } from './fractionBarLayout';
 import { liquidFill } from './particles/layout';
 import { SINGLE_VESSELS, parseProps, singleLayout } from './particles/scene';
 
@@ -138,5 +139,67 @@ describe('LightRay and NumberLine', () => {
     expect(screen.getByRole('img')).toHaveAccessibleName(/starting at -2 and landing on -1/);
     expect(screen.getByText('+5')).toBeInTheDocument();
     expect(screen.getAllByText('−4').length).toBeGreaterThan(1); // tick label + jump label
+  });
+});
+
+describe('FractionBar', () => {
+  const FB = VISUALS.FractionBar!;
+
+  it('cuts a bar into equal parts and shades the numerator', () => {
+    const l = layoutFractionBar(parseFractionBar({ bars: [{ parts: 3, shaded: 2, label: '2/3' }] }));
+    expect(l.rows[0]!.cells).toHaveLength(3);
+    expect(l.rows[0]!.cells.filter((c) => c.on)).toHaveLength(2);
+    const widths = l.rows[0]!.cells.map((c) => c.w);
+    expect(Math.max(...widths) - Math.min(...widths)).toBeLessThan(1e-9);
+  });
+
+  it('an improper fraction draws extra wholes (9/8 = one full bar and 1/8)', () => {
+    const r = layoutFractionBar(parseFractionBar({ bars: [{ parts: 8, shaded: 9 }] })).rows[0]!;
+    expect(r.wholes).toHaveLength(2);
+    expect(r.cells).toHaveLength(16);
+    expect(r.cells.filter((c) => c.on)).toHaveLength(9);
+  });
+
+  it('puts the sign between every pair of rows', () => {
+    const l = layoutFractionBar(
+      parseFractionBar({
+        bars: [
+          { parts: 8, shaded: 3 },
+          { parts: 8, shaded: 1 },
+          { parts: 8, shaded: 5 },
+        ],
+        sign: '+',
+      }),
+    );
+    expect(l.signs.map((s) => s.text)).toEqual(['+', '+']);
+    expect(l.signs[0]!.y).toBeGreaterThan(l.rows[0]!.y + l.rowHeight);
+    expect(l.signs[0]!.y).toBeLessThan(l.rows[1]!.y + 10);
+  });
+
+  it('drops junk and clamps numbers', () => {
+    const s = parseFractionBar({ bars: [{ parts: 'x' }, null, { parts: 500, shaded: -3 }], sign: '?' });
+    expect(s.bars).toEqual([{ parts: 60, shaded: 0, label: undefined }]);
+    expect(s.sign).toBeUndefined();
+    expect(parseFractionBar({ sign: '-' }).sign).toBe('−');
+  });
+
+  it('reads the sum aloud and shows the labels, sign and result', () => {
+    render(
+      <FB
+        props={{
+          bars: [
+            { parts: 9, shaded: 4, label: '4/9' },
+            { parts: 9, shaded: 2, label: '2/9' },
+          ],
+          sign: '+',
+          result: '6/9 = 2/3',
+        }}
+        reduced
+      />,
+    );
+    expect(screen.getByRole('img')).toHaveAccessibleName('Fraction bars: 4/9 + 2/9 = 6/9 = 2/3');
+    expect(screen.getByText('4/9')).toBeInTheDocument();
+    expect(screen.getByText('+')).toBeInTheDocument();
+    expect(screen.getByText('6/9 = 2/3')).toBeInTheDocument();
   });
 });

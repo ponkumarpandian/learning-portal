@@ -1,0 +1,165 @@
+{
+  "id": "fractions-compare",
+  "subject": "maths",
+  "title": "Comparing fractions",
+  "source": {
+    "pages": [
+      90,
+      91
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 9,
+            "shaded": 8,
+            "label": "8/9"
+          },
+          {
+            "parts": 9,
+            "shaded": 5,
+            "label": "5/9"
+          }
+        ],
+        "sign": ">"
+      },
+      "minDuration": 10,
+      "narration": "Rule 1. Among two fractions with the same denominator, the one with the greater numerator is the greater of the two. 8 by 9 and 5 by 9 are both ninths. 8 ninths is more, so 8 by 9 is greater than 5 by 9.",
+      "captions": "Rule 1. Among two fractions with the same denominator, the one with the greater numerator is the greater of the two. 8/9 and 5/9 are both ninths. 8 ninths is more, so 8/9 > 5/9."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 6,
+            "shaded": 5,
+            "label": "5/6"
+          },
+          {
+            "parts": 8,
+            "shaded": 5,
+            "label": "5/8"
+          }
+        ],
+        "sign": ">"
+      },
+      "minDuration": 11,
+      "narration": "Rule 2. Among two fractions with the same numerator, the one with the smaller denominator is the greater of the two. Sixths are bigger parts than eighths. So 5 by 6 is greater than 5 by 8.",
+      "captions": "Rule 2. Among two fractions with the same numerator, the one with the smaller denominator is the greater of the two. Sixths are bigger parts than eighths. So 5/6 > 5/8.",
+      "checkpoint": {
+        "questionId": "fractions-compare-cp1"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 8,
+            "shaded": 3,
+            "label": "3/8"
+          },
+          {
+            "parts": 12,
+            "shaded": 5,
+            "label": "5/12"
+          }
+        ],
+        "label": "3 × 12 = 36 · 8 × 5 = 40"
+      },
+      "steps": [
+        {
+          "at": 8,
+          "props": {
+            "sign": "<"
+          }
+        }
+      ],
+      "minDuration": 14,
+      "narration": "When the numerators and denominators are both different, cross multiply. To compare 3 by 8 and 5 by 12: 3 times 12 is 36, and 8 times 5 is 40. 36 is less than 40. Hence, 3 by 8 is less than 5 by 12.",
+      "captions": "When the numerators and denominators are both different, cross multiply. To compare 3/8 and 5/12: 3 × 12 = 36, and 8 × 5 = 40. 36 < 40. Hence, 3/8 < 5/12."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 9,
+            "shaded": 5,
+            "label": "5/9"
+          },
+          {
+            "parts": 11,
+            "shaded": 6,
+            "label": "6/11"
+          }
+        ],
+        "label": "5 × 11 = 55 · 9 × 6 = 54"
+      },
+      "steps": [
+        {
+          "at": 7,
+          "props": {
+            "sign": ">"
+          }
+        }
+      ],
+      "minDuration": 12,
+      "narration": "Let us try 5 by 9 and 6 by 11. 5 times 11 is 55, and 9 times 6 is 54. 55 is greater than 54. Hence, 5 by 9 is greater than 6 by 11.",
+      "captions": "Let us try 5/9 and 6/11. 5 × 11 = 55, and 9 × 6 = 54. 55 > 54. Hence, 5/9 > 6/11.",
+      "checkpoint": {
+        "questionId": "fractions-compare-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "Which is greater: 3/5 or 3/7?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "3/5",
+        "3/7",
+        "They are equal"
+      ],
+      "answer": "3/5",
+      "hints": [
+        "Same numerator: the smaller denominator wins."
+      ],
+      "explanation": "Same numerator, so the smaller denominator is greater (Rule 2): 3/5 > 3/7.",
+      "source": {
+        "pages": [
+          91
+        ]
+      },
+      "id": "fractions-compare-cp1"
+    },
+    {
+      "type": "mcq",
+      "prompt": "5 × 11 = 55 and 9 × 6 = 54. So…",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "5/9 > 6/11",
+        "5/9 < 6/11",
+        "5/9 = 6/11"
+      ],
+      "answer": "5/9 > 6/11",
+      "hints": [
+        "If ad > bc then a/b > c/d."
+      ],
+      "explanation": "55 > 54, so 5/9 > 6/11.",
+      "source": {
+        "pages": [
+          91
+        ]
+      },
+      "id": "fractions-compare-cp2"
+    }
+  ]
+}

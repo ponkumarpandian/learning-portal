@@ -3,6 +3,7 @@
  * without an entry yet (Phase 7) renders the player's friendly "picture coming soon" stage.
  */
 import type { VisualName } from '@/content';
+import { FractionBar } from './FractionBar';
 import { LightRay } from './LightRay';
 import { NumberLine } from './NumberLine';
 import { ParticleBox } from './ParticleBox';
@@ -14,4 +15,5 @@ export const VISUALS: Partial<Record<VisualName, VisualComponent>> = {
   ParticleBox,
   LightRay,
   NumberLine,
+  FractionBar,
 };

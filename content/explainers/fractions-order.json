@@ -1,0 +1,279 @@
+{
+  "id": "fractions-order",
+  "subject": "maths",
+  "title": "Comparing by LCM and arranging in order",
+  "source": {
+    "pages": [
+      91,
+      92,
+      93
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 6,
+            "shaded": 5,
+            "label": "5/6"
+          },
+          {
+            "parts": 9,
+            "shaded": 8,
+            "label": "8/9"
+          }
+        ],
+        "label": "LCM of 6 and 9 = 18"
+      },
+      "steps": [
+        {
+          "at": 7,
+          "props": {
+            "bars": [
+              {
+                "parts": 18,
+                "shaded": 15,
+                "label": "15/18"
+              },
+              {
+                "parts": 18,
+                "shaded": 16,
+                "label": "16/18"
+              }
+            ],
+            "sign": "<"
+          }
+        }
+      ],
+      "minDuration": 14,
+      "narration": "Another way to compare: change each fraction into an equivalent fraction with the LCM of the denominators. Then compare them by Rule 1. For 5 by 6 and 8 by 9, the LCM of 6 and 9 is 18. 5 by 6 is 15 by 18, and 8 by 9 is 16 by 18. 15 by 18 is less than 16 by 18, so 5 by 6 is less than 8 by 9.",
+      "captions": "Another way to compare: change each fraction into an equivalent fraction with the LCM of the denominators. Then compare them by Rule 1. For 5/6 and 8/9, the LCM of 6 and 9 is 18. 5/6 = 15/18, and 8/9 = 16/18. 15/18 < 16/18, so 5/6 < 8/9.",
+      "checkpoint": {
+        "questionId": "fractions-order-cp1"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 3,
+            "shaded": 2,
+            "label": "2/3"
+          },
+          {
+            "parts": 6,
+            "shaded": 1,
+            "label": "1/6"
+          },
+          {
+            "parts": 9,
+            "shaded": 5,
+            "label": "5/9"
+          },
+          {
+            "parts": 12,
+            "shaded": 7,
+            "label": "7/12"
+          }
+        ],
+        "label": "LCM of 3, 6, 9, 12 = 36"
+      },
+      "steps": [
+        {
+          "at": 6,
+          "props": {
+            "bars": [
+              {
+                "parts": 36,
+                "shaded": 24,
+                "label": "24/36"
+              },
+              {
+                "parts": 36,
+                "shaded": 6,
+                "label": "6/36"
+              },
+              {
+                "parts": 36,
+                "shaded": 20,
+                "label": "20/36"
+              },
+              {
+                "parts": 36,
+                "shaded": 21,
+                "label": "21/36"
+              }
+            ]
+          }
+        },
+        {
+          "at": 12,
+          "props": {
+            "bars": [
+              {
+                "parts": 6,
+                "shaded": 1,
+                "label": "1/6"
+              },
+              {
+                "parts": 9,
+                "shaded": 5,
+                "label": "5/9"
+              },
+              {
+                "parts": 12,
+                "shaded": 7,
+                "label": "7/12"
+              },
+              {
+                "parts": 3,
+                "shaded": 2,
+                "label": "2/3"
+              }
+            ],
+            "label": "Ascending order"
+          }
+        }
+      ],
+      "minDuration": 18,
+      "narration": "Now let us arrange 2 by 3, 1 by 6, 5 by 9 and 7 by 12 in ascending order. That means smallest first. The LCM of 3, 6, 9 and 12 is 36. So we get 24 by 36, 6 by 36, 20 by 36 and 21 by 36. Clearly, 6 is the smallest, then 20, then 21, then 24. So the ascending order is 1 by 6, 5 by 9, 7 by 12, 2 by 3.",
+      "captions": "Now let us arrange 2/3, 1/6, 5/9 and 7/12 in ascending order. That means smallest first. The LCM of 3, 6, 9 and 12 is 36. So we get 24/36, 6/36, 20/36 and 21/36. Clearly, 6 is the smallest, then 20, then 21, then 24. So the ascending order is 1/6, 5/9, 7/12, 2/3.",
+      "checkpoint": {
+        "questionId": "fractions-order-cp2"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 5,
+            "shaded": 4,
+            "label": "4/5"
+          },
+          {
+            "parts": 10,
+            "shaded": 7,
+            "label": "7/10"
+          },
+          {
+            "parts": 15,
+            "shaded": 8,
+            "label": "8/15"
+          },
+          {
+            "parts": 30,
+            "shaded": 17,
+            "label": "17/30"
+          }
+        ],
+        "label": "LCM of 5, 10, 15, 30 = 30"
+      },
+      "steps": [
+        {
+          "at": 8,
+          "props": {
+            "bars": [
+              {
+                "parts": 5,
+                "shaded": 4,
+                "label": "4/5"
+              },
+              {
+                "parts": 10,
+                "shaded": 7,
+                "label": "7/10"
+              },
+              {
+                "parts": 30,
+                "shaded": 17,
+                "label": "17/30"
+              },
+              {
+                "parts": 15,
+                "shaded": 8,
+                "label": "8/15"
+              }
+            ],
+            "label": "Descending order"
+          }
+        }
+      ],
+      "minDuration": 16,
+      "narration": "Descending order means greatest first. For 4 by 5, 7 by 10, 8 by 15 and 17 by 30, the LCM is 30. We get 24 by 30, 21 by 30, 16 by 30 and 17 by 30. So the descending order is 4 by 5, 7 by 10, 17 by 30, 8 by 15. Your book has a tiny printing slip here, but this is the right order.",
+      "captions": "Descending order means greatest first. For 4/5, 7/10, 8/15 and 17/30, the LCM is 30. We get 24/30, 21/30, 16/30 and 17/30. So the descending order is 4/5, 7/10, 17/30, 8/15. Your book has a tiny printing slip here, but this is the right order.",
+      "checkpoint": {
+        "questionId": "fractions-order-cp3"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "fill_blank",
+      "prompt": "8/9 = ____/18",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "16",
+      "hints": [
+        "9 × 2 = 18."
+      ],
+      "explanation": "8/9 = (8×2)/(9×2) = 16/18.",
+      "source": {
+        "pages": [
+          92
+        ]
+      },
+      "id": "fractions-order-cp1"
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which comes first in ascending order: 2/3, 1/6, 5/9 or 7/12?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "1/6",
+        "2/3",
+        "5/9",
+        "7/12"
+      ],
+      "answer": "1/6",
+      "hints": [
+        "Ascending means smallest first. 1/6 = 6/36."
+      ],
+      "explanation": "1/6 = 6/36 is the smallest.",
+      "source": {
+        "pages": [
+          92
+        ]
+      },
+      "id": "fractions-order-cp2"
+    },
+    {
+      "type": "mcq",
+      "prompt": "Which comes last in descending order: 4/5, 7/10, 8/15 or 17/30?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "8/15",
+        "17/30",
+        "4/5",
+        "7/10"
+      ],
+      "answer": "8/15",
+      "hints": [
+        "8/15 = 16/30. Is that the smallest?"
+      ],
+      "explanation": "8/15 = 16/30 is the smallest, so it comes last.",
+      "source": {
+        "pages": [
+          92,
+          93
+        ]
+      },
+      "id": "fractions-order-cp3"
+    }
+  ]
+}

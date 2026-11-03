@@ -224,3 +224,11 @@ Ambiguities resolved while building, one line each, with a short "why" (SPEC §0
 - The eye break comes after 20 minutes of screen time (homework and notebook don't count). It can be skipped once and returns 5 minutes later, and a 60-minute lesson also breaks halfway. Why: §7.7.
 - Today reads the slot log: done stones are gold ✓ and never catch-ups, the progress line reads "N of M done", and the Up now card moves to the next slot that isn't done. Why: §5.1, §15.3.
 - Open question for the parent: 30 minutes of homework on a 45-minute slot leaves 15 minutes, which gives Check only. Mini (20–29 minutes left) can't happen with the No/15/30/45 choices on today's slots. Why: it follows §5.3 literally.
+
+## 2026-11-03 · Phase C (Maths Ch 5 "Fractions" import)
+
+- Only pp.89–101 were imported. The parent said the earlier pages (intro, equivalent fractions, simplest form, Ex. 5A–5B) were done for the half-yearly exam, so Lesson 1 is a short refresher built from "Things to Remember" (p.101) and Ex. 5C. Why: the parent's call; no facts from the missing pages.
+- The pages have no answer key, so answers were worked out with the book's own LCM method and checked with exact fraction arithmetic (a one-off generator), instead of marking ~130 questions needsReview. Why: the method is printed on pp.90–98, and the arithmetic can't be miscopied.
+- Fraction answers are fill_blank text: `answer` is the book's final form (simplest, mixed when more than 1, e.g. "1 11/36") and `accept` holds the improper form ("47/36"), with or without the unit. Why: no grading-engine change is needed, and both forms are correct.
+- The book's misprint on p.93 (Example 7: "<" signs and "8/5") is taught in its corrected form, with a gentle "printing slip" note on the card. Why: never teach a wrong order; tell her so the book doesn't confuse her.
+- FractionBar was built now, not in Phase 7: the visual-registry test requires a component for every visual that content uses, and a fractions chapter without it would show "picture coming soon" everywhere. Its layout file is `fractionBarLayout.ts`. Why: `fractionBar.ts` and `FractionBar.tsx` are the same file on Windows' case-insensitive disk.

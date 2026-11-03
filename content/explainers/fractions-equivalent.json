@@ -1,0 +1,217 @@
+{
+  "id": "fractions-equivalent",
+  "subject": "maths",
+  "title": "Equivalent fractions and simplest form",
+  "source": {
+    "pages": [
+      89,
+      90,
+      94,
+      101
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 3,
+            "shaded": 2,
+            "label": "2/3"
+          }
+        ]
+      },
+      "minDuration": 10,
+      "narration": "The numbers of the form a by b, where a and b are natural numbers, are called fractions. In a by b, we call a the numerator and b the denominator. Here is 2 by 3. The numerator is 2. The denominator is 3.",
+      "captions": "The numbers of the form a/b, where a and b are natural numbers, are called fractions. In a/b, we call a the numerator and b the denominator. Here is 2/3. The numerator is 2. The denominator is 3."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 2,
+            "shaded": 1,
+            "label": "1/2"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "at": 5,
+          "props": {
+            "bars": [
+              {
+                "parts": 2,
+                "shaded": 1,
+                "label": "1/2"
+              },
+              {
+                "parts": 18,
+                "shaded": 9,
+                "label": "9/18"
+              }
+            ],
+            "sign": "="
+          }
+        }
+      ],
+      "minDuration": 12,
+      "narration": "Two or more fractions representing the same part of a whole are called equivalent fractions. Look at 1 by 2. Now look at 9 by 18. They cover the same part of the bar! So 1 by 2 and 9 by 18 are equivalent fractions.",
+      "captions": "Two or more fractions representing the same part of a whole are called equivalent fractions. Look at 1/2. Now look at 9/18. They cover the same part of the bar! So 1/2 and 9/18 are equivalent fractions.",
+      "checkpoint": {
+        "questionId": "fractions-equivalent-cp1"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 2,
+            "shaded": 1,
+            "label": "1/2"
+          },
+          {
+            "parts": 18,
+            "shaded": 9,
+            "label": "9/18"
+          }
+        ],
+        "sign": "=",
+        "label": "× 9"
+      },
+      "minDuration": 12,
+      "narration": "How do we get an equivalent fraction? We multiply or divide the numerator and the denominator by the same nonzero number. 1 times 9 is 9. 2 times 9 is 18. So 1 by 2 equals 9 by 18.",
+      "captions": "How do we get an equivalent fraction? We multiply or divide the numerator and the denominator by the same nonzero number. 1 × 9 = 9. 2 × 9 = 18. So 1/2 = 9/18."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 35,
+            "shaded": 21,
+            "label": "21/35"
+          }
+        ]
+      },
+      "steps": [
+        {
+          "at": 4,
+          "props": {
+            "bars": [
+              {
+                "parts": 35,
+                "shaded": 21,
+                "label": "21/35"
+              },
+              {
+                "parts": 5,
+                "shaded": 3,
+                "label": "3/5"
+              }
+            ],
+            "sign": "=",
+            "label": "÷ 7"
+          }
+        }
+      ],
+      "minDuration": 11,
+      "narration": "We can divide too. Divide 21 and 35 by 7, and you get 3 by 5. Your book says the simplest form of 21 by 35 is 3 by 5.",
+      "captions": "We can divide too. Divide 21 and 35 by 7, and you get 3/5. Your book says the simplest form of 21/35 is 3/5.",
+      "checkpoint": {
+        "questionId": "fractions-equivalent-cp2"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 8,
+            "shaded": 8,
+            "label": "8/8"
+          },
+          {
+            "parts": 8,
+            "shaded": 1,
+            "label": "1/8"
+          }
+        ],
+        "sign": "+",
+        "result": "9/8 = 1 1/8"
+      },
+      "minDuration": 14,
+      "narration": "A fraction whose numerator is less than its denominator is called a proper fraction. Otherwise, it is called an improper fraction. 9 by 8 is improper. A mixed fraction is a whole number plus a fraction. 9 by 8 is one whole and 1 by 8 more, so 9 by 8 equals 1 and 1 by 8.",
+      "captions": "A fraction whose numerator is less than its denominator is called a proper fraction. Otherwise, it is called an improper fraction. 9/8 is improper. A mixed fraction = a whole number + a fraction. 9/8 is one whole and 1/8 more, so 9/8 = 1 1/8.",
+      "checkpoint": {
+        "questionId": "fractions-equivalent-cp3"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "mcq",
+      "prompt": "Which fraction is equivalent to 1/2?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "9/18",
+        "9/10",
+        "1/18"
+      ],
+      "answer": "9/18",
+      "hints": [
+        "Which one covers the same part of the bar?"
+      ],
+      "explanation": "1/2 = (1×9)/(2×9) = 9/18.",
+      "source": {
+        "pages": [
+          90
+        ]
+      },
+      "id": "fractions-equivalent-cp1"
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "The simplest form of 21/35 is ____",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "3/5",
+      "hints": [
+        "Divide 21 and 35 by 7."
+      ],
+      "explanation": "21 ÷ 7 = 3 and 35 ÷ 7 = 5, so 21/35 = 3/5.",
+      "source": {
+        "pages": [
+          89
+        ]
+      },
+      "id": "fractions-equivalent-cp2"
+    },
+    {
+      "type": "mcq",
+      "prompt": "9/8 as a mixed fraction is",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "1 1/8",
+        "9 1/8",
+        "1 8/9"
+      ],
+      "answer": "1 1/8",
+      "hints": [
+        "One whole is 8/8. What is left?"
+      ],
+      "explanation": "9/8 = 8/8 + 1/8 = 1 1/8.",
+      "source": {
+        "pages": [
+          94
+        ]
+      },
+      "id": "fractions-equivalent-cp3"
+    }
+  ]
+}

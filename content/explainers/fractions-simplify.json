@@ -1,0 +1,168 @@
+{
+  "id": "fractions-simplify",
+  "subject": "maths",
+  "title": "Simplify: adding and subtracting together",
+  "source": {
+    "pages": [
+      98
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 6,
+            "shaded": 31,
+            "label": "5 1/6"
+          },
+          {
+            "parts": 4,
+            "shaded": 13,
+            "label": "3 1/4"
+          },
+          {
+            "parts": 3,
+            "shaded": 10,
+            "label": "3 1/3"
+          },
+          {
+            "parts": 1,
+            "shaded": 4,
+            "label": "4"
+          }
+        ],
+        "label": "5 1/6 − 3 1/4 + 3 1/3 + 4"
+      },
+      "minDuration": 10,
+      "narration": "Let us simplify 5 and 1 by 6, minus 3 and 1 by 4, plus 3 and 1 by 3, plus 4. We will do all the adding and subtracting together.",
+      "captions": "Let us simplify 5 1/6 − 3 1/4 + 3 1/3 + 4. We will do all the adding and subtracting together."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 6,
+            "shaded": 31,
+            "label": "31/6"
+          },
+          {
+            "parts": 4,
+            "shaded": 13,
+            "label": "13/4"
+          },
+          {
+            "parts": 3,
+            "shaded": 10,
+            "label": "10/3"
+          },
+          {
+            "parts": 1,
+            "shaded": 4,
+            "label": "4/1"
+          }
+        ],
+        "label": "31/6 − 13/4 + 10/3 + 4/1"
+      },
+      "minDuration": 11,
+      "narration": "Step 1. Change them into improper fractions. 31 by 6, minus 13 by 4, plus 10 by 3, plus 4 by 1.",
+      "captions": "Step 1. Change them into improper fractions: 31/6 − 13/4 + 10/3 + 4/1."
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [
+          {
+            "parts": 6,
+            "shaded": 31,
+            "label": "31/6"
+          },
+          {
+            "parts": 4,
+            "shaded": 13,
+            "label": "13/4"
+          },
+          {
+            "parts": 3,
+            "shaded": 10,
+            "label": "10/3"
+          },
+          {
+            "parts": 1,
+            "shaded": 4,
+            "label": "4/1"
+          }
+        ],
+        "label": "LCM of 6, 4, 3, 1 = 12"
+      },
+      "steps": [
+        {
+          "at": 7,
+          "props": {
+            "result": "(62 − 39 + 40 + 48)/12"
+          }
+        }
+      ],
+      "minDuration": 14,
+      "narration": "Step 2. The LCM of 6, 4, 3 and 1 is 12. 12 divided by 6 is 2, and 2 times 31 is 62. In the same way we get 39, 40 and 48. So we have 62 minus 39 plus 40 plus 48, all over 12.",
+      "captions": "Step 2. The LCM of 6, 4, 3 and 1 is 12. 12 ÷ 6 = 2, and 2 × 31 = 62. In the same way we get 39, 40 and 48. So we have (62 − 39 + 40 + 48)/12.",
+      "checkpoint": {
+        "questionId": "fractions-simplify-cp1"
+      }
+    },
+    {
+      "visual": "FractionBar",
+      "props": {
+        "bars": [],
+        "result": "(150 − 39)/12 = 111/12 = 37/4 = 9 1/4"
+      },
+      "minDuration": 12,
+      "narration": "Step 3. Add the plus numbers first: 62 plus 40 plus 48 is 150. 150 minus 39 is 111. So we get 111 by 12, which is 37 by 4. And 37 by 4 is 9 and 1 by 4.",
+      "captions": "Step 3. Add the plus numbers first: 62 + 40 + 48 = 150. 150 − 39 = 111. So we get 111/12 = 37/4 = 9 1/4.",
+      "checkpoint": {
+        "questionId": "fractions-simplify-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "type": "fill_blank",
+      "prompt": "LCM of 6, 4, 3 and 1 = ____",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "12",
+      "hints": [
+        "The smallest number 6, 4 and 3 all go into."
+      ],
+      "explanation": "LCM of 6, 4, 3, 1 = (3 × 2 × 2) = 12.",
+      "source": {
+        "pages": [
+          98
+        ]
+      },
+      "id": "fractions-simplify-cp1"
+    },
+    {
+      "type": "fill_blank",
+      "prompt": "5 1/6 − 3 1/4 + 3 1/3 + 4 = ____",
+      "difficulty": "medium",
+      "marks": 1,
+      "answer": "9 1/4",
+      "accept": [
+        "37/4"
+      ],
+      "hints": [
+        "111/12: divide both by 3."
+      ],
+      "explanation": "(150 − 39)/12 = 111/12 = 37/4 = 9 1/4.",
+      "source": {
+        "pages": [
+          98
+        ]
+      },
+      "id": "fractions-simplify-cp2"
+    }
+  ]
+}

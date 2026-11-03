@@ -11,7 +11,7 @@
   "chapterOrder": {
     "physics": ["phy-light"],
     "chemistry": ["che-matter"],
-    "maths": [],
+    "maths": ["mat-fractions"],
     "biology": [],
     "english": [],
     "history": [],
