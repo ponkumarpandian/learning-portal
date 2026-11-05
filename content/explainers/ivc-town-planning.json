@@ -1,0 +1,138 @@
+{
+  "id": "ivc-town-planning",
+  "subject": "history",
+  "title": "An Indus city: upper town and lower town",
+  "source": {
+    "pages": [
+      28,
+      29
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Upper town (citadel): on a massive platform of baked brick",
+          "Lower town: houses of the common people"
+        ],
+        "arrows": false,
+        "label": "Mohenjodaro, p.28"
+      },
+      "narration": "Mohenjodaro was a planned city with streets in a grid pattern: all the streets cut each other at right angles. The city was divided into two parts, the upper town and the lower town.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          28
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Upper town (citadel): on a massive platform of baked brick",
+          "Lower town: houses of the common people"
+        ],
+        "arrows": false,
+        "highlight": 0,
+        "label": "p.28"
+      },
+      "narration": "The upper town was built on a massive platform of baked brick. Archaeologists call it the citadel or acropolis. It might have been the administrative centre.",
+      "minDuration": 11,
+      "source": {
+        "pages": [
+          28
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-town-planning-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "A well in the room beside the tank",
+          "Water fills the tank (waterproof with bitumen)",
+          "Steps from opposite sides to the bottom",
+          "Dirty water out to a brick drain"
+        ],
+        "highlight": "all",
+        "label": "The Great Bath, p.29"
+      },
+      "narration": "Within the citadel was the Great Bath: a rectangular tank of fired bricks, made waterproof with bitumen. A large well supplied water, steps led to the bottom, and used water drained out to a brick drain.",
+      "minDuration": 14,
+      "source": {
+        "pages": [
+          29
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Drains in houses",
+          "A cesspool or manhole",
+          "Covered drains along the main roads, cleaned regularly"
+        ],
+        "highlight": 2,
+        "label": "Drainage, p.29"
+      },
+      "narration": "The drains in houses led to a cesspool or manhole. The drains along the main roads were covered, and were inspected and cleaned regularly. This drainage system was remarkable among the cities of the world at that time.",
+      "minDuration": 14,
+      "source": {
+        "pages": [
+          29
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-town-planning-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "ivc-town-planning-cp1",
+      "type": "true_false",
+      "prompt": "The citadel was in the lower town.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "hints": [
+        "The citadel was built on a massive platform."
+      ],
+      "explanation": "The upper town is the citadel (p.28).",
+      "source": {
+        "pages": [
+          28
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "ivc-town-planning-cp2",
+      "type": "mcq",
+      "prompt": "The drains along the main roads were",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "covered",
+        "open",
+        "made of wood"
+      ],
+      "answer": "covered",
+      "hints": [
+        "They were inspected and cleaned regularly."
+      ],
+      "explanation": "The drains along the main roads were covered (p.29).",
+      "source": {
+        "pages": [
+          29
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

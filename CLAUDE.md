@@ -7,15 +7,15 @@ Vite 8 + React 19 + TypeScript 6 (strict, `noUncheckedIndexedAccess`), Tailwind 
 ## Status
 
 - **Phase 0 (Foundation): done.**
-- **Phase C:** Chemistry Ch 3 "Matter" (pp.58–62) imported and **approved**. Its exercises and opening pages are still to come. Maths Ch 5 "Fractions" (pp.89–101) **approved**. Biology Ch 4 "Digestive System" (pp.48–57, 6 lessons, 64 bank questions) imported and **approved** at the parent's request (4 needsReview answers still listed in its parentNotes).
+- **Phase C:** Chemistry Ch 3 "Matter" (pp.58–62) imported and **approved**. Its exercises and opening pages are still to come. Maths Ch 5 "Fractions" (pp.89–101) **approved**. Biology Ch 4 "Digestive System" (pp.48–57, 6 lessons, 64 bank questions) imported and **approved** at the parent's request (4 needsReview answers still listed in its parentNotes). History Ch 4 "The First Cities" (pp.27–35, 5 lessons, 27 bank questions) and Civics Ch 4 "Elements of a Democracy" (Civics pp.24–28, 3 lessons, 16 bank questions) imported and **approved** at the parent's request, both in subject `history`. Geography Ch 6–7 photos are waiting in `source/geography/`.
 - **Phase 2 (Lessons & videos): built early, at the parent's request.**
   - `src/features/lesson/`: the lesson flow, autosave and resume.
-  - `src/explainers/`: the narrated player, plus ParticleBox, LightRay, NumberLine, FractionBar and DigestiveJourney.
+  - `src/explainers/`: the narrated player, plus ParticleBox, LightRay, NumberLine, FractionBar, DigestiveJourney and FlowChart.
   - `src/features/video/`: YouTube, MP4 and the fallbacks.
   - `src/features/questions/`: every question type and the correction report.
   - `src/engine/`: grading, lessonTemplate and queue.
   - YouTube and MP4 haven't been tried with real videos yet, because every id is still REPLACE_ME.
-- **Phase 1 (Timetable & Today):** partly done. The catch-up and done states are in `todayModel.ts`. The Week view (`src/features/week/weekModel.ts`) lists this week and last week; earlier days' lessons open as catch-ups (parent request) and future days are locked. Still to do: the engine `timetable.ts`, the bedtime block and the parent PIN unlock for a future day.
+- **Phase 1 (Timetable & Today):** partly done. The catch-up and done states are in `todayModel.ts`. The Week view (`src/features/week/weekModel.ts`) steps back week by week to the plan start; earlier days' lessons open as catch-ups (parent request), Today links to them, and future days are locked. Still to do: the engine `timetable.ts`, the bedtime block and the parent PIN unlock for a future day.
 - **Next:** finish Phase 1, then Phase 3. Use the `build-phase` skill.
 
 ## Commands

@@ -1,0 +1,1969 @@
+{
+  "id": "his-first-cities",
+  "subject": "history",
+  "title": "The First Cities",
+  "order": 4,
+  "status": "approved",
+  "book": {
+    "title": "REPLACE_ME",
+    "publisher": "REPLACE_ME",
+    "chapterNo": 4
+  },
+  "sourceDir": "source/history/04-the-first-cities",
+  "parentNotes": [
+    "History Ch 4, pages 27–35, the whole chapter. Approved straight away at your request. The scan also had Civics Ch 4 (imported as his-elements-of-democracy) and Geography Ch 6 and 7 (saved in source/geography/ for a later import).",
+    "No answer key is printed. Answers come from the chapter text. Avantika’s ticks on pp.33–34 all agree with the text.",
+    "Ex. I Q3 (needsReview): the pages say the walls were made with baked bricks, but never say why. Answered \"strong and durable\" (her tick too); please check with her teacher.",
+    "Ex. IV Q1 and Q4 (needsReview): opinion questions (\"Do you agree?\", \"Do you think…?\"). The model answers use only facts from the chapter; her own reasons may differ.",
+    "Ex. II \"believed in life after death\" → burials with pots and ornaments: the book never says \"life after death\", but it is the only proof left.",
+    "Lead In, Do and learn, Enrichment and Life Skills (p.35 tick-list) are class activities and are not questions here.",
+    "Her handwriting on p.35 (a Great Bath answer) and the \"Doubt\" notes beside The Granary and Drainage (p.29) are kept in extract.md. Lesson 2 covers both.",
+    "Please fill in the book’s title and publisher in source/books.json (history) and in the \"book\" field here.",
+    "Video search words — lesson his-first-cities-1: \"Indus Valley Civilisation class 6 introduction\", \"what is urbanisation for kids\"",
+    "Video search words — lesson his-first-cities-2: \"Mohenjodaro town planning Great Bath class 6\", \"Harappan drainage system\"",
+    "Video search words — lesson his-first-cities-3: \"Indus Valley food clothes ornaments class 6\", \"Indus script seals\"",
+    "Video search words — lesson his-first-cities-4: \"Indus Valley seals dancing girl bearded man\", \"Harappan pottery weights\"",
+    "Video search words — lesson his-first-cities-5: \"Indus Valley trade Lothal dockyard\", \"decline of Indus Valley Civilisation class 6\""
+  ],
+  "lessons": [
+    {
+      "id": "his-first-cities-1",
+      "title": "Civilisation, cities and the Indus Valley",
+      "source": {
+        "pages": [
+          27,
+          28
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "ivc-civilisation-cities"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Indus Valley Civilisation introduction (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "his-first-cities-1-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "In the Neolithic Age, where did many people live?",
+          "back": "In small villages, practising agriculture and domesticating animals.",
+          "source": {
+            "pages": [
+              27
+            ]
+          }
+        }
+      ],
+      "cards": [
+        {
+          "title": "From villages to cities",
+          "emoji": "🏘️",
+          "body": "With better methods of agriculture, surplus food was produced. So people could now devote more time to other activities. Gradually, villages grew into towns, and towns into cities; and the first great civilisations of the world were born.",
+          "source": {
+            "pages": [
+              27
+            ]
+          }
+        },
+        {
+          "title": "What is a civilisation?",
+          "emoji": "📘",
+          "body": "\"Civilisation is said to occur when a society is in an advanced state of social development.\"",
+          "source": {
+            "pages": [
+              27
+            ]
+          }
+        },
+        {
+          "title": "City and urbanisation",
+          "emoji": "🏙️",
+          "body": "\"A city is a large and densely populated area. Cities are also known as urban areas.\" \"When more and more people start moving from villages to towns and cities, the process is called urbanisation.\"",
+          "reveal": "Urbanisation is one of the key features of civilisation.",
+          "source": {
+            "pages": [
+              27
+            ]
+          }
+        },
+        {
+          "title": "Life in a city",
+          "emoji": "🛍️",
+          "body": "In cities, people have occupations other than farming: traders, jewellery makers, writers and artists. Rulers and the ruling class usually live in cities.",
+          "example": "Public facilities: roads, a drainage system, public halls, and granaries.",
+          "source": {
+            "pages": [
+              27
+            ]
+          }
+        },
+        {
+          "title": "The Indus Valley Civilisation (IVC)",
+          "emoji": "🏺",
+          "body": "About 4,700 years ago, the largest Bronze Age civilisation in the world emerged in the north-western part of the Indian subcontinent. It was born in the valley of the Indus River, so it is called the Indus Valley Civilisation (IVC). It is also known as the Harappan culture.",
+          "didYouKnow": "It was spread over about 650,000 sq. km, and more than 1,400 sites have been discovered to date.",
+          "source": {
+            "pages": [
+              28
+            ]
+          }
+        },
+        {
+          "title": "Important IVC sites",
+          "emoji": "📍",
+          "body": "Mohenjodaro and Harappa (in Pakistan), Dholavira and Lothal in Gujarat, Rakhigarhi and Banawali in Haryana, Ropar in Punjab, Kalibangan in Rajasthan, and Alamgirpur in Uttar Pradesh.",
+          "reveal": "It evolved from village communities between 7000 and 5000 BCE, and had many large urban centres between 2,600 and 1,900 BCE.",
+          "source": {
+            "pages": [
+              28
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "his-first-cities-1-p1",
+          "type": "fill_blank",
+          "prompt": "When more and more people start moving from villages to towns and cities, the process is called ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "urbanisation",
+          "explanation": "This is the book’s definition of urbanisation (p.27).",
+          "source": {
+            "pages": [
+              27
+            ]
+          },
+          "hints": [
+            "It comes from the word \"urban\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-1-p2",
+          "type": "mcq",
+          "prompt": "The Indus Valley Civilisation is also known as the",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Harappan culture",
+            "Neolithic culture",
+            "Mesopotamian culture"
+          ],
+          "answer": "Harappan culture",
+          "explanation": "Also known as the Harappan culture, the IVC was spread over about 650,000 sq. km (p.28).",
+          "source": {
+            "pages": [
+              28
+            ]
+          },
+          "hints": [
+            "It is named after one of its big cities."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-1-p3",
+          "type": "mcq",
+          "prompt": "Lothal and Dholavira are in",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Gujarat",
+            "Haryana",
+            "Punjab"
+          ],
+          "answer": "Gujarat",
+          "explanation": "Dholavira and Lothal are in Gujarat (p.28).",
+          "source": {
+            "pages": [
+              28
+            ]
+          },
+          "hints": [
+            "Look at the list of sites on p.28."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-1-p4",
+          "type": "order",
+          "prompt": "Put these in order, as the book describes it.",
+          "difficulty": "medium",
+          "marks": 2,
+          "sequence": [
+            "Villages",
+            "Towns",
+            "Cities",
+            "Civilisations"
+          ],
+          "explanation": "Villages grew into towns, and towns into cities; and the first great civilisations were born (p.27).",
+          "source": {
+            "pages": [
+              27
+            ]
+          },
+          "hints": [
+            "Start with the smallest place to live."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "In your notebook, write the book’s definitions of civilisation, city and urbanisation (p.27). Then list the IVC sites in Pakistan and in India, with their states (p.28).",
+      "check": [
+        {
+          "id": "his-first-cities-1-c1",
+          "type": "fill_blank",
+          "prompt": "Civilisation is said to occur when a society is in an advanced state of ____ development.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "social",
+          "explanation": "The book’s definition of civilisation (p.27).",
+          "source": {
+            "pages": [
+              27
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-1-c2",
+          "type": "mcq",
+          "prompt": "Mohenjodaro and Harappa are in",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Pakistan",
+            "Gujarat",
+            "Rajasthan"
+          ],
+          "answer": "Pakistan",
+          "explanation": "Mohenjodaro and Harappa (in Pakistan) (p.28).",
+          "source": {
+            "pages": [
+              28
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-1-c3",
+          "type": "true_false",
+          "prompt": "Cities are also known as urban areas.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "\"Cities are also known as urban areas\" (p.27).",
+          "source": {
+            "pages": [
+              27
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-1-c4",
+          "type": "mcq",
+          "prompt": "The IVC reached a highly developed phase, with many large urban centres, between",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "2,600 and 1,900 BCE",
+            "7000 and 5000 BCE",
+            "3300 and 1200 BCE"
+          ],
+          "answer": "2,600 and 1,900 BCE",
+          "explanation": "It evolved from villages between 7000 and 5000 BCE, and reached its highly developed phase between 2,600 and 1,900 BCE (p.28).",
+          "source": {
+            "pages": [
+              28
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Civilisation is said to occur when a society is in an advanced state of social development.",
+        "A city is a large and densely populated area. Cities are also known as urban areas.",
+        "When more and more people start moving from villages to towns and cities, the process is called urbanisation.",
+        "Since this culture was born in the valley of the Indus River, it is popularly known as the Indus Valley Civilisation (IVC)."
+      ]
+    },
+    {
+      "id": "his-first-cities-2",
+      "title": "Town planning: citadel, Great Bath and drains",
+      "source": {
+        "pages": [
+          28,
+          29
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "ivc-town-planning"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Mohenjodaro town planning and Great Bath (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "his-first-cities-2-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Well-planned cities",
+          "emoji": "🗺️",
+          "body": "The most striking feature of the Indus Valley Civilisation was the well-planned nature of its cities. Mohenjodaro was a planned city with streets laid out in a grid pattern, that is, all the streets cut each other at right angles.",
+          "source": {
+            "pages": [
+              28
+            ]
+          }
+        },
+        {
+          "title": "The upper town (citadel)",
+          "emoji": "🏰",
+          "body": "The upper town was built on a massive platform constructed of baked brick. Archaeologists call this area the citadel or acropolis. It might have been the administrative centre of the city.",
+          "source": {
+            "pages": [
+              28
+            ]
+          }
+        },
+        {
+          "title": "The lower town",
+          "emoji": "🏠",
+          "body": "The lower town had the houses of the common people, with walls of baked bricks. The rooms were arranged around a courtyard. Each house had a single entrance, and one of every three houses had a well.",
+          "didYouKnow": "Many houses had a separate bathing area, and some were double-storeyed.",
+          "source": {
+            "pages": [
+              28,
+              29
+            ]
+          }
+        },
+        {
+          "title": "The Great Bath",
+          "emoji": "🛁",
+          "body": "Within the citadel at Mohenjodaro: a rectangular tank made of fired bricks closely fitted together, made waterproof by a thick layer of bitumen (tar).",
+          "example": "Rooms along its sides (one with a large well that supplied water), an outlet to a brick drain for dirty water, and flights of steps from opposite sides to the bottom.",
+          "reveal": "It might have been used for a bath before important functions and ceremonies.",
+          "source": {
+            "pages": [
+              29
+            ]
+          }
+        },
+        {
+          "title": "The granary and the drains",
+          "emoji": "🌾",
+          "body": "To the west of the bath, a massive brick platform may have been a granary (a similar one was found at Harappa). Drains in houses led to a cesspool or manhole; drains along the main roads were covered and were inspected and cleaned regularly.",
+          "source": {
+            "pages": [
+              29
+            ]
+          }
+        },
+        {
+          "title": "Were there rulers?",
+          "emoji": "👑",
+          "body": "Straight roads, walled citadels and well-maintained drains mean there was a high standard of administration. But until the script of the IVC is deciphered, we cannot say much about the nature of government.",
+          "source": {
+            "pages": [
+              29
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "his-first-cities-2-p1",
+          "type": "mcq",
+          "prompt": "In a grid pattern, the streets",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "cut each other at right angles",
+            "go round in circles",
+            "all run along the river"
+          ],
+          "answer": "cut each other at right angles",
+          "explanation": "A grid pattern: all the streets cut each other at right angles (p.28).",
+          "source": {
+            "pages": [
+              28
+            ]
+          },
+          "hints": [
+            "Think of the lines on graph paper."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-2-p2",
+          "type": "fill_blank",
+          "prompt": "The Great Bath was made waterproof by a thick layer of ____ (tar).",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "bitumen",
+          "explanation": "\"The tank was made waterproof by a thick layer of bitumen (tar)\" (p.29).",
+          "source": {
+            "pages": [
+              29
+            ]
+          },
+          "hints": [
+            "The word in front of \"(tar)\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-2-p3",
+          "type": "mcq",
+          "prompt": "Archaeologists call the upper town the",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "citadel",
+            "granary",
+            "courtyard"
+          ],
+          "answer": "citadel",
+          "explanation": "Archaeologists call this area the citadel or acropolis (p.28).",
+          "source": {
+            "pages": [
+              28
+            ]
+          },
+          "hints": [
+            "It is also called the acropolis."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-2-p4",
+          "type": "true_false",
+          "prompt": "The drains along the main roads were open and never cleaned.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": false,
+          "explanation": "They were covered, and were inspected and cleaned regularly (p.29).",
+          "source": {
+            "pages": [
+              29
+            ]
+          },
+          "hints": [
+            "Read the Drainage part of p.29 again."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Draw a simple plan of an Indus city in your notebook: the upper town (citadel) with the Great Bath and the granary, and the lower town with houses around courtyards and covered drains. Label each part (pp.28–29).",
+      "check": [
+        {
+          "id": "his-first-cities-2-c1",
+          "type": "mcq",
+          "prompt": "Where was the Great Bath?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Within the citadel at Mohenjodaro",
+            "In the lower town of Harappa",
+            "At Lothal"
+          ],
+          "answer": "Within the citadel at Mohenjodaro",
+          "explanation": "Within the citadel at Mohenjodaro, archaeologists found the Great Bath (p.29).",
+          "source": {
+            "pages": [
+              29
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-2-c2",
+          "type": "true_false",
+          "prompt": "One of every three houses had a well.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "Each house had a single entrance and one of every three houses had a well too (p.29).",
+          "source": {
+            "pages": [
+              29
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-2-c3",
+          "type": "fill_blank",
+          "prompt": "The drains in houses led to a cesspool or ____.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "manhole",
+          "explanation": "The drains in houses led to a cesspool or manhole (p.29).",
+          "source": {
+            "pages": [
+              29
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-2-c4",
+          "type": "mcq",
+          "prompt": "Why can’t we say much about the government of the Indus cities?",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "The script of the IVC is not yet deciphered",
+            "There were no cities",
+            "There were no drains"
+          ],
+          "answer": "The script of the IVC is not yet deciphered",
+          "explanation": "Until the script of the IVC is deciphered, we cannot say much about the nature of government (p.29).",
+          "source": {
+            "pages": [
+              29
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "The most striking feature of the Indus Valley Civilisation was the well-planned nature of its cities.",
+        "The city was divided into two parts—the upper town and the lower town.",
+        "The Great Bath was a rectangular tank made of fired bricks closely fitted together.",
+        "The drainage system of the Indus cities stands out as remarkable among the cities of the world at that time."
+      ]
+    },
+    {
+      "id": "his-first-cities-3",
+      "title": "Food, clothes and the Indus script",
+      "source": {
+        "pages": [
+          29,
+          30
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "ivc-daily-life"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Indus Valley food, clothes and script (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "his-first-cities-3-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "What did the people eat?",
+          "emoji": "🌾",
+          "body": "Cereals like wheat and barley, pulses, oilseeds like mustard and sesame, and millets like bajra, ragi and jowar. Remains of these crops have been found from the excavated sites.",
+          "example": "Fish, meat, milk, date and fruit were also a part of the diet.",
+          "reveal": "We do not find much evidence of the cultivation of rice.",
+          "source": {
+            "pages": [
+              29,
+              30
+            ]
+          }
+        },
+        {
+          "title": "What did they wear?",
+          "emoji": "🧵",
+          "body": "Archaeologists have found evidence of cotton and woven cloth. Spindles made of clay have been found in many sites. (Spindles are used to spin cotton thread.)",
+          "example": "Men wore long, flowing cloth; the women may have worn skirts. Both seem to have draped a shawl over their shoulders.",
+          "source": {
+            "pages": [
+              30
+            ]
+          }
+        },
+        {
+          "title": "Ornaments",
+          "emoji": "📿",
+          "body": "Both men and women wore ornaments made of gold, silver, faience and beads of semi-precious stones like jade, lapis lazuli, cornelian and agate. Bangles, earrings and necklaces seem to have been popular.",
+          "didYouKnow": "The women applied kajal (kohl) on their eyes and painted their lips.",
+          "source": {
+            "pages": [
+              30
+            ]
+          }
+        },
+        {
+          "title": "Did they know how to write?",
+          "emoji": "✍️",
+          "body": "Yes. They wrote in one of the world’s earliest known scripts. The script can be seen on seals made of baked clay and steatite (a soft stone that can be carved easily).",
+          "reveal": "The writing was mainly brief inscriptions, written from the right to the left. Historians are still trying to decipher the script.",
+          "source": {
+            "pages": [
+              30
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "his-first-cities-3-p1",
+          "type": "mcq",
+          "prompt": "Which grain does the book say there is NOT much evidence of?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Rice",
+            "Wheat",
+            "Barley"
+          ],
+          "answer": "Rice",
+          "explanation": "We do not find much evidence of the cultivation of rice (p.30).",
+          "source": {
+            "pages": [
+              30
+            ]
+          },
+          "hints": [
+            "Wheat and barley are listed as cereals they grew."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-3-p2",
+          "type": "fill_blank",
+          "prompt": "____ are used to spin cotton thread.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "Spindles",
+          "explanation": "(Spindles are used to spin cotton thread.) Spindles made of clay were found in many sites (p.30).",
+          "source": {
+            "pages": [
+              30
+            ]
+          },
+          "hints": [
+            "They were made of clay."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-3-p3",
+          "type": "mcq",
+          "prompt": "The Indus script was written",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "from the right to the left",
+            "from the left to the right",
+            "from top to bottom"
+          ],
+          "answer": "from the right to the left",
+          "explanation": "Brief inscriptions, written from the right to the left (p.30).",
+          "source": {
+            "pages": [
+              30
+            ]
+          },
+          "hints": [
+            "It is the opposite of how you write English."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-3-p4",
+          "type": "true_false",
+          "prompt": "Steatite is a soft stone that can be carved easily.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "steatite (a soft stone that can be carved easily) (p.30).",
+          "source": {
+            "pages": [
+              30
+            ]
+          },
+          "hints": [
+            "Look in the brackets on p.30."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Make two lists in your notebook: \"Food of the Indus people\" and \"Clothes and ornaments\". Use only the words in your book (pp.29–30). Then invent three symbols of your own script, like the Do and learn activity on p.30.",
+      "check": [
+        {
+          "id": "his-first-cities-3-c1",
+          "type": "mcq",
+          "prompt": "Bajra, ragi and jowar are",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "millets",
+            "oilseeds",
+            "pulses"
+          ],
+          "answer": "millets",
+          "explanation": "Millets like bajra, ragi and jowar (p.29).",
+          "source": {
+            "pages": [
+              29
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-3-c2",
+          "type": "mcq",
+          "prompt": "Mustard and sesame are",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "oilseeds",
+            "cereals",
+            "millets"
+          ],
+          "answer": "oilseeds",
+          "explanation": "Oilseeds like mustard and sesame (p.29).",
+          "source": {
+            "pages": [
+              29
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-3-c3",
+          "type": "true_false",
+          "prompt": "Historians have fully deciphered the Indus script.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "explanation": "Historians are still trying to decipher the script in its entirety (p.30).",
+          "source": {
+            "pages": [
+              30
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-3-c4",
+          "type": "fill_blank",
+          "prompt": "The women applied ____ (kohl) on their eyes.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "kajal",
+          "explanation": "The women applied kajal (kohl) on their eyes and painted their lips (p.30).",
+          "source": {
+            "pages": [
+              30
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "A number of crops were cultivated—cereals like wheat and barley, pulses, oilseeds like mustard and sesame, and millets like bajra, ragi and jowar.",
+        "Archaeologists have found evidence of cotton and woven cloth.",
+        "The people of the Indus Valley Civilisation had developed a form of writing. The script can be seen on seals found at the IVC sites."
+      ]
+    },
+    {
+      "id": "his-first-cities-4",
+      "title": "Metals, pottery, art, seals and weights",
+      "source": {
+        "pages": [
+          30,
+          31
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "ivc-crafts-seals"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Indus Valley seals, dancing girl and crafts (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "his-first-cities-4-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Metallurgy",
+          "emoji": "⚒️",
+          "body": "The Indus people alloyed copper and tin to make bronze, which was stronger and more malleable than copper. Copper tools: razors, hooks, sickles, axes, nails and needles. Knives, axes and chisels were made of stone.",
+          "reveal": "There is no evidence for the use of iron to make objects, but iron minerals like hematite were used to make pigments.",
+          "source": {
+            "pages": [
+              30
+            ]
+          }
+        },
+        {
+          "title": "Pottery",
+          "emoji": "🏺",
+          "body": "Besides agriculture, probably the most important occupation of the Indus people was pottery. Many pots were painted red, with designs in black suggesting geometric patterns.",
+          "source": {
+            "pages": [
+              31
+            ]
+          }
+        },
+        {
+          "title": "Art and Craft",
+          "emoji": "🗿",
+          "body": "Two finely sculpted works of art from Mohenjodaro: the bust of a bearded man with his robe thrown over one shoulder, and the famed ‘dancing girl’ in bronze.",
+          "example": "Terracotta toys with moving parts: bulls and rams that could shake their heads and tails, and toy birds which could move up and down ropes.",
+          "source": {
+            "pages": [
+              31
+            ]
+          }
+        },
+        {
+          "title": "Seals",
+          "emoji": "🦄",
+          "body": "Many seals were found, mainly made of steatite. Many show figures of animals, with writing on the top portion. Most are square in shape, a few round and some cylindrical.",
+          "reveal": "They were used for trade: pressed into soft clay to seal the mouths of jars and sacks of grain. Some were worn around the neck or arm, perhaps as a kind of identity card.",
+          "source": {
+            "pages": [
+              31
+            ]
+          }
+        },
+        {
+          "title": "Weights and Measures",
+          "emoji": "⚖️",
+          "body": "Cube-shaped stone weights in graduated sizes have been found. The smallest weight found is 0.856 grams and the most common weight is approximately 13.7 grams.",
+          "didYouKnow": "They seem to be uniform throughout the IVC, which must have made trade between the cities much easier.",
+          "source": {
+            "pages": [
+              31
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "his-first-cities-4-p1",
+          "type": "mcq",
+          "prompt": "The Indus people made bronze by alloying copper and",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "tin",
+            "iron",
+            "gold"
+          ],
+          "answer": "tin",
+          "explanation": "The Indus people alloyed copper and tin to make bronze (p.30).",
+          "source": {
+            "pages": [
+              30
+            ]
+          },
+          "hints": [
+            "Bronze Age: bronze is an alloy of copper and ____."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-4-p2",
+          "type": "mcq",
+          "prompt": "Most Indus seals are",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "square in shape",
+            "round",
+            "triangular"
+          ],
+          "answer": "square in shape",
+          "explanation": "Most of them are square in shape, a few round and some cylindrical (p.31).",
+          "source": {
+            "pages": [
+              31
+            ]
+          },
+          "hints": [
+            "Look at the Unicorn seal picture."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-4-p3",
+          "type": "fill_blank",
+          "prompt": "The most common Indus weight is approximately ____ grams.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "13.7",
+          "explanation": "The smallest is 0.856 grams and the most common is approximately 13.7 grams (p.31).",
+          "source": {
+            "pages": [
+              31
+            ]
+          },
+          "hints": [
+            "The smallest is 0.856 grams; this one is bigger."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-4-p4",
+          "type": "true_false",
+          "prompt": "There is clear evidence that the Indus people used iron to make tools.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": false,
+          "explanation": "There is no evidence for the use of iron to manufacture objects (p.30).",
+          "source": {
+            "pages": [
+              30
+            ]
+          },
+          "hints": [
+            "Hematite was used only for pigments."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Draw a seal in your notebook: a square with an animal in the middle and a row of your own symbols on top (pp.30–31). Under it, write two uses of Indus seals from p.31.",
+      "check": [
+        {
+          "id": "his-first-cities-4-c1",
+          "type": "mcq",
+          "prompt": "The famed ‘dancing girl’ statue is made of",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "bronze",
+            "terracotta",
+            "steatite"
+          ],
+          "answer": "bronze",
+          "explanation": "The famed ‘dancing girl’ in bronze (p.31).",
+          "source": {
+            "pages": [
+              31
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-4-c2",
+          "type": "mcq",
+          "prompt": "Indus seals were mainly made of",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "steatite",
+            "gold",
+            "iron"
+          ],
+          "answer": "steatite",
+          "explanation": "Many seals have been found in the IVC sites, mainly made of steatite (p.31).",
+          "source": {
+            "pages": [
+              31
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-4-c3",
+          "type": "true_false",
+          "prompt": "Many Indus pots were painted red, with designs in black.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "Many pots were painted red, with designs in black suggesting geometric patterns (p.31).",
+          "source": {
+            "pages": [
+              31
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-4-c4",
+          "type": "mcq",
+          "prompt": "Why were uniform weights useful?",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "They made trade between the cities much easier",
+            "They were worn as ornaments",
+            "They were used to build houses"
+          ],
+          "answer": "They made trade between the cities much easier",
+          "explanation": "The use of these uniform weights must have made trade between the different cities of the IVC much easier (p.31).",
+          "source": {
+            "pages": [
+              31
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "The Indus people alloyed copper and tin to make bronze, which was stronger and more malleable than copper.",
+        "Besides agriculture, probably the most important occupation of the Indus people was pottery.",
+        "The seals were used for trade and commercial purposes."
+      ]
+    },
+    {
+      "id": "his-first-cities-5",
+      "title": "Religion, trade and the decline of the IVC",
+      "source": {
+        "pages": [
+          32
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "ivc-trade-decline"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Indus Valley trade and decline (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "his-first-cities-5-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Religion",
+          "emoji": "🙏",
+          "body": "Not much can be said with certainty. They may have worshipped a male yogic figure depicted in some of the seals. Archaeologists have named him ‘Pasupati’ and think the figure represents an early form of Shiva. They may also have worshipped mother goddesses and nature.",
+          "reveal": "Cemeteries at Harappa, Lothal and a few other sites show that the dead were buried wearing ornaments and with a few pots.",
+          "source": {
+            "pages": [
+              32
+            ]
+          }
+        },
+        {
+          "title": "Trade by land and by sea",
+          "emoji": "⛵",
+          "body": "The IVC had a flourishing system of trade—both by land and by sea. Grains probably came from the villages around the cities, and the villages may have traded grain for goods produced in the cities. The Indus river system must have been used for trade.",
+          "source": {
+            "pages": [
+              32
+            ]
+          }
+        },
+        {
+          "title": "Trade with far-away lands",
+          "emoji": "🌍",
+          "body": "Ornaments made in the Indus Valley have been found in Mesopotamia, which suggests trade between the two civilisations. A dockyard found at Lothal suggests overseas trade with western Asia.",
+          "source": {
+            "pages": [
+              32
+            ]
+          }
+        },
+        {
+          "title": "The decline",
+          "emoji": "🏚️",
+          "body": "This advanced civilisation appears to have declined suddenly after 2000 BCE. The exact causes of its decline remain a mystery, but a few reasons have been suggested.",
+          "source": {
+            "pages": [
+              32
+            ]
+          }
+        },
+        {
+          "title": "Suggested reasons",
+          "emoji": "🌊",
+          "body": "Repeated natural and environmental disasters (earthquakes, floods or drought; rivers changing course, crops failing, epidemics); the falling quality of the soil and desertification due to excessive deforestation; the authority that kept the civilisation together losing control.",
+          "reveal": "Gradually, people would have moved away, and the cities would have crumbled.",
+          "source": {
+            "pages": [
+              32
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "his-first-cities-5-p1",
+          "type": "mcq",
+          "prompt": "Archaeologists named the male yogic figure on some seals",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Pasupati",
+            "Harappa",
+            "Lothal"
+          ],
+          "answer": "Pasupati",
+          "explanation": "Archaeologists have named him ‘Pasupati’ (p.32).",
+          "source": {
+            "pages": [
+              32
+            ]
+          },
+          "hints": [
+            "They think he is an early form of Shiva."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-5-p2",
+          "type": "mcq",
+          "prompt": "A dockyard was found at",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Lothal",
+            "Harappa",
+            "Ropar"
+          ],
+          "answer": "Lothal",
+          "explanation": "A dockyard found at Lothal suggests overseas trade with western Asia (p.32).",
+          "source": {
+            "pages": [
+              32
+            ]
+          },
+          "hints": [
+            "It is in Gujarat."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-5-p3",
+          "type": "true_false",
+          "prompt": "The exact causes of the decline of the IVC are known for certain.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "explanation": "The exact causes of its decline remain a mystery (p.32).",
+          "source": {
+            "pages": [
+              32
+            ]
+          },
+          "hints": [
+            "The book says the causes \"remain a mystery\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-5-p4",
+          "type": "mcq",
+          "prompt": "Ornaments made in the Indus Valley were found in",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "Mesopotamia",
+            "China",
+            "Egypt"
+          ],
+          "answer": "Mesopotamia",
+          "explanation": "Ornaments made in the Indus Valley have been found by archaeologists in Mesopotamia (p.32).",
+          "source": {
+            "pages": [
+              32
+            ]
+          },
+          "hints": [
+            "It suggests trade between the two civilisations."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Make a chart in your notebook titled \"Why did the IVC decline?\" with three boxes: disasters, soil and deforestation, and the authority losing control. Write the book’s words in each box (p.32).",
+      "check": [
+        {
+          "id": "his-first-cities-5-c1",
+          "type": "mcq",
+          "prompt": "The IVC appears to have declined suddenly after",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "2000 BCE",
+            "7000 BCE",
+            "1200 BCE"
+          ],
+          "answer": "2000 BCE",
+          "explanation": "This advanced civilisation appears to have declined suddenly after 2000 BCE (p.32).",
+          "source": {
+            "pages": [
+              32
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-5-c2",
+          "type": "true_false",
+          "prompt": "The IVC traded both by land and by sea.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "A flourishing system of trade—both by land and by sea (p.32).",
+          "source": {
+            "pages": [
+              32
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-5-c3",
+          "type": "fill_blank",
+          "prompt": "Another possible cause of decline was desertification due to excessive ____.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "deforestation",
+          "explanation": "The falling quality of the soil and desertification due to excessive deforestation (p.32).",
+          "source": {
+            "pages": [
+              32
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-first-cities-5-c4",
+          "type": "mcq",
+          "prompt": "How were the dead buried?",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "Wearing ornaments and with a few pots",
+            "With weapons and horses",
+            "In the Great Bath"
+          ],
+          "answer": "Wearing ornaments and with a few pots",
+          "explanation": "The dead were buried wearing ornaments and with a few pots (p.32).",
+          "source": {
+            "pages": [
+              32
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "The people of the IVC had established a flourishing system of trade—both by land and by sea.",
+        "This advanced civilisation appears to have declined suddenly after 2000 BCE. The exact causes of its decline remain a mystery."
+      ]
+    }
+  ],
+  "questionBank": [
+    {
+      "id": "his-first-cities-1-q1",
+      "lessonId": "his-first-cities-1",
+      "type": "mcq",
+      "prompt": "Which of the following correctly describe the Indus Valley Civilisation?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "It was a Neolithic civilisation",
+        "It was a Chalcolithic civilisation",
+        "It was a Bronze age civilisation",
+        "It was a Mesolithic civilisation"
+      ],
+      "answer": "It was a Bronze age civilisation",
+      "explanation": "About 4,700 years ago, the largest Bronze Age civilisation in the world emerged (p.28).",
+      "source": {
+        "pages": [
+          28,
+          33
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q1"
+    },
+    {
+      "id": "his-first-cities-1-q2",
+      "lessonId": "his-first-cities-1",
+      "type": "short_answer",
+      "prompt": "Mention two places in Pakistan and two in India, where Indus Valley sites have been found.",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Pakistan: Mohenjodaro and Harappa. India: for example, Dholavira and Lothal (Gujarat), Rakhigarhi and Banawali (Haryana), Ropar (Punjab), Kalibangan (Rajasthan), Alamgirpur (Uttar Pradesh).",
+      "keywords": [
+        "Mohenjodaro",
+        "Harappa",
+        "Lothal",
+        "Dholavira"
+      ],
+      "explanation": "Any two Indian sites from p.28 are right.",
+      "source": {
+        "pages": [
+          28,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q1"
+    },
+    {
+      "id": "his-first-cities-1-q3",
+      "lessonId": "his-first-cities-1",
+      "type": "think_write",
+      "prompt": "'The Indus Valley civilisation had all the pre-conditions for it to be called a civilisation.' Do you agree? Justify your answer.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Yes. With better agriculture there was surplus food, so people could do other things. It had large planned cities (urbanisation), people with occupations other than farming, a script, art and craft, trade by land and sea, and a high standard of administration.",
+      "keywords": [
+        "surplus food",
+        "cities",
+        "writing",
+        "trade",
+        "administration"
+      ],
+      "needsReview": true,
+      "explanation": "Use what the chapter says makes a civilisation (p.27) and what the IVC had (pp.28–32).",
+      "source": {
+        "pages": [
+          27,
+          28,
+          29,
+          30,
+          32,
+          35
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q1"
+    },
+    {
+      "id": "his-first-cities-1-q4",
+      "lessonId": "his-first-cities-1",
+      "type": "mcq",
+      "prompt": "About how many years ago did the IVC emerge?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "4,700",
+        "470",
+        "47,000"
+      ],
+      "answer": "4,700",
+      "explanation": "About 4,700 years ago (p.28).",
+      "source": {
+        "pages": [
+          28
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-first-cities-1-q5",
+      "lessonId": "his-first-cities-1",
+      "type": "fill_blank",
+      "prompt": "More than ____ Indus Valley Civilisation sites have been discovered to date.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": "1,400",
+      "accept": [
+        "1400"
+      ],
+      "explanation": "More than 1,400 IVC sites have been discovered (p.28).",
+      "source": {
+        "pages": [
+          28
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-first-cities-1-q6",
+      "lessonId": "his-first-cities-1",
+      "type": "mcq",
+      "prompt": "Which of these is NOT something cities usually have, as the book lists it?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Forests for hunting",
+        "A drainage system",
+        "Granaries"
+      ],
+      "answer": "Forests for hunting",
+      "explanation": "Cities usually have roads, a drainage system, public halls, and granaries (p.27).",
+      "source": {
+        "pages": [
+          27
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-first-cities-2-q1",
+      "lessonId": "his-first-cities-2",
+      "type": "mcq",
+      "prompt": "Identify the structure: it was rectangular in shape; flights of steps from opposite sides led to its bottom; there were several rooms along the other two sides of it; there was a large well in one of the rooms.",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "The Citadel",
+        "The Great Bath",
+        "The Granary",
+        "Dockyard"
+      ],
+      "answer": "The Great Bath",
+      "explanation": "All four clues describe the Great Bath (p.29).",
+      "source": {
+        "pages": [
+          29,
+          33
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q2"
+    },
+    {
+      "id": "his-first-cities-2-q2",
+      "lessonId": "his-first-cities-2",
+      "type": "mcq",
+      "prompt": "The Indus Valley people built the walls of their houses with baked bricks. Which of the following statements correctly explains the reason behind it?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Baked bricks would prevent the houses from being washed away by floods.",
+        "Houses made of baked bricks could withstand attacks by enemies.",
+        "Houses made of baked bricks were strong and durable.",
+        "Houses made of baked bricks could protect people from volcanoes."
+      ],
+      "answer": "Houses made of baked bricks were strong and durable.",
+      "needsReview": true,
+      "explanation": "The pages say the walls were made with baked bricks (p.28) but not why. Strong and durable is the general reason.",
+      "source": {
+        "pages": [
+          28,
+          33
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q3"
+    },
+    {
+      "id": "his-first-cities-2-q3",
+      "lessonId": "his-first-cities-2",
+      "type": "mcq",
+      "prompt": "The Indus people possibly gave importance to personal hygiene. Which features of town planning are evidence of that? (i) underground drainage (ii) a courtyard in each house (iii) separate bathing areas in many houses (iv) houses on raised platforms",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "i and ii",
+        "ii and iv",
+        "i and iii",
+        "iii and iv"
+      ],
+      "answer": "i and iii",
+      "explanation": "The careful drainage system and the separate bathing areas in many houses (p.29) are about keeping clean.",
+      "source": {
+        "pages": [
+          29,
+          33,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q4"
+    },
+    {
+      "id": "his-first-cities-2-q4",
+      "lessonId": "his-first-cities-2",
+      "type": "short_answer",
+      "prompt": "What were the two parts into which the Indus Valley cities were divided?",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "The upper town (the citadel or acropolis) and the lower town.",
+      "keywords": [
+        "upper town",
+        "lower town"
+      ],
+      "explanation": "The city was divided into two parts—the upper town and the lower town (p.28).",
+      "source": {
+        "pages": [
+          28,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q2"
+    },
+    {
+      "id": "his-first-cities-2-q5",
+      "lessonId": "his-first-cities-2",
+      "type": "short_answer",
+      "prompt": "Mention any two features of the Great Bath that led archaeologists to identify it as a public bath.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "It was a rectangular tank of fired bricks made waterproof with bitumen; there were rooms along its sides, one with a large well that supplied water; dirty water drained out to a brick drain; flights of steps from opposite sides led to the bottom.",
+      "keywords": [
+        "tank",
+        "waterproof",
+        "well",
+        "steps",
+        "drain"
+      ],
+      "explanation": "Any two of the four features on p.29.",
+      "source": {
+        "pages": [
+          29,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q3"
+    },
+    {
+      "id": "his-first-cities-2-q6",
+      "lessonId": "his-first-cities-2",
+      "type": "mcq",
+      "prompt": "What was found to the west of the Great Bath?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "A massive brick platform, perhaps a granary",
+        "A dockyard",
+        "A temple"
+      ],
+      "answer": "A massive brick platform, perhaps a granary",
+      "explanation": "To the west of the bath, a massive brick platform has been excavated; it might have been a granary (p.29).",
+      "source": {
+        "pages": [
+          29
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-first-cities-2-q7",
+      "lessonId": "his-first-cities-2",
+      "type": "true_false",
+      "prompt": "Most of the houses in the lower town were plain and uniform in plan.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "explanation": "\"Most of the houses were plain and uniform in plan\" (p.29).",
+      "source": {
+        "pages": [
+          29
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-first-cities-3-q1",
+      "lessonId": "his-first-cities-3",
+      "type": "mcq",
+      "prompt": "Which of the following artefacts is most associated with the writing system of the Indus Valley people?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Seals",
+        "Pots",
+        "Clothes",
+        "Ornaments"
+      ],
+      "answer": "Seals",
+      "explanation": "The script can be seen on seals found at the IVC sites (p.30).",
+      "source": {
+        "pages": [
+          30,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q5"
+    },
+    {
+      "id": "his-first-cities-3-q2",
+      "lessonId": "his-first-cities-3",
+      "type": "short_answer",
+      "prompt": "What were the foods that the people of the IVC ate?",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Cereals like wheat and barley, pulses, oilseeds like mustard and sesame, and millets like bajra, ragi and jowar. Fish, meat, milk, date and fruit were also a part of the diet. There is not much evidence of rice.",
+      "keywords": [
+        "wheat",
+        "barley",
+        "pulses",
+        "millets",
+        "fish",
+        "milk"
+      ],
+      "explanation": "All of these are listed on pp.29–30.",
+      "source": {
+        "pages": [
+          29,
+          30,
+          35
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q2"
+    },
+    {
+      "id": "his-first-cities-3-q3",
+      "lessonId": "his-first-cities-3",
+      "type": "short_answer",
+      "prompt": "Describe the clothes and ornaments worn by the people of the IVC.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "They wore cotton, woven cloth (spindles of clay were found). Men wore long, flowing cloth; women may have worn skirts; both draped a shawl over their shoulders. Men and women wore ornaments of gold, silver, faience and beads of jade, lapis lazuli, cornelian and agate; bangles, earrings and necklaces were popular. Women applied kajal and painted their lips.",
+      "keywords": [
+        "cotton",
+        "shawl",
+        "skirts",
+        "gold",
+        "beads",
+        "bangles"
+      ],
+      "explanation": "All from p.30.",
+      "source": {
+        "pages": [
+          30,
+          35
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q3"
+    },
+    {
+      "id": "his-first-cities-3-q4",
+      "lessonId": "his-first-cities-3",
+      "type": "mcq",
+      "prompt": "Which semi-precious stone is in the book’s list?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Lapis lazuli",
+        "Diamond",
+        "Ruby"
+      ],
+      "answer": "Lapis lazuli",
+      "explanation": "Beads of semi-precious stones like jade, lapis lazuli, cornelian and agate (p.30).",
+      "source": {
+        "pages": [
+          30
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-first-cities-3-q5",
+      "lessonId": "his-first-cities-3",
+      "type": "true_false",
+      "prompt": "Fish, meat and milk were also a part of the diet of the Indus people.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "explanation": "Fish, meat, milk, date and fruit were also a part of the diet (p.30).",
+      "source": {
+        "pages": [
+          30
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-first-cities-4-q1",
+      "lessonId": "his-first-cities-4",
+      "type": "short_answer",
+      "prompt": "Give two examples that illustrate the advanced state of arts and crafts in the IVC.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "The bust of a bearded man and the famed ‘dancing girl’ in bronze, from Mohenjodaro; terracotta toys with moving parts, like bulls and rams that could shake their heads and tails; pots painted red with black geometric designs.",
+      "keywords": [
+        "bearded man",
+        "dancing girl",
+        "terracotta",
+        "toys"
+      ],
+      "explanation": "Any two examples from pp.30–31.",
+      "source": {
+        "pages": [
+          30,
+          31,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q4"
+    },
+    {
+      "id": "his-first-cities-4-q2",
+      "lessonId": "his-first-cities-4",
+      "type": "short_answer",
+      "prompt": "What do the Indus seals show?",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Many of them show figures of animals, with writing on the top portion. Some show a male yogic figure.",
+      "keywords": [
+        "animals",
+        "writing"
+      ],
+      "explanation": "Seals (p.31); the yogic figure is on p.32.",
+      "source": {
+        "pages": [
+          31,
+          32,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q5"
+    },
+    {
+      "id": "his-first-cities-4-q3",
+      "lessonId": "his-first-cities-4",
+      "type": "think_write",
+      "prompt": "'The IVC was one of the most advanced civilisations of the ancient world'. Illustrate this statement with the help of examples drawn from the chapter.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Its cities were planned on a grid, with a citadel and the Great Bath; its drainage system stands out as remarkable among the cities of the world at that time; it used bronze; it had one of the world’s earliest known scripts; it had uniform weights and trade by land and sea, even with Mesopotamia.",
+      "keywords": [
+        "grid",
+        "Great Bath",
+        "drainage",
+        "bronze",
+        "script",
+        "weights",
+        "trade"
+      ],
+      "explanation": "Choose examples from across the chapter (pp.28–32).",
+      "source": {
+        "pages": [
+          28,
+          29,
+          30,
+          31,
+          32,
+          35
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q5"
+    },
+    {
+      "id": "his-first-cities-4-q4",
+      "lessonId": "his-first-cities-4",
+      "type": "mcq",
+      "prompt": "What was hematite used for?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "To make pigments",
+        "To make tools",
+        "To make seals"
+      ],
+      "answer": "To make pigments",
+      "explanation": "Iron minerals, like hematite, were used to make pigments (p.30).",
+      "source": {
+        "pages": [
+          30
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-first-cities-5-q1",
+      "lessonId": "his-first-cities-5",
+      "type": "mcq",
+      "prompt": "Assertion (A): The Indus Valley Civilisation suddenly came to an end after 2,000 BCE. Reason (R): There is strong evidence that frequent wars brought the Indus Valley Civilisation to an end.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "answer": "A is true but R is false",
+      "explanation": "A is true: it declined suddenly after 2000 BCE. R is false: the exact causes remain a mystery, and wars are not among the suggested reasons (p.32).",
+      "source": {
+        "pages": [
+          32,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q6"
+    },
+    {
+      "id": "his-first-cities-5-q2",
+      "lessonId": "his-first-cities-5",
+      "type": "match",
+      "prompt": "Match each statement with its proof.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "pairs": [
+        [
+          "The Indus people wore clothes made of cotton.",
+          "Spindles made of clay have been found in many sites."
+        ],
+        [
+          "The IVC had a strong system of administration.",
+          "The Indus cities were well planned, with straight roads, walled citadels and well-maintained drains."
+        ],
+        [
+          "The Indus people conducted long-distance maritime trade.",
+          "A dockyard has been discovered at Lothal."
+        ],
+        [
+          "The Indus people produced excess grains.",
+          "Granaries have been discovered at Mohenjodaro and Harappa."
+        ],
+        [
+          "The Indus people believed in life after death.",
+          "They buried the dead along with pots and ornaments."
+        ]
+      ],
+      "explanation": "Each proof is in the chapter: spindles (p.30), well-planned cities (p.29), the Lothal dockyard and granaries (p.32), burials (p.32).",
+      "source": {
+        "pages": [
+          29,
+          30,
+          32,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II"
+    },
+    {
+      "id": "his-first-cities-5-q3",
+      "lessonId": "his-first-cities-5",
+      "type": "short_answer",
+      "prompt": "What did the Indus people worship?",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "They may have worshipped a male yogic figure seen on some seals (named ‘Pasupati’, thought to be an early form of Shiva), and also mother goddesses and nature.",
+      "keywords": [
+        "Pasupati",
+        "mother goddesses",
+        "nature"
+      ],
+      "explanation": "Religion, p.32: \"Not much can be said with certainty\".",
+      "source": {
+        "pages": [
+          32,
+          34
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q6"
+    },
+    {
+      "id": "his-first-cities-5-q4",
+      "lessonId": "his-first-cities-5",
+      "type": "think_write",
+      "prompt": "Do you think the people of the IVC were more interested in commerce than in conquest? Give examples from the chapter to support your answer.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Yes. They had a flourishing system of trade by land and by sea; a dockyard at Lothal; Indus ornaments found in Mesopotamia; uniform weights that made trade easier; and seals used for trade and commercial purposes. The chapter does not describe any wars.",
+      "keywords": [
+        "trade",
+        "dockyard",
+        "Mesopotamia",
+        "weights",
+        "seals"
+      ],
+      "needsReview": true,
+      "explanation": "Use the Trade, Seals and Weights parts (pp.31–32).",
+      "source": {
+        "pages": [
+          31,
+          32,
+          35
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q4"
+    },
+    {
+      "id": "his-first-cities-5-q5",
+      "lessonId": "his-first-cities-5",
+      "type": "short_answer",
+      "prompt": "Examine the reasons for the decline of the IVC.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "The exact causes remain a mystery. Suggested reasons: repeated natural and environmental disasters such as earthquakes, floods or drought (rivers changing course, crops failing, epidemics); the falling quality of the soil and desertification due to excessive deforestation; and the authority that kept the civilisation together losing control, so people moved away and the cities crumbled.",
+      "keywords": [
+        "earthquakes",
+        "floods",
+        "deforestation",
+        "desertification",
+        "authority"
+      ],
+      "explanation": "All three reasons are on p.32.",
+      "source": {
+        "pages": [
+          32,
+          35
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q6"
+    }
+  ]
+}

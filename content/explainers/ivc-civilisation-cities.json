@@ -1,0 +1,149 @@
+{
+  "id": "ivc-civilisation-cities",
+  "subject": "history",
+  "title": "From villages to the Indus cities",
+  "source": {
+    "pages": [
+      27,
+      28
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Small villages: agriculture",
+          "Surplus food",
+          "Towns",
+          "Cities",
+          "The first great civilisations"
+        ],
+        "highlight": 0,
+        "label": "p.27"
+      },
+      "narration": "In the Neolithic Age, many people settled in small villages and practised agriculture. With better methods, surplus food was produced.",
+      "minDuration": 10,
+      "source": {
+        "pages": [
+          27
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Small villages: agriculture",
+          "Surplus food",
+          "Towns",
+          "Cities",
+          "The first great civilisations"
+        ],
+        "highlight": [
+          2,
+          3,
+          4
+        ],
+        "label": "p.27"
+      },
+      "narration": "Gradually, villages grew into towns, and towns into cities; and the first great civilisations of the world were born. Civilisation is said to occur when a society is in an advanced state of social development.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          27
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-civilisation-cities-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "City: a large and densely populated area",
+          "Urbanisation: more and more people move from villages to towns and cities"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "p.27"
+      },
+      "narration": "A city is a large and densely populated area. When more and more people start moving from villages to towns and cities, the process is called urbanisation.",
+      "minDuration": 11,
+      "source": {
+        "pages": [
+          27
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "7000–5000 BCE: village communities",
+          "2,600–1,900 BCE: many large urban centres"
+        ],
+        "highlight": 1,
+        "label": "Timeline, p.28"
+      },
+      "narration": "The Indus Valley Civilisation grew slowly from village communities between 7000 and 5000 BCE. It reached a highly developed phase with many large urban centres between 2,600 and 1,900 BCE.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          28
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-civilisation-cities-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "ivc-civilisation-cities-cp1",
+      "type": "mcq",
+      "prompt": "Villages grew into towns, and towns into",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "cities",
+        "farms",
+        "forests"
+      ],
+      "answer": "cities",
+      "hints": [
+        "The chapter is called \"The First Cities\"."
+      ],
+      "explanation": "Villages grew into towns, and towns into cities (p.27).",
+      "source": {
+        "pages": [
+          27
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "ivc-civilisation-cities-cp2",
+      "type": "mcq",
+      "prompt": "When did the IVC have many large urban centres?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "2,600–1,900 BCE",
+        "7000–5000 BCE"
+      ],
+      "answer": "2,600–1,900 BCE",
+      "hints": [
+        "The earlier dates are the village communities."
+      ],
+      "explanation": "It reached a highly developed phase between 2,600 and 1,900 BCE (p.28).",
+      "source": {
+        "pages": [
+          28
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

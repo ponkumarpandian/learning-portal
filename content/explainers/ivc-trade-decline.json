@@ -1,0 +1,117 @@
+{
+  "id": "ivc-trade-decline",
+  "subject": "history",
+  "title": "Trade, and why the cities crumbled",
+  "source": {
+    "pages": [
+      32
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Villages around the cities grow grain",
+          "Grain stored in granaries",
+          "Traded for goods made in the cities"
+        ],
+        "label": "Trade, p.32"
+      },
+      "narration": "The grains probably came from the villages around the cities. The villages may have traded grain for goods produced in the cities. Roads and the Indus river system were used for trade.",
+      "minDuration": 12,
+      "source": {
+        "pages": [
+          32
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Indus ornaments found in Mesopotamia",
+          "A dockyard at Lothal: overseas trade with western Asia"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "By sea, p.32"
+      },
+      "narration": "Ornaments made in the Indus Valley have been found in Mesopotamia. A dockyard found at Lothal suggests overseas trade with western Asia.",
+      "minDuration": 10,
+      "source": {
+        "pages": [
+          32
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-trade-decline-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Natural and environmental disasters: earthquakes, floods, drought",
+          "Falling soil quality; desertification from deforestation",
+          "The authority loses control",
+          "People move away; the cities crumble"
+        ],
+        "highlight": 3,
+        "label": "After 2000 BCE, p.32"
+      },
+      "narration": "The civilisation declined suddenly after 2000 BCE. The exact causes remain a mystery. Disasters, poor soil from deforestation, or the authority losing control may have made people move away, and the cities crumbled.",
+      "minDuration": 15,
+      "source": {
+        "pages": [
+          32
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-trade-decline-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "ivc-trade-decline-cp1",
+      "type": "mcq",
+      "prompt": "The dockyard at Lothal suggests trade",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "overseas, with western Asia",
+        "only with nearby villages"
+      ],
+      "answer": "overseas, with western Asia",
+      "hints": [
+        "Boats were used for long distance travel."
+      ],
+      "explanation": "A dockyard found at Lothal suggests overseas trade with western Asia (p.32).",
+      "source": {
+        "pages": [
+          32
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "ivc-trade-decline-cp2",
+      "type": "true_false",
+      "prompt": "We know the exact causes of the decline of the IVC.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "hints": [
+        "The book calls it a mystery."
+      ],
+      "explanation": "The exact causes of its decline remain a mystery (p.32).",
+      "source": {
+        "pages": [
+          32
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

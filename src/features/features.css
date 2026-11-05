@@ -108,6 +108,29 @@
   .wday {
     margin-top: var(--sp-5);
   }
+  /* ◀ Earlier · This week · Later ▶ */
+  .wnav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: var(--sp-3);
+    margin-top: var(--sp-4);
+  }
+  .wnav .chunky {
+    min-height: var(--tap-min);
+    font-size: var(--fs-body);
+    padding-inline: 0.5rem;
+  }
+  .wnav-name {
+    font: 600 var(--fs-lg) / 1.2 var(--font-display);
+    text-align: center;
+    white-space: nowrap;
+  }
+  /* Today: lessons from earlier days are waiting */
+  .waiting {
+    display: grid;
+    gap: var(--sp-3);
+  }
   .wday > p {
     margin-top: var(--sp-2);
   }

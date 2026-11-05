@@ -66,16 +66,28 @@ describe('Week screen', () => {
     expect(within(sheet).getByText(/It starts at 4:15/)).toBeInTheDocument();
   });
 
-  it('last week is reachable, so a missed Sunday or Saturday is not lost on Monday', async () => {
+  it('steps back week by week to the plan start, so an older missed day is not lost', async () => {
     const u = userEvent.setup();
-    renderAt('2026-11-02T16:20'); // Monday
-    await u.click(screen.getByRole('radio', { name: 'Last week' }));
-    // opens on last Sunday; Saturday has catch-ups
-    expect(screen.getByRole('heading', { level: 2, name: 'Sunday 1 November' })).toBeInTheDocument();
+    renderAt('2026-11-16T16:20'); // Monday, two weeks after the plan started (Mon 2 Nov)
+    const earlier = screen.getByRole('button', { name: /Earlier/ });
+    expect(screen.getByRole('button', { name: /Later/ })).toBeDisabled();
+    await u.click(earlier);
+    expect(screen.getByText('Last week')).toBeInTheDocument();
+    // an earlier week opens on its Sunday
+    expect(screen.getByRole('heading', { level: 2, name: 'Sunday 15 November' })).toBeInTheDocument();
+    await u.click(earlier);
+    expect(screen.getByText('2 weeks ago')).toBeInTheDocument();
+    expect(earlier).toBeDisabled(); // the week the plan started in
     await u.click(day(/Saturday/));
     expect(screen.getByRole('link', { name: /^Chemistry, 10:15–11:00, catch up now/ })).toHaveAttribute(
       'href',
-      '/lesson/2026-10-31/2',
+      '/lesson/2026-11-07/2',
     );
+  });
+
+  it('in the week the plan started, there is no earlier week to go to', () => {
+    renderAt('2026-11-04T16:20'); // the plan started on Monday 2 Nov
+    expect(screen.getByRole('button', { name: /Earlier/ })).toBeDisabled();
+    expect(screen.getByText('This week')).toBeInTheDocument();
   });
 });

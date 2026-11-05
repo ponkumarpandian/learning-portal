@@ -1,0 +1,126 @@
+{
+  "id": "ivc-daily-life",
+  "subject": "history",
+  "title": "What the Indus people ate, wore and wrote",
+  "source": {
+    "pages": [
+      29,
+      30
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Cereals: wheat, barley",
+          "Pulses",
+          "Oilseeds: mustard, sesame",
+          "Millets: bajra, ragi, jowar"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "Crops, p.29"
+      },
+      "narration": "A number of crops were cultivated: cereals like wheat and barley, pulses, oilseeds like mustard and sesame, and millets like bajra, ragi and jowar. Fish, meat, milk, date and fruit were also eaten.",
+      "minDuration": 14,
+      "source": {
+        "pages": [
+          29,
+          30
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-daily-life-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Cotton thread spun on clay spindles",
+          "Woven cloth",
+          "Long, flowing cloth, skirts and shawls"
+        ],
+        "highlight": 0,
+        "label": "Clothes, p.30"
+      },
+      "narration": "Spindles made of clay were found in many sites; spindles are used to spin cotton thread. Men wore long, flowing cloth, women may have worn skirts, and both draped a shawl over their shoulders.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          30
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Seals of baked clay or steatite",
+          "Brief inscriptions",
+          "Written from the right to the left",
+          "Not yet fully deciphered"
+        ],
+        "highlight": [
+          2,
+          3
+        ],
+        "label": "The Indus script, p.30"
+      },
+      "narration": "They wrote in one of the world’s earliest known scripts, seen on seals. The writing was mainly brief inscriptions, written from the right to the left. Historians are still trying to decipher it.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          30
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-daily-life-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "ivc-daily-life-cp1",
+      "type": "mcq",
+      "prompt": "Which of these is a millet?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Ragi",
+        "Mustard",
+        "Barley"
+      ],
+      "answer": "Ragi",
+      "hints": [
+        "Bajra, ragi and jowar."
+      ],
+      "explanation": "Millets like bajra, ragi and jowar (p.29).",
+      "source": {
+        "pages": [
+          29
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "ivc-daily-life-cp2",
+      "type": "true_false",
+      "prompt": "The Indus script was written from the left to the right.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "hints": [
+        "Look at the third box."
+      ],
+      "explanation": "It was written from the right to the left (p.30).",
+      "source": {
+        "pages": [
+          30
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

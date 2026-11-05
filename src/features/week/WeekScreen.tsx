@@ -1,91 +1,68 @@
 import { format, parseISO } from 'date-fns';
-import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { Link } from 'react-router';
 import { BottomSheet } from '@/components/BottomSheet';
 import { Card } from '@/components/Card';
-import { SegmentedControl } from '@/components/SegmentedControl';
+import { ChunkyButton } from '@/components/ChunkyButton';
 import { TaraSays } from '@/components/SpeechBubble';
 import { subjectVars, tokenVars, type ColourVars } from '@/components/colours';
 import { Screen } from '@/components/layout/Screen';
-import { listSlotLogForDate } from '@/db/repos';
 import { zonedParts } from '@/engine/clock';
 import { useClock } from '@/state/clock';
 import { useBundle } from '@/state/content';
 import { fmtRange, fmtTime, weekdayName } from '../today/todayModel';
-import { catchUpCount, dayLessons, weekDays, type DayLesson, type WeekDay, type WeekPage } from './weekModel';
+import { useDoneByDay } from './useDoneByDay';
+import {
+  catchUpCount,
+  dayLessons,
+  earliestWeek,
+  waitingAcross,
+  weekDays,
+  weekName,
+  type DayLesson,
+  type WeekDay,
+} from './weekModel';
 
 const SHORT = { mon: 'Mon', tue: 'Tue', wed: 'Wed', thu: 'Thu', fri: 'Fri', sat: 'Sat', sun: 'Sun' } as const;
-const PAGES = [
-  { value: 'this', label: 'This week' },
-  { value: 'last', label: 'Last week' },
-] as const;
 const NONE: ReadonlySet<number> = new Set();
-
-/** The slots logged as done on each of these days (async; starts empty, so nothing shows as done). */
-function useDoneByDay(dateKeys: readonly string[]): ReadonlyMap<string, ReadonlySet<number>> {
-  const joined = dateKeys.join(',');
-  const [state, setState] = useState<{ key: string; map: ReadonlyMap<string, ReadonlySet<number>> }>({
-    key: '',
-    map: new Map(),
-  });
-  useEffect(() => {
-    let live = true;
-    const keys = joined.split(',');
-    Promise.all(keys.map((k) => listSlotLogForDate(k)))
-      .then((logs) => {
-        if (!live) return;
-        const map = new Map(
-          logs.map((log, i) => [
-            keys[i]!,
-            new Set(log.filter((r) => r.status === 'done').map((r) => r.slotIndex)),
-          ]),
-        );
-        setState({ key: joined, map });
-      })
-      .catch(() => {
-        /* storage blocked: show the plain week */
-      });
-    return () => {
-      live = false;
-    };
-  }, [joined]);
-  return state.key === joined ? state.map : new Map();
-}
+const NO_LOG: ReadonlyMap<string, ReadonlySet<number>> = new Map();
 
 type Sheet = { icon: ReactNode; title: string; body: string } | null;
 
 /**
- * Week (§15.1, §5.2): the 7 day bubbles with subject dots, this week or last week. Tap a day to see its
- * lessons. An earlier day's missed lesson is an amber "Catch up" she can still start; today's are on
- * Today's trail; future days are locked.
+ * Week (§15.1, §5.2): the 7 day bubbles with subject dots. "◀ Earlier week" steps back as far as the
+ * week the plan started in. Tap a day to see its lessons: an earlier day's missed lesson is an amber
+ * "Catch up" she can still start; a done one opens again; today's are on Today's trail; future days
+ * are locked.
  */
 export function WeekScreen() {
   const clock = useClock();
   const bundle = useBundle();
   const todayKey = useMemo(() => zonedParts(clock.now()).dateKey, [clock]);
-  const [page, setPage] = useState<WeekPage>('this');
-  const days = useMemo(() => weekDays(bundle, todayKey, page), [bundle, todayKey, page]);
+  const earliest = useMemo(() => earliestWeek(bundle, todayKey), [bundle, todayKey]);
+  const [offset, setOffset] = useState(0);
+  const days = useMemo(() => weekDays(bundle, todayKey, offset), [bundle, todayKey, offset]);
   const [picked, setPicked] = useState<string>(todayKey);
   const [sheet, setSheet] = useState<Sheet>(null);
-  const doneByDay = useDoneByDay(useMemo(() => days.map((d) => d.dateKey), [days]));
+  const doneByDay = useDoneByDay(days[0]!.dateKey, days[6]!.dateKey) ?? NO_LOG;
   const subjects = useMemo(() => new Map(bundle.subjects.map((s) => [s.id, s])), [bundle.subjects]);
 
   const selected = days.find((d) => d.dateKey === picked) ?? days.find((d) => d.when === 'today') ?? days[6]!;
   const lessonsOf = (d: WeekDay) => dayLessons(bundle, d, doneByDay.get(d.dateKey) ?? NONE);
   const lessons = lessonsOf(selected);
-  const missedThisPage = days.reduce((n, d) => n + (d.when === 'past' ? catchUpCount(lessonsOf(d)) : 0), 0);
+  const missedThisPage = waitingAcross(bundle, days, doneByDay);
 
-  const changePage = (p: WeekPage) => {
-    setPage(p);
-    // this week opens on today; last week opens on its Sunday (the day just gone)
-    setPicked(p === 'this' ? todayKey : (weekDays(bundle, todayKey, p)[6]?.dateKey ?? todayKey));
+  const goTo = (o: number) => {
+    setOffset(o);
+    // this week opens on today; an earlier week opens on its Sunday
+    setPicked(o === 0 ? todayKey : (weekDays(bundle, todayKey, o)[6]?.dateKey ?? todayKey));
   };
 
   const first = days[0]!.dateKey;
   const last = days[6]!.dateKey;
   const heading = (
     <>
-      {format(parseISO(first), 'd')}–{format(parseISO(last), 'd MMMM')}
+      {format(parseISO(first), 'd MMM')}–{format(parseISO(last), 'd MMM')}
     </>
   );
 
@@ -103,7 +80,17 @@ export function WeekScreen() {
         </p>
       </TaraSays>
 
-      <SegmentedControl label="Which week?" options={PAGES} value={page} onChange={changePage} />
+      <nav className="wnav" aria-label="Choose a week">
+        <ChunkyButton variant="soft" disabled={offset <= earliest} onClick={() => goTo(offset - 1)}>
+          <span aria-hidden="true">◀</span> Earlier
+        </ChunkyButton>
+        <p className="wnav-name" aria-live="polite">
+          {weekName(offset)}
+        </p>
+        <ChunkyButton variant="soft" disabled={offset >= 0} onClick={() => goTo(offset + 1)}>
+          Later <span aria-hidden="true">▶</span>
+        </ChunkyButton>
+      </nav>
 
       <ul className="days" role="list" aria-label="Days of the week">
         {days.map((d) => {
@@ -190,8 +177,9 @@ function DayCard({
   const waiting = catchUpCount(lessons);
   const done = lessons.filter((l) => l.state === 'done').length;
   const title = `${day.when === 'today' ? 'Today · ' : ''}${weekdayName(day.weekday)} ${format(parseISO(day.dateKey), 'd MMMM')}`;
-  const line =
-    lessons.length === 0
+  const line = day.beforeStart
+    ? 'Your adventure hadn’t started yet on this day 🌱'
+    : lessons.length === 0
       ? 'No lessons on this day — enjoy it! 🌈'
       : day.when === 'future'
         ? `🔒 This day opens on ${weekdayName(day.weekday)}.`

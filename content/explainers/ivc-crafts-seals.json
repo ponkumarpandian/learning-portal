@@ -1,0 +1,142 @@
+{
+  "id": "ivc-crafts-seals",
+  "subject": "history",
+  "title": "Bronze, seals and uniform weights",
+  "source": {
+    "pages": [
+      30,
+      31
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Copper",
+          "Copper + tin",
+          "Bronze: stronger and more malleable"
+        ],
+        "highlight": 2,
+        "label": "Metallurgy, p.30"
+      },
+      "narration": "The Indus people alloyed copper and tin to make bronze, which was stronger and more malleable than copper. There is no evidence that they used iron to make objects.",
+      "minDuration": 11,
+      "source": {
+        "pages": [
+          30
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-crafts-seals-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Bust of a bearded man",
+          "‘Dancing girl’ in bronze",
+          "Terracotta toys with moving parts",
+          "Pots painted red with black designs"
+        ],
+        "arrows": false,
+        "highlight": [
+          0,
+          1
+        ],
+        "label": "Art and craft, p.31"
+      },
+      "narration": "Two finely sculpted works of art came from Mohenjodaro: the bust of a bearded man and the famed dancing girl in bronze. Terracotta toys had moving parts, like bulls that could shake their heads.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          31
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Seals pressed into soft clay",
+          "Mouths of jars and sacks of grain sealed",
+          "Goods traded"
+        ],
+        "label": "Seals, p.31"
+      },
+      "narration": "Most seals were square, made mainly of steatite, with animals and writing on top. They were pressed into soft clay to seal the mouths of jars and sacks of grain, for trade.",
+      "minDuration": 12,
+      "source": {
+        "pages": [
+          31
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Smallest weight: 0.856 grams",
+          "Most common weight: about 13.7 grams",
+          "Uniform throughout the IVC: easier trade"
+        ],
+        "highlight": 2,
+        "label": "Weights, p.31"
+      },
+      "narration": "Cube-shaped stone weights in graduated sizes were found. The smallest is 0.856 grams, and the most common about 13.7 grams. They seem uniform throughout the IVC, which made trade between cities much easier.",
+      "minDuration": 14,
+      "source": {
+        "pages": [
+          31
+        ]
+      },
+      "checkpoint": {
+        "questionId": "ivc-crafts-seals-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "ivc-crafts-seals-cp1",
+      "type": "mcq",
+      "prompt": "Copper + tin makes",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "bronze",
+        "iron",
+        "steatite"
+      ],
+      "answer": "bronze",
+      "hints": [
+        "It gave the Bronze Age its name."
+      ],
+      "explanation": "They alloyed copper and tin to make bronze (p.30).",
+      "source": {
+        "pages": [
+          30
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "ivc-crafts-seals-cp2",
+      "type": "true_false",
+      "prompt": "Indus weights were different in every city.",
+      "difficulty": "medium",
+      "marks": 1,
+      "answer": false,
+      "hints": [
+        "Read the last box."
+      ],
+      "explanation": "They seem to be uniform throughout the IVC (p.31).",
+      "source": {
+        "pages": [
+          31
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

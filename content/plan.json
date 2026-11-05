@@ -14,7 +14,7 @@
     "maths": ["mat-fractions"],
     "biology": ["bio-digestive-system"],
     "english": [],
-    "history": [],
+    "history": ["his-first-cities", "his-elements-of-democracy"],
     "geography": []
   },
   "taughtAlready": [],

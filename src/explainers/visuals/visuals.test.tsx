@@ -3,6 +3,7 @@ import { loadContent } from '@/content';
 import { activeProps } from '../timeline';
 import { VISUALS } from './index';
 import { describeJourney, layoutJourney, parseJourney } from './digestiveJourneyLayout';
+import { LINE_CHARS, describeFlow, layoutFlow, parseFlow, wrap } from './flowChartLayout';
 import { layoutFractionBar, parseFractionBar } from './fractionBarLayout';
 import { liquidFill } from './particles/layout';
 import { SINGLE_VESSELS, parseProps, singleLayout } from './particles/scene';
@@ -259,5 +260,43 @@ describe('DigestiveJourney', () => {
     expect(screen.getByRole('img')).toHaveAccessibleName(/food is in the oesophagus \(bolus\)/);
     expect(screen.getByText('Peristalsis')).toBeInTheDocument();
     expect(screen.getByText('Small intestine')).toBeInTheDocument();
+  });
+});
+
+describe('FlowChart', () => {
+  const FC = VISUALS.FlowChart!;
+
+  it('stacks boxes top to bottom with an arrow between each pair', () => {
+    const l = layoutFlow(parseFlow({ nodes: ['Villages', 'Towns', 'Cities'] }));
+    expect(l.boxes.map((b) => b.lines.join(' '))).toEqual(['Villages', 'Towns', 'Cities']);
+    expect(l.boxes.every((b, i) => i === 0 || b.y > l.boxes[i - 1]!.y + l.boxes[i - 1]!.h)).toBe(true);
+    expect(l.arrows).toHaveLength(2);
+    expect(layoutFlow(parseFlow({ nodes: ['a', 'b'], arrows: false })).arrows).toHaveLength(0);
+  });
+
+  it('wraps long text so no line runs past the box, and the box grows', () => {
+    const long = 'Earthquakes might have caused rivers to change their course, leading to floods or droughts';
+    expect(wrap(long).every((line) => line.length <= LINE_CHARS)).toBe(true);
+    const [one, many] = layoutFlow(parseFlow({ nodes: ['Short', long] })).boxes;
+    expect(many!.lines.length).toBeGreaterThan(1);
+    expect(many!.h).toBeGreaterThan(one!.h);
+  });
+
+  it('highlights by index, list or "all"; junk is ignored', () => {
+    expect(parseFlow({ nodes: ['a', 'b', 'c'], highlight: 1 }).highlight).toEqual([1]);
+    expect(parseFlow({ nodes: ['a', 'b', 'c'], highlight: 'all' }).highlight).toEqual([0, 1, 2]);
+    const s = parseFlow({ nodes: ['a', ' ', 7, 'b'], highlight: [1, 5, -1, 'x', 1.5] });
+    expect(s.nodes).toEqual(['a', 'b']);
+    expect(s.highlight).toEqual([1]);
+    expect(parseFlow({ nodes: Array.from({ length: 9 }, (_, i) => String(i)) }).nodes).toHaveLength(6);
+  });
+
+  it('reads the chart aloud and shows the label chip', () => {
+    const props = { nodes: ['Upper town', 'Lower town'], arrows: false, highlight: 0, label: 'p.28' };
+    render(<FC props={props} reduced />);
+    expect(screen.getByRole('img')).toHaveAccessibleName(describeFlow(parseFlow(props)));
+    expect(screen.getByRole('img')).toHaveAccessibleName(/Showing: Upper town/);
+    expect(screen.getByText('p.28')).toBeInTheDocument();
+    expect(screen.getByText('Lower town')).toBeInTheDocument();
   });
 });

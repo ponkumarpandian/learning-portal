@@ -4,6 +4,7 @@
  */
 import type { VisualName } from '@/content';
 import { DigestiveJourney } from './DigestiveJourney';
+import { FlowChart } from './FlowChart';
 import { FractionBar } from './FractionBar';
 import { LightRay } from './LightRay';
 import { NumberLine } from './NumberLine';
@@ -18,4 +19,5 @@ export const VISUALS: Partial<Record<VisualName, VisualComponent>> = {
   NumberLine,
   FractionBar,
   DigestiveJourney,
+  FlowChart,
 };

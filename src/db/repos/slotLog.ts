@@ -14,6 +14,13 @@ export async function listSlotLogForDate(date: string): Promise<SlotLogRecord[]>
   return rows.sort((a, b) => a.slotIndex - b.slotIndex);
 }
 
+/** All logged slots from one IST date to another (both included), in date then slot order. */
+export async function listSlotLogBetween(from: string, to: string): Promise<SlotLogRecord[]> {
+  if (from > to) return [];
+  const rows = await db.slotLog.where('date').between(from, to, true, true).toArray();
+  return rows.sort((a, b) => a.date.localeCompare(b.date) || a.slotIndex - b.slotIndex);
+}
+
 export async function setSlotStatus(
   date: string,
   slotIndex: number,

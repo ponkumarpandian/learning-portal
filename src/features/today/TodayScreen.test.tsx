@@ -2,6 +2,7 @@ import { render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes, useLocation } from 'react-router';
 import { STUDY_KINDS, loadContent } from '@/content';
+import { setSlotStatus } from '@/db/repos';
 import { fixedClock } from '@/engine/clock';
 import { ClockContext } from '@/state/clock';
 import { TodayScreen } from './TodayScreen';
@@ -123,6 +124,27 @@ describe('Today screen', () => {
     // a missed test is not a catch-up lesson (it has its own window, §8.3)
     const sat = buildToday(bundle, partsAt('sat', '2026-11-07', '16:20'));
     expect(sat.catchUps.map((e) => e.name)).toEqual(['Maths', 'Chemistry', 'Biology']);
+  });
+
+  it('says how many lessons from earlier days are waiting, and opens the Week view', async () => {
+    const user = userEvent.setup();
+    // Tue 3 Nov: Monday's 4 lessons were missed except Maths
+    await setSlotStatus('2026-11-02', 1, 'done', 1);
+    renderAt('2026-11-03T16:20');
+    const h = await screen.findByRole('heading', {
+      level: 2,
+      name: /3 lessons from earlier days are waiting/,
+    });
+    await user.click(
+      within(h.closest('.waiting') as HTMLElement).getByRole('link', { name: /Open my week/ }),
+    );
+    expect(screen.getByTestId('where')).toHaveTextContent('/week');
+  });
+
+  it('shows no earlier-days line on the plan’s first day', async () => {
+    renderAt('2026-11-02T16:20');
+    await screen.findByText(/lessons? today/);
+    expect(screen.queryByText(/from earlier days/)).not.toBeInTheDocument();
   });
 
   it('picks the greeting by hour', () => {

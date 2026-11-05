@@ -79,6 +79,7 @@ export function ExplainerKit() {
   const light = useMemo(() => samplesFor(bundle, 'LightRay'), [bundle]);
   const fractions = useMemo(() => samplesFor(bundle, 'FractionBar'), [bundle]);
   const digestion = useMemo(() => samplesFor(bundle, 'DigestiveJourney'), [bundle]);
+  const flows = useMemo(() => samplesFor(bundle, 'FlowChart'), [bundle]);
   const lessonPick = useMemo(() => firstExplainerLesson(bundle), [bundle]);
   const [note, setNote] = useState('');
 
@@ -111,6 +112,10 @@ export function ExplainerKit() {
       <Card>
         <h2>DigestiveJourney: every content frame</h2>
         <Gallery samples={digestion} reduced={reduced} />
+      </Card>
+      <Card>
+        <h2>FlowChart: every content frame</h2>
+        <Gallery samples={flows} reduced={reduced} />
       </Card>
       <Card>
         <h2>NumberLine</h2>

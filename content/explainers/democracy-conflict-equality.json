@@ -1,0 +1,121 @@
+{
+  "id": "democracy-conflict-equality",
+  "subject": "history",
+  "title": "Settling disputes, and equality for all",
+  "source": {
+    "pages": [
+      26,
+      27
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Limited resources: land, fresh water, coal, petroleum",
+          "Growing demands from a growing population",
+          "Conflict, e.g. states sharing river waters"
+        ],
+        "highlight": 2,
+        "label": "Why conflicts arise, p.26"
+      },
+      "narration": "Natural resources like land, fresh water, coal and petroleum are limited, but demands keep increasing because of our growing population. When resources are limited but demands many, there is conflict.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          26
+        ]
+      },
+      "checkpoint": {
+        "questionId": "democracy-conflict-equality-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "The judiciary (court of law): impartial",
+          "The police: law and order every day",
+          "Dialogue, discussions and negotiations"
+        ],
+        "arrows": false,
+        "highlight": 0,
+        "label": "Conflict resolution, p.26"
+      },
+      "narration": "Conflict resolution is the peaceful settlement of disputes. The judiciary is the main body that deals with it, because the court is impartial. The police, and dialogue and negotiations, also help.",
+      "minDuration": 12,
+      "source": {
+        "pages": [
+          26
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "All equal in the eyes of the law, even top leaders",
+          "Seats reserved: positive discrimination",
+          "Laws against discrimination by caste, creed or colour"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "Equality and justice, pp.26–27"
+      },
+      "narration": "In a democracy, all are equal in the eyes of the law, including leaders in the highest positions. In India, seats are reserved for people discriminated against for centuries, and laws prohibit discrimination on the basis of caste, creed or colour.",
+      "minDuration": 15,
+      "source": {
+        "pages": [
+          26,
+          27
+        ]
+      },
+      "checkpoint": {
+        "questionId": "democracy-conflict-equality-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "democracy-conflict-equality-cp1",
+      "type": "true_false",
+      "prompt": "Conflicts arise when resources are limited but the demands on them are many.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "hints": [
+        "Read the chart from top to bottom."
+      ],
+      "explanation": "p.26.",
+      "source": {
+        "pages": [
+          26
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "democracy-conflict-equality-cp2",
+      "type": "mcq",
+      "prompt": "In a democracy, are top leaders above the law?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "No, all are equal in the eyes of the law",
+        "Yes, they are"
+      ],
+      "answer": "No, all are equal in the eyes of the law",
+      "hints": [
+        "Look at the first box."
+      ],
+      "explanation": "All are equal in the eyes of the law, including leaders holding the highest positions (p.26).",
+      "source": {
+        "pages": [
+          26
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

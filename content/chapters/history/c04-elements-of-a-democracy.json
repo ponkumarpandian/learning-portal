@@ -1,0 +1,1028 @@
+{
+  "id": "his-elements-of-democracy",
+  "subject": "history",
+  "title": "Elements of a Democracy (Civics)",
+  "order": 104,
+  "status": "approved",
+  "book": {
+    "title": "REPLACE_ME",
+    "publisher": "REPLACE_ME",
+    "chapterNo": 4
+  },
+  "sourceDir": "source/history/c04-elements-of-a-democracy",
+  "parentNotes": [
+    "Civics Ch 4, pages 24–28, the whole chapter (Civics has its own page numbers in the book). Approved straight away at your request. It sits in the History / Civics subject, after History Ch 4.",
+    "Page 27 is blurred in the photo. The exercises and boxes on it are readable; its top paragraph (reserved seats, positive discrimination, laws against discrimination) is pieced together from the p.27 photo and the edge of the p.26 photo. If you can, please re-photograph p.27. Ex. V Q2 is marked needsReview because of this.",
+    "Ex. III Q1 (needsReview): a book flaw. Three of the four options (protest marches, rallies, voicing protest through media) are \"direct\" ways to participate on pp.24–25. It is a written-answer question here; please check what her teacher expects.",
+    "Ex. III Q2 answered \"i, ii, iii\": the pages name \"the judiciary\", not \"the Supreme Court\" by name.",
+    "Ex. V Q1 (needsReview): an opinion question; any method with a reason from the chapter is fine.",
+    "Do and learn activities (media instance, mining role play, river-water project) and the Enrichment group work are class activities, not questions here.",
+    "Please fill in the book’s title and publisher in source/books.json (history) and in the \"book\" field here.",
+    "Video search words — lesson his-elements-of-democracy-1: \"elements of democracy class 6 participation\", \"how citizens participate in democracy for kids\"",
+    "Video search words — lesson his-elements-of-democracy-2: \"accountability in democracy class 6\", \"Right to Information Act for kids\"",
+    "Video search words — lesson his-elements-of-democracy-3: \"conflict resolution judiciary class 6\", \"equality and justice in democracy for kids\""
+  ],
+  "lessons": [
+    {
+      "id": "his-elements-of-democracy-1",
+      "title": "Elements of a democracy and participation",
+      "source": {
+        "pages": [
+          24,
+          25
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "democracy-participation"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Elements of democracy: participation (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "his-elements-of-democracy-1-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "The key elements",
+          "emoji": "🗳️",
+          "body": "A democracy has certain key elements which make it the most preferred form of government today: participation and collective decision-making, accountability, conflict resolution, and concern for equality and justice.",
+          "source": {
+            "pages": [
+              24
+            ]
+          }
+        },
+        {
+          "title": "What is participation?",
+          "emoji": "🙋",
+          "body": "\"Participation means ‘to take part in’. In a democracy, every citizen has the right and the means to participate in the decision-making process of the government.\"",
+          "source": {
+            "pages": [
+              24
+            ]
+          }
+        },
+        {
+          "title": "Elections",
+          "emoji": "✅",
+          "body": "In a democracy, there is a free and fair system of election for choosing representatives to the government. People elect the person whom they feel understands their problems the best, and this person acts as their representative.",
+          "source": {
+            "pages": [
+              24
+            ]
+          }
+        },
+        {
+          "title": "More than voting",
+          "emoji": "📣",
+          "body": "Participatory citizenship goes beyond elections. Citizens directly participate in, and influence, government decisions through discussions, debates, speaking out through the media, protest marches and rallies.",
+          "source": {
+            "pages": [
+              24
+            ]
+          }
+        },
+        {
+          "title": "The media",
+          "emoji": "📰",
+          "body": "The media is another powerful tool of direct participation. In a democracy, the government does not control the media, so people can express themselves freely through newspapers, television, radio and social media.",
+          "reveal": "The opinions expressed may force the government to change its decisions. The media acts as a protector of freedom and justice.",
+          "source": {
+            "pages": [
+              25
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "his-elements-of-democracy-1-p1",
+          "type": "fill_blank",
+          "prompt": "Participation means ‘to take ____ in’.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "part",
+          "explanation": "Participation means ‘to take part in’ (p.24).",
+          "source": {
+            "pages": [
+              24
+            ]
+          },
+          "hints": [
+            "The word is in quotes on p.24."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-1-p2",
+          "type": "mcq",
+          "prompt": "In a democracy, who controls the media?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Not the government",
+            "The government",
+            "The police"
+          ],
+          "answer": "Not the government",
+          "explanation": "In a democracy, the government does not control the media (p.25).",
+          "source": {
+            "pages": [
+              25
+            ]
+          },
+          "hints": [
+            "That is why people can express themselves freely."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-1-p3",
+          "type": "true_false",
+          "prompt": "Participatory citizenship means only voting in elections.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": false,
+          "explanation": "Participatory citizenship goes beyond just taking part in elections (p.24).",
+          "source": {
+            "pages": [
+              24
+            ]
+          },
+          "hints": [
+            "Think of debates, the media, marches and rallies."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "In your notebook, write the four key elements of a democracy as a list (p.24). Then write three ways citizens directly participate, in the book’s words.",
+      "check": [
+        {
+          "id": "his-elements-of-democracy-1-c1",
+          "type": "mcq",
+          "prompt": "Which of these is a key element of democracy?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Accountability",
+            "Monarchy",
+            "Dictatorship"
+          ],
+          "answer": "Accountability",
+          "explanation": "The key elements: participation and collective decision-making, accountability, conflict resolution, and concern for equality and justice (p.24).",
+          "source": {
+            "pages": [
+              24
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-1-c2",
+          "type": "fill_blank",
+          "prompt": "In a democracy, there is a free and fair system of ____ for choosing representatives to the government.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "election",
+          "accept": [
+            "elections"
+          ],
+          "explanation": "A free and fair system of election (p.24).",
+          "source": {
+            "pages": [
+              24
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-1-c3",
+          "type": "true_false",
+          "prompt": "The opinions expressed in the media may force the government to change its decisions.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "The opinions expressed may force the government to change its decisions (p.25).",
+          "source": {
+            "pages": [
+              25
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "A democracy has certain key elements: participation and collective decision-making, accountability, conflict resolution, and concern for equality and justice.",
+        "Participation means ‘to take part in’. In a democracy, every citizen has the right and the means to participate in the decision-making process of the government.",
+        "The media is another powerful tool of direct participation."
+      ]
+    },
+    {
+      "id": "his-elements-of-democracy-2",
+      "title": "Accountability",
+      "source": {
+        "pages": [
+          25
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "democracy-accountability"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Accountability in a democracy, Right to Information (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "his-elements-of-democracy-2-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "What is accountability?",
+          "emoji": "🤝",
+          "body": "\"Accountability means being responsible for one’s actions.\" In a democracy, the elected representatives are accountable to the people who elected them.",
+          "source": {
+            "pages": [
+              25
+            ]
+          }
+        },
+        {
+          "title": "Elections every 5 years",
+          "emoji": "📅",
+          "body": "Most government bodies are elected for a period of around 5 years. If they fail to live up to the expectations of the people, the people may not vote for them in the next elections.",
+          "source": {
+            "pages": [
+              25
+            ]
+          }
+        },
+        {
+          "title": "An independent judiciary",
+          "emoji": "⚖️",
+          "body": "If elected representatives turn out to be dishonest or inefficient, independent bodies like the judiciary can take them to task and punish them. The Constitution has made sure judges cannot be influenced by political leaders.",
+          "source": {
+            "pages": [
+              25
+            ]
+          }
+        },
+        {
+          "title": "The Constitution and the RTI Act",
+          "emoji": "📜",
+          "body": "The Constitution lays down rules and laws that governments have to follow; they act as a check on the misuse of power. The Right to Information Act gives Indian citizens the right and power to closely examine and monitor the government.",
+          "example": "The RTI poster: cost 10/-, a reply in 30 days, and a penalty of 250/- per day on the officer.",
+          "source": {
+            "pages": [
+              25
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "his-elements-of-democracy-2-p1",
+          "type": "mcq",
+          "prompt": "Most government bodies are elected for around",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "5 years",
+            "1 year",
+            "10 years"
+          ],
+          "answer": "5 years",
+          "explanation": "Most government bodies are elected for a period of around 5 years (p.25).",
+          "source": {
+            "pages": [
+              25
+            ]
+          },
+          "hints": [
+            "Look at the second card."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-2-p2",
+          "type": "mcq",
+          "prompt": "Which Act gives citizens the right to closely examine the government?",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "The Right to Information Act",
+            "The Lokpal Bill",
+            "The Constitution of Kerala"
+          ],
+          "answer": "The Right to Information Act",
+          "explanation": "The Right to Information Act gives Indian citizens the right and power to closely examine and monitor the functioning of the government (p.25).",
+          "source": {
+            "pages": [
+              25
+            ]
+          },
+          "hints": [
+            "RTI"
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-2-p3",
+          "type": "true_false",
+          "prompt": "Judges can be forced by political leaders to obey them.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": false,
+          "explanation": "The Constitution has ensured that judges cannot be influenced by political leaders or forced to obey them (p.25).",
+          "source": {
+            "pages": [
+              25
+            ]
+          },
+          "hints": [
+            "The judiciary is an independent body."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Copy the book’s definition of accountability into your notebook (p.25). Then write three ways the people can hold their representatives accountable: elections, the judiciary, and the Right to Information Act.",
+      "check": [
+        {
+          "id": "his-elements-of-democracy-2-c1",
+          "type": "fill_blank",
+          "prompt": "____ means being responsible for one’s actions.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "Accountability",
+          "explanation": "The book’s definition (p.25).",
+          "source": {
+            "pages": [
+              25
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-2-c2",
+          "type": "true_false",
+          "prompt": "In a democracy, the elected representatives are accountable to the people who elected them.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "p.25.",
+          "source": {
+            "pages": [
+              25
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-2-c3",
+          "type": "mcq",
+          "prompt": "If elected representatives are dishonest, who can take them to task and punish them?",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "The judiciary",
+            "The media",
+            "The tribal people"
+          ],
+          "answer": "The judiciary",
+          "explanation": "Independent bodies like the judiciary take them to task and punish them (p.25).",
+          "source": {
+            "pages": [
+              25
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Accountability means being responsible for one’s actions. In a democracy, the elected representatives are accountable to the people who elected them.",
+        "The Constitution lays down rules and laws that governments have to follow. These laws act as a check on the misuse of power by the government."
+      ]
+    },
+    {
+      "id": "his-elements-of-democracy-3",
+      "title": "Conflict resolution, equality and justice",
+      "source": {
+        "pages": [
+          26,
+          27
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "democracy-conflict-equality"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Conflict resolution, equality and justice in democracy (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "his-elements-of-democracy-3-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Why conflicts happen",
+          "emoji": "💧",
+          "body": "Natural resources like land, fresh water, coal and petroleum are limited in supply, but the demands on them are increasing because of our growing population. When resources are limited but the demands many, there is conflict.",
+          "example": "In India, many states are locked in conflict over the issue of sharing river waters.",
+          "source": {
+            "pages": [
+              26
+            ]
+          }
+        },
+        {
+          "title": "Conflict resolution",
+          "emoji": "🕊️",
+          "body": "\"Conflict resolution, or the peaceful settlement of disputes, is an important feature of democracy.\" The judiciary, or the court of law, is the main body which deals with conflict resolution; it is an impartial body.",
+          "source": {
+            "pages": [
+              26
+            ]
+          }
+        },
+        {
+          "title": "Police, and talking it out",
+          "emoji": "👮",
+          "body": "The police is responsible for maintaining law and order in the country on a daily basis. Dialogue, discussions and negotiations between the parties concerned are also important elements of conflict resolution.",
+          "source": {
+            "pages": [
+              26
+            ]
+          }
+        },
+        {
+          "title": "Equality and justice",
+          "emoji": "⚖️",
+          "body": "In a democracy all should be treated equally, whether they be rich or poor, whatever be their religious belief, gender, caste, race or the language they speak.",
+          "reveal": "In a democracy all are equal in the eyes of the law, including leaders holding the highest positions in the government.",
+          "source": {
+            "pages": [
+              26
+            ]
+          }
+        },
+        {
+          "title": "Correcting old wrongs",
+          "emoji": "🎓",
+          "body": "The Constitution makes special provision for people who have been discriminated against for centuries: seats are reserved for them in Parliament, educational institutions and government undertakings. This is called positive discrimination. Laws prohibit discrimination on the basis of caste, creed or colour.",
+          "source": {
+            "pages": [
+              27
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "his-elements-of-democracy-3-p1",
+          "type": "mcq",
+          "prompt": "The main body which deals with conflict resolution in a democracy is",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "the judiciary",
+            "the media",
+            "the Parliament"
+          ],
+          "answer": "the judiciary",
+          "explanation": "The judiciary, or the court of law, is the main body which deals with conflict resolution (p.26).",
+          "source": {
+            "pages": [
+              26
+            ]
+          },
+          "hints": [
+            "It is also called the court of law."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-3-p2",
+          "type": "fill_blank",
+          "prompt": "Conflict resolution means the peaceful settlement of ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "disputes",
+          "explanation": "\"Conflict resolution, or the peaceful settlement of disputes\" (p.26).",
+          "source": {
+            "pages": [
+              26
+            ]
+          },
+          "hints": [
+            "Another word for arguments or fights."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-3-p3",
+          "type": "true_false",
+          "prompt": "In a democracy, leaders in the highest positions are above the law.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": false,
+          "explanation": "All are equal in the eyes of the law, including leaders holding the highest positions in the government (p.26).",
+          "source": {
+            "pages": [
+              26
+            ]
+          },
+          "hints": [
+            "Read the underlined line on p.26."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "In your notebook, draw two boxes: \"Who resolves conflicts?\" (judiciary, police, dialogue) and \"How does India ensure equality?\" (equal in the eyes of the law, reserved seats, laws against discrimination). Use the book’s words (pp.26–27).",
+      "check": [
+        {
+          "id": "his-elements-of-democracy-3-c1",
+          "type": "mcq",
+          "prompt": "Which conflict between Indian states does the book give as an example?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Sharing river waters",
+            "Sharing schools",
+            "Sharing railways"
+          ],
+          "answer": "Sharing river waters",
+          "explanation": "Many states are locked in conflict over the issue of sharing river waters (p.26).",
+          "source": {
+            "pages": [
+              26
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-3-c2",
+          "type": "true_false",
+          "prompt": "The police is responsible for maintaining law and order on a daily basis.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "p.26.",
+          "source": {
+            "pages": [
+              26
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-3-c3",
+          "type": "mcq",
+          "prompt": "Reserving seats for people discriminated against for centuries is called",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "positive discrimination",
+            "conflict resolution",
+            "participation"
+          ],
+          "answer": "positive discrimination",
+          "explanation": "It is called positive discrimination or affirmative action (p.27).",
+          "source": {
+            "pages": [
+              27
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "his-elements-of-democracy-3-c4",
+          "type": "mcq",
+          "prompt": "In a democracy, all should be treated equally, whatever be their",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "religious belief, gender, caste, race or language",
+            "height",
+            "favourite food"
+          ],
+          "answer": "religious belief, gender, caste, race or language",
+          "explanation": "p.26.",
+          "source": {
+            "pages": [
+              26
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Conflict resolution, or the peaceful settlement of disputes, is an important feature of democracy.",
+        "The judiciary, or the court of law, is the main body which deals with conflict resolution in a democracy.",
+        "In a democracy all are equal in the eyes of the law, including leaders holding the highest positions in the government."
+      ]
+    }
+  ],
+  "questionBank": [
+    {
+      "id": "his-elements-of-democracy-1-q1",
+      "lessonId": "his-elements-of-democracy-1",
+      "type": "true_false",
+      "prompt": "In a democracy, only some citizens have the power to take part in the decision-making process.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "explanation": "False: every citizen has the right and the means to participate in the decision-making process of the government (p.24).",
+      "source": {
+        "pages": [
+          24,
+          27
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q1"
+    },
+    {
+      "id": "his-elements-of-democracy-1-q2",
+      "lessonId": "his-elements-of-democracy-1",
+      "type": "fill_blank",
+      "prompt": "In democracies, citizens directly participate in, and influence, government decisions, through methods like ____ and ____.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": "discussions and debates",
+      "accept": [
+        "debates and discussions",
+        "protest marches and rallies",
+        "rallies and protest marches",
+        "discussions, debates",
+        "media and rallies",
+        "debates and rallies",
+        "discussions and rallies"
+      ],
+      "explanation": "Through discussions, debates, speaking out through the media, protest marches and rallies (p.24). Any two are right.",
+      "source": {
+        "pages": [
+          24,
+          27
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q1"
+    },
+    {
+      "id": "his-elements-of-democracy-1-q3",
+      "lessonId": "his-elements-of-democracy-1",
+      "type": "short_answer",
+      "prompt": "Which of the following is a direct method of participation of citizens in a democracy? (a) Protest marches (b) Elections (c) Rallies (d) Voicing protest through media",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Protest marches, rallies and voicing protest through the media are all ways citizens directly participate (p.24–25). In elections, people choose representatives who act for them.",
+      "keywords": [
+        "protest marches",
+        "rallies",
+        "media"
+      ],
+      "needsReview": true,
+      "explanation": "The book question has three right options, so here you write the answer instead of picking one.",
+      "source": {
+        "pages": [
+          24,
+          25,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q1"
+    },
+    {
+      "id": "his-elements-of-democracy-1-q4",
+      "lessonId": "his-elements-of-democracy-1",
+      "type": "short_answer",
+      "prompt": "Name the key elements of democracy.",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Participation and collective decision-making, accountability, conflict resolution, and concern for equality and justice.",
+      "keywords": [
+        "participation",
+        "accountability",
+        "conflict resolution",
+        "equality",
+        "justice"
+      ],
+      "explanation": "All four are named on p.24.",
+      "source": {
+        "pages": [
+          24,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q1"
+    },
+    {
+      "id": "his-elements-of-democracy-1-q5",
+      "lessonId": "his-elements-of-democracy-1",
+      "type": "short_answer",
+      "prompt": "Explain the meaning of participation.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Participation means ‘to take part in’. In a democracy, every citizen has the right and the means to participate in the decision-making process of the government: by electing representatives, and directly through discussions, debates, the media, protest marches and rallies.",
+      "keywords": [
+        "take part",
+        "every citizen",
+        "decision-making",
+        "elections"
+      ],
+      "explanation": "The definition is on p.24.",
+      "source": {
+        "pages": [
+          24,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q2"
+    },
+    {
+      "id": "his-elements-of-democracy-1-q6",
+      "lessonId": "his-elements-of-democracy-1",
+      "type": "think_write",
+      "prompt": "According to you, which of the methods mentioned in this chapter is the most effective form of participation in a democracy? Give reasons for your answer.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Any method from the chapter with a reason from it. For example: elections, because people choose the representative who understands their problems best and can vote them out; or the media, because the opinions expressed may force the government to change its decisions.",
+      "keywords": [
+        "elections",
+        "media",
+        "protest",
+        "reason"
+      ],
+      "needsReview": true,
+      "explanation": "This is your opinion: choose one method and give a reason from pp.24–25.",
+      "source": {
+        "pages": [
+          24,
+          25,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q1"
+    },
+    {
+      "id": "his-elements-of-democracy-2-q1",
+      "lessonId": "his-elements-of-democracy-2",
+      "type": "fill_blank",
+      "prompt": "Elected representatives are answerable to the ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "people",
+      "accept": [
+        "citizens",
+        "voters"
+      ],
+      "explanation": "Elected representatives are accountable (answerable) to the people who elected them (p.25).",
+      "source": {
+        "pages": [
+          25,
+          27
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q2"
+    },
+    {
+      "id": "his-elements-of-democracy-2-q2",
+      "lessonId": "his-elements-of-democracy-2",
+      "type": "fill_blank",
+      "prompt": "____ means being responsible for one’s actions.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "Accountability",
+      "explanation": "The book’s definition (p.25).",
+      "source": {
+        "pages": [
+          25,
+          27
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q3"
+    },
+    {
+      "id": "his-elements-of-democracy-2-q3",
+      "lessonId": "his-elements-of-democracy-2",
+      "type": "mcq",
+      "prompt": "A minister in the government is found to be involved in illegal activities that can compromise the security of the country. What can the citizens do? (i) Vote the minister out of power in the next election. (ii) Voice their protest through the media. (iii) File a case against the minister in the Supreme Court.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "i, ii",
+        "ii and iii",
+        "i, iii",
+        "i, ii, iii"
+      ],
+      "answer": "i, ii, iii",
+      "explanation": "All three: people may not vote for them in the next elections; the media is a tool of direct participation; the judiciary can take them to task (pp.24–25).",
+      "source": {
+        "pages": [
+          24,
+          25,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q2"
+    },
+    {
+      "id": "his-elements-of-democracy-2-q4",
+      "lessonId": "his-elements-of-democracy-2",
+      "type": "mcq",
+      "prompt": "What does the Constitution do for accountability?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "It lays down rules and laws that governments have to follow",
+        "It controls the media",
+        "It chooses the representatives"
+      ],
+      "answer": "It lays down rules and laws that governments have to follow",
+      "explanation": "These laws act as a check on the misuse of power by the government (p.25).",
+      "source": {
+        "pages": [
+          25
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "his-elements-of-democracy-3-q1",
+      "lessonId": "his-elements-of-democracy-3",
+      "type": "true_false",
+      "prompt": "The police are responsible for the daily maintenance of law and order.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "explanation": "The police is responsible for maintaining law and order in the country on a daily basis (p.26).",
+      "source": {
+        "pages": [
+          26,
+          27
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q2"
+    },
+    {
+      "id": "his-elements-of-democracy-3-q2",
+      "lessonId": "his-elements-of-democracy-3",
+      "type": "true_false",
+      "prompt": "The Prime Minister of India is not answerable to the courts.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": false,
+      "explanation": "False: in a democracy all are equal in the eyes of the law, including leaders holding the highest positions in the government (p.26).",
+      "source": {
+        "pages": [
+          26,
+          27
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q3"
+    },
+    {
+      "id": "his-elements-of-democracy-3-q3",
+      "lessonId": "his-elements-of-democracy-3",
+      "type": "mcq",
+      "prompt": "Which is the main body created to resolve conflicts peacefully and impartially in a democracy?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "the judiciary",
+        "the Constitution",
+        "the Parliament",
+        "the police"
+      ],
+      "answer": "the judiciary",
+      "explanation": "The judiciary is the main body which deals with conflict resolution; the court is an impartial body (p.26).",
+      "source": {
+        "pages": [
+          26,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q3"
+    },
+    {
+      "id": "his-elements-of-democracy-3-q4",
+      "lessonId": "his-elements-of-democracy-3",
+      "type": "short_answer",
+      "prompt": "Why do conflicts arise in a society?",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Natural resources like land, fresh water, coal and petroleum are limited in supply, but the demands on them are increasing because of our steadily growing population. When resources are limited but the demands many, there is conflict between the people or groups who need them, for example states sharing river waters.",
+      "keywords": [
+        "limited",
+        "resources",
+        "demands",
+        "population"
+      ],
+      "explanation": "Conflict resolution, p.26.",
+      "source": {
+        "pages": [
+          26,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q3"
+    },
+    {
+      "id": "his-elements-of-democracy-3-q5",
+      "lessonId": "his-elements-of-democracy-3",
+      "type": "short_answer",
+      "prompt": "What are the steps taken by the government to prohibit discrimination in all forms?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "The Constitution makes special provision for the welfare of people who have been discriminated against for centuries: seats are reserved for them in Parliament, educational institutions and government undertakings (positive discrimination or affirmative action). Several laws have been passed prohibiting discrimination on the basis of caste, creed or colour.",
+      "keywords": [
+        "reserved",
+        "positive discrimination",
+        "laws",
+        "caste"
+      ],
+      "needsReview": true,
+      "explanation": "p.27 (the page photo is blurred; the wording is pieced together from two photos).",
+      "source": {
+        "pages": [
+          27,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q2"
+    },
+    {
+      "id": "his-elements-of-democracy-3-q6",
+      "lessonId": "his-elements-of-democracy-3",
+      "type": "short_answer",
+      "prompt": "Describe how democracies ensure equality and justice for all.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "All are treated equally, whether rich or poor, whatever their religious belief, gender, caste, race or language. All are equal in the eyes of the law, including leaders holding the highest positions. The Constitution makes special provisions, such as reserved seats, and laws prohibit discrimination.",
+      "keywords": [
+        "equal",
+        "eyes of the law",
+        "Constitution",
+        "reserved"
+      ],
+      "explanation": "Concern for equality and justice, pp.26–27.",
+      "source": {
+        "pages": [
+          26,
+          27,
+          28
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q3"
+    }
+  ]
+}

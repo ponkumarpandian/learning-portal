@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { BottomSheet } from '@/components/BottomSheet';
 import { Card } from '@/components/Card';
 import { Chip, ChipRow } from '@/components/Chip';
-import { ChunkyButton } from '@/components/ChunkyButton';
+import { ChunkyButton, ChunkyLink } from '@/components/ChunkyButton';
 import { ProgressBar } from '@/components/ProgressBar';
 import { TaraSays } from '@/components/SpeechBubble';
 import { Tara } from '@/components/Tara';
@@ -16,6 +16,8 @@ import { useClock } from '@/state/clock';
 import { useBundle } from '@/state/content';
 import { useSettings } from '@/state/settingsStore';
 import { KID_NAME } from '../copy';
+import { useDoneByDay } from '../week/useDoneByDay';
+import { pastDays, waitingAcross } from '../week/weekModel';
 import {
   buildToday,
   fmtRange,
@@ -90,6 +92,9 @@ export function TodayScreen() {
   const log = useTodayLog(parts.dateKey);
   const view = useMemo(() => buildToday(bundle, parts, log.done), [bundle, parts, log.done]);
   const subjectsById = useMemo(() => new Map(bundle.subjects.map((s) => [s.id, s])), [bundle.subjects]);
+  const earlier = useMemo(() => pastDays(bundle, parts.dateKey), [bundle, parts.dateKey]);
+  const earlierLog = useDoneByDay(earlier[0]?.dateKey ?? parts.dateKey, earlier.at(-1)?.dateKey ?? '');
+  const waitingEarlier = earlierLog ? waitingAcross(bundle, earlier, earlierLog) : 0;
 
   const start = (index: number) => navigate(`/lesson/${parts.dateKey}/${index}`);
   const nowIndex = view.upNow?.isNow ? view.upNow.entry.index : undefined;
@@ -237,6 +242,19 @@ export function TodayScreen() {
         onStart={start}
         upNowName={upNowName}
       />
+
+      {waitingEarlier > 0 && (
+        <Card className="waiting" aria-labelledby="waiting-h">
+          <h2 id="waiting-h">
+            <span aria-hidden="true">📅</span> {waitingEarlier} lesson{waitingEarlier === 1 ? '' : 's'} from
+            earlier days {waitingEarlier === 1 ? 'is' : 'are'} waiting
+          </h2>
+          <p className="muted">Missed a day? No worries. You can still do them from your week.</p>
+          <ChunkyLink to="/week" variant="soft" arrow>
+            Open my week
+          </ChunkyLink>
+        </Card>
+      )}
 
       <section aria-labelledby="trail-h">
         <div className="sec-head">

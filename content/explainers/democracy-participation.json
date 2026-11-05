@@ -1,0 +1,122 @@
+{
+  "id": "democracy-participation",
+  "subject": "history",
+  "title": "The four elements, and taking part",
+  "source": {
+    "pages": [
+      24,
+      25
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Participation and collective decision-making",
+          "Accountability",
+          "Conflict resolution",
+          "Concern for equality and justice"
+        ],
+        "arrows": false,
+        "label": "Key elements, p.24"
+      },
+      "narration": "A democracy has certain key elements which make it the most preferred form of government today: participation and collective decision-making, accountability, conflict resolution, and concern for equality and justice.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          24
+        ]
+      },
+      "checkpoint": {
+        "questionId": "democracy-participation-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "People elect a representative",
+          "The representative acts for them in the government"
+        ],
+        "highlight": "all",
+        "label": "Elections, p.24"
+      },
+      "narration": "In a democracy, there is a free and fair system of election. People elect the person whom they feel understands their problems the best, and this person acts as their representative.",
+      "minDuration": 11,
+      "source": {
+        "pages": [
+          24
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Discussions",
+          "Debates",
+          "Speaking out through the media",
+          "Protest marches",
+          "Rallies"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "Direct participation, p.24"
+      },
+      "narration": "But participation goes beyond elections. Citizens directly take part in, and influence, government decisions through discussions, debates, speaking out through the media, protest marches and rallies.",
+      "minDuration": 12,
+      "source": {
+        "pages": [
+          24,
+          25
+        ]
+      },
+      "checkpoint": {
+        "questionId": "democracy-participation-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "democracy-participation-cp1",
+      "type": "mcq",
+      "prompt": "Which is one of the key elements of a democracy?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Conflict resolution",
+        "Oppression"
+      ],
+      "answer": "Conflict resolution",
+      "hints": [
+        "Look at the third box."
+      ],
+      "explanation": "Conflict resolution is one of the four key elements (p.24).",
+      "source": {
+        "pages": [
+          24
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "democracy-participation-cp2",
+      "type": "true_false",
+      "prompt": "Debates and rallies are ways citizens directly participate.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "hints": [
+        "They are in the list."
+      ],
+      "explanation": "Through discussions, debates, the media, protest marches and rallies (p.24).",
+      "source": {
+        "pages": [
+          24
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

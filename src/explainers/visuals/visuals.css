@@ -8,7 +8,8 @@
   .lr,
   .nl,
   .fb,
-  .dj {
+  .dj,
+  .fc {
     position: relative;
     width: 100%;
     color: var(--ink);
@@ -17,7 +18,8 @@
   .lr-svg,
   .nl-svg,
   .fb-svg,
-  .dj-svg {
+  .dj-svg,
+  .fc-svg {
     display: block;
     width: 100%;
     height: auto;
@@ -668,6 +670,29 @@
     fill: var(--gold);
     stroke: var(--gold-d);
     stroke-width: 3;
+  }
+
+  /* ---------- FlowChart ---------- */
+  .fc-box {
+    fill: var(--surface2);
+    stroke: var(--line);
+    stroke-width: 3;
+  }
+  .fc-box.is-on {
+    fill: color-mix(in srgb, var(--s) 22%, var(--surface));
+    stroke: var(--s);
+    stroke-width: 5;
+  }
+  .fc-text {
+    font: 700 22px/1 var(--font-display);
+    fill: var(--ink);
+  }
+  .fc-arrow {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   /* ---------- /kit gallery (dev only) ---------- */
