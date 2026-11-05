@@ -1,0 +1,132 @@
+{
+  "id": "digestion-enzymes",
+  "subject": "biology",
+  "title": "Digestion in humans: enzymes",
+  "source": {
+    "pages": [
+      48,
+      52
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [],
+        "label": "Enzymes"
+      },
+      "narration": "Enzymes are proteins in nature, and they act as catalysts. Digestion is brought about by digestive juices containing enzymes.",
+      "minDuration": 9
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [
+          "mouth",
+          "stomach"
+        ],
+        "label": "Table 4.2"
+      },
+      "narration": "In the mouth, saliva amylase turns starch into sugars. In the stomach, gastric juice pepsin turns proteins into peptides.",
+      "minDuration": 10,
+      "checkpoint": {
+        "questionId": "digestion-enzymes-cp1"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [
+          "pancreas",
+          "small-intestine"
+        ],
+        "label": "Table 4.2"
+      },
+      "narration": "The pancreas makes three enzymes. Pancreatic amylase turns starch into maltose. Trypsin turns proteins into peptides. Lipase turns fats into fatty acids. In the small intestine, intestinal juice turns them into simple sugars and amino acids.",
+      "minDuration": 16,
+      "checkpoint": {
+        "questionId": "digestion-enzymes-cp2"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [],
+        "label": "Investigation 4.2"
+      },
+      "narration": "Try the iodine test. Tube A has potato and water. Tube B has potato, water and amylase. After 30 minutes, add iodine. Tube A turns blue-black because of the starch. Tube B does not change colour, because amylase digested the starch.",
+      "minDuration": 15,
+      "checkpoint": {
+        "questionId": "digestion-enzymes-cp3"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "digestion-enzymes-cp1",
+      "type": "mcq",
+      "prompt": "Pepsin in gastric juice acts on",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Proteins",
+        "Starch",
+        "Fats"
+      ],
+      "answer": "Proteins",
+      "hints": [
+        "It makes peptides."
+      ],
+      "explanation": "Gastric juice (pepsin): proteins → peptides.",
+      "source": {
+        "pages": [
+          52
+        ]
+      }
+    },
+    {
+      "id": "digestion-enzymes-cp2",
+      "type": "mcq",
+      "prompt": "Which enzyme turns fats into fatty acids?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "Lipase",
+        "Trypsin",
+        "Amylase"
+      ],
+      "answer": "Lipase",
+      "hints": [
+        "It comes from the pancreas."
+      ],
+      "explanation": "Lipase: fats → fatty acids.",
+      "source": {
+        "pages": [
+          52
+        ]
+      }
+    },
+    {
+      "id": "digestion-enzymes-cp3",
+      "type": "mcq",
+      "prompt": "Why did tube B not change colour?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "Amylase digested the starch",
+        "It had no water",
+        "Iodine was not added"
+      ],
+      "answer": "Amylase digested the starch",
+      "hints": [
+        "Iodine turns STARCH blue-black."
+      ],
+      "explanation": "In test tube B, digestion of starch occurred by the enzyme amylase.",
+      "source": {
+        "pages": [
+          52
+        ]
+      }
+    }
+  ]
+}

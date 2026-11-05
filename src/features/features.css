@@ -33,13 +33,22 @@
     margin-top: var(--sp-3);
   }
 
-  /* Week placeholder */
+  /* Week (§15.1): day bubbles are buttons; the picked day's lessons show in .wday below */
   .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 6px;
+    margin-top: var(--sp-4);
+  }
+  .days > li {
+    min-width: 0;
   }
   .day {
+    width: 100%;
+    height: calc(100% - var(--ledge-h-sm));
+    font: inherit;
+    color: var(--ink);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,12 +79,98 @@
     background: var(--go-d);
     color: var(--on-go);
   }
-  .day.today {
+  .day.picked {
     border-color: var(--go);
     background: var(--tab-on);
   }
-  .day.today .d-name {
+  .day.today .d-name,
+  .day.picked .d-name {
     color: var(--ink);
+  }
+  .day:active {
+    transform: translateY(2px);
+  }
+  /* "2 to catch up" — soft amber, never red */
+  .d-wait {
+    min-width: calc(24 * var(--px));
+    height: calc(24 * var(--px));
+    padding: 0 4px;
+    border-radius: var(--r-pill);
+    display: grid;
+    place-items: center;
+    border: 2px solid var(--catch);
+    background: var(--hint-bg);
+    color: var(--hint-ink);
+    font: 700 var(--fs-xs) / 1 var(--font-display);
+    box-shadow: 0 2px 0 var(--catch-d);
+  }
+
+  .wday {
+    margin-top: var(--sp-5);
+  }
+  .wday > p {
+    margin-top: var(--sp-2);
+  }
+  .wrows {
+    display: grid;
+    gap: var(--sp-3);
+    margin-top: var(--sp-4);
+  }
+  .wrow {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--sp-3);
+    width: 100%;
+    min-height: calc(72 * var(--px));
+    padding: 0.5rem 0.9rem 0.5rem 0.6rem;
+    border: 3px solid var(--line);
+    border-radius: var(--r-option);
+    background: var(--surface);
+    color: var(--ink);
+    font: inherit;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 0 var(--ledge);
+    margin-bottom: 4px;
+  }
+  .wrow:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 var(--ledge);
+  }
+  .wrow-badge {
+    width: calc(52 * var(--px));
+    height: calc(52 * var(--px));
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    background: color-mix(in srgb, var(--s, var(--a, var(--fun))) 30%, var(--surface));
+    box-shadow: 0 3px 0 var(--sd, var(--ad, var(--ledge)));
+  }
+  .wrow-text {
+    display: grid;
+    min-width: 0;
+  }
+  .wrow-text b {
+    font: 600 var(--fs-lg) / 1.2 var(--font-display);
+  }
+  .wrow-state {
+    font: 600 var(--fs-sm) / 1.2 var(--font-display);
+    white-space: nowrap;
+  }
+  .wrow.is-catchup {
+    border-color: var(--catch);
+    background: color-mix(in srgb, var(--catch) 14%, var(--surface));
+    box-shadow: 0 4px 0 var(--catch-d);
+  }
+  .wrow.is-done .wrow-state {
+    color: var(--ink-soft);
+  }
+  .wrow.is-locked,
+  .wrow.is-soon {
+    background: var(--surface2);
   }
   .dots {
     display: flex;

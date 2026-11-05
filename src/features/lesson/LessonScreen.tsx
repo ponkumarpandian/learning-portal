@@ -15,7 +15,7 @@ import { listLessonProgress } from '@/db/repos';
 import { fromWallTime, zonedParts } from '@/engine/clock';
 import { useClock } from '@/state/clock';
 import { useBundle } from '@/state/content';
-import { fmtRange, fmtTime, weekdayName } from '../today/todayModel';
+import { catchUpFrom, fmtRange, fmtTime, weekdayName } from '../today/todayModel';
 import { LessonRunner } from './LessonRunner';
 import {
   pickLesson,
@@ -78,11 +78,7 @@ export function LessonScreen() {
       <Message
         eyebrow={eyebrow}
         title="This one’s for another day 🙂"
-        line={
-          res.when === 'future'
-            ? `${name} opens on ${day} at ${fmtTime(res.slot.start)}. Today’s trail has stones waiting for you!`
-            : 'That day is over. Today’s trail has fresh stones waiting for you!'
-        }
+        line={`${name} opens on ${day} at ${fmtTime(res.slot.start)}. Today’s trail has stones waiting for you!`}
       />
     );
   }
@@ -106,6 +102,7 @@ function LessonLoader({
   subject,
   slotIndex,
   slotKey,
+  past,
   date,
 }: Extract<ReturnType<typeof resolveSlot>, { kind: 'lesson' }> & { date: string }) {
   const bundle = useBundle();
@@ -140,7 +137,7 @@ function LessonLoader({
     };
   }, [bundle, subject.id, slotKey, slot]);
 
-  const eyebrow = `${subject.emoji} ${subject.name} · ${fmtRange(slot)}`;
+  const eyebrow = `${subject.emoji} ${subject.name} · ${past ? catchUpFrom(date) : fmtRange(slot)}`;
   if (!ready) {
     return (
       <Screen labelledBy="lesson-h">
@@ -176,6 +173,7 @@ function LessonLoader({
       slot={slot}
       slotIndex={slotIndex}
       date={date}
+      past={past}
       initial={initial}
       lastDone={picked.lastDone}
     />

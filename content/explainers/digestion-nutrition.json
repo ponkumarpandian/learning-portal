@@ -1,0 +1,121 @@
+{
+  "id": "digestion-nutrition",
+  "subject": "biology",
+  "title": "Nutrition and its five steps",
+  "source": {
+    "pages": [
+      48,
+      49
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [],
+        "label": "Nutrition"
+      },
+      "narration": "The food we eat consists of a number of nutrients. A nutrient is a component of food that provides nourishment to the body for its growth and maintenance. Carbohydrates and fats give us energy. Proteins help us grow. Minerals and vitamins protect our body.",
+      "minDuration": 14
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "mouth",
+        "food": "mouth",
+        "label": "Step 1: Ingestion"
+      },
+      "narration": "In the human body, nutrition has five steps. Step one is ingestion: the process by which food is taken in.",
+      "minDuration": 9,
+      "checkpoint": {
+        "questionId": "digestion-nutrition-cp1"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [
+          "mouth",
+          "stomach",
+          "small-intestine"
+        ],
+        "food": "stomach",
+        "label": "Step 2: Digestion"
+      },
+      "narration": "Step two is digestion: breaking down complex food into simpler absorbable molecules, so that it is easily absorbed in our body.",
+      "minDuration": 10
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "small-intestine",
+        "food": "small-intestine",
+        "label": "Steps 3 and 4"
+      },
+      "narration": "Step three is absorption: the digested food is taken up by the cells of our body. Step four is assimilation: the absorbed food is used by living cells for growth and other purposes.",
+      "minDuration": 12,
+      "checkpoint": {
+        "questionId": "digestion-nutrition-cp2"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [
+          "large-intestine",
+          "anus"
+        ],
+        "food": "anus",
+        "label": "Step 5: Egestion"
+      },
+      "narration": "Step five is egestion: the process by which undigested food is removed from the body.",
+      "minDuration": 9
+    }
+  ],
+  "questions": [
+    {
+      "id": "digestion-nutrition-cp1",
+      "type": "mcq",
+      "prompt": "Taking food in is called",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Ingestion",
+        "Egestion",
+        "Absorption"
+      ],
+      "answer": "Ingestion",
+      "hints": [
+        "\"In\" — food goes in."
+      ],
+      "explanation": "Ingestion: the process by which food is taken in by the organisms.",
+      "source": {
+        "pages": [
+          49
+        ]
+      }
+    },
+    {
+      "id": "digestion-nutrition-cp2",
+      "type": "mcq",
+      "prompt": "The absorbed food is used by living cells for growth. This step is",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "Assimilation",
+        "Digestion",
+        "Ingestion"
+      ],
+      "answer": "Assimilation",
+      "hints": [
+        "It comes after absorption."
+      ],
+      "explanation": "Assimilation: the absorbed food is utilized by living cells.",
+      "source": {
+        "pages": [
+          49
+        ]
+      }
+    }
+  ]
+}

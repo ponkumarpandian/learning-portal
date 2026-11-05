@@ -7,7 +7,7 @@
  */
 import { differenceInCalendarDays, parseISO } from 'date-fns';
 import { STUDY_KINDS, toMinutes, type ContentBundle, type Slot, type Subject } from '@/content';
-import type { ZonedParts } from '@/engine/clock';
+import { fromWallTime, zonedParts, type ZonedParts } from '@/engine/clock';
 
 /** Slots studied in the app (stones). Activities and offline tasks are rest stops; breaks are off the trail. */
 const STONE_KINDS = new Set<Slot['kind']>([...STUDY_KINDS, 'test', 'review']);
@@ -169,3 +169,10 @@ const WEEKDAY_NAMES: Record<ZonedParts['weekday'], string> = {
   sun: 'Sunday',
 };
 export const weekdayName = (w: ZonedParts['weekday']) => WEEKDAY_NAMES[w];
+
+/** "2026-11-02" → its IST weekday. */
+export const weekdayOf = (dateKey: string): ZonedParts['weekday'] =>
+  zonedParts(fromWallTime(dateKey, '12:00')).weekday;
+
+/** "Catch up from Monday": the lesson eyebrow for a missed slot opened from the Week view. */
+export const catchUpFrom = (dateKey: string) => `Catch up from ${weekdayName(weekdayOf(dateKey))}`;

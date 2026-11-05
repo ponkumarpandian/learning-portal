@@ -80,7 +80,9 @@ describe('resolveSlot (§5.2)', () => {
     // [date, slot, today, kind]
     ['2026-11-06', String(FRI_CHEM), '2026-11-06', 'lesson'], // Friday chemistry, today
     ['2026-11-07', '2', '2026-11-06', 'other_day'], // tomorrow is locked
-    ['2026-11-05', '1', '2026-11-06', 'other_day'], // yesterday
+    ['2026-11-05', '1', '2026-11-06', 'lesson'], // yesterday's physics: open, to catch up
+    ['2026-10-26', '3', '2026-11-06', 'lesson'], // last week's Monday physics: still open
+    ['2026-11-01', '0', '2026-11-06', 'coming_soon'], // last Sunday's revise is still "soon"
     ['2026-11-08', '0', '2026-11-08', 'coming_soon'], // Sunday revise (4 subjects)
     ['2026-11-08', '1', '2026-11-08', 'coming_soon'], // Sunday test
     ['2026-11-07', '7', '2026-11-07', 'lesson'], // Saturday English fix-it → plays the next lesson
@@ -94,7 +96,13 @@ describe('resolveSlot (§5.2)', () => {
 
   it('knows past from future, and builds the slot key', () => {
     expect(resolveSlot(bundle, '2026-11-07', '2', '2026-11-06')).toMatchObject({ when: 'future' });
-    expect(resolveSlot(bundle, '2026-11-05', '1', '2026-11-06')).toMatchObject({ when: 'past' });
+    expect(resolveSlot(bundle, '2026-11-05', '1', '2026-11-06')).toMatchObject({
+      kind: 'lesson',
+      past: true,
+      slotKey: '2026-11-05#1',
+      subject: { id: 'physics' },
+    });
+    expect(resolveSlot(bundle, '2026-11-06', '4', '2026-11-06')).toMatchObject({ past: false });
     expect(resolveSlot(bundle, '2026-11-06', '4', '2026-11-06')).toMatchObject({
       slotKey: '2026-11-06#4',
       slotIndex: 4,
@@ -131,7 +139,7 @@ describe('pickLesson (§9.2)', () => {
 
   it('picks the sample physics lesson, and nothing for a subject with no chapters', () => {
     expect(pickLesson(bundle, 'physics', 'x', [])?.lesson.id).toBe('phy-light-1');
-    expect(pickLesson(bundle, 'maths', 'x', [])).toBeUndefined();
+    expect(pickLesson(bundle, 'english', 'x', [])).toBeUndefined();
     expect(pickLesson(bundle, 'physics', 'x', [progress('phy-light-1', 'done', 'y')])).toBeUndefined();
   });
 

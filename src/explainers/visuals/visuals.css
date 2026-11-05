@@ -7,7 +7,8 @@
   .pb,
   .lr,
   .nl,
-  .fb {
+  .fb,
+  .dj {
     position: relative;
     width: 100%;
     color: var(--ink);
@@ -15,7 +16,8 @@
   .pb-svg,
   .lr-svg,
   .nl-svg,
-  .fb-svg {
+  .fb-svg,
+  .dj-svg {
     display: block;
     width: 100%;
     height: auto;
@@ -629,6 +631,43 @@
   }
   .fb-result {
     font-size: 28px;
+  }
+
+  /* ---------- DigestiveJourney ---------- */
+  /* highlighted organs get a thick subject-colour edge and a light tint, so the ink text stays readable */
+  .dj-box {
+    fill: var(--surface2);
+    stroke: var(--line);
+    stroke-width: 3;
+  }
+  .dj-box.is-on {
+    fill: color-mix(in srgb, var(--s) 22%, var(--surface));
+    stroke: var(--s);
+    stroke-width: 5;
+  }
+  .dj-text {
+    font: 700 22px/1 var(--font-display);
+    fill: var(--ink);
+  }
+  .dj-text.is-small {
+    font-size: 18px;
+  }
+  .dj-arrow {
+    fill: none;
+    stroke: var(--ink-soft);
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .dj-join {
+    stroke: var(--ink-soft);
+    stroke-width: 3;
+    stroke-dasharray: 6 6;
+  }
+  .dj-food {
+    fill: var(--gold);
+    stroke: var(--gold-d);
+    stroke-width: 3;
   }
 
   /* ---------- /kit gallery (dev only) ---------- */

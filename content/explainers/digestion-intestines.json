@@ -1,0 +1,106 @@
+{
+  "id": "digestion-intestines",
+  "subject": "biology",
+  "title": "Small intestine, large intestine, liver and pancreas",
+  "source": {
+    "pages": [
+      51,
+      52
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "small-intestine",
+        "food": "small-intestine"
+      },
+      "narration": "The small intestine is a long coiled tube. Its intestinal juice digests all types of food into simple forms like glucose, amino acids and fatty acids. Finger-like villi on its inner surface absorb them.",
+      "minDuration": 14,
+      "checkpoint": {
+        "questionId": "digestion-intestines-cp1"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [
+          "liver",
+          "pancreas"
+        ],
+        "food": "small-intestine"
+      },
+      "narration": "The liver is the largest gland in the body. It secretes bile juice, stored in the gall bladder. Bile helps in the digestion of fats. The pancreas secretes insulin, which keeps the sugar level in the blood normal.",
+      "minDuration": 14
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "large-intestine",
+        "food": "large-intestine",
+        "foodLabel": "faeces"
+      },
+      "narration": "The large intestine does not play any role in digestion. It absorbs water from the undigested food. The semi-solid undigested food, called faeces, passes into the rectum.",
+      "minDuration": 12,
+      "checkpoint": {
+        "questionId": "digestion-intestines-cp2"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "anus",
+        "food": "anus",
+        "foodLabel": "faeces"
+      },
+      "narration": "The rectum opens into the anus, through which faeces are expelled out of the body. This is called egestion.",
+      "minDuration": 9
+    }
+  ],
+  "questions": [
+    {
+      "id": "digestion-intestines-cp1",
+      "type": "mcq",
+      "prompt": "Where are the villi?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Small intestine",
+        "Stomach",
+        "Oesophagus"
+      ],
+      "answer": "Small intestine",
+      "hints": [
+        "They absorb digested food."
+      ],
+      "explanation": "The small intestine has finger-like projections called villi.",
+      "source": {
+        "pages": [
+          51
+        ]
+      }
+    },
+    {
+      "id": "digestion-intestines-cp2",
+      "type": "mcq",
+      "prompt": "What does the large intestine absorb?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Water",
+        "Proteins",
+        "Bile"
+      ],
+      "answer": "Water",
+      "hints": [
+        "It does not digest food."
+      ],
+      "explanation": "It helps in absorbing water from the undigested food.",
+      "source": {
+        "pages": [
+          51
+        ]
+      }
+    }
+  ]
+}

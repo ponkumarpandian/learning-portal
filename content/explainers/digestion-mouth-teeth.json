@@ -1,0 +1,115 @@
+{
+  "id": "digestion-mouth-teeth",
+  "subject": "biology",
+  "title": "The alimentary canal, mouth and teeth",
+  "source": {
+    "pages": [
+      49,
+      50
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [
+          "mouth",
+          "oesophagus",
+          "stomach",
+          "small-intestine",
+          "large-intestine",
+          "anus"
+        ],
+        "label": "Alimentary canal"
+      },
+      "narration": "Our digestive system has two parts: the alimentary canal and the digestive glands. The alimentary canal is a long, muscular and coiled tube. It starts from the mouth and ends at the anus.",
+      "minDuration": 13
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [
+          "salivary-glands",
+          "liver",
+          "pancreas"
+        ],
+        "label": "Digestive glands"
+      },
+      "narration": "The digestive glands are the salivary glands, the liver and the pancreas. The alimentary canal along with these glands is called the digestive system.",
+      "minDuration": 11,
+      "checkpoint": {
+        "questionId": "digestion-mouth-teeth-cp1"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "mouth",
+        "food": "mouth",
+        "label": "Mouth",
+        "foodLabel": "food"
+      },
+      "narration": "The mouth contains the tongue, teeth and salivary glands. Digestion starts in the mouth itself. Food is chewed, or masticated, by the teeth.",
+      "minDuration": 10
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "mouth",
+        "food": "mouth",
+        "label": "Four kinds of teeth"
+      },
+      "narration": "There are four main kinds of teeth. The front four in each jaw are incisors, for biting and cutting. Then the sharp canines, two in each jaw, for tearing. Premolars and molars grind and crush the food. Each jaw in an adult has sixteen teeth.",
+      "minDuration": 16,
+      "checkpoint": {
+        "questionId": "digestion-mouth-teeth-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "digestion-mouth-teeth-cp1",
+      "type": "mcq",
+      "prompt": "Which of these is NOT a digestive gland?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Stomach",
+        "Liver",
+        "Pancreas"
+      ],
+      "answer": "Stomach",
+      "hints": [
+        "Three glands: salivary glands, liver, pancreas."
+      ],
+      "explanation": "The stomach is part of the alimentary canal, not a gland.",
+      "source": {
+        "pages": [
+          49
+        ]
+      }
+    },
+    {
+      "id": "digestion-mouth-teeth-cp2",
+      "type": "mcq",
+      "prompt": "Which teeth are meant for tearing the food?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Canines",
+        "Incisors",
+        "Molars"
+      ],
+      "answer": "Canines",
+      "hints": [
+        "They are sharp, two in each jaw."
+      ],
+      "explanation": "Canines are sharp and meant for tearing the food.",
+      "source": {
+        "pages": [
+          50
+        ]
+      }
+    }
+  ]
+}

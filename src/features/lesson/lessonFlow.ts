@@ -34,16 +34,32 @@ import { slotMinutes } from '../today/todayModel';
 
 export type SlotResolution =
   | { kind: 'invalid' }
-  | { kind: 'other_day'; when: 'past' | 'future'; slot: Slot; subject?: Subject }
+  | { kind: 'other_day'; when: 'future'; slot: Slot; subject?: Subject }
   | { kind: 'coming_soon'; slot: Slot; subject?: Subject }
-  | { kind: 'lesson'; slot: Slot; subject: Subject; slotIndex: number; slotKey: string };
+  | {
+      kind: 'lesson';
+      slot: Slot;
+      subject: Subject;
+      slotIndex: number;
+      slotKey: string;
+      /** a slot from an earlier day, opened to catch up on a missed lesson (Week view) */
+      past: boolean;
+    };
 
 /** Slot kinds that play the lesson flow (fix-it's own part arrives in Phase 4: it plays the next lesson). */
 const LESSON_KINDS = new Set<Slot['kind']>(['lesson', 'homework_lesson', 'fixit']);
 
+/** Does this slot open the lesson flow (so it can also be caught up on from an earlier day)? */
+export const isPlayable = (slot: Slot): boolean =>
+  LESSON_KINDS.has(slot.kind) &&
+  !!(slot.subject ?? (slot.subjects?.length === 1 ? slot.subjects[0] : undefined));
+
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 
-/** `/lesson/:date/:slot` → what to show. Only today's slots are playable (future days are locked). */
+/**
+ * `/lesson/:date/:slot` → what to show. Today's and earlier days' slots are playable, so a missed day
+ * can be caught up on from the Week view (parent request, DECISIONS 2026-11-04). Future days are locked.
+ */
 export function resolveSlot(
   b: Pick<ContentBundle, 'timetable' | 'subjects'>,
   date: string,
@@ -62,10 +78,10 @@ export function resolveSlot(
   if (!slot) return { kind: 'invalid' };
   const id = slot.subject ?? (slot.subjects?.length === 1 ? slot.subjects[0] : undefined);
   const subject = id ? getSubject(b, id) : undefined;
-  if (date !== todayKey)
-    return { kind: 'other_day', when: date < todayKey ? 'past' : 'future', slot, subject };
+  if (date > todayKey) return { kind: 'other_day', when: 'future', slot, subject };
   if (!LESSON_KINDS.has(slot.kind) || !subject) return { kind: 'coming_soon', slot, subject };
-  return { kind: 'lesson', slot, subject, slotIndex, slotKey: `${date}#${slotIndex}` };
+  const past = date < todayKey;
+  return { kind: 'lesson', slot, subject, slotIndex, slotKey: `${date}#${slotIndex}`, past };
 }
 
 /* ---------- picking the lesson (§9.2) ---------- */

@@ -1,0 +1,103 @@
+{
+  "id": "digestion-stomach",
+  "subject": "biology",
+  "title": "Saliva, oesophagus and stomach",
+  "source": {
+    "pages": [
+      50,
+      51
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": [
+          "mouth",
+          "salivary-glands"
+        ],
+        "food": "mouth"
+      },
+      "narration": "The tongue mixes the chewed food with saliva. Three pairs of salivary glands make saliva. Saliva has an enzyme called amylase, also called ptyalin, which breaks starch into simple sugar. It also kills germs.",
+      "minDuration": 14,
+      "checkpoint": {
+        "questionId": "digestion-stomach-cp1"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "oesophagus",
+        "food": "mouth",
+        "foodLabel": "bolus"
+      },
+      "narration": "The food mixed with saliva is called bolus. The oesophagus, or food pipe, pushes it down to the stomach by peristalsis: a wave of muscles contracting one after the other. The oesophagus has no role in digestion.",
+      "minDuration": 14,
+      "steps": [
+        {
+          "at": 5,
+          "props": {
+            "food": "oesophagus"
+          }
+        }
+      ]
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "stomach",
+        "food": "stomach",
+        "foodLabel": "chyme"
+      },
+      "narration": "The stomach is a muscular, J-shaped bag. It churns the food into a semi-solid paste. It secretes gastric juice and hydrochloric acid. The acid kills germs. Proteins are partly digested here. After about 4 to 5 hours, the partly digested food, called chyme, passes on to the small intestine.",
+      "minDuration": 18,
+      "checkpoint": {
+        "questionId": "digestion-stomach-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "digestion-stomach-cp1",
+      "type": "fill_blank",
+      "prompt": "The enzyme in saliva is called ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "amylase",
+      "accept": [
+        "ptyalin"
+      ],
+      "hints": [
+        "It acts on starch."
+      ],
+      "explanation": "Saliva contains an enzyme called amylase (also called ptyalin).",
+      "source": {
+        "pages": [
+          50
+        ]
+      }
+    },
+    {
+      "id": "digestion-stomach-cp2",
+      "type": "mcq",
+      "prompt": "What kills the germs in the food in the stomach?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "Hydrochloric acid",
+        "Bile",
+        "Insulin"
+      ],
+      "answer": "Hydrochloric acid",
+      "hints": [
+        "The stomach secretes gastric juice and an acid."
+      ],
+      "explanation": "The hydrochloric acid kills the germs which may be present in the food.",
+      "source": {
+        "pages": [
+          51
+        ]
+      }
+    }
+  ]
+}

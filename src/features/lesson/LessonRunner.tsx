@@ -29,7 +29,7 @@ import { LessonVideo, VIDEO_UNAVAILABLE } from '@/features/video';
 import { useClock } from '@/state/clock';
 import { useBundle } from '@/state/content';
 import { useMascotName } from '@/state/settingsStore';
-import { fmtRange, fmtTime } from '../today/todayModel';
+import { catchUpFrom, fmtRange, fmtTime } from '../today/todayModel';
 import {
   EYE_BREAK_SEC,
   answerHomework,
@@ -81,6 +81,8 @@ export interface LessonRunnerProps {
   slot: Slot;
   slotIndex: number;
   date: string;
+  /** a slot from an earlier day (catch-up from the Week view) */
+  past?: boolean;
   initial: Position;
   lastDone?: Lesson;
 }
@@ -110,6 +112,7 @@ export function LessonRunner({
   slot,
   slotIndex,
   date,
+  past = false,
   initial,
   lastDone,
 }: LessonRunnerProps) {
@@ -502,7 +505,7 @@ export function LessonRunner({
     <Screen labelledBy="lesson-h" className="lesson">
       <div id="lesson-top" className="lesson-top" style={vars}>
         <FocusHeader
-          eyebrow={`${subject.emoji} ${subject.name} · ${fmtRange(slot)}`}
+          eyebrow={`${subject.emoji} ${subject.name} · ${past ? catchUpFrom(date) : fmtRange(slot)}`}
           title={lesson.title}
           titleId="lesson-h"
         />

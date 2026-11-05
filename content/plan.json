@@ -12,7 +12,7 @@
     "physics": ["phy-light"],
     "chemistry": ["che-matter"],
     "maths": ["mat-fractions"],
-    "biology": [],
+    "biology": ["bio-digestive-system"],
     "english": [],
     "history": [],
     "geography": []

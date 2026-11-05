@@ -2,6 +2,7 @@ import { cleanup, render, screen } from '@testing-library/react';
 import { loadContent } from '@/content';
 import { activeProps } from '../timeline';
 import { VISUALS } from './index';
+import { describeJourney, layoutJourney, parseJourney } from './digestiveJourneyLayout';
 import { layoutFractionBar, parseFractionBar } from './fractionBarLayout';
 import { liquidFill } from './particles/layout';
 import { SINGLE_VESSELS, parseProps, singleLayout } from './particles/scene';
@@ -201,5 +202,62 @@ describe('FractionBar', () => {
     expect(screen.getByText('4/9')).toBeInTheDocument();
     expect(screen.getByText('+')).toBeInTheDocument();
     expect(screen.getByText('6/9 = 2/3')).toBeInTheDocument();
+  });
+});
+
+describe('DigestiveJourney', () => {
+  const DJ = VISUALS.DigestiveJourney!;
+
+  it('draws the canal top to bottom, mouth first and anus last, with three glands', () => {
+    const l = layoutJourney(parseJourney({}));
+    expect(l.canal.map((b) => b.id)).toEqual([
+      'mouth',
+      'oesophagus',
+      'stomach',
+      'small-intestine',
+      'large-intestine',
+      'anus',
+    ]);
+    expect(l.canal.every((b, i) => i === 0 || b.y > l.canal[i - 1]!.y)).toBe(true);
+    expect(l.glands.map((g) => g.id)).toEqual(['salivary-glands', 'liver', 'pancreas']);
+    expect(l.arrows).toHaveLength(5);
+  });
+
+  it('highlights organs and puts the food dot in its organ', () => {
+    const l = layoutJourney(parseJourney({ highlight: ['stomach', 'liver'], food: 'stomach' }));
+    expect(l.canal.filter((b) => b.on).map((b) => b.id)).toEqual(['stomach']);
+    expect(l.glands.filter((b) => b.on).map((b) => b.id)).toEqual(['liver']);
+    const stomach = l.canal.find((b) => b.id === 'stomach')!;
+    expect(l.food!.y).toBeGreaterThan(stomach.y);
+    expect(l.food!.y).toBeLessThan(stomach.y + stomach.h);
+  });
+
+  it('"all" lights every organ; junk is ignored', () => {
+    expect(parseJourney({ highlight: 'all' }).highlight).toHaveLength(9);
+    const s = parseJourney({ highlight: ['heart', 3, 'mouth'], food: 'liver' });
+    expect(s.highlight).toEqual(['mouth']);
+    expect(s.food).toBeUndefined(); // food travels only through the canal
+  });
+
+  it('reads the scene aloud and shows the chips', () => {
+    render(
+      <DJ
+        props={{ highlight: 'oesophagus', food: 'oesophagus', foodLabel: 'bolus', label: 'Peristalsis' }}
+        reduced
+      />,
+    );
+    expect(screen.getByRole('img')).toHaveAccessibleName(
+      describeJourney(
+        parseJourney({
+          highlight: 'oesophagus',
+          food: 'oesophagus',
+          foodLabel: 'bolus',
+          label: 'Peristalsis',
+        }),
+      ),
+    );
+    expect(screen.getByRole('img')).toHaveAccessibleName(/food is in the oesophagus \(bolus\)/);
+    expect(screen.getByText('Peristalsis')).toBeInTheDocument();
+    expect(screen.getByText('Small intestine')).toBeInTheDocument();
   });
 });

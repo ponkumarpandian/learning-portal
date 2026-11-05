@@ -1,0 +1,81 @@
+{
+  "id": "digestion-healthy-habits",
+  "subject": "biology",
+  "title": "Indigestion and healthy food habits",
+  "source": {
+    "pages": [
+      53
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "stomach",
+        "label": "Indigestion"
+      },
+      "narration": "Indigestion, also called dyspepsia, is impaired digestion. It causes discomfort and pain in the stomach. Signs are stomach pain, vomiting, gas, bloating and a burning feeling. If they do not go away, see your doctor right away.",
+      "minDuration": 14,
+      "checkpoint": {
+        "questionId": "digestion-healthy-habits-cp1"
+      }
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "stomach",
+        "label": "Causes"
+      },
+      "narration": "Indigestion can be caused by overeating or eating too fast, lying down soon after meals, and eating spicy, oily and fatty foods.",
+      "minDuration": 10
+    },
+    {
+      "visual": "DigestiveJourney",
+      "props": {
+        "highlight": "all",
+        "label": "Healthy food habits"
+      },
+      "narration": "Keep your digestive system happy. Eat a balanced diet. Eat clean, fresh, properly cooked food. Take green vegetables and fruits. Drink plenty of clean filtered water. Chew your food well, and eat at regular times.",
+      "minDuration": 14,
+      "checkpoint": {
+        "questionId": "digestion-healthy-habits-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "digestion-healthy-habits-cp1",
+      "type": "fill_blank",
+      "prompt": "Indigestion is also known as ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "dyspepsia",
+      "hints": [
+        "It is in brackets on p.53."
+      ],
+      "explanation": "Indigestion (also known as dyspepsia).",
+      "source": {
+        "pages": [
+          53
+        ]
+      }
+    },
+    {
+      "id": "digestion-healthy-habits-cp2",
+      "type": "true_false",
+      "prompt": "Chewing food well is a healthy food habit.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "hints": [
+        "Look at the list of healthy habits."
+      ],
+      "explanation": "\"Chew food well\" is one of the healthy food habits (p.53).",
+      "source": {
+        "pages": [
+          53
+        ]
+      }
+    }
+  ]
+}

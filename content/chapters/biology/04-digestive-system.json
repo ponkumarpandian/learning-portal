@@ -1,0 +1,3178 @@
+{
+  "id": "bio-digestive-system",
+  "subject": "biology",
+  "title": "Digestive System",
+  "order": 4,
+  "status": "approved",
+  "book": {
+    "title": "REPLACE_ME",
+    "publisher": "REPLACE_ME",
+    "chapterNo": 4
+  },
+  "sourceDir": "source/biology/04-digestive-system",
+  "parentNotes": [
+    "Pages imported: 48–57, the whole chapter (the PDF had the pages in reverse order; saved in book order as p048.jpg–p057.jpg). Approved straight away at your request.",
+    "No answer key is printed. Answers come from the chapter text (pp.48–53); four are marked needsReview (below).",
+    "Ex. I Q4 (needsReview): \"chewed boiled rice with iodine\" — answered \"No change in the colour\", reasoning from Investigation 4.2 (amylase digests starch). Some keys say blue-black; please check her teacher’s answer.",
+    "Ex. III Q2 (needsReview): \"Molar teeth are present in a human baby\" — answered False from \"At birth, a human infant has no teeth\" (p.50). Please check her teacher’s answer.",
+    "Ex. X Q3 (needsReview): \"The longest part of alimentary canal\" — answered small intestine; the pages call it \"a long coiled tube\" but never say \"longest\".",
+    "Ex. XIII Q6 (needsReview): book misprint — only Sonu’s observation is incorrect, but none of the printed options (a)–(d) says that. It is a short-answer question here, with the model answer \"Only Sonu’s\".",
+    "Ex. XII Column III is a set of line drawings (stomach, intestine, liver, head, oesophagus); the match question uses Columns I and II. The pictures are in the DigestiveJourney explainers.",
+    "The chapter title page’s book name is not shown — please fill in source/books.json (biology) and the \"book\" field here.",
+    "Video search words — lesson bio-digestive-system-1: \"steps of nutrition ingestion digestion absorption assimilation egestion class 6\"",
+    "Video search words — lesson bio-digestive-system-2: \"human digestive system alimentary canal class 6\", \"types of teeth incisors canines premolars molars\"",
+    "Video search words — lesson bio-digestive-system-3: \"saliva amylase peristalsis oesophagus class 6\", \"stomach gastric juice hydrochloric acid for kids\"",
+    "Video search words — lesson bio-digestive-system-4: \"small intestine villi large intestine class 6\", \"liver bile gall bladder pancreas for kids\"",
+    "Video search words — lesson bio-digestive-system-5: \"digestive enzymes amylase pepsin trypsin lipase class 6\", \"iodine test for starch potato\"",
+    "Video search words — lesson bio-digestive-system-6: \"indigestion causes symptoms healthy food habits for kids\""
+  ],
+  "lessons": [
+    {
+      "id": "bio-digestive-system-1",
+      "title": "Nutrition and its five steps",
+      "source": {
+        "pages": [
+          48,
+          49
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "digestion-nutrition"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Steps of nutrition in humans (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "bio-digestive-system-1-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "What is a nutrient?",
+          "emoji": "🥗",
+          "body": "\"A nutrient is a component of food that provides nourishment to the body for its growth and maintenance.\"",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "title": "The five major nutrients",
+          "emoji": "🍚",
+          "body": "Carbohydrates and fats provide energy. Proteins help our body to grow. Minerals and vitamins protect our body.",
+          "example": "Carbohydrates: rice, sugar, potato · Fats: oil, butter · Proteins: eggs, meat, pulses, cheese · Minerals: calcium, iodine, sodium · Vitamins: Vitamin D, Vitamin K",
+          "reveal": "Proteins act as building blocks of our body.",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "title": "What is nutrition?",
+          "emoji": "📘",
+          "body": "\"The process by which organisms obtain and use food is known as nutrition.\"",
+          "didYouKnow": "Plants synthesize their food. Animals obtain theirs.",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "title": "Five steps: ingestion and digestion",
+          "emoji": "1️⃣",
+          "body": "Ingestion: \"The process by which food is taken in by the organisms.\" Digestion: \"It is the process of breaking down of complex food into simpler absorbable molecules so that it get easily absorbed in our body.\"",
+          "source": {
+            "pages": [
+              49
+            ]
+          }
+        },
+        {
+          "title": "Five steps: absorption and assimilation",
+          "emoji": "2️⃣",
+          "body": "Absorption: \"It is the process by which digested food is taken up (absorbed) by the cells of our body.\" Assimilation: \"The absorbed food is utilized by living cells and is used by the body for its growth and other purposes.\"",
+          "source": {
+            "pages": [
+              49
+            ]
+          }
+        },
+        {
+          "title": "Five steps: egestion",
+          "emoji": "3️⃣",
+          "body": "Egestion: \"It is the process by which undigested food is removed from the body.\"",
+          "reveal": "In order: ingestion → digestion → absorption → assimilation → egestion",
+          "source": {
+            "pages": [
+              49
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "bio-digestive-system-1-p1",
+          "type": "mcq",
+          "prompt": "Which nutrients provide energy and warmth to our body?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Fats",
+            "Minerals",
+            "Vitamins"
+          ],
+          "answer": "Fats",
+          "explanation": "Fats provide energy and warmth to our body, e.g. oil and butter.",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "hints": [
+            "Think of oil and butter."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-1-p2",
+          "type": "order",
+          "prompt": "Put the five steps of nutrition in order.",
+          "difficulty": "medium",
+          "marks": 2,
+          "sequence": [
+            "Ingestion",
+            "Digestion",
+            "Absorption",
+            "Assimilation",
+            "Egestion"
+          ],
+          "explanation": "Food is taken in, broken down, taken up by cells, used by the body, and what is left is removed.",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "hints": [
+            "Food is taken in first, and removed last."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-1-p3",
+          "type": "fill_blank",
+          "prompt": "The process by which undigested food is removed from the body is called ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "egestion",
+          "explanation": "Egestion: the process by which undigested food is removed from the body.",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "hints": [
+            "It starts with \"e\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-1-p4",
+          "type": "mcq",
+          "prompt": "Which nutrients act as building blocks of our body?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Proteins",
+            "Carbohydrates",
+            "Fats"
+          ],
+          "answer": "Proteins",
+          "explanation": "Proteins help our body to grow and act as building blocks of our body.",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "hints": [
+            "Eggs, meat, pulses and cheese."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "In your notebook, draw five boxes joined by arrows and write the five steps of nutrition in order. Under each box, write one line from your book about it.",
+      "check": [
+        {
+          "id": "bio-digestive-system-1-c1",
+          "type": "fill_blank",
+          "prompt": "A ____ is a component of food that provides nourishment to the body for its growth and maintenance.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "nutrient",
+          "explanation": "This is the book’s definition of a nutrient (p.48).",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-1-c2",
+          "type": "mcq",
+          "prompt": "Rice, sugar and potato are examples of",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Carbohydrates",
+            "Proteins",
+            "Minerals"
+          ],
+          "answer": "Carbohydrates",
+          "explanation": "Carbohydrates provide energy, e.g. rice, sugar and potato.",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-1-c3",
+          "type": "true_false",
+          "prompt": "Assimilation is the process by which food is taken in by the organisms.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "explanation": "That is ingestion. Assimilation is when the absorbed food is utilized by living cells.",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-1-c4",
+          "type": "mcq",
+          "prompt": "Breaking down complex food into simpler absorbable molecules is called",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "Digestion",
+            "Egestion",
+            "Ingestion"
+          ],
+          "answer": "Digestion",
+          "explanation": "Digestion is the process of breaking down of complex food into simpler absorbable molecules.",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "A nutrient is a component of food that provides nourishment to the body for its growth and maintenance.",
+        "The process by which organisms obtain and use food is known as nutrition.",
+        "In the human body, the process of nutrition involves five steps: ingestion, digestion, absorption, assimilation and egestion."
+      ]
+    },
+    {
+      "id": "bio-digestive-system-2",
+      "title": "The alimentary canal, mouth and teeth",
+      "source": {
+        "pages": [
+          49,
+          50
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "digestion-mouth-teeth"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Human digestive system and types of teeth (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "bio-digestive-system-2-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "What are the five steps of nutrition?",
+          "back": "Ingestion, digestion, absorption, assimilation and egestion.",
+          "source": {
+            "pages": [
+              49
+            ]
+          }
+        }
+      ],
+      "cards": [
+        {
+          "title": "Two parts of the digestive system",
+          "emoji": "🧭",
+          "body": "Our digestive system is formed of two parts: the alimentary canal and the digestive glands.",
+          "reveal": "Digestive glands: salivary glands, liver and pancreas",
+          "source": {
+            "pages": [
+              49
+            ]
+          }
+        },
+        {
+          "title": "The alimentary canal",
+          "emoji": "🛤️",
+          "body": "\"Alimentary canal is a long, muscular and coiled tube. It starts from the mouth and ends at the anus.\"",
+          "example": "Mouth or buccal cavity → Oesophagus (gullet) → Stomach → Small Intestine → Large Intestine → Anus",
+          "source": {
+            "pages": [
+              49
+            ]
+          }
+        },
+        {
+          "title": "The digestive system",
+          "emoji": "📘",
+          "body": "\"The alimentary canal along with the associated glands is called the digestive system (Fig. 4.1).\"",
+          "source": {
+            "pages": [
+              49
+            ]
+          }
+        },
+        {
+          "title": "The mouth",
+          "emoji": "👄",
+          "body": "The mouth contains the tongue, teeth and salivary glands. Taking food into the mouth is called ingestion. Digestion starts in the mouth itself.",
+          "reveal": "Food is chewed (masticated) by the teeth.",
+          "source": {
+            "pages": [
+              49
+            ]
+          }
+        },
+        {
+          "title": "Four kinds of teeth",
+          "emoji": "🦷",
+          "body": "Incisors (front four, flat) bite and cut. Canines (sharp, two) tear. Premolars and molars grind and crush.",
+          "example": "Table 4.1, number in each jaw: Incisors 4 · Canines 2 · Premolars 4 · Molars 6",
+          "source": {
+            "pages": [
+              50
+            ]
+          }
+        },
+        {
+          "title": "Milk teeth and permanent teeth",
+          "emoji": "👶",
+          "body": "The first set of teeth in a baby are called milk teeth. These are later replaced by permanent teeth (about 12–14 years of age).",
+          "didYouKnow": "At birth, a human infant has no teeth. Milk teeth are twenty in number. Each jaw in an adult has 16 teeth (32 teeth in all).",
+          "source": {
+            "pages": [
+              50
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "bio-digestive-system-2-p1",
+          "type": "order",
+          "prompt": "Put the organs of the alimentary canal in order, from where food goes in.",
+          "difficulty": "medium",
+          "marks": 2,
+          "sequence": [
+            "Mouth",
+            "Oesophagus",
+            "Stomach",
+            "Small intestine",
+            "Large intestine",
+            "Anus"
+          ],
+          "explanation": "The alimentary canal starts from the mouth and ends at the anus (p.49).",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "hints": [
+            "It starts at the mouth and ends at the anus."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-2-p2",
+          "type": "match",
+          "prompt": "Match each type of tooth to its job.",
+          "difficulty": "easy",
+          "marks": 1,
+          "pairs": [
+            [
+              "Incisors",
+              "Biting & cutting"
+            ],
+            [
+              "Canines",
+              "Tearing food"
+            ],
+            [
+              "Molars",
+              "Grinding and crushing food"
+            ]
+          ],
+          "explanation": "Table 4.1 (p.50).",
+          "source": {
+            "pages": [
+              50
+            ]
+          },
+          "hints": [
+            "The sharp ones tear. The flat front ones bite."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-2-p3",
+          "type": "fill_blank",
+          "prompt": "Each jaw in an adult has ____ teeth.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "16",
+          "accept": [
+            "sixteen"
+          ],
+          "explanation": "Each jaw in an adult has 16 teeth (32 teeth in all).",
+          "source": {
+            "pages": [
+              50
+            ]
+          },
+          "hints": [
+            "4 + 2 + 4 + 6."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-2-p4",
+          "type": "mcq",
+          "prompt": "Which of these is a digestive gland?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Liver",
+            "Oesophagus",
+            "Anus"
+          ],
+          "answer": "Liver",
+          "explanation": "The digestive glands are the salivary glands, liver and pancreas.",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "hints": [
+            "Three glands: salivary glands, liver, pancreas."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Investigation 4.1 (p.50): stand in front of a mirror and count your teeth. Draw the shape of a front tooth and a back tooth in your notebook, and write which kind each one is.",
+      "check": [
+        {
+          "id": "bio-digestive-system-2-c1",
+          "type": "fill_blank",
+          "prompt": "The alimentary canal starts from the mouth and ends at the ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "anus",
+          "explanation": "Alimentary canal: a long, muscular and coiled tube from the mouth to the anus.",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-2-c2",
+          "type": "mcq",
+          "prompt": "The front four teeth in each jaw are the",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Incisors",
+            "Canines",
+            "Molars"
+          ],
+          "answer": "Incisors",
+          "explanation": "The front four teeth in each jaw are the incisors. They are flat and help in biting and cutting.",
+          "source": {
+            "pages": [
+              50
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-2-c3",
+          "type": "true_false",
+          "prompt": "Canines are sharp and two in number in each jaw.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "On either side of the incisors are the canines. These are sharp and two in number in each jaw.",
+          "source": {
+            "pages": [
+              50
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-2-c4",
+          "type": "mcq",
+          "prompt": "The last molars that appear at the age of eighteen or even later are called",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "Wisdom teeth",
+            "Milk teeth",
+            "Canines"
+          ],
+          "answer": "Wisdom teeth",
+          "explanation": "The last molars appear at the age of eighteen or even later. These are called the wisdom teeth.",
+          "source": {
+            "pages": [
+              50
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-2-c5",
+          "type": "fill_blank",
+          "prompt": "The alimentary canal along with the associated glands is called the ____.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "digestive system",
+          "explanation": "This is the book’s definition of the digestive system (p.49).",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Alimentary canal is a long, muscular and coiled tube. It starts from the mouth and ends at the anus.",
+        "The alimentary canal along with the associated glands is called the digestive system.",
+        "Incisors: biting & cutting · Canines: tearing food · Premolars and molars: grinding and crushing food."
+      ]
+    },
+    {
+      "id": "bio-digestive-system-3",
+      "title": "Tongue, salivary glands, oesophagus and stomach",
+      "source": {
+        "pages": [
+          50,
+          51
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "digestion-stomach"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Saliva, oesophagus and stomach (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "bio-digestive-system-3-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "Which teeth are meant for tearing the food?",
+          "back": "Canines",
+          "source": {
+            "pages": [
+              50
+            ]
+          }
+        }
+      ],
+      "cards": [
+        {
+          "title": "The tongue",
+          "emoji": "👅",
+          "body": "Tongue helps in mixing the chewed food with saliva and swallowing the food. It also helps us to taste the food and to speak.",
+          "reveal": "Taste buds distinguish four basic tastes – salt, sour, sweet and bitter (Fig. 4.3).",
+          "source": {
+            "pages": [
+              50
+            ]
+          }
+        },
+        {
+          "title": "Salivary glands and saliva",
+          "emoji": "💧",
+          "body": "There are three pairs of salivary glands in our mouth. They secrete a watery material called saliva.",
+          "example": "Saliva contains an enzyme called amylase (also called ptyalin) which acts on starch and break it into simple sugar.",
+          "didYouKnow": "Saliva also helps in killing the germs in mouth and in ingested food.",
+          "source": {
+            "pages": [
+              50
+            ]
+          }
+        },
+        {
+          "title": "The oesophagus",
+          "emoji": "🚇",
+          "body": "Oesophagus connects the mouth cavity with the stomach. It is also called the food pipe and it has no role in digestion.",
+          "reveal": "It pushes the food mixed with saliva (bolus) into the stomach by peristalsis.",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        },
+        {
+          "title": "Peristalsis",
+          "emoji": "🌊",
+          "body": "\"Peristalsis is the wave-like movement due to sequential (one after the other) contraction of muscles in the wall of the oesophagus. The movement enables the food to be pushed forward in the alimentary canal.\"",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        },
+        {
+          "title": "The stomach",
+          "emoji": "🫃",
+          "body": "The stomach is a muscular, J-shaped, bag-like structure in the upper abdomen. Here the food is churned and converted into a semi-solid paste.",
+          "reveal": "Food remains in the stomach for about 4–5 hours.",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        },
+        {
+          "title": "Gastric juice and hydrochloric acid",
+          "emoji": "🧪",
+          "body": "The stomach secretes gastric juice and hydrochloric acid. The acid kills the germs in the food and activates the gastric juice. Proteins are digested by the gastric juice partly in stomach.",
+          "example": "The partly digested food (chyme) then passes into the small intestine.",
+          "didYouKnow": "Milk has casein protein, digested by the enzyme rennin, found abundantly in the stomach of infants.",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "bio-digestive-system-3-p1",
+          "type": "mcq",
+          "prompt": "Saliva contains an enzyme called amylase, also called",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "ptyalin",
+            "pepsin",
+            "rennin"
+          ],
+          "answer": "ptyalin",
+          "explanation": "Saliva contains an enzyme called amylase (also called ptyalin).",
+          "source": {
+            "pages": [
+              50
+            ]
+          },
+          "hints": [
+            "It starts with \"p\" but it is not pepsin."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-3-p2",
+          "type": "fill_blank",
+          "prompt": "The food mixed with saliva is called ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "bolus",
+          "explanation": "The oesophagus pushes the food mixed with saliva (bolus) into the stomach.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "hints": [
+            "It is in brackets in your book on p.51."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-3-p3",
+          "type": "true_false",
+          "prompt": "The oesophagus has no role in digestion.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "It is also called the food pipe and it has no role in digestion. It only pushes the bolus to the stomach.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "hints": [
+            "What does the book say the food pipe does?"
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-3-p4",
+          "type": "mcq",
+          "prompt": "The partly digested food that passes from the stomach to the small intestine is called",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "chyme",
+            "bolus",
+            "faeces"
+          ],
+          "answer": "chyme",
+          "explanation": "The partly digested food (chyme) then passes into the small intestine.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "hints": [
+            "Bolus goes INTO the stomach. What comes OUT?"
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Chew a small piece of bread slowly for a few minutes (ask a grown-up first). In your notebook, write how the taste changed and which part of saliva does this (p.50).",
+      "check": [
+        {
+          "id": "bio-digestive-system-3-c1",
+          "type": "fill_blank",
+          "prompt": "There are three pairs of ____ glands in our mouth.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "salivary",
+          "explanation": "There are three pairs of salivary glands in our mouth (p.50).",
+          "source": {
+            "pages": [
+              50
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-3-c2",
+          "type": "mcq",
+          "prompt": "Taste buds on the tongue distinguish four basic tastes. Which is NOT one of them?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "spicy",
+            "sour",
+            "bitter"
+          ],
+          "answer": "spicy",
+          "explanation": "The four basic tastes are salt, sour, sweet and bitter (Fig. 4.3).",
+          "source": {
+            "pages": [
+              50
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-3-c3",
+          "type": "mcq",
+          "prompt": "The stomach is a muscular, ____-shaped, bag-like structure.",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "J",
+            "U",
+            "S"
+          ],
+          "answer": "J",
+          "explanation": "The stomach is a muscular, J-shaped, bag-like structure in the upper abdomen.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-3-c4",
+          "type": "true_false",
+          "prompt": "The hydrochloric acid in the stomach kills the germs which may be present in the food.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "The acid kills the germs and also activates the gastric juice.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-3-c5",
+          "type": "mcq",
+          "prompt": "Food remains in the stomach for about",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "4–5 hours",
+            "4–5 minutes",
+            "12–14 hours"
+          ],
+          "answer": "4–5 hours",
+          "explanation": "Here, food remains for about 4–5 hours (p.51).",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Saliva contains an enzyme called amylase (also called ptyalin) which acts on starch and break it into simple sugar.",
+        "Peristalsis is the wave-like movement due to sequential (one after the other) contraction of muscles in the wall of the oesophagus.",
+        "The stomach secretes a juice called gastric juice and hydrochloric acid."
+      ]
+    },
+    {
+      "id": "bio-digestive-system-4",
+      "title": "Small intestine, large intestine, liver and pancreas",
+      "source": {
+        "pages": [
+          51,
+          52
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "digestion-intestines"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Small intestine, villi and large intestine (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "bio-digestive-system-4-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "What is the partly digested food that leaves the stomach called?",
+          "back": "Chyme",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        }
+      ],
+      "cards": [
+        {
+          "title": "The small intestine",
+          "emoji": "🌀",
+          "body": "Small intestine is a long coiled tube. It secretes intestinal juice which helps in the digestion of all types of food.",
+          "reveal": "Food is converted into simple form like glucose, amino acids and fatty acids, etc.",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        },
+        {
+          "title": "Villi",
+          "emoji": "🖐️",
+          "body": "The inner surface of the small intestine has a number of finger-like projections called villi (Fig. 4.4). They absorb the end products of digestion.",
+          "didYouKnow": "The villi contain microvilli, which increase the area for absorption.",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        },
+        {
+          "title": "Where the food goes next",
+          "emoji": "🩸",
+          "body": "Sugar and amino acids pass into the blood system. Fats pass into lymph vessels (lacteals). Vitamins and minerals get directly absorbed in the intestinal walls.",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        },
+        {
+          "title": "The large intestine",
+          "emoji": "💦",
+          "body": "This part does not play any role in the digestion of food. It helps in absorbing water from the undigested food.",
+          "reveal": "The semi-solid undigested food (faeces) passes into the last part, called rectum.",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        },
+        {
+          "title": "Rectum, anus and egestion",
+          "emoji": "🚪",
+          "body": "\"The rectum opens into anus through which faeces are expelled out of the body. This process of eliminating undigested food through anus is called egestion.\"",
+          "source": {
+            "pages": [
+              51
+            ]
+          }
+        },
+        {
+          "title": "Liver and pancreas",
+          "emoji": "🫀",
+          "body": "The liver is the largest gland in human body. It secretes bile juice, stored in the gall bladder. Bile helps in the digestion of fats.",
+          "example": "The pancreas secretes insulin, which helps to maintain normal sugar level in the blood (Fig. 4.5).",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "bio-digestive-system-4-p1",
+          "type": "fill_blank",
+          "prompt": "The finger-like projections in the small intestine are called ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "villi",
+          "accept": [
+            "villus"
+          ],
+          "explanation": "The inner surface of the small intestine has a number of finger-like projections called villi.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "hints": [
+            "Fig. 4.4."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-4-p2",
+          "type": "mcq",
+          "prompt": "The absorbed fats pass into",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "lymph vessels (lacteals)",
+            "the blood system",
+            "the gall bladder"
+          ],
+          "answer": "lymph vessels (lacteals)",
+          "explanation": "The absorbed fats passes into lymph vessels (lacteals). Sugar and amino acids pass into the blood.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "hints": [
+            "Look for the word in brackets on p.51."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-4-p3",
+          "type": "mcq",
+          "prompt": "Bile juice is stored in a small bag called the",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "gall bladder",
+            "rectum",
+            "stomach"
+          ],
+          "answer": "gall bladder",
+          "explanation": "The liver secretes bile juice which is stored in a small bag called the gall bladder.",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "hints": [
+            "Fig. 4.5."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-4-p4",
+          "type": "true_false",
+          "prompt": "The large intestine helps in absorbing water from the undigested food.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "It plays no role in digestion, but it absorbs water from the undigested food.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "hints": [
+            "What does the large intestine take out of the undigested food?"
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Copy Fig. 4.4 (p.51) into your notebook: small intestine → a fold of the lining → a villus (label lacteal and capillary) → epithelial cell.",
+      "check": [
+        {
+          "id": "bio-digestive-system-4-c1",
+          "type": "mcq",
+          "prompt": "The largest gland in the human body is the",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Liver",
+            "Pancreas",
+            "Salivary gland"
+          ],
+          "answer": "Liver",
+          "explanation": "The liver is the largest gland in human body (p.52).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-4-c2",
+          "type": "mcq",
+          "prompt": "Which organ secretes insulin?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Pancreas",
+            "Liver",
+            "Stomach"
+          ],
+          "answer": "Pancreas",
+          "explanation": "The pancreas secretes insulin, which helps to maintain normal sugar level in the blood.",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-4-c3",
+          "type": "fill_blank",
+          "prompt": "The last part of the large intestine is called the ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "rectum",
+          "explanation": "The faeces pass into the last part of large intestine called rectum.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-4-c4",
+          "type": "true_false",
+          "prompt": "The large intestine plays a big role in the digestion of food.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "explanation": "The large intestine does not play any role in the digestion of food. It absorbs water.",
+          "source": {
+            "pages": [
+              51
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-4-c5",
+          "type": "mcq",
+          "prompt": "Bile helps in the digestion of",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "fats",
+            "starch",
+            "proteins"
+          ],
+          "answer": "fats",
+          "explanation": "Bile helps in the digestion of fats (p.52).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Small intestine is a long coiled tube. It secretes intestinal juice which helps in the digestion of all types of food.",
+        "The large intestine does not play any role in the digestion of food. It helps in absorbing water from the undigested food.",
+        "This process of eliminating undigested food through anus is called egestion.",
+        "The liver is the largest gland in human body. It secretes bile juice which is stored in a small bag called the gall bladder."
+      ]
+    },
+    {
+      "id": "bio-digestive-system-5",
+      "title": "Digestion in humans: enzymes",
+      "source": {
+        "pages": [
+          48,
+          52,
+          53
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "digestion-enzymes"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Digestive enzymes and the iodine starch test (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "bio-digestive-system-5-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "Which gland secretes bile juice?",
+          "back": "The liver",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        }
+      ],
+      "cards": [
+        {
+          "title": "Enzymes",
+          "emoji": "⚙️",
+          "body": "\"Enzymes are proteins in nature. These act as catalysts.\" The process of digestion is brought about with the help of digestive juices containing enzymes.",
+          "source": {
+            "pages": [
+              48,
+              52
+            ]
+          }
+        },
+        {
+          "title": "Mouth and stomach",
+          "emoji": "👄",
+          "body": "Mouth: saliva (amylase) acts on starch (a carbohydrate) → sugars. Stomach: gastric juice (pepsin) acts on proteins → peptides.",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        },
+        {
+          "title": "The pancreas: three enzymes",
+          "emoji": "🧪",
+          "body": "Pancreatic amylase: starch → maltose. Trypsin: proteins → peptides. Lipase: fats → fatty acids.",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        },
+        {
+          "title": "The small intestine",
+          "emoji": "🌀",
+          "body": "Intestinal juice (several enzymes) acts on partially digested proteins and carbohydrates (received from stomach) → simple sugars, amino acids, etc.",
+          "reveal": "Table 4.2 : Summary of Digestion",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        },
+        {
+          "title": "Investigation 4.2: the iodine test",
+          "emoji": "🥔",
+          "body": "Tube A: potato pieces + water. Tube B: potato pieces + water + amylase. After 30 minutes, add iodine solution to both.",
+          "reveal": "A turns blue-black (starch is there). B does not change in colour: the amylase digested the starch.",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "bio-digestive-system-5-p1",
+          "type": "match",
+          "prompt": "Match each enzyme to the food it acts on.",
+          "difficulty": "medium",
+          "marks": 2,
+          "pairs": [
+            [
+              "Saliva (amylase)",
+              "Starch"
+            ],
+            [
+              "Gastric juice (pepsin)",
+              "Proteins"
+            ],
+            [
+              "Lipase",
+              "Fats"
+            ]
+          ],
+          "explanation": "Table 4.2 (p.52).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "hints": [
+            "Lipase sounds a bit like \"lipid\", another word for fat… but check Table 4.2."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-5-p2",
+          "type": "fill_blank",
+          "prompt": "Lipase acts on fats and forms ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "fatty acids",
+          "accept": [
+            "fatty acid"
+          ],
+          "explanation": "Lipase: fats → fatty acids (Table 4.2).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "hints": [
+            "Fats → fatty ____."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-5-p3",
+          "type": "mcq",
+          "prompt": "In Investigation 4.2, which test tube turns blue-black with iodine?",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "A (potato + water)",
+            "B (potato + water + amylase)",
+            "Both"
+          ],
+          "answer": "A (potato + water)",
+          "explanation": "Iodine turns starch blue-black. In B the amylase digested the starch, so B did not change colour.",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "hints": [
+            "Which tube still has its starch?"
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Copy Table 4.2 (p.52) into your notebook with four columns: part, enzyme/juice, target nutrient, product formed.",
+      "check": [
+        {
+          "id": "bio-digestive-system-5-c1",
+          "type": "true_false",
+          "prompt": "Enzymes are proteins in nature and act as catalysts.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "Key ideas, p.48.",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-5-c2",
+          "type": "mcq",
+          "prompt": "Pancreatic amylase acts on starch and forms",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "Maltose",
+            "Peptides",
+            "Fatty acids"
+          ],
+          "answer": "Maltose",
+          "explanation": "Pancreatic amylase: starch → maltose (Table 4.2).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-5-c3",
+          "type": "mcq",
+          "prompt": "Trypsin acts on",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "Proteins",
+            "Fats",
+            "Starch"
+          ],
+          "answer": "Proteins",
+          "explanation": "Trypsin: proteins → peptides (Table 4.2).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-5-c4",
+          "type": "fill_blank",
+          "prompt": "Iodine solution turns starch ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "blue-black",
+          "accept": [
+            "blue black",
+            "blueblack"
+          ],
+          "explanation": "When iodine reacts with starch, the potato pieces turn blue-black (Investigation 4.2).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Enzymes are proteins in nature. These act as catalysts.",
+        "The process of digestion is brought about with the help of digestive juices containing enzymes."
+      ]
+    },
+    {
+      "id": "bio-digestive-system-6",
+      "title": "Indigestion and healthy food habits",
+      "source": {
+        "pages": [
+          53
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "digestion-healthy-habits"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Healthy food habits for kids (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "bio-digestive-system-6-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "Which enzyme from the pancreas acts on fats?",
+          "back": "Lipase (fats → fatty acids)",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        }
+      ],
+      "cards": [
+        {
+          "title": "What is indigestion?",
+          "emoji": "😣",
+          "body": "\"Indigestion (also known as dyspepsia) is the condition of impaired digestion. It results in persistent discomfort and pain in the stomach.\"",
+          "source": {
+            "pages": [
+              53
+            ]
+          }
+        },
+        {
+          "title": "Signs of indigestion",
+          "emoji": "🤢",
+          "body": "Stomach pain, vomiting, excessive gas formation, bloating of stomach and a burning sensation in the stomach.",
+          "reveal": "Symptoms of indigestion must not be ignored — see your doctor right away.",
+          "source": {
+            "pages": [
+              53
+            ]
+          }
+        },
+        {
+          "title": "What causes it?",
+          "emoji": "🍟",
+          "body": "Overeating or eating too fast, lying down soon after meals, drinking too much alcohol, eating spicy, oily and fatty foods, and smoking.",
+          "source": {
+            "pages": [
+              53
+            ]
+          }
+        },
+        {
+          "title": "Healthy food habits (1)",
+          "emoji": "🥦",
+          "body": "Eat a balanced diet, keeping in mind your age, health and occupation. Eat clean food, protected from dust, houseflies and mosquitoes. Eat properly cooked fresh food.",
+          "source": {
+            "pages": [
+              53
+            ]
+          }
+        },
+        {
+          "title": "Healthy food habits (2)",
+          "emoji": "💧",
+          "body": "Avoid fried foods. Use clean utensils. Take green salad, green vegetables and fruits. Drink large quantity of clean filtered water. Chew food well. Develop regular eating habits.",
+          "source": {
+            "pages": [
+              53
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "bio-digestive-system-6-p1",
+          "type": "fill_blank",
+          "prompt": "Indigestion is also known as ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "dyspepsia",
+          "explanation": "Indigestion (also known as dyspepsia) is the condition of impaired digestion.",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "hints": [
+            "It is in brackets on p.53."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-6-p2",
+          "type": "mcq",
+          "prompt": "Which of these is a healthy food habit?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Chew food well",
+            "Lie down soon after meals",
+            "Eat too fast"
+          ],
+          "answer": "Chew food well",
+          "explanation": "Chewing food well is a healthy habit. Lying down soon after meals and eating too fast cause indigestion.",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "hints": [
+            "Two of these are causes of indigestion."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-6-p3",
+          "type": "true_false",
+          "prompt": "Eating spicy, oily and fatty foods can cause indigestion.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "It is one of the causes of indigestion listed on p.53.",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "hints": [
+            "Look at \"Causes of indigestion\"."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Make a \"My healthy food habits\" chart in your notebook with the habits from p.53. Tick the ones you already follow this week.",
+      "check": [
+        {
+          "id": "bio-digestive-system-6-c1",
+          "type": "mcq",
+          "prompt": "Which is a symptom of indigestion?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Bloating of stomach",
+            "Feeling hungry",
+            "Strong teeth"
+          ],
+          "answer": "Bloating of stomach",
+          "explanation": "Bloating of stomach is listed among the common symptoms (p.53).",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-6-c2",
+          "type": "mcq",
+          "prompt": "Which is a cause of indigestion?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Overeating or eating too fast",
+            "Drinking clean filtered water",
+            "Eating fresh food"
+          ],
+          "answer": "Overeating or eating too fast",
+          "explanation": "Overeating or eating too fast is a cause of indigestion.",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "bio-digestive-system-6-c3",
+          "type": "true_false",
+          "prompt": "Food should be kept protected from dust, houseflies and mosquitoes.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "Eat clean food which is kept protected from dust, houseflies and mosquitoes.",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Indigestion (also known as dyspepsia) is the condition of impaired digestion. It results in persistent discomfort and pain in the stomach.",
+        "For maintaining good health, we need to develop and maintain good food habits."
+      ]
+    }
+  ],
+  "questionBank": [
+    {
+      "id": "bio-digestive-system-1-q1",
+      "lessonId": "bio-digestive-system-1",
+      "type": "mcq",
+      "prompt": "Which of the following is not a step of nutrition in humans?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Ingestion",
+        "Egestion",
+        "Assimilation",
+        "Reabsorption"
+      ],
+      "answer": "Reabsorption",
+      "explanation": "The five steps are ingestion, digestion, absorption, assimilation and egestion. Reabsorption is not one of them.",
+      "source": {
+        "pages": [
+          49,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q5"
+    },
+    {
+      "id": "bio-digestive-system-1-q2",
+      "lessonId": "bio-digestive-system-1",
+      "type": "short_answer",
+      "prompt": "Define: Ingestion",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Ingestion is the process by which food is taken in by the organisms.",
+      "keywords": [
+        "food",
+        "taken in"
+      ],
+      "explanation": "From the five steps of nutrition (p.49).",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q1"
+    },
+    {
+      "id": "bio-digestive-system-1-q3",
+      "lessonId": "bio-digestive-system-1",
+      "type": "short_answer",
+      "prompt": "Define: Absorption",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Absorption is the process by which digested food is taken up (absorbed) by the cells of our body.",
+      "keywords": [
+        "digested food",
+        "taken up",
+        "cells"
+      ],
+      "explanation": "From the five steps of nutrition (p.49).",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q2"
+    },
+    {
+      "id": "bio-digestive-system-1-q4",
+      "lessonId": "bio-digestive-system-1",
+      "type": "short_answer",
+      "prompt": "Define: Digestion",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Digestion is the process of breaking down of complex food into simpler absorbable molecules so that it get easily absorbed in our body.",
+      "keywords": [
+        "breaking down",
+        "complex food",
+        "simpler",
+        "absorbable"
+      ],
+      "explanation": "From the five steps of nutrition (p.49).",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q3"
+    },
+    {
+      "id": "bio-digestive-system-1-q5",
+      "lessonId": "bio-digestive-system-1",
+      "type": "short_answer",
+      "prompt": "Define: Assimilation",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Assimilation: the absorbed food is utilized by living cells and is used by the body for its growth and other purposes.",
+      "keywords": [
+        "absorbed food",
+        "utilized",
+        "cells",
+        "growth"
+      ],
+      "explanation": "From the five steps of nutrition (p.49).",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q4"
+    },
+    {
+      "id": "bio-digestive-system-1-q6",
+      "lessonId": "bio-digestive-system-1",
+      "type": "short_answer",
+      "prompt": "Mention various steps take place in the process of digestion in human.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Ingestion (food is taken in), digestion (complex food is broken down into simpler absorbable molecules), absorption (digested food is taken up by the cells), assimilation (absorbed food is used by the cells for growth) and egestion (undigested food is removed from the body).",
+      "keywords": [
+        "ingestion",
+        "digestion",
+        "absorption",
+        "assimilation",
+        "egestion"
+      ],
+      "explanation": "These are the five steps of nutrition in the human body (p.49).",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IX Q4"
+    },
+    {
+      "id": "bio-digestive-system-1-q7",
+      "lessonId": "bio-digestive-system-1",
+      "type": "mcq",
+      "prompt": "What is the process of utilisation of food material by the body?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Absorption",
+        "Egestion",
+        "Assimilation",
+        "Digestion"
+      ],
+      "answer": "Assimilation",
+      "explanation": "Assimilation: the absorbed food is utilized by living cells and is used by the body for its growth and other purposes.",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. X Q2"
+    },
+    {
+      "id": "bio-digestive-system-2-q1",
+      "lessonId": "bio-digestive-system-2",
+      "type": "mcq",
+      "prompt": "The front four teeth in each jaw of an adult human are",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Incisors",
+        "Premolars",
+        "Canines",
+        "Molars"
+      ],
+      "answer": "Incisors",
+      "explanation": "The front four teeth in each jaw are the incisors (p.50).",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q6"
+    },
+    {
+      "id": "bio-digestive-system-2-q2",
+      "lessonId": "bio-digestive-system-2",
+      "type": "fill_blank",
+      "prompt": "Number of molar teeth present in an adult human is ____.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": "12",
+      "accept": [
+        "twelve",
+        "6 in each jaw",
+        "six in each jaw"
+      ],
+      "hints": [
+        "Molars: six in each jaw. How many jaws?"
+      ],
+      "explanation": "In an adult, molars are six in number in each jaw, so there are 6 + 6 = 12 molars in all.",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q2"
+    },
+    {
+      "id": "bio-digestive-system-2-q3",
+      "lessonId": "bio-digestive-system-2",
+      "type": "fill_blank",
+      "prompt": "The teeth which help in biting the food in humans are ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "incisors",
+      "explanation": "Incisors are flat and help in biting and cutting the food.",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q3"
+    },
+    {
+      "id": "bio-digestive-system-2-q4",
+      "lessonId": "bio-digestive-system-2",
+      "type": "true_false",
+      "prompt": "Canines are meant for tearing flesh.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "explanation": "Canines are sharp and meant for tearing the food (p.50).",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q1"
+    },
+    {
+      "id": "bio-digestive-system-2-q5",
+      "lessonId": "bio-digestive-system-2",
+      "type": "true_false",
+      "prompt": "Molar teeth are present in a human baby.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": false,
+      "explanation": "At birth, a human infant has no teeth (p.50).",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q2",
+      "needsReview": true
+    },
+    {
+      "id": "bio-digestive-system-2-q6",
+      "lessonId": "bio-digestive-system-2",
+      "type": "true_false",
+      "prompt": "In humans, there are 14 teeth in each jaw.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "explanation": "Each jaw in an adult has 16 teeth (32 teeth in all).",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q6"
+    },
+    {
+      "id": "bio-digestive-system-2-q7",
+      "lessonId": "bio-digestive-system-2",
+      "type": "short_answer",
+      "prompt": "Define: Alimentary canal",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Alimentary canal is a long, muscular and coiled tube. It starts from the mouth and ends at the anus.",
+      "keywords": [
+        "long",
+        "muscular",
+        "coiled tube",
+        "mouth",
+        "anus"
+      ],
+      "explanation": "Definition on p.49.",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q5"
+    },
+    {
+      "id": "bio-digestive-system-2-q8",
+      "lessonId": "bio-digestive-system-2",
+      "type": "short_answer",
+      "prompt": "Define: Digestive system",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "The alimentary canal along with the associated glands is called the digestive system.",
+      "keywords": [
+        "alimentary canal",
+        "glands"
+      ],
+      "explanation": "Definition on p.49.",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q6"
+    },
+    {
+      "id": "bio-digestive-system-2-q9",
+      "lessonId": "bio-digestive-system-2",
+      "type": "short_answer",
+      "prompt": "Name the different types of teeth in an adult human being.",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Incisors, canines, premolars and molars.",
+      "keywords": [
+        "incisors",
+        "canines",
+        "premolars",
+        "molars"
+      ],
+      "explanation": "There are four main kinds of teeth in humans (p.50).",
+      "source": {
+        "pages": [
+          50,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VI Q2"
+    },
+    {
+      "id": "bio-digestive-system-2-q10",
+      "lessonId": "bio-digestive-system-2",
+      "type": "short_answer",
+      "prompt": "Give the functions of different types of teeth in an adult human.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Incisors (4 in each jaw) help in biting and cutting the food. Canines (2 in each jaw) are meant for tearing the food. Premolars (4 in each jaw) and molars (6 in each jaw) are meant for grinding and crushing the food.",
+      "keywords": [
+        "biting",
+        "cutting",
+        "tearing",
+        "grinding",
+        "crushing"
+      ],
+      "explanation": "Table 4.1 : Summary of Teeth (p.50).",
+      "source": {
+        "pages": [
+          50,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IX Q1"
+    },
+    {
+      "id": "bio-digestive-system-2-q11",
+      "lessonId": "bio-digestive-system-2",
+      "type": "think_write",
+      "prompt": "Represent the digestive system by means of a labelled diagram.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Draw Fig. 4.1 and label: buccal cavity, salivary glands, oesophagus, stomach, liver, gall bladder, pancreas, small intestine, large intestine and anus.",
+      "keywords": [
+        "buccal cavity",
+        "oesophagus",
+        "stomach",
+        "small intestine",
+        "large intestine",
+        "anus",
+        "liver",
+        "pancreas"
+      ],
+      "explanation": "Use Fig. 4.1 on p.49 — check every label against your book.",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IX Q3"
+    },
+    {
+      "id": "bio-digestive-system-2-q12",
+      "lessonId": "bio-digestive-system-2",
+      "type": "mcq",
+      "prompt": "Breaking down and mixing of food with saliva in the buccal cavity is called",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "churning",
+        "absorption",
+        "assimilation",
+        "mastication"
+      ],
+      "answer": "mastication",
+      "explanation": "Food is chewed (masticated) by the teeth, and the chewed food gets mixed with saliva (p.49).",
+      "source": {
+        "pages": [
+          49,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. X Q1"
+    },
+    {
+      "id": "bio-digestive-system-2-q13",
+      "lessonId": "bio-digestive-system-2",
+      "type": "mcq",
+      "prompt": "Meera made a table: P — Biting and cutting food, Q — Tearing food. Identify the correct pair of tooth types.",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "P - Molars, Q - Premolars",
+        "P - Incisors, Q - Canines",
+        "P - Canines, Q - Molars",
+        "P - Premolars, Q - Incisors"
+      ],
+      "answer": "P - Incisors, Q - Canines",
+      "explanation": "Incisors bite and cut; canines tear (Table 4.1).",
+      "source": {
+        "pages": [
+          50,
+          57
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q8"
+    },
+    {
+      "id": "bio-digestive-system-2-q14",
+      "lessonId": "bio-digestive-system-2",
+      "type": "short_answer",
+      "prompt": "Raj said: \"Incisors are used for biting and cutting food.\" Sonu said: \"Canines are used for grinding and crushing food.\" Lata said: \"Molars are used for grinding and crushing food.\" Whose observation is incorrect?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Only Sonu’s. Canines are meant for tearing the food. Raj and Lata are right.",
+      "keywords": [
+        "Sonu",
+        "tearing"
+      ],
+      "explanation": "Table 4.1: canines are for tearing food; premolars and molars grind and crush.",
+      "source": {
+        "pages": [
+          50,
+          57
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q6",
+      "needsReview": true
+    },
+    {
+      "id": "bio-digestive-system-3-q1",
+      "lessonId": "bio-digestive-system-3",
+      "type": "mcq",
+      "prompt": "Which of the following helps in the digestion of food in mouth?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Nutrients",
+        "Hormones",
+        "Pepsin",
+        "Saliva"
+      ],
+      "answer": "Saliva",
+      "explanation": "Saliva helps in the digestion of food (p.50).",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q1"
+    },
+    {
+      "id": "bio-digestive-system-3-q2",
+      "lessonId": "bio-digestive-system-3",
+      "type": "mcq",
+      "prompt": "Saliva contains an enzyme called",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Amylase",
+        "Trypsin",
+        "Pepsin",
+        "None of these"
+      ],
+      "answer": "Amylase",
+      "explanation": "Saliva contains an enzyme called amylase (also called ptyalin).",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q2"
+    },
+    {
+      "id": "bio-digestive-system-3-q3",
+      "lessonId": "bio-digestive-system-3",
+      "type": "mcq",
+      "prompt": "The movement that helps the food to travel through oesophagus is",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Linear movement",
+        "Peristaltic movement",
+        "Vertical movement",
+        "Periodic movement"
+      ],
+      "answer": "Peristaltic movement",
+      "explanation": "The oesophagus pushes the bolus into the stomach by peristalsis.",
+      "source": {
+        "pages": [
+          51,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q3"
+    },
+    {
+      "id": "bio-digestive-system-3-q4",
+      "lessonId": "bio-digestive-system-3",
+      "type": "fill_blank",
+      "prompt": "Saliva is secreted by the ____ in the mouth cavity.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "salivary glands",
+      "accept": [
+        "salivary gland"
+      ],
+      "explanation": "A watery material called saliva is secreted by the salivary glands.",
+      "source": {
+        "pages": [
+          50,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q1"
+    },
+    {
+      "id": "bio-digestive-system-3-q5",
+      "lessonId": "bio-digestive-system-3",
+      "type": "fill_blank",
+      "prompt": "Protein digestion in stomach occur with the help of ____.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": "gastric juice",
+      "accept": [
+        "pepsin",
+        "gastric juice (pepsin)"
+      ],
+      "explanation": "Proteins present in the food are digested by the gastric juice partly in stomach. Its enzyme is pepsin (Table 4.2).",
+      "source": {
+        "pages": [
+          51,
+          52,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q5"
+    },
+    {
+      "id": "bio-digestive-system-3-q6",
+      "lessonId": "bio-digestive-system-3",
+      "type": "true_false",
+      "prompt": "Mouth cavity is also known as the food pipe.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "explanation": "The OESOPHAGUS is also called the food pipe (p.51).",
+      "source": {
+        "pages": [
+          51,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q3"
+    },
+    {
+      "id": "bio-digestive-system-3-q7",
+      "lessonId": "bio-digestive-system-3",
+      "type": "true_false",
+      "prompt": "Gastric juice is secreted by the small intestine.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "explanation": "Gastric juice is secreted by the STOMACH. The small intestine secretes intestinal juice.",
+      "source": {
+        "pages": [
+          51,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q4"
+    },
+    {
+      "id": "bio-digestive-system-3-q8",
+      "lessonId": "bio-digestive-system-3",
+      "type": "fill_blank",
+      "prompt": "Name the wave of contraction in oesophagus: ____",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "peristalsis",
+      "accept": [
+        "peristaltic movement"
+      ],
+      "explanation": "Peristalsis is the wave-like movement due to sequential contraction of muscles in the wall of the oesophagus.",
+      "source": {
+        "pages": [
+          51,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VI Q1"
+    },
+    {
+      "id": "bio-digestive-system-3-q9",
+      "lessonId": "bio-digestive-system-3",
+      "type": "short_answer",
+      "prompt": "Describe the functions of saliva.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Saliva helps in the digestion of food. Its enzyme amylase (ptyalin) acts on starch and breaks it into simple sugar. Saliva also helps in killing the germs in mouth and in ingested food.",
+      "keywords": [
+        "amylase",
+        "starch",
+        "sugar",
+        "germs"
+      ],
+      "explanation": "From \"Salivary glands\" on p.50.",
+      "source": {
+        "pages": [
+          50,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VIII Q1"
+    },
+    {
+      "id": "bio-digestive-system-3-q10",
+      "lessonId": "bio-digestive-system-3",
+      "type": "short_answer",
+      "prompt": "Describe the functions of the oesophagus.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "The oesophagus connects the mouth cavity with the stomach. It is also called the food pipe. It has no role in digestion; it only pushes the food mixed with saliva (bolus) into the stomach by peristalsis.",
+      "keywords": [
+        "food pipe",
+        "bolus",
+        "peristalsis"
+      ],
+      "explanation": "From \"Oesophagus\" on p.51.",
+      "source": {
+        "pages": [
+          51,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VIII Q2"
+    },
+    {
+      "id": "bio-digestive-system-3-q11",
+      "lessonId": "bio-digestive-system-3",
+      "type": "short_answer",
+      "prompt": "Describe the functions of the tongue.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "The tongue helps in mixing the chewed food with saliva and swallowing the food. It helps us to taste the food, as it has taste buds which distinguish salt, sour, sweet and bitter. It also helps us to speak.",
+      "keywords": [
+        "mixing",
+        "saliva",
+        "swallowing",
+        "taste buds",
+        "speak"
+      ],
+      "explanation": "From \"Tongue\" on p.50.",
+      "source": {
+        "pages": [
+          50,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VIII Q3"
+    },
+    {
+      "id": "bio-digestive-system-3-q12",
+      "lessonId": "bio-digestive-system-3",
+      "type": "mcq",
+      "prompt": "Name the secretions of stomach.",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Hydrochloric Acid and Gastric Juices",
+        "Hydrochloric Acid and Pancreatic Juices",
+        "Hydrochloric Acid and Salivary Amylase",
+        "Hydrochloric Acid and Water"
+      ],
+      "answer": "Hydrochloric Acid and Gastric Juices",
+      "explanation": "The stomach secretes a juice called gastric juice and hydrochloric acid (p.51).",
+      "source": {
+        "pages": [
+          51,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. X Q4"
+    },
+    {
+      "id": "bio-digestive-system-3-q13",
+      "lessonId": "bio-digestive-system-3",
+      "type": "mcq",
+      "prompt": "Assertion (A): Digestion starts in the buccal cavity. Reason (R): Salivary amylase enzyme is present in the saliva.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true and R is false",
+        "A is false and R is true"
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A",
+      "explanation": "Both are true: digestion starts in the mouth itself (p.49), and it starts there because saliva contains amylase, which acts on starch (p.50).",
+      "source": {
+        "pages": [
+          49,
+          50,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XI Q1"
+    },
+    {
+      "id": "bio-digestive-system-3-q14",
+      "lessonId": "bio-digestive-system-3",
+      "type": "mcq",
+      "prompt": "A piece of bread was placed in the mouth for a few minutes. Students observed the changes in taste and named the enzyme involved. Which is right?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Salivary Amylase, Starch breakdown",
+        "Pepsin, Protein digestion",
+        "Lipase, Fat digestion",
+        "Trypsin, Protein breakdown"
+      ],
+      "answer": "Salivary Amylase, Starch breakdown",
+      "explanation": "Saliva’s amylase acts on starch and breaks it into simple sugar, so the bread tastes sweeter.",
+      "source": {
+        "pages": [
+          50,
+          57
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q3"
+    },
+    {
+      "id": "bio-digestive-system-3-q15",
+      "lessonId": "bio-digestive-system-3",
+      "type": "mcq",
+      "prompt": "Students chewed bread. Raj: it became sweeter. Sonu: it felt the same. Lata: her tongue helped mix the food with saliva. Abhay: his canines helped crush it. Who correctly identified the correct features?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Raj and Lata",
+        "Sonu and Abhay",
+        "Lata and Sonu",
+        "Abhay and Lata"
+      ],
+      "answer": "Raj and Lata",
+      "explanation": "Amylase turns starch into sugar (sweeter), and the tongue mixes food with saliva. Canines tear; they do not crush.",
+      "source": {
+        "pages": [
+          50,
+          57
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q7"
+    },
+    {
+      "id": "bio-digestive-system-4-q1",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "Finger-like projections called villi are present in",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Stomach",
+        "Large intestine",
+        "Small intestine",
+        "Liver"
+      ],
+      "answer": "Small intestine",
+      "explanation": "The inner surface of the small intestine has finger-like projections called villi.",
+      "source": {
+        "pages": [
+          51,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q7"
+    },
+    {
+      "id": "bio-digestive-system-4-q2",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "Most of the digestion takes place in",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Stomach",
+        "Small intestine",
+        "Large intestine",
+        "Rectum"
+      ],
+      "answer": "Small intestine",
+      "explanation": "The small intestine’s juice digests all types of food, and digestion is completed in the small intestine (p.51, p.53).",
+      "source": {
+        "pages": [
+          51,
+          53,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q8"
+    },
+    {
+      "id": "bio-digestive-system-4-q3",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "Absorption of food takes place in",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Small intestine",
+        "Pancreas",
+        "Large intestine",
+        "Liver"
+      ],
+      "answer": "Small intestine",
+      "explanation": "Absorption of food also takes place in the small intestine (p.53).",
+      "source": {
+        "pages": [
+          51,
+          53,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q9"
+    },
+    {
+      "id": "bio-digestive-system-4-q4",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "Absorption of water takes place in",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Small intestine",
+        "Large intestine",
+        "Stomach",
+        "Pancreas"
+      ],
+      "answer": "Large intestine",
+      "explanation": "Absorption of water takes place in large intestine (p.53).",
+      "source": {
+        "pages": [
+          51,
+          53,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q10"
+    },
+    {
+      "id": "bio-digestive-system-4-q5",
+      "lessonId": "bio-digestive-system-4",
+      "type": "fill_blank",
+      "prompt": "The liver and ____ are found near the stomach.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "pancreas",
+      "explanation": "Fig. 4.5 shows the digestive glands — liver and pancreas — beside the stomach.",
+      "source": {
+        "pages": [
+          52,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q6"
+    },
+    {
+      "id": "bio-digestive-system-4-q6",
+      "lessonId": "bio-digestive-system-4",
+      "type": "true_false",
+      "prompt": "Food is mostly digested in stomach.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": false,
+      "explanation": "Proteins are only partly digested in the stomach. Digestion is completed in the small intestine, whose juice digests all types of food.",
+      "source": {
+        "pages": [
+          51,
+          53,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q5"
+    },
+    {
+      "id": "bio-digestive-system-4-q7",
+      "lessonId": "bio-digestive-system-4",
+      "type": "short_answer",
+      "prompt": "Describe the functions of the liver.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "The liver is the largest gland in human body. It secretes bile juice, which is stored in the gall bladder. Bile helps in the digestion of fats.",
+      "keywords": [
+        "bile",
+        "gall bladder",
+        "fats"
+      ],
+      "explanation": "From \"Liver and Pancreas\" on p.52.",
+      "source": {
+        "pages": [
+          52,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VIII Q4"
+    },
+    {
+      "id": "bio-digestive-system-4-q8",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "The longest part of alimentary canal is",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "small intestine",
+        "oesophagus",
+        "large intestine",
+        "liver"
+      ],
+      "answer": "small intestine",
+      "explanation": "The book calls the small intestine \"a long coiled tube\" (p.51).",
+      "source": {
+        "pages": [
+          51,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. X Q3",
+      "needsReview": true
+    },
+    {
+      "id": "bio-digestive-system-4-q9",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "Assertion (A): Digestion of food occurs in large intestine. Reason (R): Anus is the last part of alimentary canal.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true and R is false",
+        "A is false and R is true"
+      ],
+      "answer": "A is false and R is true",
+      "explanation": "A is false: the large intestine does not play any role in the digestion of food. R is true: the alimentary canal ends at the anus.",
+      "source": {
+        "pages": [
+          49,
+          51,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XI Q2"
+    },
+    {
+      "id": "bio-digestive-system-4-q10",
+      "lessonId": "bio-digestive-system-4",
+      "type": "match",
+      "prompt": "Match each part with its job (Art-Integration, p.56).",
+      "difficulty": "medium",
+      "marks": 2,
+      "pairs": [
+        [
+          "Small intestine",
+          "Absorption of food"
+        ],
+        [
+          "Liver",
+          "Secretion of bile juices"
+        ],
+        [
+          "Oesophagus",
+          "Peristalsis"
+        ],
+        [
+          "Stomach",
+          "Churning of food"
+        ],
+        [
+          "Buccal cavity",
+          "Mastication"
+        ]
+      ],
+      "explanation": "Small intestine absorbs food, the liver secretes bile, the oesophagus moves food by peristalsis, the stomach churns, and the teeth in the buccal cavity masticate.",
+      "source": {
+        "pages": [
+          49,
+          51,
+          52,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XII"
+    },
+    {
+      "id": "bio-digestive-system-4-q11",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "Which are correctly matched? P. Mouth - Ingestion and initial digestion · Q. Stomach - Absorption of digested food · R. Small Intestine - Absorption of nutrients",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Only P",
+        "Only Q",
+        "Only P and R",
+        "Only Q and R"
+      ],
+      "answer": "Only P and R",
+      "explanation": "P is right (digestion starts in the mouth), R is right (absorption happens in the small intestine). Q is not: the stomach churns and digests proteins.",
+      "source": {
+        "pages": [
+          49,
+          51,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q1"
+    },
+    {
+      "id": "bio-digestive-system-4-q12",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "The function of the liver — Raj: Produces bile juice · Sonu: Secretes insulin · Lata: Converts food into chyme · Abhay: Aids in fat digestion. Who were correct?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Raj and Sonu",
+        "Sonu and Lata",
+        "Raj and Abhay",
+        "Abhay and Lata"
+      ],
+      "answer": "Raj and Abhay",
+      "explanation": "The liver secretes bile, and bile helps digest fats. Insulin comes from the pancreas; chyme is made in the stomach.",
+      "source": {
+        "pages": [
+          51,
+          52,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q2"
+    },
+    {
+      "id": "bio-digestive-system-4-q13",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "Raj: Stomach - churns food and kills germs · Sonu: Small Intestine - absorbs water · Lata: Large Intestine - absorbs nutrients · Abhay: Liver - produces bile juice. Who were correct?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Raj and Abhay",
+        "Sonu and Lata",
+        "Raj and Sonu",
+        "Lata and Abhay"
+      ],
+      "answer": "Raj and Abhay",
+      "explanation": "The stomach churns food and its acid kills germs; the liver secretes bile. Water is absorbed in the large intestine, and nutrients in the small intestine.",
+      "source": {
+        "pages": [
+          51,
+          52,
+          57
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q4"
+    },
+    {
+      "id": "bio-digestive-system-4-q14",
+      "lessonId": "bio-digestive-system-4",
+      "type": "mcq",
+      "prompt": "P is the first part of the alimentary canal. Q is a muscular, J-shaped organ that churns food. R is a long, coiled tube where most nutrient absorption takes place. Select the INCORRECT option.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "P is the mouth, which also contains salivary glands.",
+        "Q is the stomach, which secretes hydrochloric acid and gastric juice.",
+        "R is the large intestine, where water absorption occurs.",
+        "P is involved in both ingestion and initial digestion."
+      ],
+      "answer": "R is the large intestine, where water absorption occurs.",
+      "explanation": "R is the small intestine — the long coiled tube where food is absorbed. So option (c) is the incorrect one.",
+      "source": {
+        "pages": [
+          49,
+          51,
+          57
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q5"
+    },
+    {
+      "id": "bio-digestive-system-5-q1",
+      "lessonId": "bio-digestive-system-5",
+      "type": "mcq",
+      "prompt": "On treating chewed boiled rice with iodine solution, it gives",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Blue–black colour",
+        "Brown colour",
+        "Black colour",
+        "No change in the colour"
+      ],
+      "answer": "No change in the colour",
+      "explanation": "Chewing mixes the rice with saliva, whose amylase digests the starch. In Investigation 4.2, digested starch did not change colour with iodine.",
+      "source": {
+        "pages": [
+          50,
+          52,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q4",
+      "needsReview": true
+    },
+    {
+      "id": "bio-digestive-system-5-q2",
+      "lessonId": "bio-digestive-system-5",
+      "type": "fill_blank",
+      "prompt": "Food is digested by the chemicals called ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "enzymes",
+      "accept": [
+        "enzyme"
+      ],
+      "explanation": "Digestion is brought about with the help of digestive juices containing enzymes.",
+      "source": {
+        "pages": [
+          52,
+          53,
+          54
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q4"
+    },
+    {
+      "id": "bio-digestive-system-5-q3",
+      "lessonId": "bio-digestive-system-5",
+      "type": "match",
+      "prompt": "Complete the table: match each part of the digestive system to its enzyme/juice → food acted upon → product formed.",
+      "difficulty": "medium",
+      "marks": 2,
+      "pairs": [
+        [
+          "Mouth",
+          "Saliva (amylase) → Starch → Sugars"
+        ],
+        [
+          "Stomach",
+          "Gastric juice → Proteins → Peptides"
+        ],
+        [
+          "Small intestine",
+          "Intestinal juice → Partially digested proteins and carbohydrates → Simple sugars, amino acids"
+        ]
+      ],
+      "explanation": "Table 4.2 : Summary of Digestion (p.52).",
+      "source": {
+        "pages": [
+          52,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV"
+    },
+    {
+      "id": "bio-digestive-system-5-q4",
+      "lessonId": "bio-digestive-system-5",
+      "type": "short_answer",
+      "prompt": "Define: Enzymes",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Enzymes are proteins in nature. These act as catalysts. Digestive juices contain enzymes that help in the process of digestion.",
+      "keywords": [
+        "proteins",
+        "catalysts",
+        "digestion"
+      ],
+      "explanation": "Key ideas (p.48) and Highlights (p.53).",
+      "source": {
+        "pages": [
+          48,
+          53,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. V Q7"
+    },
+    {
+      "id": "bio-digestive-system-5-q5",
+      "lessonId": "bio-digestive-system-5",
+      "type": "short_answer",
+      "prompt": "Name the digestive juices secreted by mouth, pancreas, stomach and small intestine.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Mouth: saliva (amylase). Pancreas: pancreatic amylase, trypsin and lipase. Stomach: gastric juice (pepsin). Small intestine: intestinal juice (several enzymes).",
+      "keywords": [
+        "saliva",
+        "gastric juice",
+        "intestinal juice",
+        "trypsin",
+        "lipase"
+      ],
+      "explanation": "Table 4.2 (p.52).",
+      "source": {
+        "pages": [
+          52,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VI Q3"
+    },
+    {
+      "id": "bio-digestive-system-5-q6",
+      "lessonId": "bio-digestive-system-5",
+      "type": "short_answer",
+      "prompt": "Protein: give the name of the digestive juice/enzyme and the product formed.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Gastric juice (pepsin) in the stomach, or trypsin from the pancreas, acts on proteins and forms peptides.",
+      "keywords": [
+        "pepsin",
+        "trypsin",
+        "peptides"
+      ],
+      "explanation": "Table 4.2 (p.52).",
+      "source": {
+        "pages": [
+          52,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VII Q1"
+    },
+    {
+      "id": "bio-digestive-system-5-q7",
+      "lessonId": "bio-digestive-system-5",
+      "type": "short_answer",
+      "prompt": "Starch: give the name of the digestive juice/enzyme and the product formed.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Saliva (amylase) in the mouth acts on starch and forms sugars; pancreatic amylase acts on starch and forms maltose.",
+      "keywords": [
+        "amylase",
+        "sugars",
+        "maltose"
+      ],
+      "explanation": "Table 4.2 (p.52).",
+      "source": {
+        "pages": [
+          52,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. VII Q2"
+    },
+    {
+      "id": "bio-digestive-system-5-q8",
+      "lessonId": "bio-digestive-system-5",
+      "type": "short_answer",
+      "prompt": "Give a brief of enzymes found in the digestive juices secreted by different parts of digestive system.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Mouth — saliva (amylase): starch → sugars. Stomach — gastric juice (pepsin): proteins → peptides. Pancreas — pancreatic amylase: starch → maltose; trypsin: proteins → peptides; lipase: fats → fatty acids. Small intestine — intestinal juice (several enzymes): partially digested proteins and carbohydrates → simple sugars, amino acids, etc.",
+      "keywords": [
+        "amylase",
+        "pepsin",
+        "trypsin",
+        "lipase",
+        "intestinal juice"
+      ],
+      "explanation": "Table 4.2 : Summary of Digestion (p.52).",
+      "source": {
+        "pages": [
+          52,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IX Q2"
+    },
+    {
+      "id": "bio-digestive-system-5-q9",
+      "lessonId": "bio-digestive-system-5",
+      "type": "mcq",
+      "prompt": "Which enzyme helps in the digestion of fats, and which organ secretes it?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Amylase, Pancreas",
+        "Pepsin, Stomach",
+        "Lipase, Pancreas",
+        "Trypsin, Small intestine"
+      ],
+      "answer": "Lipase, Pancreas",
+      "explanation": "Table 4.2: the pancreas secretes lipase, which acts on fats and forms fatty acids.",
+      "source": {
+        "pages": [
+          52,
+          57
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. XIII Q9"
+    },
+    {
+      "id": "bio-digestive-system-6-q1",
+      "lessonId": "bio-digestive-system-6",
+      "type": "short_answer",
+      "prompt": "What is indigestion?",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Indigestion (also known as dyspepsia) is the condition of impaired digestion. It results in persistent discomfort and pain in the stomach.",
+      "keywords": [
+        "dyspepsia",
+        "impaired digestion",
+        "pain"
+      ],
+      "explanation": "Definition on p.53.",
+      "source": {
+        "pages": [
+          53
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "bio-digestive-system-6-q2",
+      "lessonId": "bio-digestive-system-6",
+      "type": "short_answer",
+      "prompt": "Write any three common symptoms of indigestion.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Any three of: stomach pain, vomiting, excessive gas formation, bloating of stomach, burning sensation in the stomach.",
+      "keywords": [
+        "stomach pain",
+        "vomiting",
+        "gas",
+        "bloating",
+        "burning"
+      ],
+      "explanation": "Common symptoms of indigestion (p.53).",
+      "source": {
+        "pages": [
+          53
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "bio-digestive-system-6-q3",
+      "lessonId": "bio-digestive-system-6",
+      "type": "short_answer",
+      "prompt": "Write any three causes of indigestion.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Any three of: overeating or eating too fast, lying down soon after meals, drinking too much alcohol, eating spicy, oily and fatty foods, smoking.",
+      "keywords": [
+        "overeating",
+        "lying down",
+        "spicy",
+        "oily",
+        "smoking"
+      ],
+      "explanation": "Causes of indigestion (p.53).",
+      "source": {
+        "pages": [
+          53
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "bio-digestive-system-6-q4",
+      "lessonId": "bio-digestive-system-6",
+      "type": "think_write",
+      "prompt": "Write five healthy food habits.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Any five of: eat a balanced diet keeping in mind your age, health and occupation; eat clean food protected from dust, houseflies and mosquitoes; eat properly cooked fresh food; avoid fried foods; use clean utensils; take green salad, green vegetables and fruits; consume simple digestible food; drink large quantity of clean filtered water; chew food well; develop regular eating habits.",
+      "keywords": [
+        "balanced diet",
+        "clean",
+        "fresh",
+        "chew",
+        "water"
+      ],
+      "explanation": "Healthy food habits (p.53).",
+      "source": {
+        "pages": [
+          53
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "bio-digestive-system-6-q5",
+      "lessonId": "bio-digestive-system-6",
+      "type": "mcq",
+      "prompt": "If symptoms of indigestion do not go away, what should you do?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "See your doctor right away",
+        "Ignore them",
+        "Eat more fried food"
+      ],
+      "answer": "See your doctor right away",
+      "explanation": "It is important that symptoms of indigestion are not ignored, and you must see your doctor right away.",
+      "source": {
+        "pages": [
+          53
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

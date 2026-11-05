@@ -457,13 +457,25 @@ describe('LessonScreen', () => {
 
   it.each([
     ['2026-11-07', '2', 'This one’s for another day 🙂', /opens on Saturday at 10:15/], // tomorrow: locked
-    ['2026-11-05', '1', 'This one’s for another day 🙂', /That day is over/],
     ['2026-11-06', '99', 'This stone isn’t on your trail 🙂', /pick one/],
   ])('%s #%s → "%s"', async (date, slot, title, line) => {
     renderAt('2026-11-06T18:40', `/lesson/${date}/${slot}`);
     expect(screen.getByRole('heading', { level: 2, name: title })).toBeInTheDocument();
     expect(screen.getByText(line)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /Back to my trail/ })).toBeInTheDocument();
+  });
+
+  it('an earlier day’s missed lesson opens to catch up, saved under that day’s slot', async () => {
+    const u = user();
+    renderAt('2026-11-06T18:40', '/lesson/2026-11-05/1'); // Friday evening, Thursday's physics
+    expect(await screen.findByRole('heading', { level: 1, name: phy1.title })).toBeInTheDocument();
+    expect(screen.getByText(/Physics · Catch up from Thursday/)).toBeInTheDocument();
+    await u.click(screen.getByRole('button', { name: /Tap to see the answer/ }));
+    await u.click(btn('Not yet 🤔'));
+    // saved under Thursday's slot, so Today's slots and Thursday's stay apart
+    await waitFor(async () =>
+      expect(await getLessonProgress(phy1.id)).toMatchObject({ data: { slotKey: '2026-11-05#1' } }),
+    );
   });
 
   it('revise / test / review slots say they are coming soon', () => {
