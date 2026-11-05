@@ -1,0 +1,122 @@
+{
+  "id": "landforms-plains-people",
+  "subject": "geography",
+  "title": "Plains, and why people live there",
+  "source": {
+    "pages": [
+      48,
+      49
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Rivers bring alluvium down from the mountains",
+          "Sand, silt, clay, and plant and animal matter",
+          "Deposited on the plains",
+          "Highly fertile alluvial tracts"
+        ],
+        "highlight": 3,
+        "label": "Plains, p.48"
+      },
+      "narration": "A plain is a broad area of relatively flat land, around 200 metres above mean sea level. Rivers bring alluvium down from the mountains and deposit it, making highly fertile alluvial tracts.",
+      "minDuration": 12,
+      "source": {
+        "pages": [
+          48
+        ]
+      },
+      "checkpoint": {
+        "questionId": "landforms-plains-people-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Mountains: rivers begin here; bring rain; block hot and cold winds",
+          "Plateaus: minerals; waterfalls for hydro-electric power",
+          "Plains: crops; roads and railways"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "Landforms and people, p.48"
+      },
+      "narration": "Landforms shape how people live. Most rivers begin in the mountains. Plateaus have minerals, and waterfalls for hydro-electric power. Plains are the main crop growing regions.",
+      "minDuration": 11,
+      "source": {
+        "pages": [
+          48
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Fertile, largely flat land",
+          "Easier to build roads and railways",
+          "Better conditions for living",
+          "The most densely populated regions"
+        ],
+        "highlight": 3,
+        "label": "pp.48–49"
+      },
+      "narration": "Because plains are fertile and flat, and it is easier to build roads and railways there, they give better conditions for living. So plains are the most densely populated regions on Earth.",
+      "minDuration": 11,
+      "source": {
+        "pages": [
+          48,
+          49
+        ]
+      },
+      "checkpoint": {
+        "questionId": "landforms-plains-people-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "landforms-plains-people-cp1",
+      "type": "mcq",
+      "prompt": "What makes alluvial tracts so fertile?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Rich nutrients brought down by rivers",
+        "Lava from volcanoes"
+      ],
+      "answer": "Rich nutrients brought down by rivers",
+      "hints": [
+        "Follow the arrows from the top box."
+      ],
+      "explanation": "These rich nutrients are deposited on the plains (p.48).",
+      "source": {
+        "pages": [
+          48
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "landforms-plains-people-cp2",
+      "type": "true_false",
+      "prompt": "Plains are the most densely populated regions on Earth.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "hints": [
+        "Read the last box."
+      ],
+      "explanation": "p.49.",
+      "source": {
+        "pages": [
+          49
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

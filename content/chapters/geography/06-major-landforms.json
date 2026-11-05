@@ -1,0 +1,1717 @@
+{
+  "id": "geo-major-landforms",
+  "subject": "geography",
+  "title": "Major Landforms of the Earth",
+  "order": 6,
+  "status": "approved",
+  "book": {
+    "title": "REPLACE_ME",
+    "publisher": "REPLACE_ME",
+    "chapterNo": 6
+  },
+  "sourceDir": "source/geography/06-major-landforms",
+  "parentNotes": [
+    "Geography Ch 6, pages 44–51, the whole chapter, from the same scan as History Ch 4 and Civics Ch 4. Approved straight away at your request.",
+    "No answer key is printed. Answers come from the chapter text.",
+    "Ex. III Q3 (needsReview): the pages never say why earthquakes happen at plate boundaries. The model answer only joins two facts from p.45 (how plates move; sudden movements cause earthquakes).",
+    "Ex. II Q5 (needsReview): Assertion–Reason with no key. Answered \"a\" (R explains A, pp.48–49); a teacher could argue \"b\", because fertile land is also a reason.",
+    "Ex. II Q1 refers to a photo in the book; the question here describes it in words. Answer \"i, ii, iii\": snow is not part of the definition on p.45.",
+    "The book has no section V in the exercises (IV is followed by VI). The Ex. VI map work is in lesson 4’s notebook task.",
+    "Lead In riddles, Do and learn, Enrichment and Life Skills are class activities and are not questions here.",
+    "Please fill in the book’s title and publisher in source/books.json (geography) and in the \"book\" field here.",
+    "Video search words — lesson geo-major-landforms-1: \"internal and external forces class 6\", \"plate tectonics for kids\"",
+    "Video search words — lesson geo-major-landforms-2: \"fold mountains and block mountains class 6\", \"horst and graben\"",
+    "Video search words — lesson geo-major-landforms-3: \"how volcanic mountains are formed class 6\", \"types of plateaus\"",
+    "Video search words — lesson geo-major-landforms-4: \"plains formation alluvium class 6\", \"landforms and people\""
+  ],
+  "lessons": [
+    {
+      "id": "geo-major-landforms-1",
+      "title": "Forces that change the Earth’s surface",
+      "source": {
+        "pages": [
+          44,
+          45
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "landforms-forces"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Internal and external forces, plate tectonics (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "geo-major-landforms-1-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "warmup": [
+        {
+          "front": "What are landforms?",
+          "back": "Landforms are natural features on the Earth’s surface, such as mountains, valleys, plains and plateaus.",
+          "source": {
+            "pages": [
+              44
+            ]
+          }
+        }
+      ],
+      "cards": [
+        {
+          "title": "Landforms",
+          "emoji": "🏔️",
+          "body": "The lithosphere is not even and the same everywhere. It is made up of many different kinds of landforms. \"Landforms are natural features on the Earth’s surface, such as mountains, valleys, plains and plateaus.\"",
+          "source": {
+            "pages": [
+              44
+            ]
+          }
+        },
+        {
+          "title": "Two kinds of forces",
+          "emoji": "⚖️",
+          "body": "The surface of the Earth, and the landforms on it, constantly undergo changes due to the action of various forces. These forces are of two types—internal forces and external forces.",
+          "source": {
+            "pages": [
+              44
+            ]
+          }
+        },
+        {
+          "title": "Internal (tectonic) forces",
+          "emoji": "🌋",
+          "body": "\"Internal forces, or tectonic forces, are forces acting from within the Earth that lead to sudden changes on the face of the Earth.\" The stiff and brittle lithosphere is broken up into several pieces called tectonic plates. They float over the viscous molten rock, called magma.",
+          "source": {
+            "pages": [
+              44
+            ]
+          }
+        },
+        {
+          "title": "Plate tectonics",
+          "emoji": "🔁",
+          "body": "Heat from the core of the Earth heats the magma in the mantle. The heated magma rises, spreads, cools and then sinks again. These rising and sinking streams of magma push against the tectonic plates, causing them to move. This movement of the plates is termed plate tectonics.",
+          "reveal": "Plates converge (move towards each other), diverge (move away from each other), or slide by each other in a transverse movement.",
+          "source": {
+            "pages": [
+              44,
+              45
+            ]
+          }
+        },
+        {
+          "title": "Slow… and sudden",
+          "emoji": "🐢",
+          "body": "The plates move very slowly (just a few centimetres in a year), so mountains and valleys can take millions of years to form. But sometimes sudden and strong movements bring about massive changes: earthquakes, volcanoes and landslides.",
+          "didYouKnow": "Internal forces are also known as endogenetic or endogenic forces.",
+          "source": {
+            "pages": [
+              45
+            ]
+          }
+        },
+        {
+          "title": "External (gradational) forces",
+          "emoji": "🌬️",
+          "body": "\"External forces, or gradational forces, are forces acting from above on the surface of the Earth.\" They lead to slow and steady changes, by wearing away and rebuilding the Earth’s surface. They are also called exogenic or denudational forces, and include all the agents of gradation like wind, water and glaciers.",
+          "example": "Weathering (breaking down rocks into smaller bits), eroding (transporting the weathered material) and depositing it at other places. Rain, wind and rivers erode the mountains and deposit the material further down to form plains.",
+          "source": {
+            "pages": [
+              45
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "geo-major-landforms-1-p1",
+          "type": "mcq",
+          "prompt": "Internal forces are also called",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "tectonic forces",
+            "gradational forces",
+            "denudational forces"
+          ],
+          "answer": "tectonic forces",
+          "explanation": "Internal forces, or tectonic forces, act from within the Earth (p.44).",
+          "source": {
+            "pages": [
+              44
+            ]
+          },
+          "hints": [
+            "They move the tectonic plates."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-1-p2",
+          "type": "fill_blank",
+          "prompt": "The movement of the tectonic plates is termed ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "plate tectonics",
+          "accept": [
+            "plate tectonic"
+          ],
+          "explanation": "This movement of the plates is termed plate tectonics (p.45).",
+          "source": {
+            "pages": [
+              45
+            ]
+          },
+          "hints": [
+            "Two words: the second one rhymes with \"electronics\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-1-p3",
+          "type": "mcq",
+          "prompt": "When two plates move towards each other, they",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "converge",
+            "diverge",
+            "slide by in a transverse movement"
+          ],
+          "answer": "converge",
+          "explanation": "Towards each other = converge; away from each other = diverge (p.45).",
+          "source": {
+            "pages": [
+              45
+            ]
+          },
+          "hints": [
+            "\"Con-\" here means coming together."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-1-p4",
+          "type": "order",
+          "prompt": "Put the work of the agents of gradation in order.",
+          "difficulty": "medium",
+          "marks": 2,
+          "sequence": [
+            "Weathering: breaking rocks into smaller bits",
+            "Eroding: transporting the weathered material",
+            "Depositing the material at other places"
+          ],
+          "explanation": "Rocks are first broken down, then carried away, then laid down somewhere else (p.45).",
+          "source": {
+            "pages": [
+              45
+            ]
+          },
+          "hints": [
+            "You have to break the rock before you can carry the bits away."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Make a two-column table in your notebook: Internal forces | External forces. For each, write its other names, how it acts (sudden, or slow and steady) and examples (pp.44–45).",
+      "check": [
+        {
+          "id": "geo-major-landforms-1-c1",
+          "type": "true_false",
+          "prompt": "External forces lead to sudden changes on the Earth’s surface.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "explanation": "External forces lead to slow and steady changes. Internal forces cause sudden changes (pp.44–45).",
+          "source": {
+            "pages": [
+              44,
+              45
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-1-c2",
+          "type": "mcq",
+          "prompt": "Which of these is an agent of gradation?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Wind",
+            "An earthquake",
+            "A volcano"
+          ],
+          "answer": "Wind",
+          "explanation": "The agents of gradation are like wind, water and glaciers (p.45).",
+          "source": {
+            "pages": [
+              45
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-1-c3",
+          "type": "fill_blank",
+          "prompt": "The stiff and brittle lithosphere is broken up into several pieces called ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "tectonic plates",
+          "accept": [
+            "plates"
+          ],
+          "explanation": "\"…broken up into several pieces called tectonic plates\" (p.44).",
+          "source": {
+            "pages": [
+              44
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-1-c4",
+          "type": "mcq",
+          "prompt": "About how fast do the tectonic plates move?",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "A few centimetres in a year",
+            "A few metres in a day",
+            "A few kilometres in a year"
+          ],
+          "answer": "A few centimetres in a year",
+          "explanation": "The plates move very slowly, just a few centimetres in a year (p.45).",
+          "source": {
+            "pages": [
+              45
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Landforms are natural features on the Earth’s surface, such as mountains, valleys, plains and plateaus.",
+        "Internal forces, or tectonic forces, are forces acting from within the Earth that lead to sudden changes on the face of the Earth.",
+        "The movement of the plates is termed plate tectonics.",
+        "External forces, or gradational forces, are forces acting from above on the surface of the Earth."
+      ]
+    },
+    {
+      "id": "geo-major-landforms-2",
+      "title": "Mountains: fold and block",
+      "source": {
+        "pages": [
+          45,
+          46,
+          47
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "landforms-mountains"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Fold mountains and block mountains (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "geo-major-landforms-2-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Three major landforms",
+          "emoji": "🗻",
+          "body": "Geographers classify major landforms on the basis of their elevation and slope. On this basis, there are three major types of landforms—mountains, plateaus and plains.",
+          "source": {
+            "pages": [
+              45
+            ]
+          }
+        },
+        {
+          "title": "What is a mountain?",
+          "emoji": "⛰️",
+          "body": "\"A mountain is a natural elevation of the Earth’s surface rising high above its surroundings.\" Mountains have narrow summits (peaks), steep slopes and broad bases. They are found both on land and on the ocean floor. A chain of mountains is called a mountain range.",
+          "reveal": "The higher reaches of the mountains can be very cold, because temperature falls with altitude.",
+          "source": {
+            "pages": [
+              45
+            ]
+          }
+        },
+        {
+          "title": "Hills and valleys",
+          "emoji": "🏞️",
+          "body": "Hills are highlands that are not as high as mountains, and have gentler slopes. The area of lowland found between hills or mountains is called a valley. Many valleys have rivers flowing through them.",
+          "example": "The Zanskar Mountain Range, with the rivers Zanskar and Indus flowing in their valleys.",
+          "source": {
+            "pages": [
+              45,
+              46
+            ]
+          }
+        },
+        {
+          "title": "Fold mountains",
+          "emoji": "🪗",
+          "body": "\"Fold mountains are formed by the upliftment and folding of landmasses due to lateral compression caused by tectonic or internal forces.\" Where two plates converge, the crust gets compressed and crumpled or folded, and massive layers get uplifted.",
+          "didYouKnow": "Lateral compression means to be squeezed from both sides. Try it: push the ends of a stack of floor mats towards each other and watch folds form in the centre!",
+          "source": {
+            "pages": [
+              46,
+              49
+            ]
+          }
+        },
+        {
+          "title": "Young and old fold mountains",
+          "emoji": "🏔️",
+          "body": "The Himalayas and the Alps were formed in the recent geological past, so they are young fold mountains. They have rugged relief, and high, sharp peaks. The Aravalli Range in Rajasthan is one of the oldest fold mountain ranges in the world; it has been lowered greatly by continuous erosion.",
+          "example": "The Urals in Russia and the Appalachians in North America are also very old fold mountains.",
+          "source": {
+            "pages": [
+              46
+            ]
+          }
+        },
+        {
+          "title": "Block mountains",
+          "emoji": "🧱",
+          "body": "When two plates diverge or get pulled apart, fractures called faults appear. When two faults form alongside each other, the land between them either subsides (falls) or gets uplifted (rises). The uplifted part is called a horst or block mountain; the subsided part is called a graben or rift valley.",
+          "example": "The Narmada River flows through a rift valley. The Rhine Valley in Europe is a rift valley, and the Black Forest and Vosges Mountains beside it are block mountains.",
+          "source": {
+            "pages": [
+              46,
+              47
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "geo-major-landforms-2-p1",
+          "type": "mcq",
+          "prompt": "A chain of mountains is called a",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "mountain range",
+            "plateau",
+            "valley"
+          ],
+          "answer": "mountain range",
+          "explanation": "A chain of mountains is called a mountain range (p.45).",
+          "source": {
+            "pages": [
+              45
+            ]
+          },
+          "hints": [
+            "Think of the \"Aravalli Range\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-2-p2",
+          "type": "mcq",
+          "prompt": "The Himalayas are",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "young fold mountains",
+            "old fold mountains",
+            "block mountains"
+          ],
+          "answer": "young fold mountains",
+          "explanation": "They were formed in the recent geological past, so they are young fold mountains (p.46).",
+          "source": {
+            "pages": [
+              46
+            ]
+          },
+          "hints": [
+            "They have high, sharp peaks."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-2-p3",
+          "type": "fill_blank",
+          "prompt": "The uplifted part of the land between two faults is called a ____ or block mountain.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "horst",
+          "explanation": "Uplifted part = horst (block mountain); subsided part = graben (rift valley) (p.47).",
+          "source": {
+            "pages": [
+              47
+            ]
+          },
+          "hints": [
+            "It starts with \"h\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-2-p4",
+          "type": "order",
+          "prompt": "Put the steps in order: how fold mountains form.",
+          "difficulty": "medium",
+          "marks": 2,
+          "sequence": [
+            "Two plates move towards each other",
+            "The place where they meet gets compressed",
+            "The crust gets crumpled or folded",
+            "Massive layers get uplifted: fold mountains"
+          ],
+          "explanation": "Converge → compressed → folded → uplifted (p.46).",
+          "source": {
+            "pages": [
+              46
+            ]
+          },
+          "hints": [
+            "It starts with the plates moving."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Draw two simple diagrams in your notebook: (1) fold mountains, with arrows pushing from both sides; (2) block mountains, with two faults, a horst and a graben. Label each (pp.46–47).",
+      "check": [
+        {
+          "id": "geo-major-landforms-2-c1",
+          "type": "true_false",
+          "prompt": "Hills are higher than mountains.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "explanation": "Hills are highlands that are not as high as mountains, with gentler slopes (p.45).",
+          "source": {
+            "pages": [
+              45
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-2-c2",
+          "type": "mcq",
+          "prompt": "Which of these is one of the oldest fold mountain ranges in the world?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "The Aravalli Range",
+            "The Himalayas",
+            "The Alps"
+          ],
+          "answer": "The Aravalli Range",
+          "explanation": "The Aravalli Range in Rajasthan is one of the oldest fold mountain ranges (p.46).",
+          "source": {
+            "pages": [
+              46
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-2-c3",
+          "type": "fill_blank",
+          "prompt": "The Narmada River flows through a ____ valley.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "rift",
+          "explanation": "The Narmada River flows through a rift valley (p.47).",
+          "source": {
+            "pages": [
+              47
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-2-c4",
+          "type": "mcq",
+          "prompt": "Fold mountains form where two plates",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "move towards each other",
+            "move away from each other"
+          ],
+          "answer": "move towards each other",
+          "explanation": "Fold mountains: plates converge. Block mountains: plates diverge (pp.46–47).",
+          "source": {
+            "pages": [
+              46,
+              47
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "A mountain is a natural elevation of the Earth’s surface rising high above its surroundings.",
+        "Fold mountains are formed by the upliftment and folding of landmasses due to lateral compression caused by tectonic or internal forces.",
+        "When two plates on the Earth’s crust diverge or get pulled apart, fractures appear on the Earth’s surface. These fractures are called faults.",
+        "The uplifted part of the land is called a horst or block mountain, and the subsided part is called a graben or rift valley."
+      ]
+    },
+    {
+      "id": "geo-major-landforms-3",
+      "title": "Volcanic mountains and plateaus",
+      "source": {
+        "pages": [
+          47,
+          48
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "landforms-volcanoes-plateaus"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Volcanic mountains and types of plateaus (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "geo-major-landforms-3-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Volcanic mountains",
+          "emoji": "🌋",
+          "body": "Sometimes, conical or dome-shaped structures are formed as a result of magma escaping to the surface of the Earth through an opening called a vent. These are called volcanic mountains, or volcanoes. \"Magma that reaches the surface of the Earth is called lava.\"",
+          "source": {
+            "pages": [
+              47
+            ]
+          }
+        },
+        {
+          "title": "How a volcano builds up",
+          "emoji": "🧱",
+          "body": "The lava, ash and rocks that erupt from the volcanoes settle in layers on the surface of the Earth. Over thousands of years, these layers build up and volcanic mountains are formed.",
+          "example": "The book’s diagram labels: magma under pressure, vent, crater, lava, and gases, ashes & cinders.",
+          "source": {
+            "pages": [
+              47
+            ]
+          }
+        },
+        {
+          "title": "Gentle or steep?",
+          "emoji": "🗻",
+          "body": "If the magma is thin and flows easily, gently sloping mountains are formed, such as Mauna Loa in Hawaii. If the lava is thick and viscous, the mountains are cone-shaped with steeply sloping sides.",
+          "example": "Mt Vesuvius in Italy, Mt Kilimanjaro in Tanzania, Africa and Mt Fuji in Japan.",
+          "source": {
+            "pages": [
+              47
+            ]
+          }
+        },
+        {
+          "title": "Plateaus",
+          "emoji": "🟫",
+          "body": "\"A plateau is a broad, flat, elevated area of land that rises sharply above the surrounding area.\" It is also called a tableland. A plateau may have one gently sloping side and one steep side. The steep side of a plateau is called an escarpment.",
+          "source": {
+            "pages": [
+              47
+            ]
+          }
+        },
+        {
+          "title": "Famous plateaus",
+          "emoji": "🌏",
+          "body": "The largest and highest plateau in the world is the Tibetan Plateau (4,000–6,000 m above mean sea level). The Pamir Plateau and the Tibetan Plateau are both called the ‘roof of the world’.",
+          "didYouKnow": "The Deccan Plateau in India is one of the oldest plateaus of the world, and most of the African continent is made of plateaus.",
+          "source": {
+            "pages": [
+              47,
+              48
+            ]
+          }
+        },
+        {
+          "title": "Three types of plateaus",
+          "emoji": "📋",
+          "body": "Intermontane plateaus are surrounded completely or partially by mountains (the plateau of Tibet). Continental plateaus are vast areas of tableland that rise abruptly from the coast or surrounding plains (the plateaus of Africa). Lava plateaus form when lava flows out of fissures and spreads thickly over extensive areas (the Deccan Plateau).",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "geo-major-landforms-3-p1",
+          "type": "fill_blank",
+          "prompt": "Magma escapes to the surface of the Earth through an opening called a ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "vent",
+          "explanation": "\"…through an opening called a vent\" (p.47).",
+          "source": {
+            "pages": [
+              47
+            ]
+          },
+          "hints": [
+            "It is also a word for an air hole."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-3-p2",
+          "type": "mcq",
+          "prompt": "Thick, viscous lava forms mountains that are",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "cone-shaped with steeply sloping sides",
+            "gently sloping"
+          ],
+          "answer": "cone-shaped with steeply sloping sides",
+          "explanation": "Thin, runny magma → gentle slopes. Thick, viscous lava → steep cones (p.47).",
+          "source": {
+            "pages": [
+              47
+            ]
+          },
+          "hints": [
+            "Thick lava doesn’t flow far before it stops."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-3-p3",
+          "type": "mcq",
+          "prompt": "The steep side of a plateau is called",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "an escarpment",
+            "a vent",
+            "a graben"
+          ],
+          "answer": "an escarpment",
+          "explanation": "The steep side of a plateau is called an escarpment (p.47).",
+          "source": {
+            "pages": [
+              47
+            ]
+          },
+          "hints": [
+            "It is in the Words to Remember on p.49."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-3-p4",
+          "type": "match",
+          "prompt": "Match each type of plateau with the book’s example.",
+          "difficulty": "medium",
+          "marks": 2,
+          "pairs": [
+            [
+              "Intermontane plateau",
+              "the plateau of Tibet"
+            ],
+            [
+              "Continental plateau",
+              "the plateaus of Africa"
+            ],
+            [
+              "Lava plateau",
+              "the Deccan Plateau"
+            ]
+          ],
+          "explanation": "p.48 gives one example for each type.",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "hints": [
+            "Tibet is surrounded by mountains: \"inter-montane\" means between mountains."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Draw the structure of a volcano in your notebook and label: magma under pressure, vent, crater, lava, and gases, ashes & cinders (p.47). Then write the three types of plateaus with one example each (p.48).",
+      "check": [
+        {
+          "id": "geo-major-landforms-3-c1",
+          "type": "true_false",
+          "prompt": "A plateau is also called a tableland.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "It is also called a tableland (p.47).",
+          "source": {
+            "pages": [
+              47
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-3-c2",
+          "type": "mcq",
+          "prompt": "Mauna Loa in Hawaii is",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "gently sloping",
+            "cone-shaped with steep sides"
+          ],
+          "answer": "gently sloping",
+          "explanation": "Thin magma that flows easily formed gently sloping Mauna Loa (p.47).",
+          "source": {
+            "pages": [
+              47
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-3-c3",
+          "type": "mcq",
+          "prompt": "Which is the largest and highest plateau in the world?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "The Tibetan Plateau",
+            "The Deccan Plateau",
+            "The Waterberg Plateau"
+          ],
+          "answer": "The Tibetan Plateau",
+          "explanation": "The Tibetan Plateau, 4,000–6,000 m above mean sea level (p.47).",
+          "source": {
+            "pages": [
+              47
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-3-c4",
+          "type": "fill_blank",
+          "prompt": "The Deccan Plateau is a ____ plateau.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "lava",
+          "explanation": "\"The Deccan Plateau is a lava plateau\" (p.48).",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "Magma that reaches the surface of the Earth is called lava.",
+        "A plateau is a broad, flat, elevated area of land that rises sharply above the surrounding area. It is also called a tableland.",
+        "The steep side of a plateau is called an escarpment.",
+        "Plateaus are of three types: intermontane, continental and lava plateaus."
+      ]
+    },
+    {
+      "id": "geo-major-landforms-4",
+      "title": "Plains, and landforms and people",
+      "source": {
+        "pages": [
+          48,
+          49
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "landforms-plains-people"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Plains and how landforms affect people (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "geo-major-landforms-4-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Plains",
+          "emoji": "🌾",
+          "body": "\"A broad area of relatively flat land is called a plain.\" Generally plains are low-lying: their average height is just around 200 m above mean sea level.",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "title": "Alluvial tracts",
+          "emoji": "🏞️",
+          "body": "Most plains are levelled alluvial tracts, formed by the deposits brought down by rivers and their tributaries. Rivers bring down eroded material, called alluvium, from the mountains: sand, silt, clay, and animal and plant matter. These rich nutrients make highly fertile alluvial tracts.",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "title": "Famous plains",
+          "emoji": "🗺️",
+          "body": "The Nile Basin in Egypt, the Hwang Ho Basin in China and the Indo-Gangetic Basin in India are some examples of plains.",
+          "example": "The book also shows the Russian Plain.",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "title": "Landforms shape our lives",
+          "emoji": "🏡",
+          "body": "Landforms influence the climate of a place, the type of houses people build, their occupations, the clothes they wear, the availability of water, and the crops grown.",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "title": "Mountains and plateaus help us",
+          "emoji": "⛰️",
+          "body": "Mountains: most of the rivers in the world originate in the mountains. Mountains bring rain, and act as barriers against both hot and cold winds. Plateaus: rich deposits of minerals such as iron ore, gold and bauxite, and fossil rocks such as coal. Their waterfalls are important sources of hydro-electric power.",
+          "source": {
+            "pages": [
+              48
+            ]
+          }
+        },
+        {
+          "title": "Plains and people",
+          "emoji": "🚆",
+          "body": "Plains, being fertile and largely flat, are the main crop growing regions of the world. It is easier to build roads and railway networks there. So plains are the most densely populated regions on Earth.",
+          "reveal": "But people have made homes in every kind of terrain, by modifying the land to suit their needs and adapting their own lifestyle.",
+          "source": {
+            "pages": [
+              48,
+              49
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "geo-major-landforms-4-p1",
+          "type": "fill_blank",
+          "prompt": "Eroded material brought down from the mountains by rivers is called ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "alluvium",
+          "explanation": "alluvium: eroded material brought down from the mountains by rivers (p.49).",
+          "source": {
+            "pages": [
+              48,
+              49
+            ]
+          },
+          "hints": [
+            "It sounds like \"alluvial\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-4-p2",
+          "type": "mcq",
+          "prompt": "The average height of plains is just around",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "200 m above mean sea level",
+            "4,000–6,000 m above mean sea level",
+            "2,000 m above mean sea level"
+          ],
+          "answer": "200 m above mean sea level",
+          "explanation": "Plains are low-lying, around 200 m above mean sea level (p.48).",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "hints": [
+            "Plains are low-lying."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-4-p3",
+          "type": "mcq",
+          "prompt": "Waterfalls on plateaus are important sources of",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "hydro-electric power",
+            "alluvium",
+            "lava"
+          ],
+          "answer": "hydro-electric power",
+          "explanation": "Waterfalls found on plateaus are important sources of hydro-electric power (p.48).",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "hints": [
+            "Falling water can turn machines."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-4-p4",
+          "type": "match",
+          "prompt": "Match each landform with how it helps people.",
+          "difficulty": "medium",
+          "marks": 2,
+          "pairs": [
+            [
+              "Mountains",
+              "Most rivers originate here"
+            ],
+            [
+              "Plateaus",
+              "Rich deposits of minerals"
+            ],
+            [
+              "Plains",
+              "Main crop growing regions"
+            ]
+          ],
+          "explanation": "p.48: Importance of mountains, plateaus and plains.",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "hints": [
+            "Crops need flat, fertile land."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Make the book’s 3-tab foldable (p.49): Forces that change the Earth’s surface · Different types of landforms · Landforms and people. On a map, mark the Deccan Plateau, the Aravalli range, the Alps, the Urals, Mt Fuji, Mt Kilimanjaro, the plateau of Tibet and the Nile Basin (Ex. VI, p.51).",
+      "check": [
+        {
+          "id": "geo-major-landforms-4-c1",
+          "type": "true_false",
+          "prompt": "Plains are the most densely populated regions on Earth.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "Plains are, therefore, the most densely populated regions on Earth (p.49).",
+          "source": {
+            "pages": [
+              49
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-4-c2",
+          "type": "mcq",
+          "prompt": "The Indo-Gangetic Basin is an example of a",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "plain",
+            "plateau",
+            "mountain"
+          ],
+          "answer": "plain",
+          "explanation": "The Indo-Gangetic Basin in India is one of the book’s examples of plains (p.48).",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-4-c3",
+          "type": "fill_blank",
+          "prompt": "Mountains act as barriers against both hot and cold ____.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "winds",
+          "accept": [
+            "wind"
+          ],
+          "explanation": "\"…acting as barriers against both hot and cold winds\" (p.48).",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-major-landforms-4-c4",
+          "type": "mcq",
+          "prompt": "Plateaus have rich deposits of minerals such as",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "iron ore, gold and bauxite",
+            "sand, silt and clay"
+          ],
+          "answer": "iron ore, gold and bauxite",
+          "explanation": "Iron ore, gold and bauxite are plateau minerals. Sand, silt and clay are in alluvium (p.48).",
+          "source": {
+            "pages": [
+              48
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "A broad area of relatively flat land is called a plain.",
+        "Alluvial tracts are formed by the deposits brought down by rivers and their tributaries.",
+        "Landforms influence the climate of a place, the type of houses people build, their occupations, the clothes they wear, the availability of water, and the crops grown.",
+        "Plains are the most densely populated regions on Earth."
+      ]
+    }
+  ],
+  "questionBank": [
+    {
+      "id": "geo-major-landforms-1-q1",
+      "lessonId": "geo-major-landforms-1",
+      "type": "mcq",
+      "prompt": "Which of the following is a major agent of gradation or denudation?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Earthquakes",
+        "Water",
+        "Volcanoes",
+        "Folding and faulting"
+      ],
+      "answer": "Water",
+      "explanation": "The agents of gradation include wind, water and glaciers. Earthquakes and volcanoes come from internal forces (p.45).",
+      "source": {
+        "pages": [
+          45,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q3"
+    },
+    {
+      "id": "geo-major-landforms-1-q2",
+      "lessonId": "geo-major-landforms-1",
+      "type": "short_answer",
+      "prompt": "Why do we not feel the movement of the tectonic plates?",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Because the plates move very slowly, just a few centimetres in a year.",
+      "keywords": [
+        "slowly",
+        "few centimetres",
+        "year"
+      ],
+      "explanation": "p.45: the plates move very slowly (just a few centimetres in a year).",
+      "source": {
+        "pages": [
+          45,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q2"
+    },
+    {
+      "id": "geo-major-landforms-1-q3",
+      "lessonId": "geo-major-landforms-1",
+      "type": "short_answer",
+      "prompt": "Most earthquakes occur along plate boundaries. Why do you think this is so?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "The plates move towards each other, away from each other, or slide by each other. Where the plates meet, sudden and strong movements can take place, and these cause earthquakes.",
+      "keywords": [
+        "plates",
+        "meet",
+        "move",
+        "sudden"
+      ],
+      "needsReview": true,
+      "explanation": "Use p.45: how plates move, and that sudden strong movements cause earthquakes.",
+      "source": {
+        "pages": [
+          45,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q3"
+    },
+    {
+      "id": "geo-major-landforms-1-q4",
+      "lessonId": "geo-major-landforms-1",
+      "type": "short_answer",
+      "prompt": "Explain how external forces cause changes on the surface of the Earth.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "External (gradational) forces act from above on the surface of the Earth. They cause slow and steady changes by wearing away and rebuilding the surface. Agents of gradation like wind, water and glaciers do this by weathering (breaking down rocks into smaller bits), eroding (transporting the weathered material) and depositing it at other places. For example, rain, wind and rivers erode mountains and deposit the material further down to form plains.",
+      "keywords": [
+        "wind",
+        "water",
+        "glaciers",
+        "weathering",
+        "eroding",
+        "depositing"
+      ],
+      "explanation": "p.45 has every part of this answer.",
+      "source": {
+        "pages": [
+          45,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q2"
+    },
+    {
+      "id": "geo-major-landforms-1-q5",
+      "lessonId": "geo-major-landforms-1",
+      "type": "fill_blank",
+      "prompt": "Weathering means ____ rocks into smaller bits.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "breaking down",
+      "accept": [
+        "breaking"
+      ],
+      "explanation": "Weathering (breaking down rocks into smaller bits) (p.45).",
+      "source": {
+        "pages": [
+          45
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "geo-major-landforms-1-q6",
+      "lessonId": "geo-major-landforms-1",
+      "type": "true_false",
+      "prompt": "Internal forces are also known as endogenic forces.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": true,
+      "explanation": "Internal forces are also known as endogenetic or endogenic forces (p.45).",
+      "source": {
+        "pages": [
+          45
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "geo-major-landforms-2-q1",
+      "lessonId": "geo-major-landforms-2",
+      "type": "fill_blank",
+      "prompt": "The Alps and the Urals are ____ mountains.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "fold",
+      "explanation": "The Alps are young fold mountains and the Urals are old fold mountains (p.46).",
+      "source": {
+        "pages": [
+          46,
+          49
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q1"
+    },
+    {
+      "id": "geo-major-landforms-2-q2",
+      "lessonId": "geo-major-landforms-2",
+      "type": "fill_blank",
+      "prompt": "Fractures in the Earth’s crust are called ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "faults",
+      "explanation": "These fractures are called faults (p.46).",
+      "source": {
+        "pages": [
+          46,
+          49
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q2"
+    },
+    {
+      "id": "geo-major-landforms-2-q3",
+      "lessonId": "geo-major-landforms-2",
+      "type": "fill_blank",
+      "prompt": "The land that subsides between two faults is called a ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "graben",
+      "accept": [
+        "rift valley",
+        "graben or rift valley"
+      ],
+      "explanation": "The subsided part is called a graben or rift valley (p.47).",
+      "source": {
+        "pages": [
+          47,
+          49
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q3"
+    },
+    {
+      "id": "geo-major-landforms-2-q4",
+      "lessonId": "geo-major-landforms-2",
+      "type": "mcq",
+      "prompt": "The book shows a picture of mountains. We can say with certainty that they are mountains because: (i) they have sharp peaks (ii) they have steep sides (iii) they rise high above the surroundings (iv) they are covered in snow.",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "i, ii, iii, iv",
+        "i, ii, iii",
+        "i, ii",
+        "i, iii, iv"
+      ],
+      "answer": "i, ii, iii",
+      "explanation": "A mountain rises high above its surroundings, with narrow summits (peaks) and steep slopes (p.45). Snow is not part of what makes a mountain.",
+      "source": {
+        "pages": [
+          45,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q1"
+    },
+    {
+      "id": "geo-major-landforms-2-q5",
+      "lessonId": "geo-major-landforms-2",
+      "type": "mcq",
+      "prompt": "The Satpura Range in central India was formed as a result of land getting uplifted along fault lines. It is a:",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "fold mountain",
+        "block mountain",
+        "volcanic mountain",
+        "rift mountain"
+      ],
+      "answer": "block mountain",
+      "explanation": "Land uplifted between fault lines is a horst or block mountain (p.47).",
+      "source": {
+        "pages": [
+          47,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q4"
+    },
+    {
+      "id": "geo-major-landforms-2-q6",
+      "lessonId": "geo-major-landforms-2",
+      "type": "short_answer",
+      "prompt": "Name the three main types of landforms of the world.",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Mountains, plateaus and plains.",
+      "keywords": [
+        "mountains",
+        "plateaus",
+        "plains"
+      ],
+      "explanation": "There are three major types of landforms—mountains, plateaus and plains (p.45).",
+      "source": {
+        "pages": [
+          45,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q1"
+    },
+    {
+      "id": "geo-major-landforms-2-q7",
+      "lessonId": "geo-major-landforms-2",
+      "type": "short_answer",
+      "prompt": "Explain the process of plate tectonics. How does it lead to the formation of fold mountains?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Heat from the core of the Earth heats the magma in the mantle. The heated magma rises, spreads, cools and sinks again. These rising and sinking streams push against the tectonic plates and make them move; this is plate tectonics. When two plates move towards each other (converge), the place where they meet gets compressed (lateral compression). The crust there gets crumpled or folded, and massive layers get uplifted, forming fold mountains, like the Himalayas and the Alps.",
+      "keywords": [
+        "magma",
+        "rises",
+        "sinks",
+        "plates",
+        "converge",
+        "compressed",
+        "folded",
+        "uplifted"
+      ],
+      "explanation": "Plate tectonics is on pp.44–45; fold mountains on p.46.",
+      "source": {
+        "pages": [
+          44,
+          45,
+          46,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q1"
+    },
+    {
+      "id": "geo-major-landforms-2-q8",
+      "lessonId": "geo-major-landforms-2",
+      "type": "short_answer",
+      "prompt": "How are block mountains formed? How are they different from fold mountains?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "When two plates diverge (get pulled apart), fractures called faults appear. When two faults form alongside each other, the land between them is displaced vertically: the uplifted part is a horst or block mountain, and the part that subsides is a graben or rift valley. Fold mountains are different: they form when plates converge, and the crust is compressed, folded and uplifted.",
+      "keywords": [
+        "diverge",
+        "faults",
+        "horst",
+        "graben",
+        "converge",
+        "folded"
+      ],
+      "explanation": "Block mountains: pp.46–47. Fold mountains: p.46.",
+      "source": {
+        "pages": [
+          46,
+          47,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q3"
+    },
+    {
+      "id": "geo-major-landforms-3-q1",
+      "lessonId": "geo-major-landforms-3",
+      "type": "fill_blank",
+      "prompt": "Magma that reaches the surface of the Earth is called ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "lava",
+      "explanation": "Magma that reaches the surface of the Earth is called lava (p.47).",
+      "source": {
+        "pages": [
+          47,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q4"
+    },
+    {
+      "id": "geo-major-landforms-3-q2",
+      "lessonId": "geo-major-landforms-3",
+      "type": "fill_blank",
+      "prompt": "Mt Kilimanjaro is a ____ mountain.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "volcanic",
+      "explanation": "Mt Kilimanjaro is one of the book’s steep, cone-shaped volcanic mountains (p.47).",
+      "source": {
+        "pages": [
+          47,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q5"
+    },
+    {
+      "id": "geo-major-landforms-3-q3",
+      "lessonId": "geo-major-landforms-3",
+      "type": "mcq",
+      "prompt": "Which of the following statements about plateaus is correct?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Plateaus always have steep sides.",
+        "Plateaus are broad, flat lands rising sharply above the surrounding areas.",
+        "Only Asia and Africa have plateaus.",
+        "Plateaus are the most densely populated regions of the world."
+      ],
+      "answer": "Plateaus are broad, flat lands rising sharply above the surrounding areas.",
+      "explanation": "This matches the definition on p.47. A plateau may have one gently sloping side, and plains (not plateaus) are the most densely populated.",
+      "source": {
+        "pages": [
+          47,
+          49,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q2"
+    },
+    {
+      "id": "geo-major-landforms-3-q4",
+      "lessonId": "geo-major-landforms-3",
+      "type": "short_answer",
+      "prompt": "Describe the formation of volcanic mountains with the help of a diagram.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Magma under pressure escapes to the surface of the Earth through an opening called a vent. Magma that reaches the surface is called lava. The lava, ash and rocks that erupt settle in layers on the surface. Over thousands of years these layers build up and form a conical or dome-shaped volcanic mountain. (Draw the volcano: magma under pressure, vent, crater, lava, and gases, ashes & cinders.)",
+      "keywords": [
+        "magma",
+        "vent",
+        "lava",
+        "layers",
+        "thousands of years"
+      ],
+      "explanation": "p.47 has the steps and the diagram. Draw it in your notebook too.",
+      "source": {
+        "pages": [
+          47,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q4"
+    },
+    {
+      "id": "geo-major-landforms-3-q5",
+      "lessonId": "geo-major-landforms-3",
+      "type": "short_answer",
+      "prompt": "How are mountains different from plateaus?",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "A mountain rises high above its surroundings and has a narrow summit (peak), steep slopes and a broad base. A plateau is a broad, flat, elevated area of land (a tableland) that rises sharply above the surrounding area; it may have one gently sloping side and one steep side (an escarpment).",
+      "keywords": [
+        "narrow",
+        "peak",
+        "steep",
+        "flat",
+        "tableland"
+      ],
+      "explanation": "Mountains: p.45. Plateaus: p.47.",
+      "source": {
+        "pages": [
+          45,
+          47,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q5"
+    },
+    {
+      "id": "geo-major-landforms-3-q6",
+      "lessonId": "geo-major-landforms-3",
+      "type": "short_answer",
+      "prompt": "Distinguish between intermontane plateaus and continental plateaus.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "Intermontane plateaus are surrounded completely or partially by mountains, for example, the plateau of Tibet. Continental plateaus are vast areas of tableland that rise abruptly from the coast or surrounding plains, for example, the plateaus of Africa.",
+      "keywords": [
+        "surrounded",
+        "mountains",
+        "Tibet",
+        "coast",
+        "Africa"
+      ],
+      "explanation": "Both are on p.48.",
+      "source": {
+        "pages": [
+          48,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q6"
+    },
+    {
+      "id": "geo-major-landforms-3-q7",
+      "lessonId": "geo-major-landforms-3",
+      "type": "mcq",
+      "prompt": "Which two plateaus are both called the ‘roof of the world’?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "The Pamir Plateau and the Tibetan Plateau",
+        "The Deccan Plateau and the Tibetan Plateau",
+        "The Pamir Plateau and the Waterberg Plateau"
+      ],
+      "answer": "The Pamir Plateau and the Tibetan Plateau",
+      "explanation": "p.47: the Pamir Plateau to the north of India and the Tibetan Plateau.",
+      "source": {
+        "pages": [
+          47
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "geo-major-landforms-4-q1",
+      "lessonId": "geo-major-landforms-4",
+      "type": "mcq",
+      "prompt": "Assertion (A): Plains are the most densely populated parts of the world. Reason (R): People find it convenient to live in the plains.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "options": [
+        "Both A and R are true and R is the correct explanation of A.",
+        "Both A and R are true but R is not a complete explanation of A.",
+        "A is true but R is false.",
+        "A is false but R is true."
+      ],
+      "answer": "Both A and R are true and R is the correct explanation of A.",
+      "needsReview": true,
+      "explanation": "Plains give better conditions for living and it is easier to build roads and railways, so they are the most densely populated (pp.48–49).",
+      "source": {
+        "pages": [
+          48,
+          49,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q5"
+    },
+    {
+      "id": "geo-major-landforms-4-q2",
+      "lessonId": "geo-major-landforms-4",
+      "type": "short_answer",
+      "prompt": "What are plains? How are they formed? Why do people prefer to live on plains?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "A broad area of relatively flat land is called a plain; plains are low-lying, about 200 m above mean sea level. Most plains are alluvial tracts: rivers bring down alluvium (sand, silt, clay, and animal and plant matter) from the mountains and deposit it, forming highly fertile land. People prefer plains because they are fertile and largely flat, they are the main crop growing regions, and it is easier to build roads and railways there, so living conditions are better.",
+      "keywords": [
+        "flat",
+        "rivers",
+        "alluvium",
+        "fertile",
+        "crops",
+        "roads",
+        "railway"
+      ],
+      "explanation": "pp.48–49 have every part of this answer.",
+      "source": {
+        "pages": [
+          48,
+          49,
+          50
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q4"
+    },
+    {
+      "id": "geo-major-landforms-4-q3",
+      "lessonId": "geo-major-landforms-4",
+      "type": "fill_blank",
+      "prompt": "Plains are formed in different ways. Most of them are levelled ____ tracts.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "alluvial",
+      "explanation": "\"Most of them are levelled alluvial tracts\" (p.48).",
+      "source": {
+        "pages": [
+          48
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "geo-major-landforms-4-q4",
+      "lessonId": "geo-major-landforms-4",
+      "type": "mcq",
+      "prompt": "The Nile Basin is in",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Egypt",
+        "China",
+        "India"
+      ],
+      "answer": "Egypt",
+      "explanation": "The Nile Basin in Egypt (p.48).",
+      "source": {
+        "pages": [
+          48
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "geo-major-landforms-4-q5",
+      "lessonId": "geo-major-landforms-4",
+      "type": "true_false",
+      "prompt": "People live only in the plains.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": false,
+      "explanation": "People have made their homes in every kind of terrain, by modifying the land and adapting their lifestyle (p.49).",
+      "source": {
+        "pages": [
+          49
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

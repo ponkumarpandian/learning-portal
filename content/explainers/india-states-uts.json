@@ -1,0 +1,118 @@
+{
+  "id": "india-states-uts",
+  "subject": "geography",
+  "title": "States and union territories",
+  "source": {
+    "pages": [
+      54,
+      55
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "15 August 1947: independence",
+          "States made on the basis of language",
+          "Today: 28 states and 8 union territories"
+        ],
+        "highlight": 2,
+        "label": "p.54"
+      },
+      "narration": "After more than 200 years under British rule, India became independent on 15 August 1947. For better administration, it was divided into states on the basis of language. Today India has 28 states and 8 union territories.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "checkpoint": {
+        "questionId": "india-states-uts-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "State: has its own duly elected state government",
+          "Union territory: under the direct administration of the Union Government"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "p.55"
+      },
+      "narration": "A state has its own duly elected state government. A union territory is under the direct administration of the Union Government.",
+      "minDuration": 9,
+      "source": {
+        "pages": [
+          55
+        ]
+      },
+      "checkpoint": {
+        "questionId": "india-states-uts-cp2"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Capital of India: New Delhi",
+          "Largest state: Rajasthan",
+          "Smallest state: Goa"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "p.54"
+      },
+      "narration": "India’s capital is New Delhi. Rajasthan is the largest state and Goa is the smallest state. Every state and union territory has its own capital, in the table on page 54.",
+      "minDuration": 10,
+      "source": {
+        "pages": [
+          54
+        ]
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "india-states-uts-cp1",
+      "type": "fill_blank",
+      "prompt": "Today India has ____ union territories.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "8",
+      "accept": [
+        "eight"
+      ],
+      "hints": [
+        "Read the last box."
+      ],
+      "explanation": "p.54.",
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "india-states-uts-cp2",
+      "type": "true_false",
+      "prompt": "A union territory has its own elected state government.",
+      "difficulty": "medium",
+      "marks": 1,
+      "answer": false,
+      "hints": [
+        "Who runs a union territory?"
+      ],
+      "explanation": "A union territory is under the direct administration of the Union Government (p.55).",
+      "source": {
+        "pages": [
+          55
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

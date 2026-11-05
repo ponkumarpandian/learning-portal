@@ -1,0 +1,146 @@
+{
+  "id": "landforms-mountains",
+  "subject": "geography",
+  "title": "How fold and block mountains form",
+  "source": {
+    "pages": [
+      45,
+      46,
+      47
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Mountains",
+          "Plateaus",
+          "Plains"
+        ],
+        "arrows": false,
+        "highlight": 0,
+        "label": "Three major landforms, p.45"
+      },
+      "narration": "Geographers sort major landforms by their elevation and slope into three types: mountains, plateaus and plains. A mountain rises high above its surroundings, with a narrow peak, steep slopes and a broad base.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          45
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Two plates converge",
+          "The meeting place gets compressed",
+          "The crust crumples or folds",
+          "Massive layers are uplifted: fold mountains"
+        ],
+        "highlight": 3,
+        "label": "Fold mountains, p.46"
+      },
+      "narration": "When two plates move towards each other, the place where they meet gets squeezed from both sides. This is lateral compression. The crust crumples or folds, and massive layers are uplifted into fold mountains.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          46
+        ]
+      },
+      "checkpoint": {
+        "questionId": "landforms-mountains-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Young fold: the Himalayas, the Alps",
+          "Old fold: the Aravallis, the Urals, the Appalachians"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "p.46"
+      },
+      "narration": "The Himalayas and the Alps formed recently, so they are young fold mountains, with high, sharp peaks. The Aravalli Range is one of the oldest; erosion has lowered it greatly. The Urals and Appalachians are old too.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          46
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Two plates diverge",
+          "Fractures called faults appear",
+          "Land between two faults moves up or down",
+          "Up: horst (block mountain). Down: graben (rift valley)"
+        ],
+        "highlight": 3,
+        "label": "Block mountains, pp.46–47"
+      },
+      "narration": "When two plates are pulled apart, fractures called faults appear. The land between two faults either rises or falls. The part that rises is a horst, or block mountain. The part that falls is a graben, or rift valley.",
+      "minDuration": 14,
+      "source": {
+        "pages": [
+          46,
+          47
+        ]
+      },
+      "checkpoint": {
+        "questionId": "landforms-mountains-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "landforms-mountains-cp1",
+      "type": "mcq",
+      "prompt": "Fold mountains form when plates",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "converge",
+        "diverge"
+      ],
+      "answer": "converge",
+      "hints": [
+        "Look at the first box."
+      ],
+      "explanation": "When two plates move towards each other (converge), the crust gets folded (p.46).",
+      "source": {
+        "pages": [
+          46
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "landforms-mountains-cp2",
+      "type": "mcq",
+      "prompt": "The land that falls between two faults is a",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "graben",
+        "horst"
+      ],
+      "answer": "graben",
+      "hints": [
+        "Down: graben."
+      ],
+      "explanation": "The subsided part is called a graben or rift valley (p.47).",
+      "source": {
+        "pages": [
+          47
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

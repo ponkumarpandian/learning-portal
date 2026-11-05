@@ -1,0 +1,146 @@
+{
+  "id": "landforms-forces",
+  "subject": "geography",
+  "title": "What moves the Earth’s surface?",
+  "source": {
+    "pages": [
+      44,
+      45
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Heat from the core heats the magma",
+          "Heated magma rises and spreads",
+          "It cools and sinks again",
+          "The streams push the plates: plate tectonics"
+        ],
+        "highlight": 0,
+        "label": "pp.44–45"
+      },
+      "narration": "The stiff and brittle lithosphere is broken up into pieces called tectonic plates. They float over molten rock called magma. Heat from the core of the Earth heats the magma in the mantle.",
+      "minDuration": 12,
+      "source": {
+        "pages": [
+          44
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Heat from the core heats the magma",
+          "Heated magma rises and spreads",
+          "It cools and sinks again",
+          "The streams push the plates: plate tectonics"
+        ],
+        "highlight": [
+          1,
+          2,
+          3
+        ],
+        "label": "pp.44–45"
+      },
+      "narration": "The heated magma rises, spreads, cools and then sinks again, to get heated and rise once more. These rising and sinking streams push against the plates and make them move. This is plate tectonics.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          44,
+          45
+        ]
+      },
+      "checkpoint": {
+        "questionId": "landforms-forces-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Converge: towards each other",
+          "Diverge: away from each other",
+          "Transverse: sliding by each other"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "How plates move, p.45"
+      },
+      "narration": "Sometimes the plates move towards each other, or converge. Sometimes they move away from each other, or diverge. Sometimes they slide by each other in a transverse movement. They move just a few centimetres in a year.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          45
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Weathering: breaking rocks into smaller bits",
+          "Eroding: transporting the material",
+          "Depositing it at other places",
+          "Plains form further down"
+        ],
+        "highlight": 3,
+        "label": "External forces, p.45"
+      },
+      "narration": "External forces act from above, with slow and steady changes. Wind, water and glaciers break rocks down, carry the bits away, and deposit them somewhere else. Rivers erode mountains and form plains further down.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          45
+        ]
+      },
+      "checkpoint": {
+        "questionId": "landforms-forces-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "landforms-forces-cp1",
+      "type": "mcq",
+      "prompt": "What pushes the tectonic plates and makes them move?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Rising and sinking streams of magma",
+        "Wind and rain"
+      ],
+      "answer": "Rising and sinking streams of magma",
+      "hints": [
+        "Look at the last box."
+      ],
+      "explanation": "These rising and sinking streams of magma push against the plates (p.45).",
+      "source": {
+        "pages": [
+          45
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "landforms-forces-cp2",
+      "type": "true_false",
+      "prompt": "Weathering means carrying rocks to other places.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "hints": [
+        "Weathering is the first box."
+      ],
+      "explanation": "Weathering is breaking down rocks into smaller bits. Carrying them away is eroding (p.45).",
+      "source": {
+        "pages": [
+          45
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

@@ -1,0 +1,1368 @@
+{
+  "id": "geo-our-country-india",
+  "subject": "geography",
+  "title": "Our Country—India",
+  "order": 7,
+  "status": "approved",
+  "book": {
+    "title": "REPLACE_ME",
+    "publisher": "REPLACE_ME",
+    "chapterNo": 7
+  },
+  "sourceDir": "source/geography/07-our-country-india",
+  "parentNotes": [
+    "Geography Ch 7, pages 52–56, the whole chapter, from the same scan as History Ch 4 and Civics Ch 4. Approved straight away at your request.",
+    "No answer key is printed. Answers come from the chapter text.",
+    "Book misprint: p.54 gives the westernmost point as 68° 7′ W, but p.53 and Ex. III Q2 use 68° 7′ E. The app uses E.",
+    "Ex. IV Q3 (needsReview): the pages never say why peninsular India stays warm; the model answer uses only where the Tropic of Cancer is (p.53). Please check with her teacher.",
+    "Ex. IV Q6 (needsReview): an opinion question (\"good or bad?\"). The model answer uses p.52; her reasons may differ.",
+    "Ex. I Q5 asks for the capital of her own state or UT; it is a think-and-write here, because the answer depends on where you live.",
+    "Ex. II asks her to correct the false sentences; the app shows the correction after she answers.",
+    "The book has no section V in the exercises (IV is followed by VI). Ex. VI map work is in the notebook tasks of lessons 2 and 3.",
+    "Lead In, Do and learn and Enrichment activities are class work and are not questions here.",
+    "Please fill in the book’s title and publisher in source/books.json (geography) and in the \"book\" field here.",
+    "Video search words — lesson geo-our-country-india-1: \"India location and extent class 6\", \"India peninsula latitude longitude\"",
+    "Video search words — lesson geo-our-country-india-2: \"Indian Standard Time explained for kids\", \"India neighbouring countries class 6\"",
+    "Video search words — lesson geo-our-country-india-3: \"28 states and 8 union territories of India song\", \"states and capitals of India\""
+  ],
+  "lessons": [
+    {
+      "id": "geo-our-country-india-1",
+      "title": "India: size, people and location",
+      "source": {
+        "pages": [
+          52,
+          53
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "india-location"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "India location and extent class 6 (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "geo-our-country-india-1-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "A land of variety",
+          "emoji": "🇮🇳",
+          "body": "India, that is Bharat, is a vast land with immense geographical and cultural variations: towering mountains, extensive plains and plateaus, rivers, deserts and long coastlines. Its flora and fauna are rich and varied, and each region has its own languages, traditional clothes and distinct foods.",
+          "reveal": "Despite the great diversities of this land, there is an underlying unity that binds this nation together.",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        },
+        {
+          "title": "Big and busy",
+          "emoji": "📏",
+          "body": "India is spread over an area of 3.28 million sq. km, making it the seventh largest country in the world. It has overtaken China to become the most populous country, with 1.426 billion people (as of 2023). It is the largest democracy in the world.",
+          "didYouKnow": "India has almost 18% of the world’s population, but only 2.4% of the total land area.",
+          "source": {
+            "pages": [
+              52
+            ]
+          }
+        },
+        {
+          "title": "A peninsula",
+          "emoji": "🌊",
+          "body": "India is located in the southern part of the continent of Asia. It is a peninsula. \"A peninsula is a land surrounded by water on three sides.\"",
+          "example": "The Himalayas in the north, the Indian Ocean in the south, the Arabian Sea in the west and the Bay of Bengal in the east.",
+          "source": {
+            "pages": [
+              53
+            ]
+          }
+        },
+        {
+          "title": "Hemispheres",
+          "emoji": "🌐",
+          "body": "India is located in the Northern and Eastern hemispheres. The Tropic of Cancer passes through almost the centre of India.",
+          "source": {
+            "pages": [
+              53
+            ]
+          }
+        },
+        {
+          "title": "Latitude and longitude",
+          "emoji": "📐",
+          "body": "The Indian mainland extends from 8° 4′ N to 37° 6′ N latitude (south to north), and 68° 7′ E to 97° 25′ E longitude (west to east).",
+          "source": {
+            "pages": [
+              53
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "geo-our-country-india-1-p1",
+          "type": "mcq",
+          "prompt": "By area, India is the ____ largest country in the world.",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "seventh",
+            "second",
+            "fifth"
+          ],
+          "answer": "seventh",
+          "explanation": "3.28 million sq. km makes India the seventh largest country (p.52).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "hints": [
+            "It is a number between six and eight."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-1-p2",
+          "type": "fill_blank",
+          "prompt": "A peninsula is a land surrounded by water on ____ sides.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "three",
+          "accept": [
+            "3"
+          ],
+          "explanation": "\"A peninsula is a land surrounded by water on three sides\" (p.53).",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "hints": [
+            "The fourth side of India has the Himalayas."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-1-p3",
+          "type": "match",
+          "prompt": "Match each side of India with what bounds it.",
+          "difficulty": "medium",
+          "marks": 2,
+          "pairs": [
+            [
+              "North",
+              "the Himalayas"
+            ],
+            [
+              "South",
+              "the Indian Ocean"
+            ],
+            [
+              "West",
+              "the Arabian Sea"
+            ],
+            [
+              "East",
+              "the Bay of Bengal"
+            ]
+          ],
+          "explanation": "p.53 names all four.",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "hints": [
+            "Mountains are in the north."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-1-p4",
+          "type": "true_false",
+          "prompt": "The Tropic of Cancer passes through almost the centre of India.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "p.53.",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "hints": [
+            "Read the hemispheres card again."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Draw a rough outline of India in your notebook. Write what bounds it on each side, and draw the Tropic of Cancer across the middle (p.53).",
+      "check": [
+        {
+          "id": "geo-our-country-india-1-c1",
+          "type": "mcq",
+          "prompt": "India’s population in 2023 was",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "1.426 billion",
+            "426 million",
+            "14 billion"
+          ],
+          "answer": "1.426 billion",
+          "explanation": "1.426 billion (as of 2023) (p.52).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-1-c2",
+          "type": "true_false",
+          "prompt": "India is located in the Southern Hemisphere.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": false,
+          "explanation": "India is in the Northern and Eastern hemispheres (p.53).",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-1-c3",
+          "type": "mcq",
+          "prompt": "The Indian mainland extends from",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "8° 4′ N to 37° 6′ N latitude",
+            "8° 4′ S to 37° 6′ S latitude",
+            "68° 7′ N to 97° 25′ N latitude"
+          ],
+          "answer": "8° 4′ N to 37° 6′ N latitude",
+          "explanation": "All of India’s mainland is north of the Equator: 8° 4′ N to 37° 6′ N (p.53).",
+          "source": {
+            "pages": [
+              53
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-1-c4",
+          "type": "fill_blank",
+          "prompt": "India has only ____% of the total land area of the world.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "2.4",
+          "explanation": "\"…it has only 2.4% of the total land area\" (p.52).",
+          "source": {
+            "pages": [
+              52
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "India is spread over an area of 3.28 million sq. km, making it the seventh largest country in the world.",
+        "A peninsula is a land surrounded by water on three sides.",
+        "India is located in the Northern and Eastern hemispheres. The Tropic of Cancer passes through almost the centre of India.",
+        "The Indian mainland extends from 8° 4′ N to 37° 6′ N latitude and 68° 7′ E to 97° 25′ E longitude."
+      ]
+    },
+    {
+      "id": "geo-our-country-india-2",
+      "title": "India’s extent, time and neighbours",
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "india-extent-neighbours"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "Indian Standard Time and India’s neighbours (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "geo-our-country-india-2-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "North to south",
+          "emoji": "↕️",
+          "body": "The northernmost point of India lies in the Siachen Glacier region of the Karakoram range (37° 6′ N). The southernmost point of the Indian mainland lies at Kanniyakumari (Kanyakumari) (8° 4′ N). The distance between these two points is 3,214 km.",
+          "source": {
+            "pages": [
+              54
+            ]
+          }
+        },
+        {
+          "title": "East to west",
+          "emoji": "↔️",
+          "body": "The easternmost point of India lies in Arunachal Pradesh (97° 25′ E). The westernmost point lies in the Rann of Kutchch in Gujarat (68° 7′ E). The distance between these two points is 2,933 km.",
+          "source": {
+            "pages": [
+              53,
+              54
+            ]
+          }
+        },
+        {
+          "title": "Indian Standard Time",
+          "emoji": "⏰",
+          "body": "The longitudinal width of India is almost 30°. The time lag between the easternmost and the westernmost parts of India is two hours. To avoid confusion, India follows the time at the central or standard meridian of India (82° 30′ E). This is called the Indian Standard Time (IST).",
+          "source": {
+            "pages": [
+              54
+            ]
+          }
+        },
+        {
+          "title": "Coastline and border",
+          "emoji": "🏖️",
+          "body": "The length of India’s coastline (its maritime boundary) is 7,516 km. The length of India’s terrestrial border is 15,200 km.",
+          "source": {
+            "pages": [
+              54
+            ]
+          }
+        },
+        {
+          "title": "Neighbours by land",
+          "emoji": "🤝",
+          "body": "Seven countries share terrestrial (land) boundaries with India. Pakistan and Afghanistan lie to the north-west, Bangladesh and Myanmar to the east, and China, Nepal and Bhutan to the north.",
+          "source": {
+            "pages": [
+              54
+            ]
+          }
+        },
+        {
+          "title": "Neighbours across the sea",
+          "emoji": "🏝️",
+          "body": "Across the sea, to the south, India’s neighbours are the islands of Sri Lanka and the Maldives. India is separated from Sri Lanka by the Palk Strait and the Gulf of Mannar.",
+          "source": {
+            "pages": [
+              54
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "geo-our-country-india-2-p1",
+          "type": "fill_blank",
+          "prompt": "The northernmost point of India lies in the ____ Glacier region of the Karakoram range.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "Siachen",
+          "explanation": "The Siachen Glacier region (37° 6′ N) (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "hints": [
+            "It starts with \"S\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-2-p2",
+          "type": "mcq",
+          "prompt": "The time at India’s standard meridian is called",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Indian Standard Time (IST)",
+            "Indian Summer Time",
+            "Island Sea Time"
+          ],
+          "answer": "Indian Standard Time (IST)",
+          "explanation": "The time on this meridian is referred to as the Indian Standard Time (IST) (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "hints": [
+            "It comes from \"standard meridian\"."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-2-p3",
+          "type": "match",
+          "prompt": "Match the direction with India’s neighbours there.",
+          "difficulty": "medium",
+          "marks": 2,
+          "pairs": [
+            [
+              "North-west",
+              "Pakistan and Afghanistan"
+            ],
+            [
+              "East",
+              "Bangladesh and Myanmar"
+            ],
+            [
+              "North",
+              "China, Nepal and Bhutan"
+            ],
+            [
+              "South, across the sea",
+              "Sri Lanka and the Maldives"
+            ]
+          ],
+          "explanation": "p.54 lists every neighbour with its direction.",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "hints": [
+            "The two island countries are across the sea."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-2-p4",
+          "type": "mcq",
+          "prompt": "How many countries share land boundaries with India?",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Seven",
+            "Five",
+            "Nine"
+          ],
+          "answer": "Seven",
+          "explanation": "Seven countries share terrestrial (land) boundaries with India (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "hints": [
+            "Count the land neighbours in the match question."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "On an outline map of India, mark the Tropic of Cancer and the standard meridian (82° 30′ E), and write the names of India’s neighbours around the map in the right directions (pp.53–54, Ex. VI).",
+      "check": [
+        {
+          "id": "geo-our-country-india-2-c1",
+          "type": "mcq",
+          "prompt": "India’s standard meridian is",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "82° 30′ E",
+            "68° 7′ E",
+            "97° 25′ E"
+          ],
+          "answer": "82° 30′ E",
+          "explanation": "The central or standard meridian of India is 82° 30′ E (p.54). The other two are the westernmost and easternmost points.",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-2-c2",
+          "type": "true_false",
+          "prompt": "The time lag between the easternmost and westernmost parts of India is two hours.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "p.54.",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-2-c3",
+          "type": "fill_blank",
+          "prompt": "The length of India’s coastline is ____ km.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "7,516",
+          "accept": [
+            "7516"
+          ],
+          "explanation": "India’s coastline (its maritime boundary) is 7,516 km (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-2-c4",
+          "type": "mcq",
+          "prompt": "The easternmost point of India lies in",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Arunachal Pradesh",
+            "Gujarat",
+            "Assam"
+          ],
+          "answer": "Arunachal Pradesh",
+          "explanation": "Arunachal Pradesh (97° 25′ E). Gujarat has the westernmost point (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "The northernmost point of India lies in the Siachen Glacier region; the southernmost point of the mainland lies at Kanniyakumari.",
+        "The easternmost point of India lies in Arunachal Pradesh; the westernmost point lies in the Rann of Kutchch in Gujarat.",
+        "India follows the time at the standard meridian of India (82° 30′ E), the Indian Standard Time (IST).",
+        "Seven countries share terrestrial (land) boundaries with India."
+      ]
+    },
+    {
+      "id": "geo-our-country-india-3",
+      "title": "States and union territories",
+      "source": {
+        "pages": [
+          54,
+          55
+        ]
+      },
+      "videos": [
+        {
+          "role": "primary",
+          "kind": "explainer",
+          "explainerId": "india-states-uts"
+        },
+        {
+          "role": "alternate",
+          "kind": "youtube",
+          "youtubeId": "REPLACE_ME",
+          "title": "States and union territories of India (parent to choose)",
+          "start": 0,
+          "end": 300,
+          "checkpoints": [
+            {
+              "at": 120,
+              "questionId": "geo-our-country-india-3-q1",
+              "rewindTo": 80
+            }
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "title": "Free India, made of states",
+          "emoji": "🗓️",
+          "body": "After more than 200 years under British rule, India became independent on 15 August 1947. For better administration, India was divided into states on the basis of language.",
+          "source": {
+            "pages": [
+              54
+            ]
+          }
+        },
+        {
+          "title": "28 states and 8 union territories",
+          "emoji": "🗺️",
+          "body": "Today India has 28 states and 8 union territories. India’s capital is New Delhi. Rajasthan is the largest state and Goa is the smallest state.",
+          "source": {
+            "pages": [
+              54
+            ]
+          }
+        },
+        {
+          "title": "State or union territory?",
+          "emoji": "🏛️",
+          "body": "A state is a smaller territorial division of India, each having its own duly elected state government. A union territory is a part of the country that is under the direct administration of the Union Government.",
+          "source": {
+            "pages": [
+              55
+            ]
+          }
+        },
+        {
+          "title": "Some state capitals",
+          "emoji": "📍",
+          "body": "Andhra Pradesh: Amaravati · Assam: Dispur · Karnataka: Bengaluru · Kerala: Thiruvananthapuram · Maharashtra: Mumbai · Tamil Nadu: Chennai · Telangana: Hyderabad · West Bengal: Kolkata. All 28 are in the table on p.54.",
+          "reveal": "Chandigarh is the capital of both Punjab and Haryana, and is itself a union territory.",
+          "source": {
+            "pages": [
+              53,
+              54
+            ]
+          }
+        },
+        {
+          "title": "The 8 union territories",
+          "emoji": "🏝️",
+          "body": "Andaman and Nicobar Islands (Sri Vijaya Puram, Port Blair) · Chandigarh · Dadra and Nagar Haveli and Daman and Diu (Daman) · Lakshadweep (Kavaratti) · Puducherry · National Capital Territory, Delhi (New Delhi) · Jammu & Kashmir (Srinagar in summer / Jammu in winter) · Ladakh (Leh).",
+          "source": {
+            "pages": [
+              54
+            ]
+          }
+        }
+      ],
+      "practice": [
+        {
+          "id": "geo-our-country-india-3-p1",
+          "type": "fill_blank",
+          "prompt": "Today India has ____ states.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": "28",
+          "accept": [
+            "twenty-eight",
+            "twenty eight"
+          ],
+          "explanation": "Today India has 28 states and 8 union territories (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "hints": [
+            "It is more than 25 and less than 30."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-3-p2",
+          "type": "mcq",
+          "prompt": "The smallest state of India is",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Goa",
+            "Sikkim",
+            "Tripura"
+          ],
+          "answer": "Goa",
+          "explanation": "Rajasthan is the largest state and Goa is the smallest state (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "hints": [
+            "It is on the west coast, with its capital Panaji."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-3-p3",
+          "type": "match",
+          "prompt": "Match each state with its capital.",
+          "difficulty": "medium",
+          "marks": 2,
+          "pairs": [
+            [
+              "Karnataka",
+              "Bengaluru"
+            ],
+            [
+              "Odisha",
+              "Bhubaneswar"
+            ],
+            [
+              "Meghalaya",
+              "Shillong"
+            ],
+            [
+              "Uttarakhand",
+              "Dehradun"
+            ]
+          ],
+          "explanation": "All four are in the state table on p.54.",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "hints": [
+            "Look at the table on p.54."
+          ],
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-3-p4",
+          "type": "mcq",
+          "prompt": "Which of these is a union territory?",
+          "difficulty": "medium",
+          "marks": 2,
+          "options": [
+            "Lakshadweep",
+            "Kerala",
+            "Goa"
+          ],
+          "answer": "Lakshadweep",
+          "explanation": "Lakshadweep (capital Kavaratti) is one of the 8 union territories (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "hints": [
+            "It is a group of islands."
+          ],
+          "fromBook": false
+        }
+      ],
+      "notebook": "Make the book’s 4-tab foldable (p.55): Diversity in India · Location · India’s neighbours · Political and administrative divisions. On an outline map of India, label the states and union territories with their capitals, and colour the one you live in (Ex. VI, p.56).",
+      "check": [
+        {
+          "id": "geo-our-country-india-3-c1",
+          "type": "true_false",
+          "prompt": "India became independent on 15 August 1947.",
+          "difficulty": "easy",
+          "marks": 1,
+          "answer": true,
+          "explanation": "p.54.",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-3-c2",
+          "type": "mcq",
+          "prompt": "The capital of Ladakh is",
+          "difficulty": "easy",
+          "marks": 1,
+          "options": [
+            "Leh",
+            "Srinagar",
+            "Shimla"
+          ],
+          "answer": "Leh",
+          "explanation": "Ladakh: Leh. Srinagar is in Jammu & Kashmir; Shimla is the capital of Himachal Pradesh (p.54).",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-3-c3",
+          "type": "fill_blank",
+          "prompt": "A union territory is under the direct administration of the ____ Government.",
+          "difficulty": "medium",
+          "marks": 2,
+          "answer": "Union",
+          "explanation": "union territory: under the direct administration of the Union Government (p.55).",
+          "source": {
+            "pages": [
+              55
+            ]
+          },
+          "fromBook": false
+        },
+        {
+          "id": "geo-our-country-india-3-c4",
+          "type": "match",
+          "prompt": "Match each state with its capital.",
+          "difficulty": "medium",
+          "marks": 2,
+          "pairs": [
+            [
+              "Assam",
+              "Dispur"
+            ],
+            [
+              "Manipur",
+              "Imphal"
+            ],
+            [
+              "Andhra Pradesh",
+              "Amaravati"
+            ],
+            [
+              "Telangana",
+              "Hyderabad"
+            ]
+          ],
+          "explanation": "p.54 state table.",
+          "source": {
+            "pages": [
+              54
+            ]
+          },
+          "fromBook": false
+        }
+      ],
+      "keyRules": [
+        "India became independent on 15 August 1947.",
+        "Today India has 28 states and 8 union territories. India’s capital is New Delhi.",
+        "state: a smaller territorial division of India, each having its own duly elected state government",
+        "union territory: a part of the country that is under the direct administration of the Union Government"
+      ]
+    }
+  ],
+  "questionBank": [
+    {
+      "id": "geo-our-country-india-1-q1",
+      "lessonId": "geo-our-country-india-1",
+      "type": "fill_blank",
+      "prompt": "India has ____ % of the world’s population.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "18",
+      "accept": [
+        "almost 18",
+        "about 18",
+        "18%"
+      ],
+      "explanation": "India accounts for almost 18% of the world’s population (p.52).",
+      "source": {
+        "pages": [
+          52,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q1"
+    },
+    {
+      "id": "geo-our-country-india-1-q2",
+      "lessonId": "geo-our-country-india-1",
+      "type": "true_false",
+      "prompt": "India is the second largest country in the world.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "explanation": "India is the seventh largest country in the world (p.52).",
+      "source": {
+        "pages": [
+          52,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q1"
+    },
+    {
+      "id": "geo-our-country-india-1-q3",
+      "lessonId": "geo-our-country-india-1",
+      "type": "true_false",
+      "prompt": "The Tropic of Capricorn runs through the middle of India.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "explanation": "It is the Tropic of Cancer that passes through almost the centre of India (p.53).",
+      "source": {
+        "pages": [
+          53,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q2"
+    },
+    {
+      "id": "geo-our-country-india-1-q4",
+      "lessonId": "geo-our-country-india-1",
+      "type": "true_false",
+      "prompt": "India is located in the Northern Hemisphere.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": true,
+      "explanation": "India is located in the Northern and Eastern hemispheres (p.53).",
+      "source": {
+        "pages": [
+          53,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q3"
+    },
+    {
+      "id": "geo-our-country-india-1-q5",
+      "lessonId": "geo-our-country-india-1",
+      "type": "mcq",
+      "prompt": "The Indian mainland extends from:",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "37° 6′ N to 8° 4′ N latitude; and 68° 7′ E to 97° 25′ E longitude",
+        "37° 6′ E to 8° 4′ E latitude; and 68° 7′ N to 97° 25′ N longitude",
+        "30° 5′ N to 8° 4′ S latitude; and 68° 7′ E to 97° 25′ W longitude",
+        "37° 6′ S to 8° 4′ N longitude; and 68° 7′ E to 97° 25′ W latitude"
+      ],
+      "answer": "37° 6′ N to 8° 4′ N latitude; and 68° 7′ E to 97° 25′ E longitude",
+      "explanation": "Latitude is N, longitude is E: 8° 4′ N to 37° 6′ N and 68° 7′ E to 97° 25′ E (p.53).",
+      "source": {
+        "pages": [
+          53,
+          55,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q2"
+    },
+    {
+      "id": "geo-our-country-india-1-q6",
+      "lessonId": "geo-our-country-india-1",
+      "type": "short_answer",
+      "prompt": "How is India a peninsula?",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "A peninsula is a land surrounded by water on three sides. India is bounded by the Arabian Sea in the west, the Bay of Bengal in the east and the Indian Ocean in the south, with the Himalayas in the north.",
+      "keywords": [
+        "three sides",
+        "Arabian Sea",
+        "Bay of Bengal",
+        "Indian Ocean"
+      ],
+      "explanation": "p.53 has the definition and the four boundaries.",
+      "source": {
+        "pages": [
+          53,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q1"
+    },
+    {
+      "id": "geo-our-country-india-1-q7",
+      "lessonId": "geo-our-country-india-1",
+      "type": "short_answer",
+      "prompt": "Why does most of peninsular India remain warm throughout the year?",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "The Tropic of Cancer passes through almost the centre of India, so most of peninsular India lies to the south of it. It is also surrounded by the sea on three sides.",
+      "keywords": [
+        "Tropic of Cancer",
+        "south"
+      ],
+      "needsReview": true,
+      "explanation": "p.53 only says where the Tropic of Cancer is; ask your teacher for the full reason.",
+      "source": {
+        "pages": [
+          53,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q3"
+    },
+    {
+      "id": "geo-our-country-india-1-q8",
+      "lessonId": "geo-our-country-india-1",
+      "type": "think_write",
+      "prompt": "India is a land of great diversity. Do you think it is good or bad for the country? Give reasons to support your answer.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "For example: good. The mountains, plains, plateaus, rivers, deserts and coastlines, the rich and varied flora and fauna, and the many languages, clothes and foods make the country rich and varied. And despite the great diversities, there is an underlying unity that binds the nation together.",
+      "keywords": [
+        "diversity",
+        "languages",
+        "unity"
+      ],
+      "needsReview": true,
+      "explanation": "There is no single answer. Use the facts on p.52 for your reasons.",
+      "source": {
+        "pages": [
+          52,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q6"
+    },
+    {
+      "id": "geo-our-country-india-2-q1",
+      "lessonId": "geo-our-country-india-2",
+      "type": "fill_blank",
+      "prompt": "The southernmost point of the Indian mainland lies at ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "Kanniyakumari",
+      "accept": [
+        "Kanyakumari",
+        "Kanniyakumari (Kanyakumari)"
+      ],
+      "explanation": "The southernmost point of the Indian mainland lies at Kanniyakumari (Kanyakumari) (p.54).",
+      "source": {
+        "pages": [
+          54,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q2"
+    },
+    {
+      "id": "geo-our-country-india-2-q2",
+      "lessonId": "geo-our-country-india-2",
+      "type": "true_false",
+      "prompt": "The Palk Strait lies between India and the Maldives.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": false,
+      "explanation": "India is separated from Sri Lanka by the Palk Strait and the Gulf of Mannar (p.54).",
+      "source": {
+        "pages": [
+          54,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q4"
+    },
+    {
+      "id": "geo-our-country-india-2-q3",
+      "lessonId": "geo-our-country-india-2",
+      "type": "mcq",
+      "prompt": "Which of the following countries is not a neighbour of India?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Pakistan",
+        "Bhutan",
+        "China",
+        "Japan"
+      ],
+      "answer": "Japan",
+      "explanation": "Pakistan, Bhutan and China are in the list of neighbours on p.54; Japan is not.",
+      "source": {
+        "pages": [
+          54,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q1"
+    },
+    {
+      "id": "geo-our-country-india-2-q4",
+      "lessonId": "geo-our-country-india-2",
+      "type": "mcq",
+      "prompt": "Which of the following states will be the first to experience sunrise?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "West Bengal",
+        "Assam",
+        "Tripura",
+        "Arunachal Pradesh"
+      ],
+      "answer": "Arunachal Pradesh",
+      "explanation": "The easternmost point of India lies in Arunachal Pradesh (p.54), so the Sun rises there first.",
+      "source": {
+        "pages": [
+          54,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q3"
+    },
+    {
+      "id": "geo-our-country-india-2-q5",
+      "lessonId": "geo-our-country-india-2",
+      "type": "mcq",
+      "prompt": "Which of the following countries can India have overseas trade with?",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Bhutan",
+        "Nepal",
+        "Pakistan",
+        "The Maldives"
+      ],
+      "answer": "The Maldives",
+      "explanation": "Overseas means across the sea. The Maldives is a neighbour across the sea; the others share land borders (p.54).",
+      "source": {
+        "pages": [
+          54,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. III Q4"
+    },
+    {
+      "id": "geo-our-country-india-2-q6",
+      "lessonId": "geo-our-country-india-2",
+      "type": "short_answer",
+      "prompt": "The Sun rises in Arunachal Pradesh two hours before it rises in Gujarat. Explain why this is so.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "modelAnswer": "Arunachal Pradesh has the easternmost point of India (97° 25′ E) and Gujarat the westernmost (68° 7′ E). The longitudinal width of India is almost 30°, so the time lag between the easternmost and westernmost parts is two hours. The Sun rises first in the east.",
+      "keywords": [
+        "easternmost",
+        "westernmost",
+        "30°",
+        "two hours"
+      ],
+      "explanation": "p.54: the extent east to west, and the two-hour time lag.",
+      "source": {
+        "pages": [
+          54,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q2"
+    },
+    {
+      "id": "geo-our-country-india-2-q7",
+      "lessonId": "geo-our-country-india-2",
+      "type": "short_answer",
+      "prompt": "Name India’s neighbours.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "By land: Pakistan and Afghanistan (north-west), China, Nepal and Bhutan (north), and Bangladesh and Myanmar (east). Across the sea, to the south: Sri Lanka and the Maldives.",
+      "keywords": [
+        "Pakistan",
+        "Afghanistan",
+        "China",
+        "Nepal",
+        "Bhutan",
+        "Bangladesh",
+        "Myanmar",
+        "Sri Lanka",
+        "Maldives"
+      ],
+      "explanation": "All nine are on p.54.",
+      "source": {
+        "pages": [
+          54,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q5"
+    },
+    {
+      "id": "geo-our-country-india-3-q1",
+      "lessonId": "geo-our-country-india-3",
+      "type": "fill_blank",
+      "prompt": "The capital of India is ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "New Delhi",
+      "accept": [
+        "Delhi"
+      ],
+      "explanation": "India’s capital is New Delhi (p.54).",
+      "source": {
+        "pages": [
+          54,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q3"
+    },
+    {
+      "id": "geo-our-country-india-3-q2",
+      "lessonId": "geo-our-country-india-3",
+      "type": "fill_blank",
+      "prompt": "The largest state in India is ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "Rajasthan",
+      "explanation": "Rajasthan is the largest state (p.54).",
+      "source": {
+        "pages": [
+          54,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q4"
+    },
+    {
+      "id": "geo-our-country-india-3-q3",
+      "lessonId": "geo-our-country-india-3",
+      "type": "think_write",
+      "prompt": "The capital of the state or union territory to which you belong is ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "modelAnswer": "Find your state or union territory in the table on p.54 and write its capital. Ask a grown-up if you are not sure.",
+      "keywords": [
+        "capital"
+      ],
+      "explanation": "Your answer depends on where you live. Check it in the table on p.54.",
+      "source": {
+        "pages": [
+          54,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. I Q5"
+    },
+    {
+      "id": "geo-our-country-india-3-q4",
+      "lessonId": "geo-our-country-india-3",
+      "type": "true_false",
+      "prompt": "There are 28 states and 9 union territories in India.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": false,
+      "explanation": "There are 28 states and 8 union territories (p.54).",
+      "source": {
+        "pages": [
+          54,
+          55
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. II Q5"
+    },
+    {
+      "id": "geo-our-country-india-3-q5",
+      "lessonId": "geo-our-country-india-3",
+      "type": "short_answer",
+      "prompt": "What is the difference between a state and a union territory in India? Give two examples of each.",
+      "difficulty": "medium",
+      "marks": 2,
+      "modelAnswer": "A state is a smaller territorial division of India with its own duly elected state government, for example Kerala and Rajasthan. A union territory is a part of the country under the direct administration of the Union Government, for example Lakshadweep and Puducherry.",
+      "keywords": [
+        "elected",
+        "state government",
+        "Union Government",
+        "direct"
+      ],
+      "explanation": "Definitions: p.55. Examples: any from the table on p.54.",
+      "source": {
+        "pages": [
+          54,
+          55,
+          56
+        ]
+      },
+      "fromBook": true,
+      "bookRef": "Ex. IV Q4"
+    },
+    {
+      "id": "geo-our-country-india-3-q6",
+      "lessonId": "geo-our-country-india-3",
+      "type": "match",
+      "prompt": "Match each union territory with its capital.",
+      "difficulty": "challenge",
+      "marks": 3,
+      "pairs": [
+        [
+          "Andaman and Nicobar Islands",
+          "Sri Vijaya Puram (Port Blair)"
+        ],
+        [
+          "Lakshadweep",
+          "Kavaratti"
+        ],
+        [
+          "Ladakh",
+          "Leh"
+        ],
+        [
+          "Dadra and Nagar Haveli and Daman and Diu",
+          "Daman"
+        ]
+      ],
+      "explanation": "p.54 union territory table.",
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "geo-our-country-india-3-q7",
+      "lessonId": "geo-our-country-india-3",
+      "type": "mcq",
+      "prompt": "Chandigarh is the capital of",
+      "difficulty": "medium",
+      "marks": 2,
+      "options": [
+        "Punjab and Haryana",
+        "Rajasthan and Gujarat",
+        "Bihar and Jharkhand"
+      ],
+      "answer": "Punjab and Haryana",
+      "explanation": "The capital of Chandigarh, Haryana and Punjab are at Chandigarh (p.53 map note, p.54 table).",
+      "source": {
+        "pages": [
+          53,
+          54
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "geo-our-country-india-3-q8",
+      "lessonId": "geo-our-country-india-3",
+      "type": "fill_blank",
+      "prompt": "For better administration, India was divided into states on the basis of ____.",
+      "difficulty": "medium",
+      "marks": 2,
+      "answer": "language",
+      "explanation": "India was divided into states on the basis of language (p.54).",
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

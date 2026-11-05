@@ -1,0 +1,130 @@
+{
+  "id": "india-location",
+  "subject": "geography",
+  "title": "Where in the world is India?",
+  "source": {
+    "pages": [
+      52,
+      53
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "3.28 million sq. km: the seventh largest country",
+          "1.426 billion people (2023): the most populous",
+          "The largest democracy in the world"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "p.52"
+      },
+      "narration": "India, that is Bharat, is a vast land of mountains, plains, plateaus, rivers, deserts and coastlines. It is the seventh largest country in the world, the most populous, and the largest democracy.",
+      "minDuration": 12,
+      "source": {
+        "pages": [
+          52
+        ]
+      },
+      "checkpoint": {
+        "questionId": "india-location-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "North: the Himalayas",
+          "West: the Arabian Sea",
+          "East: the Bay of Bengal",
+          "South: the Indian Ocean"
+        ],
+        "arrows": false,
+        "highlight": [
+          1,
+          2,
+          3
+        ],
+        "label": "A peninsula, p.53"
+      },
+      "narration": "India is in the southern part of Asia. It is a peninsula: a land surrounded by water on three sides. The Arabian Sea is to the west, the Bay of Bengal to the east, and the Indian Ocean to the south. The Himalayas are in the north.",
+      "minDuration": 14,
+      "source": {
+        "pages": [
+          53
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Latitude: 8° 4′ N to 37° 6′ N (south to north)",
+          "Longitude: 68° 7′ E to 97° 25′ E (west to east)",
+          "The Tropic of Cancer: almost through the centre"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "p.53"
+      },
+      "narration": "India is in the Northern and Eastern hemispheres. The mainland stretches from 8 degrees 4 minutes north to 37 degrees 6 minutes north, and the Tropic of Cancer passes through almost the centre.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          53
+        ]
+      },
+      "checkpoint": {
+        "questionId": "india-location-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "india-location-cp1",
+      "type": "mcq",
+      "prompt": "By area, India is the",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "seventh largest country",
+        "largest country"
+      ],
+      "answer": "seventh largest country",
+      "hints": [
+        "Read the first box."
+      ],
+      "explanation": "p.52.",
+      "source": {
+        "pages": [
+          52
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "india-location-cp2",
+      "type": "mcq",
+      "prompt": "Which line passes through almost the centre of India?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "The Tropic of Cancer",
+        "The Tropic of Capricorn"
+      ],
+      "answer": "The Tropic of Cancer",
+      "hints": [
+        "Read the last box."
+      ],
+      "explanation": "p.53.",
+      "source": {
+        "pages": [
+          53
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

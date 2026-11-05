@@ -1,0 +1,121 @@
+{
+  "id": "landforms-volcanoes-plateaus",
+  "subject": "geography",
+  "title": "Volcanoes and plateaus",
+  "source": {
+    "pages": [
+      47,
+      48
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Magma under pressure",
+          "It escapes through a vent",
+          "Lava, ash and rocks settle in layers",
+          "Over thousands of years: a volcanic mountain"
+        ],
+        "highlight": 3,
+        "label": "Volcanic mountains, p.47"
+      },
+      "narration": "Magma escapes to the surface through an opening called a vent. Magma that reaches the surface is called lava. The lava, ash and rocks settle in layers, and over thousands of years they build a volcanic mountain.",
+      "minDuration": 14,
+      "source": {
+        "pages": [
+          47
+        ]
+      },
+      "checkpoint": {
+        "questionId": "landforms-volcanoes-plateaus-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Thin magma that flows easily: gentle slopes (Mauna Loa)",
+          "Thick, viscous lava: steep cone (Mt Fuji, Mt Vesuvius, Mt Kilimanjaro)"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "p.47"
+      },
+      "narration": "If the magma is thin and flows easily, gently sloping mountains form, like Mauna Loa in Hawaii. If the lava is thick and viscous, the mountains are cone-shaped with steep sides, like Mount Fuji in Japan.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          47
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Intermontane: surrounded by mountains (Tibet)",
+          "Continental: rises from the coast or plains (Africa)",
+          "Lava: lava spreads out of fissures (the Deccan)"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "Plateaus, p.48"
+      },
+      "narration": "A plateau is a broad, flat, elevated area: a tableland. Its steep side is an escarpment. There are intermontane plateaus like Tibet, continental plateaus like those of Africa, and lava plateaus like the Deccan.",
+      "minDuration": 14,
+      "source": {
+        "pages": [
+          47,
+          48
+        ]
+      },
+      "checkpoint": {
+        "questionId": "landforms-volcanoes-plateaus-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "landforms-volcanoes-plateaus-cp1",
+      "type": "fill_blank",
+      "prompt": "Magma that reaches the surface of the Earth is called ____.",
+      "difficulty": "easy",
+      "marks": 1,
+      "answer": "lava",
+      "hints": [
+        "Look at the third box."
+      ],
+      "explanation": "p.47.",
+      "source": {
+        "pages": [
+          47
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "landforms-volcanoes-plateaus-cp2",
+      "type": "mcq",
+      "prompt": "The Deccan Plateau is",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "a lava plateau",
+        "an intermontane plateau"
+      ],
+      "answer": "a lava plateau",
+      "hints": [
+        "Read the last box."
+      ],
+      "explanation": "The Deccan Plateau is a lava plateau (p.48).",
+      "source": {
+        "pages": [
+          48
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}

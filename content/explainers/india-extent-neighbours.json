@@ -1,0 +1,127 @@
+{
+  "id": "india-extent-neighbours",
+  "subject": "geography",
+  "title": "India’s ends, its clock and its neighbours",
+  "source": {
+    "pages": [
+      54
+    ]
+  },
+  "scenes": [
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Northernmost: the Siachen Glacier region (37° 6′ N)",
+          "3,214 km",
+          "Southernmost: Kanniyakumari (8° 4′ N)"
+        ],
+        "highlight": [
+          0,
+          2
+        ],
+        "label": "North to south, p.54"
+      },
+      "narration": "The northernmost point of India is in the Siachen Glacier region of the Karakoram range. The southernmost point of the mainland is Kanniyakumari. They are 3,214 kilometres apart.",
+      "minDuration": 11,
+      "source": {
+        "pages": [
+          54
+        ]
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "Easternmost: Arunachal Pradesh (97° 25′ E)",
+          "Westernmost: the Rann of Kutchch, Gujarat (68° 7′ E)",
+          "Almost 30° apart: a two-hour time lag",
+          "India follows the time at 82° 30′ E: IST"
+        ],
+        "highlight": 3,
+        "label": "Indian Standard Time, p.54"
+      },
+      "narration": "From Arunachal Pradesh in the east to Gujarat in the west, India is almost 30 degrees wide, so there is a two-hour time lag. To avoid confusion, India follows the time at 82 degrees 30 minutes east: Indian Standard Time.",
+      "minDuration": 15,
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "checkpoint": {
+        "questionId": "india-extent-neighbours-cp1"
+      }
+    },
+    {
+      "visual": "FlowChart",
+      "props": {
+        "nodes": [
+          "North-west: Pakistan, Afghanistan",
+          "North: China, Nepal, Bhutan",
+          "East: Bangladesh, Myanmar",
+          "South, across the sea: Sri Lanka, the Maldives"
+        ],
+        "arrows": false,
+        "highlight": "all",
+        "label": "Neighbours, p.54"
+      },
+      "narration": "Seven countries share land boundaries with India. Across the sea to the south are the islands of Sri Lanka and the Maldives. The Palk Strait and the Gulf of Mannar separate India from Sri Lanka.",
+      "minDuration": 13,
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "checkpoint": {
+        "questionId": "india-extent-neighbours-cp2"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "india-extent-neighbours-cp1",
+      "type": "mcq",
+      "prompt": "Why does India follow one standard time?",
+      "difficulty": "medium",
+      "marks": 1,
+      "options": [
+        "To avoid confusion from the two-hour time lag",
+        "Because India is very small"
+      ],
+      "answer": "To avoid confusion from the two-hour time lag",
+      "hints": [
+        "Look at the third and fourth boxes."
+      ],
+      "explanation": "p.54.",
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "fromBook": false
+    },
+    {
+      "id": "india-extent-neighbours-cp2",
+      "type": "mcq",
+      "prompt": "Which neighbour is across the sea?",
+      "difficulty": "easy",
+      "marks": 1,
+      "options": [
+        "Sri Lanka",
+        "Nepal"
+      ],
+      "answer": "Sri Lanka",
+      "hints": [
+        "Read the last box."
+      ],
+      "explanation": "p.54.",
+      "source": {
+        "pages": [
+          54
+        ]
+      },
+      "fromBook": false
+    }
+  ]
+}
